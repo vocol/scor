@@ -1,0 +1,556 @@
+@prefix gr: <http://purl.org/goodrelations/v1#>.
+@prefix scor: <http://eccenca.com/scor/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+#####
+# RL.2.1 - % of Orders Delivered In Full
+#
+# Percentage of orders which all of the items are received by customer in the 
+# quantities committed. The number of orders that are received by the customer 
+# in the quantities committed divided by the total orders.
+####
+
+# scor Main classes
+
+scor:Process a owl:Class ;
+	rdfs:label "Process" ;
+	rdfs:comment "A process is a unique activity performed to meet predefined outcomes" .
+
+#scor:Metric a owl:Class ;
+#	rdfs:label "Metric" ;
+#	rdfs:comment "A metric is a standard for measurement of the performance of a process." .
+
+scor:People a owl:Class ;
+	rdfs:label "People" ;
+	rdfs:comment "". 
+
+scor:Practices a owl:Class ;
+	rdfs:label "Practices" ;
+	rdfs:comment "". 
+
+# scor Makro Processes
+
+scor:Plan a owl:Class ;
+	rdfs:subClassOf scor:Process ;
+	rdfs:label "Plan";
+	rdfs:comment "The Plan processes describe the planning activities associated with operating a supply chain. This
+includes gathering customer requirements, collecting information on available resources, and balancing
+requirements and resources to determine planned capabilities and resource gaps. This is followed by
+identifying the actions required to correct any gaps." ;
+	scor:hasProcessID "P" .
+
+scor:Source a owl:Class ;
+	rdfs:subClassOf scor:Process ;
+	rdfs:label "Source" ;
+	scor:hasProcessID "S" .
+
+scor:Make a owl:Class ;
+	rdfs:subClassOf scor:Process ;
+	rdfs:label "Make" ;
+	scor:hasProcessID "M" .
+
+scor:Deliver a owl:Class ;
+	rdfs:subClassOf scor:Process ;
+	rdfs:label "Deliver" ;
+	scor:hasProcessID "D" .
+
+scor:Return a owl:Class ;
+	rdfs:subClassOf scor:Process ;
+	rdfs:label "Return" ;
+	scor:hasProcessID "R" .
+
+scor:Enable a owl:Class ;
+	rdfs:subClassOf scor:Process ;
+	rdfs:label "Enable" ;
+	scor:hasProcessID "E" .
+
+# Scor Process Configurations 
+
+scor:SourceStockedProduct a owl:Class;
+	rdfs:subClassOf scor:Source;
+	rdfs:label "Source Stocked Product" ;
+	rdfs:comment "" ;
+	scor:hasProcessID "sS1" .
+
+scor:SourceMakeToOrderProduct a owl:Class;
+	rdfs:subClassOf scor:Source;
+	rdfs:label "Source Make-to-Order Product" ;
+	rdfs:comment "" ;
+	scor:hasProcessID "sS2" .
+
+scor:SourceEngineerToOrderProduct a owl:Class;
+	rdfs:subClassOf scor:Source;
+	rdfs:label "Source Engineer-to-Order Product" ;
+	rdfs:comment "" ;
+	scor:hasProcessID "sS3" .
+
+scor:MakeToStock a owl:Class;
+	rdfs:subClassOf scor:Make;
+	rdfs:label "Make-to-Stock" ;
+	rdfs:comment "" ;
+	scor:hasProcessID "sM1" .
+
+scor:MakeToOrder a owl:Class;
+	rdfs:subClassOf scor:Make;
+	rdfs:label "Make-to-Order" ;
+	rdfs:comment "" ;
+	scor:hasProcessID "sM2" .
+
+scor:EngineerToOrder a owl:Class;
+	rdfs:subClassOf scor:Make;
+	rdfs:label "Engineer-to-Order" ;
+	rdfs:comment "" ;
+	scor:hasProcessID "sM3" .
+
+scor:DeliverStockedProduct a owl:Class;
+	rdfs:subClassOf scor:Deliver;
+	rdfs:label "Deliver Stocked Product" ;
+	rdfs:comment "" ;
+	scor:hasProcessID "sD1" .
+
+scor:DeliverMakeToOrderProduct a owl:Class;
+	rdfs:subClassOf scor:Deliver;
+	rdfs:label "Deliver Make-to-Order Product" ;
+	rdfs:comment "" ;
+	scor:hasProcessID "sD2" .
+
+scor:DeliverEngineerToOrderProduct a owl:Class;
+	rdfs:subClassOf scor:Deliver;
+	rdfs:label "Deliver Engineer-to-Order Product" ;
+	rdfs:comment "" ;
+	scor:hasProcessID "sD3" .
+
+
+# Reliability Metrics Properties
+
+scor:hasPerfectOrderFulfillment a owl:DatatypeProperty;
+	rdfs:label "has Perfect Order Fulfillment" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double ;
+	scor:hasMetricID "RL1.1" ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+		
+scor:hasPercentOfOrdersDeliveredInFull a owl:DatatypeProperty;
+	rdfs:label "has Percent of Orders Delivered In Full" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double ;
+	scor:hasMetricID "RL2.1" ;
+	scor:isCalculatedBy "[Total number of orders delivered in full] / [Total number of orders delivered] x 100%" .
+
+scor:hasDeliveryPerformanceToCustomerCommitDate a owl:DatatypeProperty;
+	rdfs:label "has Percent of Orders Delivered In Full" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double ;
+	scor:hasMetricID "RL2.2" ;
+	scor:isCalculatedBy "[Total number of orders delivered on the original commitment date] / [Total number of orders delivered] x 100%" .
+
+scor:hasDocumentationAccuracy a owl:DatatypeProperty;
+	rdfs:label "Documentation Accuracy" ;
+	rdfs:comment "Percentage of orders with on time and accurate documentation supporting the order, including
+packing slips, bills of lading, invoices, etc." ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double ;
+	scor:hasMetricID "RL2.3" ;
+	scor:isCalculatedBy "[Total number of orders delivered with accurate documentation] / [Total number of orders delivered]
+x 100%" .
+
+scor:hasPerfectCondition a owl:DatatypeProperty;
+	rdfs:label "Perfect Condition" ;
+	rdfs:comment "Percentage of orders delivered in an undamaged state that meet specification, have the correct
+configuration, are faultlessly installed (as applicable) and accepted by the customer." ;
+	scor:hasMetricID "RL2.4" ;
+	scor:isCalculatedBy "[ Number of orders delivered in Perfect Condition ] / [Number of orders delivered ] x 100%" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double .
+
+scor:hasDeliveryItemAccuracy a owl:DatatypeProperty;
+	scor:hasMetricID "RL3.33" ;
+	rdfs:label "Delivery Item Accuracy" ;
+	scor:isCalculatedBy "Percentage of orders in which all items ordered are
+the items actually provided, and no extra items are provided" ;
+	rdfs:comment "" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double .
+
+scor:hasDeliveryQuantityAccuracy a owl:DatatypeProperty;
+	rdfs:label "Delivery Quantity Accuracy" ;
+	scor:hasMetricID "RL3.35" ;
+	scor:isCalculatedBy "Percentage of orders which is delivered to the correct location and customer entity" ;
+	rdfs:comment "" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double .
+
+scor:hasCustomerCommitDateAchievementTimeCustomerReceiving a owl:DatatypeProperty;	
+	rdfs:label "Delivery Performance to Customer Commit Date" ;
+	scor:hasMetricID "RL3.32" ;
+	scor:isCalculatedBy "" ;
+	rdfs:comment "" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double .
+
+scor:hasDeliveryLocationAccuracy a owl:DatatypeProperty;
+	rdfs:label "Delivery Location Accuracy" ;
+	scor:hasMetricID "RL3.34" ;
+	scor:isCalculatedBy "" ;
+	rdfs:comment "" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double .
+
+scor:hasComplianceDocumentationAccuracy a owl:DatatypeProperty;
+	rdfs:label "Compliance Documentation Accuracy" ;
+	scor:hasMetricID "RL3.31" ;
+	scor:isCalculatedBy "" ;
+	rdfs:comment "" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double .
+
+scor:hasOtherRequiredDocumentationAccuracy a owl:DatatypeProperty;	
+	rdfs:label "Other Required Documentation Accuracy" ;
+	scor:hasMetricID "RL3.43" ;
+	scor:isCalculatedBy "" ;
+	rdfs:comment "" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double .
+
+scor:hasPaymentDocumentationAccuracy a owl:DatatypeProperty;
+	rdfs:label "Payment Documentation Accuracy" ;
+	scor:hasMetricID "RL3.45" ;
+	scor:isCalculatedBy "" ;
+	rdfs:comment "" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double .
+
+scor:hasShippingDocumentationAccuracy a owl:DatatypeProperty;	
+	rdfs:label "Shipping Documentation Accuracy" ;
+	scor:hasMetricID "RL3.50" ;
+	scor:isCalculatedBy "" ;
+	rdfs:comment "" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:double .
+
+scor:hasPercentOfFaultlessInstallations a owl:DatatypeProperty;	
+	rdfs:label "% Of Faultless Installations" ;
+	scor:hasMetricID "RL3.12" ;
+	rdfs:comment "" .
+
+scor:hasPercentOfOrdersOrLinesReceivedDamageFree a owl:DatatypeProperty;		
+	rdfs:label "% Orders/lines received damage free" ;
+	scor:hasMetricID "RL3.24" ;
+	rdfs:comment "" .
+
+scor:hasOrdersDeliveredDamageFreeConformance a owl:DatatypeProperty;		
+	rdfs:label "Orders Delivered Damage Free Conformance" ;
+	scor:hasMetricID "RL3.41" ;
+	rdfs:comment "" .
+
+scor:hasOrdersDeliveredDefectFreeConformance a owl:DatatypeProperty;	
+	rdfs:label "Orders Delivered Defect Free Conformance" ;
+	scor:hasMetricID "RL3.42" ;
+	rdfs:comment "" .
+
+scor:hasWarrantyAndReturns a owl:DatatypeProperty;		
+	rdfs:label "Warranty and Returns" ;
+	scor:hasMetricID "RL3.55" ;
+	rdfs:comment "" .
+
+
+# Properties
+
+scor:hasMetricID a owl:AnnotationProperty ;
+	rdfs:label "has metric ID" ;
+	rdfs:comment "" ;
+	rdfs:range xsd:string .
+
+scor:isCalculatedBy a owl:AnnotationProperty ;
+	rdfs:label "is calculated by" ;
+	rdfs:range xsd:string .
+
+scor:hasProcessID a owl:AnnotationProperty ;
+	rdfs:label "has process ID" ;
+	rdfs:comment "represents a unique identifier of a process within the SCOR model" ;
+	rdfs:range xsd:string .
+
+scor:hasProcessStepList a owl:ObjectProperty;
+	rdfs:label "has process step list";
+	rdfs:comment "represents a unique identifier of a process within the SCOR model" ;
+	rdfs:domain scor:Process ;
+	rdfs:range xsd:string .
+
+
+
+scor:Metric a owl:Class ;
+	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+	skos:altLabel "KPI" .
+
+scor:Reliability a owl:Class ;
+	rdfs:subClassOf scor:Metric ;
+	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+	skos:altLabel "KPI" .
+	
+scor:Responsiveness a owl:Class ;
+	rdfs:subClassOf scor:Metric ;
+	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+	skos:altLabel "KPI" .
+
+scor:Agility a owl:Class ;
+	rdfs:subClassOf scor:Metric ;
+	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+	skos:altLabel "KPI" .
+
+scor:Cost a owl:Class ;
+	rdfs:subClassOf scor:Metric ;
+	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+	skos:altLabel "KPI" .
+	
+scor:AssetManagementEfficiency a owl:Class ;
+	rdfs:subClassOf scor:Metric ;
+	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+	skos:altLabel "KPI" .
+	
+	
+scor:PerfectOrderFulfillment a owl:Class ;
+	rdfs:subClassOf scor:Reliability ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PercentOfOrdersDeliveredInFull a owl:Class ;
+	rdfs:subClassOf scor:PerfectOrderFulfillment ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DeliveryPerformanceToCustomerCommitDate a owl:Class ;
+	rdfs:subClassOf scor:PerfectOrderFulfillment ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DocumentationAccuracy a owl:Class ;
+	rdfs:subClassOf scor:PerfectOrderFulfillment ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PerfectCondition a owl:Class ;
+	rdfs:subClassOf scor:PerfectOrderFulfillment ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+
+scor:DeliveryItemAccuracy a owl:Class ;
+	rdfs:subClassOf scor:PercentOfOrdersDeliveredInFull ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DeliveryQuantityAccuracy a owl:Class ;
+	rdfs:subClassOf scor:PercentOfOrdersDeliveredInFull ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:CustomerCommitDateAchievementTimeCustomerReceiving a owl:Class ;
+	rdfs:subClassOf scor:DeliveryPerformanceToCustomerCommitDate ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DeliveryLocationAccuracy a owl:Class ;
+	rdfs:subClassOf scor:DeliveryPerformanceToCustomerCommitDate ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+
+scor:ComplianceDocumentationAccuracy a owl:Class ;
+	rdfs:subClassOf scor:DocumentationAccuracy ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:OtherRequiredDocumenationAccuracy a owl:Class ;
+	rdfs:subClassOf scor:DocumentationAccuracy ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PaymentDocumenationAccuracy a owl:Class ;
+	rdfs:subClassOf scor:DocumentationAccuracy ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:ShippingDocumenationAccuracy a owl:Class ;
+	rdfs:subClassOf scor:DocumentationAccuracy ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+	
+	
+scor:PercentOfFaultnessInstallations a owl:Class ;
+	rdfs:subClassOf scor:PerfectCondition ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PercentOrdersOrLinesReceivedDamageFree a owl:Class ;
+	rdfs:subClassOf scor:PerfectCondition ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:OrderDeliveredDamageFreeConformance a owl:Class ;
+	rdfs:subClassOf scor:PerfectCondition ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:OrderDeliveredDefectFreeConformance a owl:Class ;
+	rdfs:subClassOf scor:PerfectCondition ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:WarrantyAndReturns a owl:Class ;
+	rdfs:subClassOf scor:PerfectCondition ;
+	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+	
+	
+
+# Metric Properties
+
+#
+#scor:PercentageOfOrdersDeliveredInFull a owl:Class ;
+#	rdfs:subClassOf scor:Metric ;
+#	scor:hasMetricID "RL2.1" ;
+#	rdfs:comment "Percentage of orders which all of the items are received by customer in the quantities committed." .
+#	
+#	
+#	
+#scor:DeliveryPerformanceToCustomerCommitDate a owl:Class ;
+#	rdfs:subClassOf scor:Metric ;
+#	rdfs:comment "The percentage of orders that are fulfilled on or before the internal
+#Commit date, used as a measure of internal scheduling systems effectiveness. Delivery measurements are based on
+#the date a complete order is shipped or the ship-to date of a complete order. A complete order has all items on the
+#order delivered in the quantities requested. An order must be complete to be considered fulfilled. Multiple line items
+#on a single order with different planned delivery dates constitute multiple orders, and multiple planned delivery dates on a single line item also constitute multiple orders. " ;
+#	scor:scorMetricID "RL2.2" ;
+#	scor:isCalculatedBy "[Total number of orders delivered in full and on time to the scheduled commit date] /
+#[Total number of orders delivered] " .
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+########################
+#
+#scor:OrderOrDelivery a owl:Class .
+#
+#scor:Order a owl:Class ;
+#	rdfs:subClassOf scor:OrderOrDelivery ;
+#	rdfs:label "Order" ;
+#	rdfs:comment "" .
+#
+#scor:OrderStatus a owl:Class ;
+#	rdfs:label "" ;
+#	rdfs:comment "" .
+#
+#scor:orderStatus a owl:ObjectProperty ;
+#	rdfs:label "" ;
+#	rdfs:comment "" ;
+#	rdfs:domain scor:Order ;
+#	rdfs:range scor:OrderStatus .
+#
+#scor:OrderSubmitted a scor:OrderStatus ;
+#	rdfs:label "" ;
+#	rdfs:comment "Possible order status to be discussed" .
+#
+#scor:OrderAccepted a scor:OrderStatus ;
+#	rdfs:label "" ;
+#	rdfs:comment "Possible order status to be discussed" .
+#
+#scor:OrderDelivered a scor:OrderStatus ;
+#	rdfs:label "" ;
+#	rdfs:comment "Possible order status to be discussed" .
+#
+#scor:containItem a owl:ObjectProperty ;
+#	rdfs:label "" ;
+#	rdfs:comment "" ;
+#	rdfs:domain scor:OrderOrDelivery ;
+#	rdfs:range scor:Item . # to be discussed 
+#
+#scor:amount a owl:DatatypeProperty ;
+#	rdfs:label "" ;
+#	rdfs:comment "" ;
+#	rdfs:domain scor:Item ;
+#	rdfs:range xsd:float . 
+#
+#scor:Item a owl:Class ;
+#	rdfs:label "" ;
+#	rdfs:comment "" ;
+#	owl:equivalentClass gr:Individual .
+#
+#scor:Delivery a owl:Class ;
+#	rdfs:subClassOf scor:OrderOrDelivery ;
+#	rdfs:label "" ;
+#	rdfs:comment "" .
+#
+#scor:DeliveryStatus a owl:Class ;
+#	rdfs:label "" ;
+#	rdfs:comment "" .
+#
+#scor:deliveryStatus a owl:ObjectProperty ;
+#	rdfs:label "" ;
+#	rdfs:comment "" ;
+#	rdfs:domain scor:Delivery ;
+#	rdfs:range scor:DeliveryStatus .
+#
+#scor:DeliveryPromissed a scor:DeliveryStatus ;
+#	rdfs:label "" ;
+#	rdfs:comment "Possible delivery status to be discussed" .
+#
+#scor:DeliveryShipped a scor:DeliveryStatus ;
+#	rdfs:label "" ;
+#	rdfs:comment "Possible delivery status to be discussed" .
+#
+#scor:DeliveryDelivered a scor:DeliveryStatus ;
+#	rdfs:label "" ;
+#	rdfs:comment "Possible delivery status to be discussed" .
+#
+#scor:DeliveryItemTolerance a owl:Class ;
+#	rdfs:label "" ;
+#	rdfs:comment "" .
+#
+#scor:toleranceAbout a owl:ObjectProperty ;
+#	rdfs:label "" ;
+#	rdfs:comment "" ;
+#	rdfs:domain scor:DeliveryItemTolerance ;
+#	rdfs:range scor:Item . 
+#
+## hier nur exemplarische Vereinfachung
+## % / Absolut / Kundenspezifisch / Orderspezifisch
+#scor:tolerance a owl:DatatypeProperty ;
+#	rdfs:label "" ;
+#	rdfs:comment "" ;
+#	rdfs:domain scor:DeliveryItemTolerance ;
+#	rdfs:range xsd:float . 
+#
+#
+#
+#
+#scor:percentageValue a owl:DatatypeProperty ;
+#	rdfs:label "" ;
+#	rdfs:comment "" ;
+#	rdfs:domain scor:Metric ;
+#	rdfs:range xsd:float . 
+#
+#scor:Period a owl:Class .
+#
+#scor:periodBegin a owl:DatatypeProperty ;
+#	rdfs:domain scor:Period ;
+#	rdfs:range xsd:dateTime . 
+#
+#scor:periodEnd a owl:DatatypeProperty ;
+#	rdfs:domain scor:Period ;
+#	rdfs:range xsd:dateTime .
+
+
+#TotalNumberOfOrdersDeliverInFull a SCOR:NumericVariable
+#TotalNUmberOfOrdersDelivered a SCOR:NumericVariable 
+
+#Contract a owl:Class,
+#	SCOR:AgreedTollerance 
+
+#AgreedTolerance a owl:Class
+#	hasAbsoluteLowerBound
+#	hasPercentageLowerBound
+#	hasAbsoluteUpperBound
+#	hasPercentageUpperBound
+
+
