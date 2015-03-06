@@ -41,6 +41,58 @@ scor:KeyPerformanceIndicator a owl:Class ;
 	rdfs:subClassOf scor:Metric ;
 	rdfs:comment "Diagnostics for the overall health of the supply chain. Benchmarking Key Performance Indicators helps establishing realistic targets to support the strategic directions". 
 
+# scor Key Performance Indicators. Metrics of level 1
+scor:PerfectOrderFulfillment a owl:Class ;
+	rdfs:label "PerfectOrderFulfillment" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "RL1.1. Delivered complete, on time according the client's specifications of time. Documentation complete. Faultlessly installed".
+	
+scor:OrderFulfillmentCycleTime a owl:Class ;
+	rdfs:label "OrderFulfillmentCycleTime" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "RS1.1. Order Fulfillment Cycle Time".	
+	
+scor:UpsideFlexibility a owl:Class ;
+	rdfs:label "UpsideFlexibility" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "AG1.1. Upside Flexibility".	
+	
+scor:UpsideAdaptability a owl:Class ;
+	rdfs:label "UpsideAdaptability" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "AG1.2. Upside Adaptability".	
+	
+scor:DownsideAdaptability a owl:Class ;
+	rdfs:label "DownsideAdaptability" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "AG1.3. Downside  Adaptability".
+	
+scor:OverallValueAtRisk a owl:Class ;
+	rdfs:label "OverallValueAtRisk" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "AG1.4. Overall Value-at-Risk".
+	
+scor:TotalCostToServe a owl:Class ;
+	rdfs:label "TotalCostToServe" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "CO.1.001. The sum of the Supply Chain Cost to deliver products and services to customers".
+
+scor:CashToCashCycleTime a owl:Class ;
+	rdfs:label "CashToCashCycleTime" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "AM.1.1. The time it takes for an investment made to flow back into a company after it has been spent for raw
+materials".
+
+scor:ReturnOnFixedAssets a owl:Class ;
+	rdfs:label "ReturnOnFixedAssets" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "AM.1.2. measures the return an organization receives on its invested capital in supply chain fixed assets. This includes the fixed assets used in Plan, Source, Make,Deliver, and Return".
+	
+scor:ReturnOnWorkingCapital a owl:Class ;
+	rdfs:label "ReturnOnWorkingCapital" ;
+	rdfs:subClassOf scor:KeyPerformanceIndicator ;
+	rdfs:comment "AM.1.3. assesses the magnitude of investment relative to a company's working capital position versus the revenue generated from a supply chain.".
+	
 # scor Makro Processes
 
 scor:Plan a owl:Class ;
@@ -391,5 +443,3 @@ scor:OrderDeliveredDefectFreeConformance a owl:Class ;
 scor:WarrantyAndReturns a owl:Class ;
 	rdfs:subClassOf scor:PerfectCondition ;
 	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-
