@@ -20,17 +20,21 @@ scor:Process a owl:Class ;
 	rdfs:label "Process" ;
 	rdfs:comment "A process is a unique activity performed to meet predefined outcomes" .
 
-#scor:Metric a owl:Class ;
-#	rdfs:label "Metric" ;
-#	rdfs:comment "A metric is a standard for measurement of the performance of a process." .
-
+scor:Metric a owl:Class ;
+	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+	rdfs:label "Metric" .
+	
 scor:People a owl:Class ;
 	rdfs:label "People" ;
 	rdfs:comment "". 
 
 scor:Practices a owl:Class ;
 	rdfs:label "Practices" ;
-	rdfs:comment "". 
+	rdfs:comment "A practice is a unique way to configure a process or a set of processes". 
+	
+scor:PerformanceAttribute a owl:Class ;
+	rdfs:label "PerformanceAttribute" ;
+	rdfs:comment "A performance attribute is a grouping or categorization of metrics used to express a specific strategy". 
 
 # scor Makro Processes
 
@@ -280,36 +284,32 @@ scor:hasProcessStepList a owl:ObjectProperty;
 	rdfs:domain scor:Process ;
 	rdfs:range xsd:string .
 
-
-
-scor:Metric a owl:Class ;
-	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
-	skos:altLabel "KPI" .
-
+# SubClasses of PerformanceAttribute
+	
 scor:Reliability a owl:Class ;
-	rdfs:subClassOf scor:Metric ;
-	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
-	skos:altLabel "KPI" .
+	rdfs:subClassOf scor:PerformanceAttribute ;
+	rdfs:comment "The Reliability attribute addresses the ability to perform tasks as required. Reliability focuses on the predictability of the outcome of a process." ;
+	rdfs:label "Reliability" .
 	
 scor:Responsiveness a owl:Class ;
-	rdfs:subClassOf scor:Metric ;
-	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
-	skos:altLabel "KPI" .
+	rdfs:subClassOf scor:PerformanceAttribute ;
+	rdfs:comment "The Responsiveness attribute describes the speed at which tasks are performed. Responsiveness addresses repeated speed of doing business." ;
+	rdfs:label "Responsiveness" .
 
 scor:Agility a owl:Class ;
-	rdfs:subClassOf scor:Metric ;
-	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
-	skos:altLabel "KPI" .
+	rdfs:subClassOf scor:PerformanceAttribute ;
+	rdfs:comment "The Agility attribute describes the ability to respond to external influences; the ability to and speed of change." ;
+	rdfs:label "Agility" .
 
 scor:Cost a owl:Class ;
-	rdfs:subClassOf scor:Metric ;
-	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
-	skos:altLabel "KPI" .
+	rdfs:subClassOf scor:PerformanceAttribute ;
+	rdfs:comment "The Cost attribute describes the cost of operating the process." ;
+	rdfs:label "Cost" .
 	
-scor:AssetManagementEfficiency a owl:Class ;
-	rdfs:subClassOf scor:Metric ;
-	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
-	skos:altLabel "KPI" .
+scor:Assets a owl:Class ;
+	rdfs:subClassOf scor:PerformanceAttribute ;
+	rdfs:comment "The Assets attribute describes the ability to efficiently utilize assets." ;
+	rdfs:label "Assets" .
 	
 	
 scor:PerfectOrderFulfillment a owl:Class ;
