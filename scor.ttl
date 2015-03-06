@@ -35,6 +35,11 @@ scor:Practices a owl:Class ;
 scor:PerformanceAttribute a owl:Class ;
 	rdfs:label "PerformanceAttribute" ;
 	rdfs:comment "A performance attribute is a grouping or categorization of metrics used to express a specific strategy". 
+	
+scor:KeyPerformanceIndicator a owl:Class ;
+	rdfs:label "KeyPerformanceIndicator" ;
+	rdfs:subClassOf scor:Metric ;
+	rdfs:comment "Diagnostics for the overall health of the supply chain. Benchmarking Key Performance Indicators helps establishing realistic targets to support the strategic directions". 
 
 # scor Makro Processes
 
