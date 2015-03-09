@@ -28,8 +28,8 @@ scor:People a owl:Class ;
 	rdfs:label "People" ;
 	rdfs:comment "Standards for managing talent in the supply chain". 
 
-scor:Practices a owl:Class ;
-	rdfs:label "Practices" ;
+scor:Practice a owl:Class ;
+	rdfs:label "Practice" ;
 	rdfs:comment "A practice is a unique way to configure a process or a set of processes". 
 	
 scor:PerformanceAttribute a owl:Class ;
@@ -215,6 +215,23 @@ scor:DeliverEngineerToOrderProduct a owl:Class;
 	rdfs:comment "" ;
 	scor:hasProcessID "sD3" .
 
+scor:EmergingPractice a owl:Class ;
+	rdfs:label "EmergingPractice" ;
+	rdfs:subClassOf scor:Practice;
+	skos:altLabel "BP.E";
+	rdfs:comment "Introduce new technology, knowledge or radically different ways of organizing processes". 
+
+scor:BestPractice a owl:Class ;
+	rdfs:label "BestPractice" ;
+	rdfs:subClassOf scor:Practice;
+	skos:altLabel "BP.B";
+	rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proven and positive impact on supply chain performance". 
+	
+scor:StandardPractice a owl:Class ;
+	rdfs:label "StandardPractice" ;
+	rdfs:subClassOf scor:Practice;
+	skos:altLabel "BP.S";
+	rdfs:comment "How a wide range of companies have historically done business by default or happenstance". 
 
 # Reliability Metrics Properties
 
