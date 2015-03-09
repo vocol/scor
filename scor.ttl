@@ -158,6 +158,8 @@ scor:Return a owl:Class ;
 scor:Enable a owl:Class ;
 	rdfs:subClassOf scor:Process ;
 	rdfs:label "Enable" ;
+	skos:altLabel "sE";
+	rdfs:comment "Establishing, maintaining and monitoring information, relationships, resources, assets, business rules, compliance and contracts required to operate the supply chain";
 	scor:hasProcessID "E" .
 
 # Scor Process Configurations 
@@ -245,7 +247,64 @@ scor:PlanReturn a owl:Class;
 	rdfs:label "PlanReturn" ;
 	skos:altLabel "sP5";
 	rdfs:comment "establish and adjust courses of action or tasks over specified time periods that represent a projected appropriation of return resources and assets to meet anticipated as well as unanticipated return requirements" .
+	
+scor:ManageSupplyChainBusinessRules a owl:Class;
+	rdfs:subClassOf scor:Enable;
+	rdfs:label "ManageSupplyChainBusinessRules" ;
+	skos:altLabel "sE1";
+	rdfs:comment "Establishing, documenting, communicating and publishing supply chain business rules" .	
+	
+scor:ManagePerformance a owl:Class;
+	rdfs:subClassOf scor:Enable;
+	rdfs:label "ManagePerformance" ;
+	skos:altLabel "sE2";
+	rdfs:comment "Reporting performance, identifying gaps in performance, performing root cause analysis, and developing and launching corrective actions to close gaps in perfromance" .	
+	
+scor:ManageDataAndInformation a owl:Class;
+	rdfs:subClassOf scor:Enable;
+	rdfs:label "ManageDataAndInformation" ;
+	skos:altLabel "sE3";
+	rdfs:comment "Collecting, maintaining and publishing data and information required to plan, operate, measure and manage the supply chain" .		
+	
+scor:ManageSupplyChainHumanResources a owl:Class;
+	rdfs:subClassOf scor:Enable;
+	rdfs:label "ManageSupplyChainHumanResources" ;
+	skos:altLabel "sE4";
+	rdfs:comment "Developing, governing and maintaining an organization of permanent, temporary and outsourced staff, with the right qualifications, in support of the business objects and supply chain goals" .
+	
 
+scor:ManageSupplyChainAssets a owl:Class;	
+	rdfs:subClassOf scor:Enable;
+	rdfs:label "ManageSupplyChainAssets" ;
+	skos:altLabel "sE5";
+	rdfs:comment "Scheduling, maintaining and dispositioning of supply chain assets that operate supply chain processes" .
+	
+scor:ManageSupplyChainContracts a owl:Class;	
+	rdfs:subClassOf scor:Enable;
+	rdfs:label "ManageSupplyChainContracts" ;
+	skos:altLabel "sE6";
+	rdfs:comment "The management and communication of contractual agreements in support of business objectives and supply chain goals" .
+	
+scor:ManageSupplyChainNetworks a owl:Class;	
+	rdfs:subClassOf scor:Enable;
+	rdfs:label "ManageSupplyChainNetworks" ;
+	skos:altLabel "sE7";
+	rdfs:comment "Developing, governing and maintaining a network of supply chain assets" .	
+	
+scor:ManageRegulatoryCompliance a owl:Class;	
+	rdfs:subClassOf scor:Enable;
+	rdfs:label "ManageRegulatoryCompliance" ;
+	skos:altLabel "sE8";
+	rdfs:comment "identifying, collecting, assessing and integrating regulatory compliance requirements in standard supply chain processes, policies and business rules" .	
+
+scor:ManageSupplyChainRisk a owl:Class;
+	rdfs:subClassOf scor:Enable;
+	rdfs:label "ManageSupplyChainRisk" ;
+	skos:altLabel "sE9";
+	rdfs:comment "identification and assessment of potential disruptions (risks) in the supply chain and developing a plan to mitigate these threats to operating the supply chain" .		
+	
+
+	
 scor:EmergingPractice a owl:Class ;
 	rdfs:label "EmergingPractice" ;
 	rdfs:subClassOf scor:Practice;
