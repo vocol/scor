@@ -128,11 +128,12 @@ scor:Supplier a owl:Class ;
 scor:Plan a owl:Class ;
 	rdfs:subClassOf scor:Process ;
 	rdfs:label "Plan";
+	skos:altLabel "sP";
 	rdfs:comment "The Plan processes describe the planning activities associated with operating a supply chain. This
 includes gathering customer requirements, collecting information on available resources, and balancing
 requirements and resources to determine planned capabilities and resource gaps. This is followed by
 identifying the actions required to correct any gaps." ;
-	scor:hasProcessID "P" .
+scor:hasProcessID "P" .
 
 scor:Source a owl:Class ;
 	rdfs:subClassOf scor:Process ;
@@ -214,6 +215,36 @@ scor:DeliverEngineerToOrderProduct a owl:Class;
 	rdfs:label "Deliver Engineer-to-Order Product" ;
 	rdfs:comment "" ;
 	scor:hasProcessID "sD3" .
+	
+scor:PlanSupplyChain a owl:Class;
+	rdfs:subClassOf scor:Plan;
+	rdfs:label "PlanSupplyChain" ;
+	skos:altLabel "sP1";
+	rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of supply chain resources to meet supply chain requirements for the longest time fence constraints of supply resources" .
+	
+scor:PlanSource a owl:Class;
+	rdfs:subClassOf scor:Plan;
+	rdfs:label "PlanSource" ;
+	skos:altLabel "sP2";
+	rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of material resources to meet supply chain requirements" .
+	
+scor:PlanMake a owl:Class;
+	rdfs:subClassOf scor:Plan;
+	rdfs:label "PlanMake" ;
+	skos:altLabel "sP3";
+	rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of production resources to meet production requirements" .
+	
+scor:PlanDeliver a owl:Class;
+	rdfs:subClassOf scor:Plan;
+	rdfs:label "PlanDeliver" ;
+	skos:altLabel "sP4";
+	rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of delivery resources to meet delivery requirements" .
+	
+scor:PlanReturn a owl:Class;
+	rdfs:subClassOf scor:Plan;
+	rdfs:label "PlanReturn" ;
+	skos:altLabel "sP5";
+	rdfs:comment "establish and adjust courses of action or tasks over specified time periods that represent a projected appropriation of return resources and assets to meet anticipated as well as unanticipated return requirements" .
 
 scor:EmergingPractice a owl:Class ;
 	rdfs:label "EmergingPractice" ;
