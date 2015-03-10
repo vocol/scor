@@ -277,7 +277,6 @@ scor:ManageSupplyChainHumanResources a owl:Class;
 	skos:altLabel "sE4";
 	rdfs:comment "Developing, governing and maintaining an organization of permanent, temporary and outsourced staff, with the right qualifications, in support of the business objects and supply chain goals" .
 	
-
 scor:ManageSupplyChainAssets a owl:Class;	
 	rdfs:subClassOf scor:Enable;
 	rdfs:label "ManageSupplyChainAssets" ;
@@ -308,6 +307,41 @@ scor:ManageSupplyChainRisk a owl:Class;
 	skos:altLabel "sE9";
 	rdfs:comment "identification and assessment of potential disruptions (risks) in the supply chain and developing a plan to mitigate these threats to operating the supply chain" .		
 	
+scor:SourceReturnDefectiveProduct a owl:Class;
+	rdfs:subClassOf scor:Return ;
+	rdfs:label "SourceReturnDefectiveProduct" ;
+	skos:altLabel "sSR1";
+	rdfs:comment "The return and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement" .		
+		
+scor:DeliverReturnDefectiveProduct a owl:Class;
+	rdfs:subClassOf scor:Return;
+	rdfs:label "DeliverReturnDefectiveProduct" ;
+	skos:altLabel "sDR1";
+	rdfs:comment "The receipt and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement" .			
+	
+scor:ReturnMROProduct a owl:Class;
+	rdfs:subClassOf scor:Return;
+	rdfs:label "ReturnMROProduct" ;
+	skos:altLabel "sSR2";
+	rdfs:comment "The return of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure" .	
+
+scor:DeliverReturnMROProduct a owl:Class;
+	rdfs:subClassOf scor:Return;
+	rdfs:label "DeliverReturnMROProduct" ;
+	skos:altLabel "sDR2";
+	rdfs:comment "The receipt of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure" .	
+
+scor:SourceReturnExcessProduct a owl:Class;
+	rdfs:subClassOf scor:Return;
+	rdfs:label "SourceReturnExcessProduct" ;
+	skos:altLabel "sSR3";
+	rdfs:comment "The return of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract" .	
+	
+scor:DeliverReturnExcessProduct a owl:Class;
+	rdfs:subClassOf scor:Return;
+	rdfs:label "DeliverReturnExcessProduct" ;
+	skos:altLabel "sDR3";
+	rdfs:comment "The receipt of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract" .		
 	
 scor:EmergingPractice a owl:Class ;
 	rdfs:label "EmergingPractice" ;
