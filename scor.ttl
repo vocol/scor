@@ -129,30 +129,35 @@ scor:Plan a owl:Class ;
 	rdfs:subClassOf scor:Process ;
 	rdfs:label "Plan";
 	skos:altLabel "sP";
-	rdfs:comment "The Plan processes describe the planning activities associated with operating a supply chain. This
-includes gathering customer requirements, collecting information on available resources, and balancing
-requirements and resources to determine planned capabilities and resource gaps. This is followed by
-identifying the actions required to correct any gaps." ;
-scor:hasProcessID "P" .
+	rdfs:comment "Describes the planning activities associated with operating a supply chain. This includes gathering customer requirements, collecting information on available resources, and balancing requirements and resources to determine planned capabilities and resource gaps. This is followed by identifying the actions required to correct any gaps." ;
+    scor:hasProcessID "P" .
 
 scor:Source a owl:Class ;
 	rdfs:subClassOf scor:Process ;
 	rdfs:label "Source" ;
+	skos:altLabel "sS" ;
+	rdfs:comment "Order, deliver, receipt and transfer of raw material items, subassemblies, product and/or services" ;
 	scor:hasProcessID "S" .
 
 scor:Make a owl:Class ;
 	rdfs:subClassOf scor:Process ;
 	rdfs:label "Make" ;
+	skos:altLabel "sM" ;
+	rdfs:comment "Adds value to products through mixing, separating, forming, machining, and chemical processes" ;
 	scor:hasProcessID "M" .
 
 scor:Deliver a owl:Class ;
 	rdfs:subClassOf scor:Process ;
 	rdfs:label "Deliver" ;
+	rdfs:comment "Performs customer-facing order management and order fulfillment activities" ;
+	skos:altLabel "sD" ;
 	scor:hasProcessID "D" .
 
 scor:Return a owl:Class ;
 	rdfs:subClassOf scor:Process ;
 	rdfs:label "Return" ;
+	skos:altLabel "sR" ;
+	rdfs:comment "Moves material from a customer back through the supply chain to address defects in product, ordering, or manufacturing, or to perform upkeep activities" ;
 	scor:hasProcessID "R" .
 
 scor:Enable a owl:Class ;
@@ -303,7 +308,6 @@ scor:ManageSupplyChainRisk a owl:Class;
 	skos:altLabel "sE9";
 	rdfs:comment "identification and assessment of potential disruptions (risks) in the supply chain and developing a plan to mitigate these threats to operating the supply chain" .		
 	
-
 	
 scor:EmergingPractice a owl:Class ;
 	rdfs:label "EmergingPractice" ;
