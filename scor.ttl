@@ -88,8 +88,7 @@ scor:CashToCashCycleTime a owl:Class ;
 	rdfs:label "CashToCashCycleTime" ;
 	rdfs:subClassOf scor:KeyPerformanceIndicator ;
 	skos:altLabel "AM.1.1" ;
-	rdfs:comment "The time it takes for an investment made to flow back into a company after it has been spent for raw
-materials".
+	rdfs:comment "The time it takes for an investment made to flow back into a company after it has been spent for raw materials".
 
 scor:ReturnOnFixedAssets a owl:Class ;
 	rdfs:label "ReturnOnFixedAssets" ;
@@ -395,18 +394,15 @@ scor:hasDeliveryPerformanceToCustomerCommitDate a owl:DatatypeProperty;
 
 scor:hasDocumentationAccuracy a owl:DatatypeProperty;
 	rdfs:label "Documentation Accuracy" ;
-	rdfs:comment "Percentage of orders with on time and accurate documentation supporting the order, including
-packing slips, bills of lading, invoices, etc." ;
+	rdfs:comment "Percentage of orders with on time and accurate documentation supporting the order, including packing slips, bills of lading, invoices, etc." ;
 	rdfs:domain scor:Process ;
 	rdfs:range xsd:double ;
 	scor:hasMetricID "RL2.3" ;
-	scor:isCalculatedBy "[Total number of orders delivered with accurate documentation] / [Total number of orders delivered]
-x 100%" .
+	scor:isCalculatedBy "[Total number of orders delivered with accurate documentation] / [Total number of orders delivered] x 100%" .
 
 scor:hasPerfectCondition a owl:DatatypeProperty;
 	rdfs:label "Perfect Condition" ;
-	rdfs:comment "Percentage of orders delivered in an undamaged state that meet specification, have the correct
-configuration, are faultlessly installed (as applicable) and accepted by the customer." ;
+	rdfs:comment "Percentage of orders delivered in an undamaged state that meet specification, have the correct configuration, are faultlessly installed (as applicable) and accepted by the customer." ;
 	scor:hasMetricID "RL2.4" ;
 	scor:isCalculatedBy "[ Number of orders delivered in Perfect Condition ] / [Number of orders delivered ] x 100%" ;
 	rdfs:domain scor:Process ;
@@ -415,8 +411,7 @@ configuration, are faultlessly installed (as applicable) and accepted by the cus
 scor:hasDeliveryItemAccuracy a owl:DatatypeProperty;
 	scor:hasMetricID "RL3.33" ;
 	rdfs:label "Delivery Item Accuracy" ;
-	scor:isCalculatedBy "Percentage of orders in which all items ordered are
-the items actually provided, and no extra items are provided" ;
+	scor:isCalculatedBy "Percentage of orders in which all items ordered are the items actually provided, and no extra items are provided" ;
 	rdfs:comment "" ;
 	rdfs:domain scor:Process ;
 	rdfs:range xsd:double .
