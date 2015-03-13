@@ -395,8 +395,7 @@ scor:hasDeliveryPerformanceToCustomerCommitDate a owl:DatatypeProperty;
 
 scor:hasDocumentationAccuracy a owl:DatatypeProperty;
 	rdfs:label "Documentation Accuracy" ;
-	rdfs:comment "Percentage of orders with on time and accurate documentation supporting the order, including
-packing slips, bills of lading, invoices, etc." ;
+	rdfs:comment "Percentage of orders with on time and accurate documentation supporting the order, including packing slips, bills of lading, invoices, etc." ;
 	rdfs:domain scor:Process ;
 	rdfs:range xsd:double ;
 	scor:hasMetricID "RL2.3" ;
