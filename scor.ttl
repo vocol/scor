@@ -1,626 +1,715 @@
-@prefix gr: <http://purl.org/goodrelations/v1#>.
-@prefix scor: <http://eccenca.com/scor/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+# Saved by TopBraid on Fri Mar 20 16:23:07 CET 2015
+# baseURI: http://eccenca.com/scor/#
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.w3.org/2004/02/skos/core
 
-<http://eccenca.com/scor/#> rdf:type owl:Ontology ;
-							rdfs:label "Supply Chain Operation Reference Vocabulary"^^xsd:string ; 
-							dc:date "2014-10-05T12:52:16"^^xsd:dateTime ;
-                            rdfs:comment "Supply Chain Operation Reference Vocabulary has the purpose to represent the information about the Supply Chain in order to use this in a Linked Data environement"@en .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix scor:    <http://eccenca.com/scor/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-# scor Main classes
+<http://eccenca.com/scor/#>
+      rdf:type owl:Ontology ;
+      rdfs:comment "Supply Chain Operation Reference Vocabulary has the purpose to represent the information about the Supply Chain in order to use this in a Linked Data environement"@en ;
+      rdfs:label "Supply Chain Operation Reference Vocabulary"^^xsd:string ;
+      dc:date "2014-10-05T12:52:16"^^xsd:dateTime ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> , dc: .
 
-scor:Process a owl:Class ;
-	rdfs:label "Process" ;
-	rdfs:comment "A process is a unique activity performed to meet predefined outcomes" .
+scor:Agility
+      rdf:type owl:Class ;
+      rdfs:comment "The Agility attribute describes the ability to respond to external influences; the ability to and speed of change." ;
+      rdfs:label "Agility" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
 
-scor:Metric a owl:Class ;
-	rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
-	rdfs:label "Metric" .
-	
-scor:People a owl:Class ;
-	rdfs:label "People" ;
-	rdfs:comment "Standards for managing talent in the supply chain". 
+scor:Assets
+      rdf:type owl:Class ;
+      rdfs:comment "The Assets attribute describes the ability to efficiently utilize assets." ;
+      rdfs:label "Assets" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
 
-scor:Practice a owl:Class ;
-	rdfs:label "Practice" ;
-	rdfs:comment "A practice is a unique way to configure a process or a set of processes". 
-	
-scor:PerformanceAttribute a owl:Class ;
-	rdfs:label "PerformanceAttribute" ;
-	rdfs:comment "A performance attribute is a grouping or categorization of metrics used to express a specific strategy". 
-	
-scor:KeyPerformanceIndicator a owl:Class ;
-	rdfs:label "KeyPerformanceIndicator" ;
-	rdfs:subClassOf scor:Metric ;
-	rdfs:comment "Diagnostics for the overall health of the supply chain. Benchmarking Key Performance Indicators helps establishing realistic targets to support the strategic directions". 
+scor:BestPractice
+      rdf:type owl:Class ;
+      rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proven and positive impact on supply chain performance" ;
+      rdfs:label "BestPractice" ;
+      rdfs:subClassOf scor:Practice ;
+      skos:altLabel "BP.B" .
 
-# scor Key Performance Indicators. Metrics of level 1
-scor:PerfectOrderFulfillment a owl:Class ;
-	rdfs:label "PerfectOrderFulfillment" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "RL.1.1" ;
-	rdfs:comment "Delivered complete, on time according the client's specifications of time. Documentation complete. Faultlessly installed".
-	
-scor:OrderFulfillmentCycleTime a owl:Class ;
-	rdfs:label "OrderFulfillmentCycleTime" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "RS.1.1" ;
-	rdfs:comment "Order Fulfillment Cycle Time".	
-	
-scor:UpsideFlexibility a owl:Class ;
-	rdfs:label "UpsideFlexibility" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "AG.1.1" ;
-	rdfs:comment "Upside Flexibility".	
-	
-scor:UpsideAdaptability a owl:Class ;
-	rdfs:label "UpsideAdaptability" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "AG.1.2" ;
-	rdfs:comment "Upside Adaptability".	
-	
-scor:DownsideAdaptability a owl:Class ;
-	rdfs:label "DownsideAdaptability" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "AG.1.3" ;
-	rdfs:comment "Downside  Adaptability".
-	
-scor:OverallValueAtRisk a owl:Class ;
-	rdfs:label "OverallValueAtRisk" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "AG.1.4" ;
-	rdfs:comment "Overall Value-at-Risk".
-	
-scor:TotalCostToServe a owl:Class ;
-	rdfs:label "TotalCostToServe" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "CO.1.001" ;
-	rdfs:comment "The sum of the Supply Chain Cost to deliver products and services to customers".
+scor:CashToCashCycleTime
+      rdf:type owl:Class ;
+      rdfs:comment "The time it takes for an investment made to flow back into a company after it has been spent for raw materials" ;
+      rdfs:label "CashToCashCycleTime" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AM.1.1" .
 
-scor:CashToCashCycleTime a owl:Class ;
-	rdfs:label "CashToCashCycleTime" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "AM.1.1" ;
-	rdfs:comment "The time it takes for an investment made to flow back into a company after it has been spent for raw materials".
+scor:ComplianceDocumentationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DocumentationAccuracy ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:ReturnOnFixedAssets a owl:Class ;
-	rdfs:label "ReturnOnFixedAssets" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "AM.1.2." ;
-	rdfs:comment "Measures the return an organization receives on its invested capital in supply chain fixed assets. This includes the fixed assets used in Plan, Source, Make,Deliver, and Return".
-	
-scor:ReturnOnWorkingCapital a owl:Class ;
-	rdfs:label "ReturnOnWorkingCapital" ;
-	rdfs:subClassOf scor:KeyPerformanceIndicator ;
-	skos:altLabel "AM.1.3." ;
-	rdfs:comment "Assesses the magnitude of investment relative to a company's working capital position versus the revenue generated from a supply chain.".
+scor:Cost
+      rdf:type owl:Class ;
+      rdfs:comment "The Cost attribute describes the cost of operating the process." ;
+      rdfs:label "Cost" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
 
-# scor Scope
-scor:Scope a owl:Class ;
-	rdfs:label "Scope" ;
-	rdfs:comment "Types of focus measure for performance attributes.".
+scor:Customer
+      rdf:type owl:Class ;
+      rdfs:comment "Customer focus for performance attributes" ;
+      rdfs:label "Customer" ;
+      rdfs:subClassOf scor:Scope .
 
-scor:Internal a owl:Class ;
-	rdfs:label "Internal" ;
-	rdfs:subClassOf scor:Scope ;
-	rdfs:comment "Internal focus for performance attributes".
-	
-scor:Customer a owl:Class ;
-	rdfs:label "Customer" ;
-	rdfs:subClassOf scor:Scope ;
-	rdfs:comment "Customer focus for performance attributes".
-	
-scor:Supplier a owl:Class ;
-	rdfs:label "Supplier" ;
-	rdfs:subClassOf scor:Scope ;
-	rdfs:comment "Supplier focus for performance attributes".	
-	
-# scor Makro Processes
+scor:CustomerCommitDateAchievementTimeCustomerReceiving
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DeliveryPerformanceToCustomerCommitDate ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:Plan a owl:Class ;
-	rdfs:subClassOf scor:Process ;
-	rdfs:label "Plan";
-	skos:altLabel "sP";
-	rdfs:comment "Describes the planning activities associated with operating a supply chain. This includes gathering customer requirements, collecting information on available resources, and balancing requirements and resources to determine planned capabilities and resource gaps. This is followed by identifying the actions required to correct any gaps." ;
-    scor:hasProcessID "P" .
+scor:Deliver
+      rdf:type owl:Class ;
+      rdfs:comment "Performs customer-facing order management and order fulfillment activities" ;
+      rdfs:label "Deliver" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "D" ;
+      skos:altLabel "sD" .
 
-scor:Source a owl:Class ;
-	rdfs:subClassOf scor:Process ;
-	rdfs:label "Source" ;
-	skos:altLabel "sS" ;
-	rdfs:comment "Order, deliver, receipt and transfer of raw material items, subassemblies, product and/or services" ;
-	scor:hasProcessID "S" .
+scor:DeliverEngineerToOrderProduct
+      rdf:type owl:Class ;
+      rdfs:comment "Obtaining, responding to, and allocating resources for a customer order that has unique requirements or specifications and delivering a product that is partially or fully designed, redesigned, manufactured, and/or assembled from a bill of materials or recipe that includes one or more custom parts or ingredients" ;
+      rdfs:label "Deliver Engineer-to-Order Product" ;
+      rdfs:subClassOf scor:Deliver ;
+      scor:hasProcessID "sD3" ;
+      skos:altLabel "sD3" .
 
-scor:Make a owl:Class ;
-	rdfs:subClassOf scor:Process ;
-	rdfs:label "Make" ;
-	skos:altLabel "sM" ;
-	rdfs:comment "Adds value to products through mixing, separating, forming, machining, and chemical processes" ;
-	scor:hasProcessID "M" .
+scor:DeliverMakeToOrderProduct
+      rdf:type owl:Class ;
+      rdfs:comment "Delivers product that is sourced, configured, manufactured, and/or assembled from standard raw materials, parts, ingredients or sub-assemblies, in response to a specific firm customer order" ;
+      rdfs:label "Deliver Make-to-Order Product" ;
+      rdfs:subClassOf scor:Deliver ;
+      scor:hasProcessID "sD2" ;
+      skos:altLabel "sD2" .
 
-scor:Deliver a owl:Class ;
-	rdfs:subClassOf scor:Process ;
-	rdfs:label "Deliver" ;
-	rdfs:comment "Performs customer-facing order management and order fulfillment activities" ;
-	skos:altLabel "sD" ;
-	scor:hasProcessID "D" .
+scor:DeliverRetailProduct
+      rdf:type owl:Class ;
+      rdfs:comment "To acquire, merchandise, and sell finished goods at a retail store" ;
+      rdfs:label "Deliver Retail Product" ;
+      rdfs:subClassOf scor:Deliver ;
+      skos:altLabel "sD4" .
 
-scor:Return a owl:Class ;
-	rdfs:subClassOf scor:Process ;
-	rdfs:label "Return" ;
-	skos:altLabel "sR" ;
-	rdfs:comment "Moves material from a customer back through the supply chain to address defects in product, ordering, or manufacturing, or to perform upkeep activities" ;
-	scor:hasProcessID "R" .
+scor:DeliverReturnDefectiveProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The receipt and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement" ;
+      rdfs:label "Deliver Return Defective Product" ;
+      rdfs:subClassOf scor:Return ;
+      skos:altLabel "sDR1" .
 
-scor:Enable a owl:Class ;
-	rdfs:subClassOf scor:Process ;
-	rdfs:label "Enable" ;
-	skos:altLabel "sE";
-	rdfs:comment "Establishing, maintaining and monitoring information, relationships, resources, assets, business rules, compliance and contracts required to operate the supply chain";
-	scor:hasProcessID "E" .
+scor:DeliverReturnExcessProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The receipt of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract" ;
+      rdfs:label "Deliver Return Excess Product" ;
+      rdfs:subClassOf scor:Return ;
+      skos:altLabel "sDR3" .
 
-# Scor Process Configurations 
+scor:DeliverReturnMROProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The receipt of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure" ;
+      rdfs:label "Deliver Return MRO Product" ;
+      rdfs:subClassOf scor:Return ;
+      skos:altLabel "sDR2" .
 
-scor:SourceStockedProduct a owl:Class;
-	rdfs:subClassOf scor:Source;
-	rdfs:label "Source Stocked Product" ;
-	rdfs:comment "" ;
-	scor:hasProcessID "sS1" .
+scor:DeliverStockedProduct
+      rdf:type owl:Class ;
+      rdfs:comment "Delivers product that is sourced or made based on aggregated customer orders, projected orders/demand and inventory re-ordering parameters" ;
+      rdfs:label "Deliver Stocked Product" ;
+      rdfs:subClassOf scor:Deliver ;
+      scor:hasProcessID "sD1" ;
+      skos:altLabel "sD1" .
 
-scor:SourceMakeToOrderProduct a owl:Class;
-	rdfs:subClassOf scor:Source;
-	rdfs:label "Source Make-to-Order Product" ;
-	rdfs:comment "" ;
-	scor:hasProcessID "sS2" .
+scor:DeliveryItemAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PercentOfOrdersDeliveredInFull ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:SourceEngineerToOrderProduct a owl:Class;
-	rdfs:subClassOf scor:Source;
-	rdfs:label "Source Engineer-to-Order Product" ;
-	rdfs:comment "" ;
-	scor:hasProcessID "sS3" .
+scor:DeliveryLocationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DeliveryPerformanceToCustomerCommitDate ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:MakeToStock a owl:Class;
-	rdfs:subClassOf scor:Make;
-	rdfs:label "Make-to-Stock" ;
-	rdfs:comment "" ;
-	scor:hasProcessID "sM1" .
+scor:DeliveryPerformanceToCustomerCommitDate
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectOrderFulfillment ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:MakeToOrder a owl:Class;
-	rdfs:subClassOf scor:Make;
-	rdfs:label "Make-to-Order" ;
-	rdfs:comment "" ;
-	scor:hasProcessID "sM2" .
+scor:DeliveryQuantityAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PercentOfOrdersDeliveredInFull ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:EngineerToOrder a owl:Class;
-	rdfs:subClassOf scor:Make;
-	rdfs:label "Engineer-to-Order" ;
-	rdfs:comment "" ;
-	scor:hasProcessID "sM3" .
+scor:DocumentationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectOrderFulfillment ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:DeliverStockedProduct a owl:Class;
-	rdfs:subClassOf scor:Deliver;
-	rdfs:label "Deliver Stocked Product" ;
-	skos:altLabel "sD1" ;
-	rdfs:comment "Delivers product that is sourced or made based on aggregated customer orders, projected orders/demand and inventory re-ordering parameters" ;
-	scor:hasProcessID "sD1" .
+scor:DownsideAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "Downside  Adaptability" ;
+      rdfs:label "DownsideAdaptability" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AG.1.3" .
 
-scor:DeliverMakeToOrderProduct a owl:Class;
-	rdfs:subClassOf scor:Deliver;
-	rdfs:label "Deliver Make-to-Order Product" ;
-	skos:altLabel "sD2" ;
-	rdfs:comment "Delivers product that is sourced, configured, manufactured, and/or assembled from standard raw materials, parts, ingredients or sub-assemblies, in response to a specific firm customer order" ;
-	scor:hasProcessID "sD2" .
+scor:EmergingPractice
+      rdf:type owl:Class ;
+      rdfs:comment "Introduce new technology, knowledge or radically different ways of organizing processes" ;
+      rdfs:label "EmergingPractice" ;
+      rdfs:subClassOf scor:Practice ;
+      skos:altLabel "BP.E" .
 
-scor:DeliverEngineerToOrderProduct a owl:Class;
-	rdfs:subClassOf scor:Deliver;
-	rdfs:label "Deliver Engineer-to-Order Product" ;
-	skos:altLabel "sD3" ;
-	rdfs:comment "Obtaining, responding to, and allocating resources for a customer order that has unique requirements or specifications and delivering a product that is partially or fully designed, redesigned, manufactured, and/or assembled from a bill of materials or recipe that includes one or more custom parts or ingredients" ;
-	scor:hasProcessID "sD3" .
-	
-scor:DeliverRetailProduct a owl:Class;
-	rdfs:subClassOf scor:Deliver;
-	rdfs:label "Deliver Retail Product" ;
-	skos:altLabel "sD4" ;
-	rdfs:comment "To acquire, merchandise, and sell finished goods at a retail store" .
-	
-scor:PlanSupplyChain a owl:Class;
-	rdfs:subClassOf scor:Plan;
-	rdfs:label "Plan Supply Chain" ;
-	skos:altLabel "sP1";
-	rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of supply chain resources to meet supply chain requirements for the longest time fence constraints of supply resources" .
-	
-scor:PlanSource a owl:Class;
-	rdfs:subClassOf scor:Plan;
-	rdfs:label "Plan Source" ;
-	skos:altLabel "sP2";
-	rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of material resources to meet supply chain requirements" .
-	
-scor:PlanMake a owl:Class;
-	rdfs:subClassOf scor:Plan;
-	rdfs:label "Plan Make" ;
-	skos:altLabel "sP3";
-	rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of production resources to meet production requirements" .
-	
-scor:PlanDeliver a owl:Class;
-	rdfs:subClassOf scor:Plan;
-	rdfs:label "Plan Deliver" ;
-	skos:altLabel "sP4";
-	rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of delivery resources to meet delivery requirements" .
-	
-scor:PlanReturn a owl:Class;
-	rdfs:subClassOf scor:Plan;
-	rdfs:label "Plan Return" ;
-	skos:altLabel "sP5";
-	rdfs:comment "establish and adjust courses of action or tasks over specified time periods that represent a projected appropriation of return resources and assets to meet anticipated as well as unanticipated return requirements" .
-	
-scor:ManageSupplyChainBusinessRules a owl:Class;
-	rdfs:subClassOf scor:Enable;
-	rdfs:label "Manage Supply Chain Business Rules" ;
-	skos:altLabel "sE1";
-	rdfs:comment "Establishing, documenting, communicating and publishing supply chain business rules" .	
-	
-scor:ManagePerformance a owl:Class;
-	rdfs:subClassOf scor:Enable;
-	rdfs:label "Manage Performance" ;
-	skos:altLabel "sE2";
-	rdfs:comment "Reporting performance, identifying gaps in performance, performing root cause analysis, and developing and launching corrective actions to close gaps in perfromance" .	
-	
-scor:ManageDataAndInformation a owl:Class;
-	rdfs:subClassOf scor:Enable;
-	rdfs:label "Manage Data and Information" ;
-	skos:altLabel "sE3";
-	rdfs:comment "Collecting, maintaining and publishing data and information required to plan, operate, measure and manage the supply chain" .		
-	
-scor:ManageSupplyChainHumanResources a owl:Class;
-	rdfs:subClassOf scor:Enable;
-	rdfs:label "Manage Supply Chain Human Resources" ;
-	skos:altLabel "sE4";
-	rdfs:comment "Developing, governing and maintaining an organization of permanent, temporary and outsourced staff, with the right qualifications, in support of the business objects and supply chain goals" .
-	
-scor:ManageSupplyChainAssets a owl:Class;	
-	rdfs:subClassOf scor:Enable;
-	rdfs:label "Manage Supply Chain Assets" ;
-	skos:altLabel "sE5";
-	rdfs:comment "Scheduling, maintaining and dispositioning of supply chain assets that operate supply chain processes" .
-	
-scor:ManageSupplyChainContracts a owl:Class;	
-	rdfs:subClassOf scor:Enable;
-	rdfs:label "Manage Supply Chain Contracts" ;
-	skos:altLabel "sE6";
-	rdfs:comment "The management and communication of contractual agreements in support of business objectives and supply chain goals" .
-	
-scor:ManageSupplyChainNetworks a owl:Class;	
-	rdfs:subClassOf scor:Enable;
-	rdfs:label "Manage Supply Chain Networks" ;
-	skos:altLabel "sE7";
-	rdfs:comment "Developing, governing and maintaining a network of supply chain assets" .	
-	
-scor:ManageRegulatoryCompliance a owl:Class;	
-	rdfs:subClassOf scor:Enable;
-	rdfs:label "Manage Regulatory Compliance" ;
-	skos:altLabel "sE8";
-	rdfs:comment "Identifying, collecting, assessing and integrating regulatory compliance requirements in standard supply chain processes, policies and business rules" .	
+scor:Enable
+      rdf:type owl:Class ;
+      rdfs:comment "Establishing, maintaining and monitoring information, relationships, resources, assets, business rules, compliance and contracts required to operate the supply chain" ;
+      rdfs:label "Enable" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "E" ;
+      skos:altLabel "sE" .
 
-scor:ManageSupplyChainRisk a owl:Class;
-	rdfs:subClassOf scor:Enable;
-	rdfs:label "Manage Supply Chain Risk" ;
-	skos:altLabel "sE9";
-	rdfs:comment "Identification and assessment of potential disruptions (risks) in the supply chain and developing a plan to mitigate these threats to operating the supply chain" .		
-	
-scor:SourceReturnDefectiveProduct a owl:Class;
-	rdfs:subClassOf scor:Return ;
-	rdfs:label "Source Return Defective Product" ;
-	skos:altLabel "sSR1";
-	rdfs:comment "The return and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement" .		
-		
-scor:DeliverReturnDefectiveProduct a owl:Class;
-	rdfs:subClassOf scor:Return;
-	rdfs:label "Deliver Return Defective Product" ;
-	skos:altLabel "sDR1";
-	rdfs:comment "The receipt and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement" .			
-	
-scor:ReturnMROProduct a owl:Class;
-	rdfs:subClassOf scor:Return;
-	rdfs:label "Return MRO Product" ;
-	skos:altLabel "sSR2";
-	rdfs:comment "The return of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure" .	
+scor:EngineerToOrder
+      rdf:type owl:Class ;
+      rdfs:comment "" ;
+      rdfs:label "Engineer-to-Order" ;
+      rdfs:subClassOf scor:Make ;
+      scor:hasProcessID "sM3" .
 
-scor:DeliverReturnMROProduct a owl:Class;
-	rdfs:subClassOf scor:Return;
-	rdfs:label "Deliver Return MRO Product" ;
-	skos:altLabel "sDR2";
-	rdfs:comment "The receipt of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure" .	
+scor:Internal
+      rdf:type owl:Class ;
+      rdfs:comment "Internal focus for performance attributes" ;
+      rdfs:label "Internal" ;
+      rdfs:subClassOf scor:Scope .
 
-scor:SourceReturnExcessProduct a owl:Class;
-	rdfs:subClassOf scor:Return;
-	rdfs:label "Source Return Excess Product" ;
-	skos:altLabel "sSR3";
-	rdfs:comment "The return of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract" .	
-	
-scor:DeliverReturnExcessProduct a owl:Class;
-	rdfs:subClassOf scor:Return;
-	rdfs:label "Deliver Return Excess Product" ;
-	skos:altLabel "sDR3";
-	rdfs:comment "The receipt of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract" .		
-	
-scor:EmergingPractice a owl:Class ;
-	rdfs:label "EmergingPractice" ;
-	rdfs:subClassOf scor:Practice;
-	skos:altLabel "BP.E";
-	rdfs:comment "Introduce new technology, knowledge or radically different ways of organizing processes". 
+scor:KeyPerformanceIndicator
+      rdf:type owl:Class ;
+      rdfs:comment "Diagnostics for the overall health of the supply chain. Benchmarking Key Performance Indicators helps establishing realistic targets to support the strategic directions" ;
+      rdfs:label "KeyPerformanceIndicator" ;
+      rdfs:subClassOf scor:Metric .
 
-scor:BestPractice a owl:Class ;
-	rdfs:label "BestPractice" ;
-	rdfs:subClassOf scor:Practice;
-	skos:altLabel "BP.B";
-	rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proven and positive impact on supply chain performance". 
-	
-scor:StandardPractice a owl:Class ;
-	rdfs:label "StandardPractice" ;
-	rdfs:subClassOf scor:Practice;
-	skos:altLabel "BP.S";
-	rdfs:comment "How a wide range of companies have historically done business by default or happenstance". 
+scor:Make
+      rdf:type owl:Class ;
+      rdfs:comment "Adds value to products through mixing, separating, forming, machining, and chemical processes" ;
+      rdfs:label "Make" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "M" ;
+      skos:altLabel "sM" .
 
-# Reliability Metrics Properties
+scor:MakeToOrder
+      rdf:type owl:Class ;
+      rdfs:comment "" ;
+      rdfs:label "Make-to-Order" ;
+      rdfs:subClassOf scor:Make ;
+      scor:hasProcessID "sM2" .
 
-scor:hasPerfectOrderFulfillment a owl:DatatypeProperty;
-	rdfs:label "has Perfect Order Fulfillment" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double ;
-	scor:hasMetricID "RL1.1" ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-		
-scor:hasPercentOfOrdersDeliveredInFull a owl:DatatypeProperty;
-	rdfs:label "has Percent of Orders Delivered In Full" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double ;
-	scor:hasMetricID "RL2.1" ;
-	scor:isCalculatedBy "[Total number of orders delivered in full] / [Total number of orders delivered] x 100%" .
+scor:MakeToStock
+      rdf:type owl:Class ;
+      rdfs:comment "" ;
+      rdfs:label "Make-to-Stock" ;
+      rdfs:subClassOf scor:Make ;
+      scor:hasProcessID "sM1" .
 
-scor:hasDeliveryPerformanceToCustomerCommitDate a owl:DatatypeProperty;
-	rdfs:label "has Percent of Orders Delivered In Full" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double ;
-	scor:hasMetricID "RL2.2" ;
-	scor:isCalculatedBy "[Total number of orders delivered on the original commitment date] / [Total number of orders delivered] x 100%" .
+scor:ManageDataInformation
+      rdf:type owl:Class ;
+      rdfs:comment "Collecting, maintaining and publishing data and information required to plan, operate, measure and manage the supply chain" ;
+      rdfs:label "Manage Data and Information" ;
+      rdfs:subClassOf scor:Enable ;
+      skos:altLabel "sE3" .
 
-scor:hasDocumentationAccuracy a owl:DatatypeProperty;
-	rdfs:label "Documentation Accuracy" ;
-	rdfs:comment "Percentage of orders with on time and accurate documentation supporting the order, including packing slips, bills of lading, invoices, etc." ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double ;
-	scor:hasMetricID "RL2.3" ;
-	scor:isCalculatedBy "[Total number of orders delivered with accurate documentation] / [Total number of orders delivered] x 100%" .
+scor:ManagePerformance
+      rdf:type owl:Class ;
+      rdfs:comment "Reporting performance, identifying gaps in performance, performing root cause analysis, and developing and launching corrective actions to close gaps in perfromance" ;
+      rdfs:label "Manage Performance" ;
+      rdfs:subClassOf scor:Enable ;
+      skos:altLabel "sE2" .
 
-scor:hasPerfectCondition a owl:DatatypeProperty;
-	rdfs:label "Perfect Condition" ;
-	rdfs:comment "Percentage of orders delivered in an undamaged state that meet specification, have the correct configuration, are faultlessly installed (as applicable) and accepted by the customer." ;
-	scor:hasMetricID "RL2.4" ;
-	scor:isCalculatedBy "[ Number of orders delivered in Perfect Condition ] / [Number of orders delivered ] x 100%" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double .
+scor:ManageRegulatoryCompliance
+      rdf:type owl:Class ;
+      rdfs:comment "Identifying, collecting, assessing and integrating regulatory compliance requirements in standard supply chain processes, policies and business rules" ;
+      rdfs:label "Manage Regulatory Compliance" ;
+      rdfs:subClassOf scor:Enable ;
+      skos:altLabel "sE8" .
 
-scor:hasDeliveryItemAccuracy a owl:DatatypeProperty;
-	scor:hasMetricID "RL3.33" ;
-	rdfs:label "Delivery Item Accuracy" ;
-	scor:isCalculatedBy "Percentage of orders in which all items ordered are the items actually provided, and no extra items are provided" ;
-	rdfs:comment "" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double .
+scor:ManageSupplyChainAssets
+      rdf:type owl:Class ;
+      rdfs:comment "Scheduling, maintaining and dispositioning of supply chain assets that operate supply chain processes" ;
+      rdfs:label "Manage Supply Chain Assets" ;
+      rdfs:subClassOf scor:Enable ;
+      skos:altLabel "sE5" .
 
-scor:hasDeliveryQuantityAccuracy a owl:DatatypeProperty;
-	rdfs:label "Delivery Quantity Accuracy" ;
-	scor:hasMetricID "RL3.35" ;
-	scor:isCalculatedBy "Percentage of orders which is delivered to the correct location and customer entity" ;
-	rdfs:comment "" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double .
+scor:ManageSupplyChainBusinessRules
+      rdf:type owl:Class ;
+      rdfs:comment "Establishing, documenting, communicating and publishing supply chain business rules" ;
+      rdfs:label "Manage Supply Chain Business Rules" ;
+      rdfs:subClassOf scor:Enable ;
+      skos:altLabel "sE1" .
 
-scor:hasCustomerCommitDateAchievementTimeCustomerReceiving a owl:DatatypeProperty;	
-	rdfs:label "Delivery Performance to Customer Commit Date" ;
-	scor:hasMetricID "RL3.32" ;
-	scor:isCalculatedBy "" ;
-	rdfs:comment "" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double .
+scor:ManageSupplyChainContracts
+      rdf:type owl:Class ;
+      rdfs:comment "The management and communication of contractual agreements in support of business objectives and supply chain goals" ;
+      rdfs:label "Manage Supply Chain Contracts" ;
+      rdfs:subClassOf scor:Enable ;
+      skos:altLabel "sE6" .
 
-scor:hasDeliveryLocationAccuracy a owl:DatatypeProperty;
-	rdfs:label "Delivery Location Accuracy" ;
-	scor:hasMetricID "RL3.34" ;
-	scor:isCalculatedBy "" ;
-	rdfs:comment "" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double .
+scor:ManageSupplyChainHumanResources
+      rdf:type owl:Class ;
+      rdfs:comment "Developing, governing and maintaining an organization of permanent, temporary and outsourced staff, with the right qualifications, in support of the business objects and supply chain goals" ;
+      rdfs:label "Manage Supply Chain Human Resources" ;
+      rdfs:subClassOf scor:Enable ;
+      skos:altLabel "sE4" .
 
-scor:hasComplianceDocumentationAccuracy a owl:DatatypeProperty;
-	rdfs:label "Compliance Documentation Accuracy" ;
-	scor:hasMetricID "RL3.31" ;
-	scor:isCalculatedBy "" ;
-	rdfs:comment "" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double .
+scor:ManageSupplyChainNetworks
+      rdf:type owl:Class ;
+      rdfs:comment "Developing, governing and maintaining a network of supply chain assets" ;
+      rdfs:label "Manage Supply Chain Networks" ;
+      rdfs:subClassOf scor:Enable ;
+      skos:altLabel "sE7" .
 
-scor:hasOtherRequiredDocumentationAccuracy a owl:DatatypeProperty;	
-	rdfs:label "Other Required Documentation Accuracy" ;
-	scor:hasMetricID "RL3.43" ;
-	scor:isCalculatedBy "" ;
-	rdfs:comment "" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double .
+scor:ManageSupplyChainRisk
+      rdf:type owl:Class ;
+      rdfs:comment "Identification and assessment of potential disruptions (risks) in the supply chain and developing a plan to mitigate these threats to operating the supply chain" ;
+      rdfs:label "Manage Supply Chain Risk" ;
+      rdfs:subClassOf scor:Enable ;
+      skos:altLabel "sE9" .
 
-scor:hasPaymentDocumentationAccuracy a owl:DatatypeProperty;
-	rdfs:label "Payment Documentation Accuracy" ;
-	scor:hasMetricID "RL3.45" ;
-	scor:isCalculatedBy "" ;
-	rdfs:comment "" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double .
+scor:Metric
+      rdf:type owl:Class ;
+      rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+      rdfs:label "Metric" .
 
-scor:hasShippingDocumentationAccuracy a owl:DatatypeProperty;	
-	rdfs:label "Shipping Documentation Accuracy" ;
-	scor:hasMetricID "RL3.50" ;
-	scor:isCalculatedBy "" ;
-	rdfs:comment "" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:double .
+scor:OrderDeliveredDamageFreeConformance
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:hasPercentOfFaultlessInstallations a owl:DatatypeProperty;	
-	rdfs:label "% Of Faultless Installations" ;
-	scor:hasMetricID "RL3.12" ;
-	rdfs:comment "" .
+scor:OrderDeliveredDefectFreeConformance
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:hasPercentOfOrdersOrLinesReceivedDamageFree a owl:DatatypeProperty;		
-	rdfs:label "% Orders/lines received damage free" ;
-	scor:hasMetricID "RL3.24" ;
-	rdfs:comment "" .
+scor:OrderFulfillmentCycleTime
+      rdf:type owl:Class ;
+      rdfs:comment "Order Fulfillment Cycle Time" ;
+      rdfs:label "OrderFulfillmentCycleTime" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "RS.1.1" .
 
-scor:hasOrdersDeliveredDamageFreeConformance a owl:DatatypeProperty;		
-	rdfs:label "Orders Delivered Damage Free Conformance" ;
-	scor:hasMetricID "RL3.41" ;
-	rdfs:comment "" .
+scor:OtherRequiredDocumenationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DocumentationAccuracy ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:hasOrdersDeliveredDefectFreeConformance a owl:DatatypeProperty;	
-	rdfs:label "Orders Delivered Defect Free Conformance" ;
-	scor:hasMetricID "RL3.42" ;
-	rdfs:comment "" .
+scor:OverallValueAtRisk
+      rdf:type owl:Class ;
+      rdfs:comment "Overall Value-at-Risk" ;
+      rdfs:label "OverallValueAtRisk" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AG.1.4" .
 
-scor:hasWarrantyAndReturns a owl:DatatypeProperty;		
-	rdfs:label "Warranty and Returns" ;
-	scor:hasMetricID "RL3.55" ;
-	rdfs:comment "" .
+scor:PaymentDocumenationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DocumentationAccuracy ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
+scor:People
+      rdf:type owl:Class ;
+      rdfs:comment "Standards for managing talent in the supply chain" ;
+      rdfs:label "People" .
 
-# Properties
+scor:PercentOfFaultnessInstallations
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:measure a owl:ObjectProperty ;
+scor:PercentOfOrdersDeliveredInFull
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectOrderFulfillment ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PercentOrdersLinesReceivedDamageFree
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PerfectCondition
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectOrderFulfillment ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PerfectOrderFulfillment
+      rdf:type owl:Class ;
+      rdfs:comment "Delivered complete, on time according the client's specifications of time. Documentation complete. Faultlessly installed" ;
+      rdfs:label "PerfectOrderFulfillment" ;
+      rdfs:subClassOf scor:Reliability , scor:KeyPerformanceIndicator ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" ;
+      skos:altLabel "RL.1.1" .
+
+scor:PerformanceAttribute
+      rdf:type owl:Class ;
+      rdfs:comment "A performance attribute is a grouping or categorization of metrics used to express a specific strategy" ;
+      rdfs:label "PerformanceAttribute" .
+
+scor:Plan
+      rdf:type owl:Class ;
+      rdfs:comment "Describes the planning activities associated with operating a supply chain. This includes gathering customer requirements, collecting information on available resources, and balancing requirements and resources to determine planned capabilities and resource gaps. This is followed by identifying the actions required to correct any gaps." ;
+      rdfs:label "Plan" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "P" ;
+      skos:altLabel "sP" .
+
+scor:PlanDeliver
+      rdf:type owl:Class ;
+      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of delivery resources to meet delivery requirements" ;
+      rdfs:label "Plan Deliver" ;
+      rdfs:subClassOf scor:Plan ;
+      skos:altLabel "sP4" .
+
+scor:PlanMake
+      rdf:type owl:Class ;
+      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of production resources to meet production requirements" ;
+      rdfs:label "Plan Make" ;
+      rdfs:subClassOf scor:Plan ;
+      skos:altLabel "sP3" .
+
+scor:PlanReturn
+      rdf:type owl:Class ;
+      rdfs:comment "establish and adjust courses of action or tasks over specified time periods that represent a projected appropriation of return resources and assets to meet anticipated as well as unanticipated return requirements" ;
+      rdfs:label "Plan Return" ;
+      rdfs:subClassOf scor:Plan ;
+      skos:altLabel "sP5" .
+
+scor:PlanSource
+      rdf:type owl:Class ;
+      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of material resources to meet supply chain requirements" ;
+      rdfs:label "Plan Source" ;
+      rdfs:subClassOf scor:Plan ;
+      skos:altLabel "sP2" .
+
+scor:PlanSupplyChain
+      rdf:type owl:Class ;
+      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of supply chain resources to meet supply chain requirements for the longest time fence constraints of supply resources" ;
+      rdfs:label "Plan Supply Chain" ;
+      rdfs:subClassOf scor:Plan ;
+      skos:altLabel "sP1" .
+
+scor:Practice
+      rdf:type owl:Class ;
+      rdfs:comment "A practice is a unique way to configure a process or a set of processes" ;
+      rdfs:label "Practice" .
+
+scor:Process
+      rdf:type owl:Class ;
+      rdfs:comment "A process is a unique activity performed to meet predefined outcomes" ;
+      rdfs:label "Process" .
+
+scor:Reliability
+      rdf:type owl:Class ;
+      rdfs:comment "The Reliability attribute addresses the ability to perform tasks as required. Reliability focuses on the predictability of the outcome of a process." ;
+      rdfs:label "Reliability" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
+
+scor:Responsiveness
+      rdf:type owl:Class ;
+      rdfs:comment "The Responsiveness attribute describes the speed at which tasks are performed. Responsiveness addresses repeated speed of doing business." ;
+      rdfs:label "Responsiveness" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
+
+scor:Return
+      rdf:type owl:Class ;
+      rdfs:comment "Moves material from a customer back through the supply chain to address defects in product, ordering, or manufacturing, or to perform upkeep activities" ;
+      rdfs:label "Return" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "R" ;
+      skos:altLabel "sR" .
+
+scor:ReturnMROProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The return of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure" ;
+      rdfs:label "Return MRO Product" ;
+      rdfs:subClassOf scor:Return ;
+      skos:altLabel "sSR2" .
+
+scor:ReturnOnFixedAssets
+      rdf:type owl:Class ;
+      rdfs:comment "Measures the return an organization receives on its invested capital in supply chain fixed assets. This includes the fixed assets used in Plan, Source, Make,Deliver, and Return" ;
+      rdfs:label "ReturnOnFixedAssets" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AM.1.2." .
+
+scor:ReturnOnWorkingCapital
+      rdf:type owl:Class ;
+      rdfs:comment "Assesses the magnitude of investment relative to a company's working capital position versus the revenue generated from a supply chain." ;
+      rdfs:label "ReturnOnWorkingCapital" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AM.1.3." .
+
+scor:Scope
+      rdf:type owl:Class ;
+      rdfs:comment "Types of focus measure for performance attributes." ;
+      rdfs:label "Scope" .
+
+scor:ShippingDocumenationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DocumentationAccuracy ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:Source
+      rdf:type owl:Class ;
+      rdfs:comment "Order, deliver, receipt and transfer of raw material items, subassemblies, product and/or services" ;
+      rdfs:label "Source" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "S" ;
+      skos:altLabel "sS" .
+
+scor:SourceEngineerToOrderProduct
+      rdf:type owl:Class ;
+      rdfs:comment "" ;
+      rdfs:label "Source Engineer-to-Order Product" ;
+      rdfs:subClassOf scor:Source ;
+      scor:hasProcessID "sS3" .
+
+scor:SourceMakeToOrderProduct
+      rdf:type owl:Class ;
+      rdfs:comment "" ;
+      rdfs:label "Source Make-to-Order Product" ;
+      rdfs:subClassOf scor:Source ;
+      scor:hasProcessID "sS2" .
+
+scor:SourceReturnDefectiveProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The return and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement" ;
+      rdfs:label "Source Return Defective Product" ;
+      rdfs:subClassOf scor:Return ;
+      skos:altLabel "sSR1" .
+
+scor:SourceReturnExcessProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The return of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract" ;
+      rdfs:label "Source Return Excess Product" ;
+      rdfs:subClassOf scor:Return ;
+      skos:altLabel "sSR3" .
+
+scor:SourceStockedProduct
+      rdf:type owl:Class ;
+      rdfs:comment "" ;
+      rdfs:label "Source Stocked Product" ;
+      rdfs:subClassOf scor:Source ;
+      scor:hasProcessID "sS1" .
+
+scor:StandardPractice
+      rdf:type owl:Class ;
+      rdfs:comment "How a wide range of companies have historically done business by default or happenstance" ;
+      rdfs:label "StandardPractice" ;
+      rdfs:subClassOf scor:Practice ;
+      skos:altLabel "BP.S" .
+
+scor:Supplier
+      rdf:type owl:Class ;
+      rdfs:comment "Supplier focus for performance attributes" ;
+      rdfs:label "Supplier" ;
+      rdfs:subClassOf scor:Scope .
+
+scor:TotalCostToServe
+      rdf:type owl:Class ;
+      rdfs:comment "The sum of the Supply Chain Cost to deliver products and services to customers" ;
+      rdfs:label "TotalCostToServe" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "CO.1.001" .
+
+scor:UpsideAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "Upside Adaptability" ;
+      rdfs:label "UpsideAdaptability" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AG.1.2" .
+
+scor:UpsideFlexibility
+      rdf:type owl:Class ;
+      rdfs:comment "Upside Flexibility" ;
+      rdfs:label "UpsideFlexibility" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AG.1.1" .
+
+scor:WarrantyReturns
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:hasComplianceDocumentationAccuracy
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Compliance Documentation Accuracy" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL3.31" ;
+      scor:isCalculatedBy "" .
+
+scor:hasCustomerCommitDateAchievementTimeCustomerReceiving
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Delivery Performance to Customer Commit Date" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL3.32" ;
+      scor:isCalculatedBy "" .
+
+scor:hasDeliveryItemAccuracy
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Delivery Item Accuracy" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL3.33" ;
+      scor:isCalculatedBy "Percentage of orders in which all items ordered are the items actually provided, and no extra items are provided" .
+
+scor:hasDeliveryLocationAccuracy
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Delivery Location Accuracy" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL3.34" ;
+      scor:isCalculatedBy "" .
+
+scor:hasDeliveryPerformanceToCustomerCommitDate
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain scor:Process ;
+      rdfs:label "has Percent of Orders Delivered In Full" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL2.2" ;
+      scor:isCalculatedBy "[Total number of orders delivered on the original commitment date] / [Total number of orders delivered] x 100%" .
+
+scor:hasDeliveryQuantityAccuracy
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Delivery Quantity Accuracy" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL3.35" ;
+      scor:isCalculatedBy "Percentage of orders which is delivered to the correct location and customer entity" .
+
+scor:hasDocumentationAccuracy
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "Percentage of orders with on time and accurate documentation supporting the order, including packing slips, bills of lading, invoices, etc." ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Documentation Accuracy" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL2.3" ;
+      scor:isCalculatedBy "[Total number of orders delivered with accurate documentation] / [Total number of orders delivered] x 100%" .
+
+scor:hasMetricID
+      rdf:type owl:AnnotationProperty ;
+      rdfs:comment "" ;
+      rdfs:label "has metric ID" ;
+      rdfs:range xsd:string .
+
+scor:hasOrdersDeliveredDamageFreeConformance
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:label "Orders Delivered Damage Free Conformance" ;
+      scor:hasMetricID "RL3.41" .
+
+scor:hasOrdersDeliveredDefectFreeConformance
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:label "Orders Delivered Defect Free Conformance" ;
+      scor:hasMetricID "RL3.42" .
+
+scor:hasOtherRequiredDocumentationAccuracy
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Other Required Documentation Accuracy" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL3.43" ;
+      scor:isCalculatedBy "" .
+
+scor:hasPaymentDocumentationAccuracy
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Payment Documentation Accuracy" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL3.45" ;
+      scor:isCalculatedBy "" .
+
+scor:hasPercentOfFaultlessInstallations
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:label "% Of Faultless Installations" ;
+      scor:hasMetricID "RL3.12" .
+
+scor:hasPercentOfOrdersDeliveredInFull
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain scor:Process ;
+      rdfs:label "has Percent of Orders Delivered In Full" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL2.1" ;
+      scor:isCalculatedBy "[Total number of orders delivered in full] / [Total number of orders delivered] x 100%" .
+
+scor:hasPercentOfOrdersOrLinesReceivedDamageFree
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:label "% Orders/lines received damage free" ;
+      scor:hasMetricID "RL3.24" .
+
+scor:hasPerfectCondition
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "Percentage of orders delivered in an undamaged state that meet specification, have the correct configuration, are faultlessly installed (as applicable) and accepted by the customer." ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Perfect Condition" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL2.4" ;
+      scor:isCalculatedBy "[ Number of orders delivered in Perfect Condition ] / [Number of orders delivered ] x 100%" .
+
+scor:hasPerfectOrderFulfillment
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain scor:Process ;
+      rdfs:label "has Perfect Order Fulfillment" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL1.1" ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:hasProcessID
+      rdf:type owl:AnnotationProperty ;
+      rdfs:comment "represents a unique identifier of a process within the SCOR model" ;
+      rdfs:label "has process ID" ;
+      rdfs:range xsd:string .
+
+scor:hasProcessStepList
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "represents a unique identifier of a process within the SCOR model" ;
+      rdfs:domain scor:Process ;
+      rdfs:label "has process step list" ;
+      rdfs:range xsd:string .
+
+scor:hasShippingDocumentationAccuracy
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:domain scor:Process ;
+      rdfs:label "Shipping Documentation Accuracy" ;
+      rdfs:range xsd:double ;
+      scor:hasMetricID "RL3.50" ;
+      scor:isCalculatedBy "" .
+
+scor:hasWarrantyAndReturns
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "" ;
+      rdfs:label "Warranty and Returns" ;
+      scor:hasMetricID "RL3.55" .
+
+scor:isCalculatedBy
+      rdf:type owl:AnnotationProperty ;
+      rdfs:label "is calculated by" ;
+      rdfs:range xsd:string .
+
+scor:measure
+      rdf:type owl:ObjectProperty ;
       rdfs:domain scor:KeyPerformanceIndicator ;
       rdfs:range scor:PerformanceAttribute .
-
-scor:hasMetricID a owl:AnnotationProperty ;
-	rdfs:label "has metric ID" ;
-	rdfs:comment "" ;
-	rdfs:range xsd:string .
-
-scor:isCalculatedBy a owl:AnnotationProperty ;
-	rdfs:label "is calculated by" ;
-	rdfs:range xsd:string .
-
-scor:hasProcessID a owl:AnnotationProperty ;
-	rdfs:label "has process ID" ;
-	rdfs:comment "represents a unique identifier of a process within the SCOR model" ;
-	rdfs:range xsd:string .
-
-scor:hasProcessStepList a owl:ObjectProperty;
-	rdfs:label "has process step list";
-	rdfs:comment "represents a unique identifier of a process within the SCOR model" ;
-	rdfs:domain scor:Process ;
-	rdfs:range xsd:string .
-
-# SubClasses of PerformanceAttribute
-	
-scor:Reliability a owl:Class ;
-	rdfs:subClassOf scor:PerformanceAttribute ;
-	rdfs:comment "The Reliability attribute addresses the ability to perform tasks as required. Reliability focuses on the predictability of the outcome of a process." ;
-	rdfs:label "Reliability" .
-	
-scor:Responsiveness a owl:Class ;
-	rdfs:subClassOf scor:PerformanceAttribute ;
-	rdfs:comment "The Responsiveness attribute describes the speed at which tasks are performed. Responsiveness addresses repeated speed of doing business." ;
-	rdfs:label "Responsiveness" .
-
-scor:Agility a owl:Class ;
-	rdfs:subClassOf scor:PerformanceAttribute ;
-	rdfs:comment "The Agility attribute describes the ability to respond to external influences; the ability to and speed of change." ;
-	rdfs:label "Agility" .
-
-scor:Cost a owl:Class ;
-	rdfs:subClassOf scor:PerformanceAttribute ;
-	rdfs:comment "The Cost attribute describes the cost of operating the process." ;
-	rdfs:label "Cost" .
-	
-scor:Assets a owl:Class ;
-	rdfs:subClassOf scor:PerformanceAttribute ;
-	rdfs:comment "The Assets attribute describes the ability to efficiently utilize assets." ;
-	rdfs:label "Assets" .
-	
-	
-scor:PerfectOrderFulfillment a owl:Class ;
-	rdfs:subClassOf scor:Reliability ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:PercentOfOrdersDeliveredInFull a owl:Class ;
-	rdfs:subClassOf scor:PerfectOrderFulfillment ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:DeliveryPerformanceToCustomerCommitDate a owl:Class ;
-	rdfs:subClassOf scor:PerfectOrderFulfillment ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:DocumentationAccuracy a owl:Class ;
-	rdfs:subClassOf scor:PerfectOrderFulfillment ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:PerfectCondition a owl:Class ;
-	rdfs:subClassOf scor:PerfectOrderFulfillment ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-
-scor:DeliveryItemAccuracy a owl:Class ;
-	rdfs:subClassOf scor:PercentOfOrdersDeliveredInFull ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:DeliveryQuantityAccuracy a owl:Class ;
-	rdfs:subClassOf scor:PercentOfOrdersDeliveredInFull ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:CustomerCommitDateAchievementTimeCustomerReceiving a owl:Class ;
-	rdfs:subClassOf scor:DeliveryPerformanceToCustomerCommitDate ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:DeliveryLocationAccuracy a owl:Class ;
-	rdfs:subClassOf scor:DeliveryPerformanceToCustomerCommitDate ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-
-scor:ComplianceDocumentationAccuracy a owl:Class ;
-	rdfs:subClassOf scor:DocumentationAccuracy ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:OtherRequiredDocumenationAccuracy a owl:Class ;
-	rdfs:subClassOf scor:DocumentationAccuracy ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:PaymentDocumenationAccuracy a owl:Class ;
-	rdfs:subClassOf scor:DocumentationAccuracy ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:ShippingDocumenationAccuracy a owl:Class ;
-	rdfs:subClassOf scor:DocumentationAccuracy ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-	
-	
-scor:PercentOfFaultnessInstallations a owl:Class ;
-	rdfs:subClassOf scor:PerfectCondition ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:PercentOrdersOrLinesReceivedDamageFree a owl:Class ;
-	rdfs:subClassOf scor:PerfectCondition ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:OrderDeliveredDamageFreeConformance a owl:Class ;
-	rdfs:subClassOf scor:PerfectCondition ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:OrderDeliveredDefectFreeConformance a owl:Class ;
-	rdfs:subClassOf scor:PerfectCondition ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:WarrantyAndReturns a owl:Class ;
-	rdfs:subClassOf scor:PerfectCondition ;
-	scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
