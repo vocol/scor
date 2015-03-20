@@ -1,18 +1,16 @@
 @prefix gr: <http://purl.org/goodrelations/v1#>.
 @prefix scor: <http://eccenca.com/scor/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-#####
-# RL.2.1 - % of Orders Delivered In Full
-#
-# Percentage of orders which all of the items are received by customer in the 
-# quantities committed. The number of orders that are received by the customer 
-# in the quantities committed divided by the total orders.
-####
+<http://eccenca.com/scor/#> rdf:type owl:Ontology ;
+							rdfs:label "Supply Chain Operation Reference Vocabulary"^^xsd:string ; 
+							dc:date "2014-10-05T12:52:16"^^xsd:dateTime ;
+                            rdfs:comment "Supply Chain Operation Reference Vocabulary has the purpose to represent the information about the Supply Chain in order to use this in a Linked Data environement"@en .
 
 # scor Main classes
 
