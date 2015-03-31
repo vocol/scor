@@ -1,0 +1,265 @@
+@prefix gr: <http://purl.org/goodrelations/v1#>.
+@prefix scor: <http://eccenca.com/scor/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+#---------------------------------------------------------------------
+scor:Process a owl:Class .
+
+#---------------------------------------------------------------------
+
+scor:Process 
+
+scor:Plan    rdfs:subClassOf scor:Process .
+scor:Return  rdfs:subClassOf scor:Process .
+scor:Source  rdfs:subClassOf scor:Process .
+scor:Make    rdfs:subClassOf scor:Process .
+scor:Enable  rdfs:subClassOf scor:Process .
+scor:Deliver rdfs:subClassOf scor:Process .
+
+
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
+scor:PlanSupplyChain rdfs:subClassOf scor:Plan .
+scor:PlanSource      rdfs:subClassOf scor:Plan .
+scor:PlanMake        rdfs:subClassOf scor:Plan .
+scor:PlanDeliver     rdfs:subClassOf scor:Plan .
+scor:PlanReturn      rdfs:subClassOf scor:Plan .
+
+#---------------------------------------------------------------------
+
+scor:SourceReturnDefectiveProduct  rdfs:subClassOf scor:Return .
+scor:SourceReturnMROProduct        rdfs:subClassOf scor:Return .
+scor:SourceReturnExecessProduct    rdfs:subClassOf scor:Return .
+scor:DeliverReturnDefectiveProduct rdfs:subClassOf scor:Return .
+scor:DeliverReturnMROProduct       rdfs:subClassOf scor:Return .
+scor:DeliverReturnExcessProduct    rdfs:subClassOf scor:Return .
+
+#---------------------------------------------------------------------
+
+scor:SourceStockedProduct         rdfs:subClassOf scor:Make .
+scor:SourceMakeToOrderProduct     rdfs:subClassOf scor:Make .
+scor:SourceEngineerToOrderProduct rdfs:subClassOf scor:Make .
+
+#---------------------------------------------------------------------
+
+scor:ManageSupplyChainBusinessRules         rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainPerformance           rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainDataAndInformation    rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainHumanRessources       rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainAssets                rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainContact               rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainNetwork               rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainRegulartoryCompliance rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainRisk                  rdfs:subClassOf scor:Enable .
+
+#---------------------------------------------------------------------
+
+scor:DeliverStockedProduct         rdfs:subClassOf scor:Deliver .
+scor:DeliverMakeToOrderProduct     rdfs:subClassOf scor:Deliver .
+scor:DeliverEngineerToOrderProduct rdfs:subClassOf scor:Deliver .
+
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
+
+scor:Plan1_1 rdfs:subClassOf  scor:PlanSupplyChain .
+scor:Plan1_2 rdfs:subClassOf  scor:PlanSupplyChain .
+scor:Plan1_3 rdfs:subClassOf  scor:PlanSupplyChain .
+scor:Plan1_4 rdfs:subClassOf  scor:PlanSupplyChain .
+
+scor:Plan1_1 scor:hasNextStep  scor:Plan1_2 .
+scor:Plan1_2 scor:hasNextStep  scor:Plan1_3 .
+scor:Plan1_3 scor:hasNextStep  scor:Plan1_4 .
+
+
+#---------------------------------------------------------------------
+
+
+scor:hasNextStep a owl:ObjectProperty .
+
+scor:hasMetricRL_1  a            owl:DatatypeProperty ;
+		    rdfs:range   xsd:float ;
+ 		    rdfs:domain scor:Make1_6 .
+
+scor:hasMetricRL_2  a            owl:DatatypeProperty ;
+		    rdfs:range   xsd:float ;
+ 		    rdfs:domain scor:Make1_6 .
+
+scor:hasMetricRL_3  a owl:DatatypeProperty .
+	  # seems to be deprecated
+
+scor:hasMetricRL_4  a            owl:DatatypeProperty ;
+		    rdfs:range   xsd:float ;
+ 		    rdfs:domain scor:Deliver1_19 ,
+		   	        scor:Deliver2_9 ,
+		    	        scor:Deliver3_8 . 
+
+
+
+
+
+scor:hasMetricRL_5  a owl:DatatypeProperty ;
+scor:hasMetricRL_6  a owl:DatatypeProperty ;
+scor:hasMetricRL_7  a owl:DatatypeProperty ;
+scor:hasMetricRL_8  a owl:DatatypeProperty ;
+scor:hasMetricRL_9  a owl:DatatypeProperty ;
+scor:hasMetricRL_10 a owl:DatatypeProperty ;
+scor:hasMetricRL_11 a owl:DatatypeProperty ;
+scor:hasMetricRL_12 a owl:DatatypeProperty ;
+scor:hasMetricRL_13 a owl:DatatypeProperty ;
+scor:hasMetricRL_14 a owl:DatatypeProperty ;
+scor:hasMetricRL_15 a owl:DatatypeProperty ;
+scor:hasMetricRL_16 a owl:DatatypeProperty ;
+scor:hasMetricRL_17 a owl:DatatypeProperty ;
+scor:hasMetricRL_18 a owl:DatatypeProperty ;
+scor:hasMetricRL_19 a owl:DatatypeProperty ;
+scor:hasMetricRL_20 a owl:DatatypeProperty ;
+scor:hasMetricRL_21 a owl:DatatypeProperty ;
+scor:hasMetricRL_22 a owl:DatatypeProperty ;
+scor:hasMetricRL_23 a owl:DatatypeProperty ;
+scor:hasMetricRL_24 a owl:DatatypeProperty ;
+scor:hasMetricRL_25 a owl:DatatypeProperty ;
+scor:hasMetricRL_26 a owl:DatatypeProperty ;
+scor:hasMetricRL_27 a owl:DatatypeProperty ;
+scor:hasMetricRL_28 a owl:DatatypeProperty ;
+scor:hasMetricRL_29 a owl:DatatypeProperty ;
+scor:hasMetricRL_30 a owl:DatatypeProperty ;
+scor:hasMetricRL_31 a owl:DatatypeProperty ;
+scor:hasMetricRL_32 a owl:DatatypeProperty ;
+scor:hasMetricRL_33 a owl:DatatypeProperty ;
+scor:hasMetricRL_34 a owl:DatatypeProperty ;
+scor:hasMetricRL_35 a owl:DatatypeProperty ;
+scor:hasMetricRL_36 a owl:DatatypeProperty ;
+scor:hasMetricRL_37 a owl:DatatypeProperty ;
+scor:hasMetricRL_38 a owl:DatatypeProperty ;
+
+scor:hasMetricRL_39      a 	 owl:DatatypeProperty ;
+
+
+
+scor:hasMetricRL_40 a owl:DatatypeProperty ;
+scor:hasMetricRL_41 a owl:DatatypeProperty ;
+scor:hasMetricRL_42 a owl:DatatypeProperty ;
+scor:hasMetricRL_43 a owl:DatatypeProperty ;
+scor:hasMetricRL_44 a owl:DatatypeProperty ;
+scor:hasMetricRL_45 a owl:DatatypeProperty ;
+scor:hasMetricRL_46 a owl:DatatypeProperty ;
+scor:hasMetricRL_47 a owl:DatatypeProperty ;
+scor:hasMetricRL_48 a owl:DatatypeProperty ;
+scor:hasMetricRL_49 a owl:DatatypeProperty ;
+scor:hasMetricRL_50 a owl:DatatypeProperty ;
+scor:hasMetricRL_51 a owl:DatatypeProperty ;
+scor:hasMetricRL_52 a owl:DatatypeProperty ;
+scor:hasMetricRL_53 a owl:DatatypeProperty ;
+scor:hasMetricRL_54 a owl:DatatypeProperty ;
+scor:hasMetricRL_55 a owl:DatatypeProperty ;
+scor:hasMetricRL_56 a owl:DatatypeProperty ;
+scor:hasMetricRL_57 a owl:DatatypeProperty ;
+scor:hasMetricRL_58 a owl:DatatypeProperty ;
+scor:hasMetricRL_59 a owl:DatatypeProperty ;
+
+
+
+scor:hasMetricRL_1 rdfs:domain scor:Make1_6 .
+scor:hasMetricRL_2 rdfs:domain scor:Make1_6 .
+#################3 seems to be deprecated 
+scor:hasMetricRL_4 rdfs:domain scor:Deliver1_10 ,
+		   	       scor:Deliver2_9  ,
+		    	       scor:Deliver3_8  . 
+scor:hasMetricRL_5 rdfs:domain scor:SourceReturn1_5 ,
+		   	       scor:SourceReturn2_5 ,
+		    	       scor:SourceReturn3_5 . 
+scor:hasMetricRL_6 rdfs:domain scor:Return2_2 .
+scor:hasMetricRL_7 rdfs:domain scor:Deliver4_5 .
+#################8 seems to be deprecated 
+#################9 seems to be deprecated  
+scor:hasMetricRL_10 rdfs:domain scor:SourecReturn3 ,
+		   	        scor:DeliverReturn3 .
+scor:hasMetricRL_11 rdfs:domain scor:Deliver1_15 ,
+				scor:Deliver2_15 ,
+		   	        scor:Deliver3_15 .
+scor:hasMetricRL_12 rdfs:domain scor:Deliver1_14 .
+scor:hasMetricRL_13 rdfs:domain scor:DeliverReturn2 .
+scor:hasMetricRL_14 rdfs:domain scor:Make2_6 .
+scor:hasMetricRL_15 rdfs:domain scor:Make2_6 .
+scor:hasMetricRL_16 rdfs:domain scor:Deliver1_7 .
+scor:hasMetricRL_17 rdfs:domain scor:Source3_2 .
+scor:hasMetricRL_18 rdfs:domain scor:Source1_2 ,
+				scor:Source2_2 ,
+		   	        scor:Source3_4 .
+scor:hasMetricRL_19 rdfs:domain scor:Source1_3 ,
+				scor:Source2_3 ,
+		   	        scor:Source3_5 .
+scor:hasMetricRL_20 rdfs:domain scor:Source1_2 ,
+				scor:Source2_2 ,
+		   	        scor:Source3_4 .
+scor:hasMetricRL_21 rdfs:domain scor:Source1_3 ,
+				scor:Source2_3 ,
+		   	        scor:Source3_5 .
+scor:hasMetricRL_23 rdfs:domain scor:Source1_2 ,
+				scor:Source2_2 ,
+		   	        scor:Source3_4 .
+
+scor:hasMetricRL_24 rdfs:domain scor:Source1_3 ,
+				scor:Source2_3 ,
+		   	        scor:Source3_5 .
+scor:hasMetricRL_25 rdfs:domain scor:Source1_4 ,
+				scor:Source2_4 ,
+		   	        scor:Source3_6 .
+scor:hasMetricRL_26 rdfs:domain scor:Source1_4 ,
+				scor:Source2_4 ,
+		   	        scor:Source3_6 .
+scor:hasMetricRL_27 rdfs:domain scor:Source1_1 ,
+				scor:Source2_1 ,
+		   	        scor:Source3_3 .
+
+#---------------------------------------------------------------------
+scor:hasMetricRL_10 rdfs:domain scor: ,
+		   	        scor: .
+#---------------------------------------------------------------------
+
+#---------------------------------------------------------------------
+
+#---------------------------------------------------------------------
+
+
+scor:Plan1Step1 owl:sameAs scor:IdentifyPrioritizeAndAggregateSupplyChainRequirements .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
