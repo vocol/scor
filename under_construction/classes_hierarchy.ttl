@@ -1,0 +1,68 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix scor: <http://www.ok-fraunhofer.de/2015/04/scor#> .
+
+#---------------------------------------------------------------------
+scor:Process a owl:Class .
+
+#---------------------------------------------------------------------
+
+scor:Plan    rdfs:subClassOf scor:Process .
+scor:Return  rdfs:subClassOf scor:Process .
+scor:Source  rdfs:subClassOf scor:Process .
+scor:Make    rdfs:subClassOf scor:Process .
+scor:Enable  rdfs:subClassOf scor:Process .
+scor:Deliver rdfs:subClassOf scor:Process .
+
+#---------------------------------------------------------------------
+scor:PlanSupplyChain rdfs:subClassOf scor:Plan .
+scor:PlanSource      rdfs:subClassOf scor:Plan .
+scor:PlanMake        rdfs:subClassOf scor:Plan .
+scor:PlanDeliver     rdfs:subClassOf scor:Plan .
+scor:PlanReturn      rdfs:subClassOf scor:Plan .
+
+#---------------------------------------------------------------------
+
+scor:SourceReturnDefectiveProduct  rdfs:subClassOf scor:Return .
+scor:SourceReturnMROProduct        rdfs:subClassOf scor:Return .
+scor:SourceReturnExecessProduct    rdfs:subClassOf scor:Return .
+scor:DeliverReturnDefectiveProduct rdfs:subClassOf scor:Return .
+scor:DeliverReturnMROProduct       rdfs:subClassOf scor:Return .
+scor:DeliverReturnExcessProduct    rdfs:subClassOf scor:Return .
+
+#---------------------------------------------------------------------
+
+scor:SourceStockedProduct         rdfs:subClassOf scor:Make .
+scor:SourceMakeToOrderProduct     rdfs:subClassOf scor:Make .
+scor:SourceEngineerToOrderProduct rdfs:subClassOf scor:Make .
+
+#---------------------------------------------------------------------
+
+scor:ManageSupplyChainBusinessRules         rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainPerformance           rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainDataAndInformation    rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainHumanRessources       rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainAssets                rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainContact               rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainNetwork               rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainRegulartoryCompliance rdfs:subClassOf scor:Enable .
+scor:ManageSupplyChainRisk                  rdfs:subClassOf scor:Enable .
+
+#---------------------------------------------------------------------
+
+scor:DeliverStockedProduct         rdfs:subClassOf scor:Deliver .
+scor:DeliverMakeToOrderProduct     rdfs:subClassOf scor:Deliver .
+scor:DeliverEngineerToOrderProduct rdfs:subClassOf scor:Deliver .
+
+#---------------------------------------------------------------------
+
+scor:Plan1_1 rdfs:subClassOf  scor:PlanSupplyChain .
+scor:Plan1_2 rdfs:subClassOf  scor:PlanSupplyChain .
+scor:Plan1_3 rdfs:subClassOf  scor:PlanSupplyChain .
+scor:Plan1_4 rdfs:subClassOf  scor:PlanSupplyChain .
+
+scor:Plan1_1 scor:hasNextStep  scor:Plan1_2 .
+scor:Plan1_2 scor:hasNextStep  scor:Plan1_3 .
+scor:Plan1_3 scor:hasNextStep  scor:Plan1_4 .
+
+

@@ -1,0 +1,44 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix scor: <http://www.ok-fraunhofer.de/2015/04/scor#> .
+
+
+scor:Process rdfs:comment	"A process is a unique activity performed to meet pre-defined outcomes" ;
+		   	 rdfs:label "Process"@en,
+			            "Prozess"@de .
+
+
+scor:Plan rdfs:comment	"The Plan processes describe the activities associated with developing plans to operate the supply chain." ;
+		   	 rdfs:label "Plan"@en,
+			            "Plan"@de .
+
+scor:Source rdfs:comment	"The Source processes describe the ordering (or scheduling of deliveries) and receipt of goods and services." ;
+		   	 rdfs:label "Source"@en,
+			            "Einkauf"@de .
+
+scor:Make rdfs:comment	"The Make processes describe the activities associated with the conversion of materials or creation of the content for services." ;
+		   	 rdfs:label "Make"@en,
+			            "Produktion"@de .
+
+scor:Deliver rdfs:comment	"The Deliver processes describe the activities associated with the creation, maintenance and fulfillment of customer orders." ;
+		   	 rdfs:label "Deliver"@en,
+			            "Verkauf"@de .
+
+
+scor:Return rdfs:comment	"The Return processes describe the activities associated with the reverse flow of goods." ;
+		   	 rdfs:label "Return"@en,
+			            "Retour"@de .
+
+
+scor:Enable rdfs:comment	"The Enable processes describe the associated with the management of the supply chain." ;
+		   	 rdfs:label "Enable"@en,
+			            "Freigabe"@de .
+
+
+
+
+#---- TO DO: Define all owl:sameAs ...
+
+
+scor:Plan1Step1 owl:sameAs scor:IdentifyPrioritizeAndAggregateSupplyChainRequirements .
+
