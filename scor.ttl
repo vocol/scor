@@ -1,5 +1,5 @@
 # Saved by TopBraid on Wed Apr 15 18:47:57 CEST 2015
-# baseURI: http://eis.iai.uni-bonn.de/#
+# baseURI: http://eis.iai.uni-bonn.de/openscorvoc#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.w3.org/2004/02/skos/core
 
@@ -15,7 +15,7 @@
 @prefix xml:     <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://eis.iai.uni-bonn.de/#>
+<http://eis.iai.uni-bonn.de/openscorvoc#>
       rdf:type owl:Ontology ;
       rdfs:comment "Supply Chain Operation Reference Vocabulary has the purpose to represent the information about the Supply Chain in order to use this in a Linked Data environement"@en ;
       rdfs:label "Supply Chain Operation Reference Vocabulary"^^xsd:string ;
