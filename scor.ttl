@@ -1,39 +1,47 @@
-# Saved by TopBraid on Fri Mar 20 16:23:07 CET 2015
-# baseURI: http://eccenca.com/scor/#
+# Saved by TopBraid on Wed Apr 15 18:47:57 CEST 2015
+# baseURI: http://eis.iai.uni-bonn.de/#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.w3.org/2004/02/skos/core
 
+@prefix :        <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix daq:     <http://purl.org/eis/vocab/daq#> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix gr:      <http://purl.org/goodrelations/v1#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix scor:    <http://eccenca.com/scor/> .
+@prefix scor:    <http://eis.iai.uni-bonn.de/> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://eccenca.com/scor/#>
+<http://eis.iai.uni-bonn.de/#>
       rdf:type owl:Ontology ;
       rdfs:comment "Supply Chain Operation Reference Vocabulary has the purpose to represent the information about the Supply Chain in order to use this in a Linked Data environement"@en ;
       rdfs:label "Supply Chain Operation Reference Vocabulary"^^xsd:string ;
       dc:date "2014-10-05T12:52:16"^^xsd:dateTime ;
-      owl:imports <http://www.w3.org/2004/02/skos/core> , dc: .
+      owl:imports dc: , <http://www.w3.org/2004/02/skos/core> .
+
+scor:AdditionalRequiredDocumentationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DocumentationAccuracy ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
 scor:Agility
       rdf:type owl:Class ;
-      rdfs:comment "The Agility attribute describes the ability to respond to external influences; the ability to and speed of change." ;
+      rdfs:comment "The Agility attribute describes the ability to respond to external influences; the ability to and speed of change."@en ;
       rdfs:label "Agility" ;
       rdfs:subClassOf scor:PerformanceAttribute .
 
 scor:Assets
       rdf:type owl:Class ;
-      rdfs:comment "The Assets attribute describes the ability to efficiently utilize assets." ;
+      rdfs:comment "The Assets attribute describes the ability to efficiently utilize assets."@en ;
       rdfs:label "Assets" ;
       rdfs:subClassOf scor:PerformanceAttribute .
 
 scor:BestPractice
       rdf:type owl:Class ;
-      rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proven and positive impact on supply chain performance" ;
+      rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proven and positive impact on supply chain performance"@en ;
       rdfs:label "BestPractice" ;
       rdfs:subClassOf scor:Practice ;
       skos:altLabel "BP.B" .
@@ -181,6 +189,20 @@ scor:EngineerToOrder
       rdfs:subClassOf scor:Make ;
       scor:hasProcessID "sM3" .
 
+scor:IdentifyPrioritizeAggregateSCRequirements
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, aggregating, and prioritizing, all sources of demand for the integrated supply chain of a product or service at the appropriate level, horizon and interval." ;
+      rdfs:label "Identify, Prioritize	Aggregate Supply Chain Requirements" ;
+      rdfs:subClassOf scor:PlanSupplyChain ;
+      skos:altLabel "sP1.1" .
+
+scor:IdentifyPrioritizeAggregateSCResources
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, prioritizing, and aggregating, as a whole with constituent parts, all sources of supply that are required and add value in the supply chain of a product or service at the appropriate level, horizon and interval." ;
+      rdfs:label "Identify, Prioritize	Aggregate Supply Chain Resources" ;
+      rdfs:subClassOf scor:PlanSupplyChain ;
+      skos:altLabel "sP1.2" .
+
 scor:Internal
       rdf:type owl:Class ;
       rdfs:comment "Internal focus for performance attributes" ;
@@ -191,7 +213,7 @@ scor:KeyPerformanceIndicator
       rdf:type owl:Class ;
       rdfs:comment "Diagnostics for the overall health of the supply chain. Benchmarking Key Performance Indicators helps establishing realistic targets to support the strategic directions" ;
       rdfs:label "KeyPerformanceIndicator" ;
-      rdfs:subClassOf scor:Metric .
+      rdfs:subClassOf daq:Metric .
 
 scor:Make
       rdf:type owl:Class ;
@@ -278,11 +300,6 @@ scor:ManageSupplyChainRisk
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE9" .
 
-scor:Metric
-      rdf:type owl:Class ;
-      rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
-      rdfs:label "Metric" .
-
 scor:OrderDeliveredDamageFreeConformance
       rdf:type owl:Class ;
       rdfs:subClassOf scor:PerfectCondition ;
@@ -299,11 +316,6 @@ scor:OrderFulfillmentCycleTime
       rdfs:label "OrderFulfillmentCycleTime" ;
       rdfs:subClassOf scor:KeyPerformanceIndicator ;
       skos:altLabel "RS.1.1" .
-
-scor:OtherRequiredDocumenationAccuracy
-      rdf:type owl:Class ;
-      rdfs:subClassOf scor:DocumentationAccuracy ;
-      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
 scor:OverallValueAtRisk
       rdf:type owl:Class ;
@@ -346,7 +358,7 @@ scor:PerfectOrderFulfillment
       rdf:type owl:Class ;
       rdfs:comment "Delivered complete, on time according the client's specifications of time. Documentation complete. Faultlessly installed" ;
       rdfs:label "PerfectOrderFulfillment" ;
-      rdfs:subClassOf scor:Reliability , scor:KeyPerformanceIndicator ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator , scor:Reliability ;
       scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" ;
       skos:altLabel "RL.1.1" .
 
@@ -541,140 +553,26 @@ scor:WarrantyReturns
       rdfs:subClassOf scor:PerfectCondition ;
       scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:hasComplianceDocumentationAccuracy
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:domain scor:Process ;
-      rdfs:label "Compliance Documentation Accuracy" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL3.31" ;
-      scor:isCalculatedBy "" .
+scor:bp1
+      rdf:type scor:BestPractice , owl:NamedIndividual ;
+      scor:hasPracticeId "BP.001"^^xsd:string .
 
-scor:hasCustomerCommitDateAchievementTimeCustomerReceiving
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
+scor:hasMetric
+      rdf:type owl:ObjectProperty ;
       rdfs:domain scor:Process ;
-      rdfs:label "Delivery Performance to Customer Commit Date" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL3.32" ;
-      scor:isCalculatedBy "" .
-
-scor:hasDeliveryItemAccuracy
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:domain scor:Process ;
-      rdfs:label "Delivery Item Accuracy" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL3.33" ;
-      scor:isCalculatedBy "Percentage of orders in which all items ordered are the items actually provided, and no extra items are provided" .
-
-scor:hasDeliveryLocationAccuracy
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:domain scor:Process ;
-      rdfs:label "Delivery Location Accuracy" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL3.34" ;
-      scor:isCalculatedBy "" .
-
-scor:hasDeliveryPerformanceToCustomerCommitDate
-      rdf:type owl:DatatypeProperty ;
-      rdfs:domain scor:Process ;
-      rdfs:label "has Percent of Orders Delivered In Full" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL2.2" ;
-      scor:isCalculatedBy "[Total number of orders delivered on the original commitment date] / [Total number of orders delivered] x 100%" .
-
-scor:hasDeliveryQuantityAccuracy
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:domain scor:Process ;
-      rdfs:label "Delivery Quantity Accuracy" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL3.35" ;
-      scor:isCalculatedBy "Percentage of orders which is delivered to the correct location and customer entity" .
-
-scor:hasDocumentationAccuracy
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "Percentage of orders with on time and accurate documentation supporting the order, including packing slips, bills of lading, invoices, etc." ;
-      rdfs:domain scor:Process ;
-      rdfs:label "Documentation Accuracy" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL2.3" ;
-      scor:isCalculatedBy "[Total number of orders delivered with accurate documentation] / [Total number of orders delivered] x 100%" .
+      rdfs:range daq:Metric .
 
 scor:hasMetricID
       rdf:type owl:AnnotationProperty ;
       rdfs:comment "" ;
+      rdfs:domain daq:Metric ;
       rdfs:label "has metric ID" ;
       rdfs:range xsd:string .
 
-scor:hasOrdersDeliveredDamageFreeConformance
+scor:hasPracticeId
       rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:label "Orders Delivered Damage Free Conformance" ;
-      scor:hasMetricID "RL3.41" .
-
-scor:hasOrdersDeliveredDefectFreeConformance
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:label "Orders Delivered Defect Free Conformance" ;
-      scor:hasMetricID "RL3.42" .
-
-scor:hasOtherRequiredDocumentationAccuracy
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:domain scor:Process ;
-      rdfs:label "Other Required Documentation Accuracy" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL3.43" ;
-      scor:isCalculatedBy "" .
-
-scor:hasPaymentDocumentationAccuracy
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:domain scor:Process ;
-      rdfs:label "Payment Documentation Accuracy" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL3.45" ;
-      scor:isCalculatedBy "" .
-
-scor:hasPercentOfFaultlessInstallations
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:label "% Of Faultless Installations" ;
-      scor:hasMetricID "RL3.12" .
-
-scor:hasPercentOfOrdersDeliveredInFull
-      rdf:type owl:DatatypeProperty ;
-      rdfs:domain scor:Process ;
-      rdfs:label "has Percent of Orders Delivered In Full" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL2.1" ;
-      scor:isCalculatedBy "[Total number of orders delivered in full] / [Total number of orders delivered] x 100%" .
-
-scor:hasPercentOfOrdersOrLinesReceivedDamageFree
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:label "% Orders/lines received damage free" ;
-      scor:hasMetricID "RL3.24" .
-
-scor:hasPerfectCondition
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "Percentage of orders delivered in an undamaged state that meet specification, have the correct configuration, are faultlessly installed (as applicable) and accepted by the customer." ;
-      rdfs:domain scor:Process ;
-      rdfs:label "Perfect Condition" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL2.4" ;
-      scor:isCalculatedBy "[ Number of orders delivered in Perfect Condition ] / [Number of orders delivered ] x 100%" .
-
-scor:hasPerfectOrderFulfillment
-      rdf:type owl:DatatypeProperty ;
-      rdfs:domain scor:Process ;
-      rdfs:label "has Perfect Order Fulfillment" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL1.1" ;
-      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+      rdfs:domain scor:Practice ;
+      rdfs:range xsd:string .
 
 scor:hasProcessID
       rdf:type owl:AnnotationProperty ;
@@ -683,26 +581,11 @@ scor:hasProcessID
       rdfs:range xsd:string .
 
 scor:hasProcessStepList
-      rdf:type owl:ObjectProperty ;
+      rdf:type owl:ObjectProperty , owl:DatatypeProperty ;
       rdfs:comment "represents a unique identifier of a process within the SCOR model" ;
       rdfs:domain scor:Process ;
       rdfs:label "has process step list" ;
       rdfs:range xsd:string .
-
-scor:hasShippingDocumentationAccuracy
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:domain scor:Process ;
-      rdfs:label "Shipping Documentation Accuracy" ;
-      rdfs:range xsd:double ;
-      scor:hasMetricID "RL3.50" ;
-      scor:isCalculatedBy "" .
-
-scor:hasWarrantyAndReturns
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "" ;
-      rdfs:label "Warranty and Returns" ;
-      scor:hasMetricID "RL3.55" .
 
 scor:isCalculatedBy
       rdf:type owl:AnnotationProperty ;
@@ -713,3 +596,258 @@ scor:measure
       rdf:type owl:ObjectProperty ;
       rdfs:domain scor:KeyPerformanceIndicator ;
       rdfs:range scor:PerformanceAttribute .
+
+dc:Plan1
+      rdf:type scor:Plan , owl:NamedIndividual ;
+      scor:hasMetric daq:Metric1 .
+
+daq:Metric
+      rdf:type owl:Class ;
+      rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+      rdfs:label "Metric" .
+
+daq:Metric1
+      rdf:type daq:Metric , owl:NamedIndividual ;
+      scor:hasMetricID "CO.2.001"^^xsd:string .
+
+:BarCodingRFID
+      rdf:type owl:Class ;
+      rdfs:comment """Bar coding is the practice of adding machine readable labels to packaging of goods, in order to increase reading speed and reducing reading errors."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.153"^^xsd:string .
+
+:BusinessRuleManagement
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.023"^^xsd:string .
+
+:BusinessRuleReview
+      rdf:type owl:Class ;
+      rdfs:comment "is performed by supply chain middle and upper level management of an organization."^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.035"^^xsd:string .
+
+:CarcassDisassembly
+      rdf:type owl:Class ;
+      rdfs:comment """Returned Maintenance, Repair, Operations (MRO) items are disassembled to the bill of material level and component parts are tested."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.137"^^xsd:string .
+
+:CarcassPrepositioning
+      rdf:type owl:Class ;
+      rdfs:comment """The practice of making disposition decisions for reparable parts/cores/carcasses early in the (Return Material Authorization) RMA process."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.109"^^xsd:string .
+
+:DemandManagement
+      rdf:type owl:Class ;
+      rdfs:comment "takes Demand Planning to the next level and integrates the plan up and down the supply chain as well as across the enterprise."^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.020"^^xsd:string .
+
+:DemandPlanningForecasting
+      rdf:type owl:Class ;
+      rdfs:comment "Use state-of-the-art forecasting algorithms for product life-cycle planning and trade promotion planning."^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.014"^^xsd:string .
+
+:DigitalPackagingOnDemand
+      rdf:type owl:Class ;
+      rdfs:comment """The use of digital packaging printing to create custom product packaging unique to the customer and the product requirements."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.121"^^xsd:string .
+
+:DownsideDeliverAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment """Downside Deliver Adaptability = The reduction in delivered quantities sustainable at 30 days prior to delivery with no inventory or cost penalties."""^^xsd:string ;
+      rdfs:subClassOf :DownsideSCAdaptability ;
+      skos:prefLabel "AG.2.13"^^xsd:string .
+
+:DownsideMakeAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "The production reduction sustainable at 30 days prior to delivery with no inventory or cost penalties."^^xsd:string ;
+      rdfs:subClassOf :DownsideSCAdaptability ;
+      skos:prefLabel "AG.2.12"^^xsd:string .
+
+:DownsideSCAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment """The reduction in quantities ordered sustainable at 30 days prior to delivery with no inventory or cost penalties."""^^xsd:string ;
+      rdfs:subClassOf scor:Agility ;
+      skos:prefLabel "AG.1.3"^^xsd:string .
+
+:DownsideSourceAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment """The raw material quantity reduction sustainable at 30 days prior to delivery with no inventory or cost penalties."""^^xsd:string ;
+      rdfs:subClassOf :DownsideSCAdaptability ;
+      skos:prefLabel "AG.2.11"^^xsd:string .
+
+:EmbedSpecializedServices
+      rdf:type owl:Class ;
+      rdfs:comment """Add additional capability, processes and expertise by embedding specialized packaging, product completion and pack out services on-site from a 3rd party provider."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.117"^^xsd:string .
+
+:EnterpriseLevelSpendAnalysis
+      rdf:type owl:Class ;
+      rdfs:comment """Spend analysis involved collection of data across procures to pay process in an enterprise and slicing and dicing these data into useful information."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.161"^^xsd:string .
+
+:LeanPlanning
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.049"^^xsd:string .
+
+:LoanerProgram
+      rdf:type owl:Class ;
+      rdfs:comment """In order to minimize lost productivity, many companies offer a loaner program for their customers when they need to return a defective product."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.079"^^xsd:string .
+
+:LongTermSupplierAgreementPartnership
+      rdf:type owl:Class ;
+      rdfs:comment """The Long Term Supplier Agreement/Partnership is a communication framework of buyer and supplier relationship."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.162"^^xsd:string .
+
+:MixedModeReverseMaterialIssue
+      rdf:type owl:Class ;
+      rdfs:comment """Backflush is a concept where issuing of the material automatically happens once the finished product is ready."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.171"^^xsd:string .
+
+:MobileAccessOfInformation
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.098"^^xsd:string .
+
+:OverallValueAtRisk
+      rdf:type owl:Class ;
+      rdfs:comment """Risk management in organizations traditionally resides within the finance function, due to its inherent focus on financial impact on the organization."""^^xsd:string ;
+      rdfs:subClassOf scor:Agility ;
+      skos:prefLabel "AG.1.4"^^xsd:string .
+
+:ProductionSchedulingOptimizationUsingTech
+      rdf:type owl:Class ;
+      rdfs:comment """Effective scheduling should not only include production related attributes (e.g. rated/demonstrated capacity asset loading sequencing changeover constraints etc.) but also other directly and indirectly related processes."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.172"^^xsd:string .
+
+:ReturnPolicyConformanceIntegration
+      rdf:type owl:Class ;
+      rdfs:comment """The practice of implementing standard procedures and enableing technology to ensure conformance to return policies."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.108"^^xsd:string .
+
+:ReturnsReceivingRefurbishment
+      rdf:type owl:Class ;
+      rdfs:comment "The practice of refurbishing materials during the receiving processes (i.e. Source processes) for returned materials."^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.073"^^xsd:string .
+
+:Self-ServiceWarrantyClaimSubmittal
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.025"^^xsd:string .
+
+:SupplierCustomerProductRiskRating
+      rdf:type owl:Class ;
+      rdfs:comment """The numerical risk rating for supplier, customer or product. Normalized and used for comparison purposes."""^^xsd:string ;
+      rdfs:label "Supplier's/Customer's/Products's Risk Rating"^^xsd:string ;
+      rdfs:subClassOf :DownsideSCAdaptability ;
+      skos:prefLabel "AG.2.14"^^xsd:string .
+
+:SupplyChainOptimization
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.024"^^xsd:string .
+
+:SupplyNetworkPlanning
+      rdf:type owl:Class ;
+      rdfs:comment "Simulate and implement comprehensive tactical planning and sourcing decisions based on a single, globally consistent model."^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.016"^^xsd:string .
+
+:ThreeDPrintRapidProtoyping
+      rdf:type owl:Class ;
+      rdfs:comment """3D printing is a phrase used to describe the process of creating three dimensional objects from digital file using a materials printer, in a manner similar to printing images on paper."""^^xsd:string ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.120"^^xsd:string .
+
+:TransportationManagementOutsourcing
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:EmergingPractice ;
+      skos:prefLabel "BP.118"^^xsd:string .
+
+:UpsideDeliverAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment """The maximum sustainable percentage increase in quantities delivered that can be achieved in 30 days with the assumption of unconstrained finished good availability."""^^xsd:string ;
+      rdfs:subClassOf :UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.8"^^xsd:string .
+
+:UpsideDeliverFlexibility
+      rdf:type owl:Class ;
+      rdfs:subClassOf :UpsideSCFlexibility ;
+      skos:prefLabel "AG.2.3"^^xsd:string .
+
+:UpsideDeliverReturnAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment """The maximum sustainable percentage increase in returns of finished goods from customers that can be achieved in 30 days."""^^xsd:string ;
+      rdfs:subClassOf :UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.10"^^xsd:string .
+
+:UpsideDeliverReturnFlexibility
+      rdf:type owl:Class ;
+      rdfs:subClassOf :UpsideSCFlexibility ;
+      skos:prefLabel "AG.2.5"^^xsd:string .
+
+:UpsideMakeAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment """The maximum sustainable percentage increase in production that can be achieved in 30 days with the assumption of no raw material constraints."""^^xsd:string ;
+      rdfs:subClassOf :UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.7"^^xsd:string .
+
+:UpsideMakeFlexibility
+      rdf:type owl:Class ;
+      rdfs:comment """The number of days required to achieve an unplanned sustainable 20% increase in production with the assumption of no raw material constraints."""^^xsd:string ;
+      rdfs:subClassOf :UpsideSCFlexibility ;
+      skos:prefLabel "AG.2.2"^^xsd:string .
+
+:UpsideSCAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment """The maximum sustainable percentage increase in quantity delivered that can be achieved in 30 days."""^^xsd:string ;
+      rdfs:subClassOf scor:Agility ;
+      skos:prefLabel "AG.1.2"^^xsd:string .
+
+:UpsideSCFlexibility
+      rdf:type owl:Class ;
+      rdfs:comment """The number of days required to achieve an unplanned sustainable 20% increase in quantities delivered."""^^xsd:string ;
+      rdfs:subClassOf scor:Agility ;
+      skos:prefLabel "AG.1.1"^^xsd:string .
+
+:UpsideSourceAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment """The maximum sustainable percentage increase in raw material quantities that can be acquired/received in 30 days."""^^xsd:string ;
+      rdfs:subClassOf :UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.6"^^xsd:string .
+
+:UpsideSourceFlexibility
+      rdf:type owl:Class ;
+      rdfs:comment """The number of days required to achieve an unplanned sustainable 20% increase in quantity of raw materials."""^^xsd:string ;
+      rdfs:subClassOf :UpsideSCFlexibility ;
+      skos:prefLabel "AG.2.1"^^xsd:string .
+
+:UpsideSourceReturnAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment """The maximum sustainable percentage increase in returns of raw materials to suppliers that can be achieved in 30 days."""^^xsd:string ;
+      rdfs:subClassOf :UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.9"^^xsd:string .
+
+:UpsideSourceReturnFlexibility
+      rdf:type owl:Class ;
+      rdfs:comment """The number of days required to achieve an unplanned sustainable 20% increase in the return of raw materials to suppliers."""^^xsd:string ;
+      rdfs:subClassOf :UpsideSCFlexibility ;
+      skos:prefLabel "AG.2.4"^^xsd:string .
+
+skos:altLabel
+      rdf:type owl:AnnotationProperty .
