@@ -14,12 +14,62 @@
 @prefix xml:     <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://eis.iai.uni-bonn.de/#>
+<http://eis.iai.uni-bonn.de/openscorvoc#>
       rdf:type owl:Ontology ;
       rdfs:comment "Supply Chain Operation Reference Vocabulary has the purpose to represent the information about the Supply Chain in order to use this in a Linked Data environement"@en ;
       rdfs:label "Supply Chain Operation Reference Vocabulary"^^xsd:string ;
       dc:date "2014-10-05T12:52:16"^^xsd:dateTime ;
       owl:imports <http://www.w3.org/2004/02/skos/core> , dc: .
+	  
+# Processes
+
+scor:Plan
+      rdf:type owl:Class ;
+      rdfs:comment "Describes the planning activities associated with operating a supply chain. This includes gathering customer requirements, collecting information on available resources, and balancing requirements and resources to determine planned capabilities and resource gaps. This is followed by identifying the actions required to correct any gaps."@en ;
+      rdfs:label "Plan" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "P" ;
+      skos:altLabel "sP" .
+	  
+scor:Source
+      rdf:type owl:Class ;
+      rdfs:comment "Order, deliver, receipt and transfer of raw material items, subassemblies, product and/or services"@en ;
+      rdfs:label "Source" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "S" ;
+      skos:altLabel "sS" .	
+
+scor:Make
+      rdf:type owl:Class ;
+      rdfs:comment "Adds value to products through mixing, separating, forming, machining, and chemical processes"@en ;
+      rdfs:label "Make" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "M" ;
+      skos:altLabel "sM" .	
+
+scor:Deliver
+      rdf:type owl:Class ;
+      rdfs:comment "Performs customer-facing order management and order fulfillment activities"@en ;
+      rdfs:label "Deliver" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "D" ;
+      skos:altLabel "sD" .	
+
+scor:Return
+      rdf:type owl:Class ;
+      rdfs:comment "Moves material from a customer back through the supply chain to address defects in product, ordering, or manufacturing, or to perform upkeep activities"@en ;
+      rdfs:label "Return" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "R" ;
+      skos:altLabel "sR" .	  
+
+scor:Enable
+      rdf:type owl:Class ;
+      rdfs:comment "Establishing, maintaining and monitoring information, relationships, resources, assets, business rules, compliance and contracts required to operate the supply chain"@en ;
+      rdfs:label "Enable" ;
+      rdfs:subClassOf scor:Process ;
+      scor:hasProcessID "E" ;
+      skos:altLabel "sE" .
 
 scor:AdditionalRequiredDocumentationAccuracy
       rdf:type owl:Class ;
@@ -28,19 +78,19 @@ scor:AdditionalRequiredDocumentationAccuracy
 
 scor:Agility
       rdf:type owl:Class ;
-      rdfs:comment "The Agility attribute describes the ability to respond to external influences; the ability to and speed of change." ;
+      rdfs:comment "The Agility attribute describes the ability to respond to external influences; the ability to and speed of change."@en ;
       rdfs:label "Agility" ;
       rdfs:subClassOf scor:PerformanceAttribute .
 
 scor:Assets
       rdf:type owl:Class ;
-      rdfs:comment "The Assets attribute describes the ability to efficiently utilize assets." ;
+      rdfs:comment "The Assets attribute describes the ability to efficiently utilize assets."@en ;
       rdfs:label "Assets" ;
       rdfs:subClassOf scor:PerformanceAttribute .
 
 scor:CashToCashCycleTime
       rdf:type owl:Class ;
-      rdfs:comment "The time it takes for an investment made to flow back into a company after it has been spent for raw materials" ;
+      rdfs:comment "The time it takes for an investment made to flow back into a company after it has been spent for raw materials"@en ;
       rdfs:label "CashToCashCycleTime" ;
       rdfs:subClassOf scor:KeyPerformanceIndicator ;
       skos:altLabel "AM.1.1" .
@@ -52,7 +102,7 @@ scor:ComplianceDocumentationAccuracy
 
 scor:Cost
       rdf:type owl:Class ;
-      rdfs:comment "The Cost attribute describes the cost of operating the process." ;
+      rdfs:comment "The Cost attribute describes the cost of operating the process."@en ;
       rdfs:label "Cost" ;
       rdfs:subClassOf scor:PerformanceAttribute .
 
@@ -61,17 +111,9 @@ scor:CustomerCommitDateAchievementTimeCustomerReceiving
       rdfs:subClassOf scor:DeliveryPerformanceToCustomerCommitDate ;
       scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
 
-scor:Deliver
-      rdf:type owl:Class ;
-      rdfs:comment "Performs customer-facing order management and order fulfillment activities" ;
-      rdfs:label "Deliver" ;
-      rdfs:subClassOf scor:Process ;
-      scor:hasProcessID "D" ;
-      skos:altLabel "sD" .
-
 scor:DeliverEngineerToOrderProduct
       rdf:type owl:Class ;
-      rdfs:comment "Obtaining, responding to, and allocating resources for a customer order that has unique requirements or specifications and delivering a product that is partially or fully designed, redesigned, manufactured, and/or assembled from a bill of materials or recipe that includes one or more custom parts or ingredients" ;
+      rdfs:comment "Obtaining, responding to, and allocating resources for a customer order that has unique requirements or specifications and delivering a product that is partially or fully designed, redesigned, manufactured, and/or assembled from a bill of materials or recipe that includes one or more custom parts or ingredients"@en ;
       rdfs:label "Deliver Engineer-to-Order Product" ;
       rdfs:subClassOf scor:Deliver ;
       scor:hasProcessID "sD3" ;
@@ -79,7 +121,7 @@ scor:DeliverEngineerToOrderProduct
 
 scor:DeliverMakeToOrderProduct
       rdf:type owl:Class ;
-      rdfs:comment "Delivers product that is sourced, configured, manufactured, and/or assembled from standard raw materials, parts, ingredients or sub-assemblies, in response to a specific firm customer order" ;
+      rdfs:comment "Delivers product that is sourced, configured, manufactured, and/or assembled from standard raw materials, parts, ingredients or sub-assemblies, in response to a specific firm customer order"@en ;
       rdfs:label "Deliver Make-to-Order Product" ;
       rdfs:subClassOf scor:Deliver ;
       scor:hasProcessID "sD2" ;
@@ -87,35 +129,35 @@ scor:DeliverMakeToOrderProduct
 
 scor:DeliverRetailProduct
       rdf:type owl:Class ;
-      rdfs:comment "To acquire, merchandise, and sell finished goods at a retail store" ;
+      rdfs:comment "To acquire, merchandise, and sell finished goods at a retail store"@en ;
       rdfs:label "Deliver Retail Product" ;
       rdfs:subClassOf scor:Deliver ;
       skos:altLabel "sD4" .
 
 scor:DeliverReturnDefectiveProduct
       rdf:type owl:Class ;
-      rdfs:comment "The receipt and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement" ;
+      rdfs:comment "The receipt and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement"@en ;
       rdfs:label "Deliver Return Defective Product" ;
       rdfs:subClassOf scor:Return ;
       skos:altLabel "sDR1" .
 
 scor:DeliverReturnExcessProduct
       rdf:type owl:Class ;
-      rdfs:comment "The receipt of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract" ;
+      rdfs:comment "The receipt of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract"@en ;
       rdfs:label "Deliver Return Excess Product" ;
       rdfs:subClassOf scor:Return ;
       skos:altLabel "sDR3" .
 
 scor:DeliverReturnMROProduct
       rdf:type owl:Class ;
-      rdfs:comment "The receipt of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure" ;
+      rdfs:comment "The receipt of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure"@en ;
       rdfs:label "Deliver Return MRO Product" ;
       rdfs:subClassOf scor:Return ;
       skos:altLabel "sDR2" .
 
 scor:DeliverStockedProduct
       rdf:type owl:Class ;
-      rdfs:comment "Delivers product that is sourced or made based on aggregated customer orders, projected orders/demand and inventory re-ordering parameters" ;
+      rdfs:comment "Delivers product that is sourced or made based on aggregated customer orders, projected orders/demand and inventory re-ordering parameters"@en ;
       rdfs:label "Deliver Stocked Product" ;
       rdfs:subClassOf scor:Deliver ;
       scor:hasProcessID "sD1" ;
@@ -153,14 +195,6 @@ scor:DownsideAdaptability
       rdfs:subClassOf scor:KeyPerformanceIndicator ;
       skos:altLabel "AG.1.3" .
 
-scor:Enable
-      rdf:type owl:Class ;
-      rdfs:comment "Establishing, maintaining and monitoring information, relationships, resources, assets, business rules, compliance and contracts required to operate the supply chain" ;
-      rdfs:label "Enable" ;
-      rdfs:subClassOf scor:Process ;
-      scor:hasProcessID "E" ;
-      skos:altLabel "sE" .
-
 scor:EngineerToOrder
       rdf:type owl:Class ;
       rdfs:comment "" ;
@@ -170,31 +204,23 @@ scor:EngineerToOrder
 
 scor:IdentifyPrioritizeAggregateSCRequirements
       rdf:type owl:Class ;
-      rdfs:comment "The process of identifying, aggregating, and prioritizing, all sources of demand for the integrated supply chain of a product or service at the appropriate level, horizon and interval." ;
+      rdfs:comment "The process of identifying, aggregating, and prioritizing, all sources of demand for the integrated supply chain of a product or service at the appropriate level, horizon and interval."@en ;
       rdfs:label "Identify, Prioritize	Aggregate Supply Chain Requirements" ;
       rdfs:subClassOf scor:PlanSupplyChain ;
       skos:altLabel "sP1.1" .
 
 scor:IdentifyPrioritizeAggregateSCResources
       rdf:type owl:Class ;
-      rdfs:comment "The process of identifying, prioritizing, and aggregating, as a whole with constituent parts, all sources of supply that are required and add value in the supply chain of a product or service at the appropriate level, horizon and interval." ;
+      rdfs:comment "The process of identifying, prioritizing, and aggregating, as a whole with constituent parts, all sources of supply that are required and add value in the supply chain of a product or service at the appropriate level, horizon and interval."@en ;
       rdfs:label "Identify, Prioritize	Aggregate Supply Chain Resources" ;
       rdfs:subClassOf scor:PlanSupplyChain ;
       skos:altLabel "sP1.2" .
 
 scor:KeyPerformanceIndicator
       rdf:type owl:Class ;
-      rdfs:comment "Diagnostics for the overall health of the supply chain. Benchmarking Key Performance Indicators helps establishing realistic targets to support the strategic directions" ;
+      rdfs:comment "Diagnostics for the overall health of the supply chain. Benchmarking Key Performance Indicators helps establishing realistic targets to support the strategic directions"@en ;
       rdfs:label "KeyPerformanceIndicator" ;
       rdfs:subClassOf daq:Metric .
-
-scor:Make
-      rdf:type owl:Class ;
-      rdfs:comment "Adds value to products through mixing, separating, forming, machining, and chemical processes" ;
-      rdfs:label "Make" ;
-      rdfs:subClassOf scor:Process ;
-      scor:hasProcessID "M" ;
-      skos:altLabel "sM" .
 
 scor:MakeToOrder
       rdf:type owl:Class ;
@@ -212,63 +238,63 @@ scor:MakeToStock
 
 scor:ManageDataInformation
       rdf:type owl:Class ;
-      rdfs:comment "Collecting, maintaining and publishing data and information required to plan, operate, measure and manage the supply chain" ;
+      rdfs:comment "Collecting, maintaining and publishing data and information required to plan, operate, measure and manage the supply chain"@en ;
       rdfs:label "Manage Data and Information" ;
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE3" .
 
 scor:ManagePerformance
       rdf:type owl:Class ;
-      rdfs:comment "Reporting performance, identifying gaps in performance, performing root cause analysis, and developing and launching corrective actions to close gaps in perfromance" ;
+      rdfs:comment "Reporting performance, identifying gaps in performance, performing root cause analysis, and developing and launching corrective actions to close gaps in perfromance"@en ;
       rdfs:label "Manage Performance" ;
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE2" .
 
 scor:ManageRegulatoryCompliance
       rdf:type owl:Class ;
-      rdfs:comment "Identifying, collecting, assessing and integrating regulatory compliance requirements in standard supply chain processes, policies and business rules" ;
+      rdfs:comment "Identifying, collecting, assessing and integrating regulatory compliance requirements in standard supply chain processes, policies and business rules"@en ;
       rdfs:label "Manage Regulatory Compliance" ;
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE8" .
 
 scor:ManageSupplyChainAssets
       rdf:type owl:Class ;
-      rdfs:comment "Scheduling, maintaining and dispositioning of supply chain assets that operate supply chain processes" ;
+      rdfs:comment "Scheduling, maintaining and dispositioning of supply chain assets that operate supply chain processes"@en ;
       rdfs:label "Manage Supply Chain Assets" ;
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE5" .
 
 scor:ManageSupplyChainBusinessRules
       rdf:type owl:Class ;
-      rdfs:comment "Establishing, documenting, communicating and publishing supply chain business rules" ;
+      rdfs:comment "Establishing, documenting, communicating and publishing supply chain business rules"@en ;
       rdfs:label "Manage Supply Chain Business Rules" ;
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE1" .
 
 scor:ManageSupplyChainContracts
       rdf:type owl:Class ;
-      rdfs:comment "The management and communication of contractual agreements in support of business objectives and supply chain goals" ;
+      rdfs:comment "The management and communication of contractual agreements in support of business objectives and supply chain goals"@en ;
       rdfs:label "Manage Supply Chain Contracts" ;
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE6" .
 
 scor:ManageSupplyChainHumanResources
       rdf:type owl:Class ;
-      rdfs:comment "Developing, governing and maintaining an organization of permanent, temporary and outsourced staff, with the right qualifications, in support of the business objects and supply chain goals" ;
+      rdfs:comment "Developing, governing and maintaining an organization of permanent, temporary and outsourced staff, with the right qualifications, in support of the business objects and supply chain goals"@en ;
       rdfs:label "Manage Supply Chain Human Resources" ;
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE4" .
 
 scor:ManageSupplyChainNetworks
       rdf:type owl:Class ;
-      rdfs:comment "Developing, governing and maintaining a network of supply chain assets" ;
+      rdfs:comment "Developing, governing and maintaining a network of supply chain assets"@en ;
       rdfs:label "Manage Supply Chain Networks" ;
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE7" .
 
 scor:ManageSupplyChainRisk
       rdf:type owl:Class ;
-      rdfs:comment "Identification and assessment of potential disruptions (risks) in the supply chain and developing a plan to mitigate these threats to operating the supply chain" ;
+      rdfs:comment "Identification and assessment of potential disruptions (risks) in the supply chain and developing a plan to mitigate these threats to operating the supply chain"@en ;
       rdfs:label "Manage Supply Chain Risk" ;
       rdfs:subClassOf scor:Enable ;
       skos:altLabel "sE9" .
@@ -324,7 +350,7 @@ scor:PerfectCondition
 
 scor:PerfectOrderFulfillment
       rdf:type owl:Class ;
-      rdfs:comment "Delivered complete, on time according the client's specifications of time. Documentation complete. Faultlessly installed" ;
+      rdfs:comment "Delivered complete, on time according the client's specifications of time. Documentation complete. Faultlessly installed"@en ;
       rdfs:label "PerfectOrderFulfillment" ;
       rdfs:subClassOf scor:Reliability , scor:KeyPerformanceIndicator ;
       scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" ;
@@ -332,94 +358,78 @@ scor:PerfectOrderFulfillment
 
 scor:PerformanceAttribute
       rdf:type owl:Class ;
-      rdfs:comment "A performance attribute is a grouping or categorization of metrics used to express a specific strategy" ;
+      rdfs:comment "A performance attribute is a grouping or categorization of metrics used to express a specific strategy"@en ;
       rdfs:label "PerformanceAttribute" .
-
-scor:Plan
-      rdf:type owl:Class ;
-      rdfs:comment "Describes the planning activities associated with operating a supply chain. This includes gathering customer requirements, collecting information on available resources, and balancing requirements and resources to determine planned capabilities and resource gaps. This is followed by identifying the actions required to correct any gaps." ;
-      rdfs:label "Plan" ;
-      rdfs:subClassOf scor:Process ;
-      scor:hasProcessID "P" ;
-      skos:altLabel "sP" .
 
 scor:PlanDeliver
       rdf:type owl:Class ;
-      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of delivery resources to meet delivery requirements" ;
+      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of delivery resources to meet delivery requirements"@en ;
       rdfs:label "Plan Deliver" ;
       rdfs:subClassOf scor:Plan ;
       skos:altLabel "sP4" .
 
 scor:PlanMake
       rdf:type owl:Class ;
-      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of production resources to meet production requirements" ;
+      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of production resources to meet production requirements"@en ;
       rdfs:label "Plan Make" ;
       rdfs:subClassOf scor:Plan ;
       skos:altLabel "sP3" .
 
 scor:PlanReturn
       rdf:type owl:Class ;
-      rdfs:comment "establish and adjust courses of action or tasks over specified time periods that represent a projected appropriation of return resources and assets to meet anticipated as well as unanticipated return requirements" ;
+      rdfs:comment "establish and adjust courses of action or tasks over specified time periods that represent a projected appropriation of return resources and assets to meet anticipated as well as unanticipated return requirements"@en ;
       rdfs:label "Plan Return" ;
       rdfs:subClassOf scor:Plan ;
       skos:altLabel "sP5" .
 
 scor:PlanSource
       rdf:type owl:Class ;
-      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of material resources to meet supply chain requirements" ;
+      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of material resources to meet supply chain requirements"@en ;
       rdfs:label "Plan Source" ;
       rdfs:subClassOf scor:Plan ;
       skos:altLabel "sP2" .
 
 scor:PlanSupplyChain
       rdf:type owl:Class ;
-      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of supply chain resources to meet supply chain requirements for the longest time fence constraints of supply resources" ;
+      rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of supply chain resources to meet supply chain requirements for the longest time fence constraints of supply resources"@en ;
       rdfs:label "Plan Supply Chain" ;
       rdfs:subClassOf scor:Plan ;
       skos:altLabel "sP1" .
 
 scor:Process
       rdf:type owl:Class ;
-      rdfs:comment "A process is a unique activity performed to meet predefined outcomes" ;
+      rdfs:comment "A process is a unique activity performed to meet predefined outcomes"@en ;
       rdfs:label "Process" .
 
 scor:Reliability
       rdf:type owl:Class ;
-      rdfs:comment "The Reliability attribute addresses the ability to perform tasks as required. Reliability focuses on the predictability of the outcome of a process." ;
+      rdfs:comment "The Reliability attribute addresses the ability to perform tasks as required. Reliability focuses on the predictability of the outcome of a process."@en;
       rdfs:label "Reliability" ;
       rdfs:subClassOf scor:PerformanceAttribute .
 
 scor:Responsiveness
       rdf:type owl:Class ;
-      rdfs:comment "The Responsiveness attribute describes the speed at which tasks are performed. Responsiveness addresses repeated speed of doing business." ;
+      rdfs:comment "The Responsiveness attribute describes the speed at which tasks are performed. Responsiveness addresses repeated speed of doing business."@en ;
       rdfs:label "Responsiveness" ;
       rdfs:subClassOf scor:PerformanceAttribute .
 
-scor:Return
-      rdf:type owl:Class ;
-      rdfs:comment "Moves material from a customer back through the supply chain to address defects in product, ordering, or manufacturing, or to perform upkeep activities" ;
-      rdfs:label "Return" ;
-      rdfs:subClassOf scor:Process ;
-      scor:hasProcessID "R" ;
-      skos:altLabel "sR" .
-
 scor:ReturnMROProduct
       rdf:type owl:Class ;
-      rdfs:comment "The return of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure" ;
+      rdfs:comment "The return of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure"@en ;
       rdfs:label "Return MRO Product" ;
       rdfs:subClassOf scor:Return ;
       skos:altLabel "sSR2" .
 
 scor:ReturnOnFixedAssets
       rdf:type owl:Class ;
-      rdfs:comment "Measures the return an organization receives on its invested capital in supply chain fixed assets. This includes the fixed assets used in Plan, Source, Make,Deliver, and Return" ;
+      rdfs:comment "Measures the return an organization receives on its invested capital in supply chain fixed assets. This includes the fixed assets used in Plan, Source, Make,Deliver, and Return"@en ;
       rdfs:label "ReturnOnFixedAssets" ;
       rdfs:subClassOf scor:KeyPerformanceIndicator ;
       skos:altLabel "AM.1.2." .
 
 scor:ReturnOnWorkingCapital
       rdf:type owl:Class ;
-      rdfs:comment "Assesses the magnitude of investment relative to a company's working capital position versus the revenue generated from a supply chain." ;
+      rdfs:comment "Assesses the magnitude of investment relative to a company's working capital position versus the revenue generated from a supply chain."@en ;
       rdfs:label "ReturnOnWorkingCapital" ;
       rdfs:subClassOf scor:KeyPerformanceIndicator ;
       skos:altLabel "AM.1.3." .
@@ -428,14 +438,6 @@ scor:ShippingDocumenationAccuracy
       rdf:type owl:Class ;
       rdfs:subClassOf scor:DocumentationAccuracy ;
       scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
-
-scor:Source
-      rdf:type owl:Class ;
-      rdfs:comment "Order, deliver, receipt and transfer of raw material items, subassemblies, product and/or services" ;
-      rdfs:label "Source" ;
-      rdfs:subClassOf scor:Process ;
-      scor:hasProcessID "S" ;
-      skos:altLabel "sS" .
 
 scor:SourceEngineerToOrderProduct
       rdf:type owl:Class ;
@@ -453,14 +455,14 @@ scor:SourceMakeToOrderProduct
 
 scor:SourceReturnDefectiveProduct
       rdf:type owl:Class ;
-      rdfs:comment "The return and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement" ;
+      rdfs:comment "The return and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement"@en ;
       rdfs:label "Source Return Defective Product" ;
       rdfs:subClassOf scor:Return ;
       skos:altLabel "sSR1" .
 
 scor:SourceReturnExcessProduct
       rdf:type owl:Class ;
-      rdfs:comment "The return of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract" ;
+      rdfs:comment "The return of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract"@en ;
       rdfs:label "Source Return Excess Product" ;
       rdfs:subClassOf scor:Return ;
       skos:altLabel "sSR3" .
@@ -474,7 +476,7 @@ scor:SourceStockedProduct
 
 scor:TotalCostToServe
       rdf:type owl:Class ;
-      rdfs:comment "The sum of the Supply Chain Cost to deliver products and services to customers" ;
+      rdfs:comment "The sum of the Supply Chain Cost to deliver products and services to customers"@en ;
       rdfs:label "TotalCostToServe" ;
       rdfs:subClassOf scor:KeyPerformanceIndicator ;
       skos:altLabel "CO.1.001" .
@@ -512,13 +514,13 @@ scor:hasMetricID
 
 scor:hasProcessID
       rdf:type owl:AnnotationProperty ;
-      rdfs:comment "represents a unique identifier of a process within the SCOR model" ;
+      rdfs:comment "Represents a unique identifier of a process within the SCOR model"@en ;
       rdfs:label "has process ID" ;
       rdfs:range xsd:string .
 
 scor:hasProcessStepList
       rdf:type owl:DatatypeProperty , owl:ObjectProperty ;
-      rdfs:comment "represents a unique identifier of a process within the SCOR model" ;
+      rdfs:comment "Represents a unique identifier of a process within the SCOR model"@en ;
       rdfs:domain scor:Process ;
       rdfs:label "has process step list" ;
       rdfs:range xsd:string .
@@ -539,7 +541,7 @@ dc:Plan1
 
 daq:Metric
       rdf:type owl:Class ;
-      rdfs:comment "A metric is a standard for measurement of the performance of a process." ;
+      rdfs:comment "A metric is a standard for measurement of the performance of a process." @en;
       rdfs:label "Metric" .
 
 daq:Metric1
@@ -553,56 +555,56 @@ scor:AuthorizeSupplierPaymentCycleTime
 
 scor:DownsideDeliverAdaptability
       rdf:type owl:Class ;
-      rdfs:comment """Downside Deliver Adaptability = The reduction in delivered quantities sustainable at 30 days prior to delivery with no inventory or cost penalties."""^^xsd:string ;
+      rdfs:comment "Downside Deliver Adaptability = The reduction in delivered quantities sustainable at 30 days prior to delivery with no inventory or cost penalties." @en ;
       rdfs:subClassOf :DownsideSCAdaptability ;
       skos:prefLabel "AG.2.13"^^xsd:string .
 
 scor:DownsideMakeAdaptability
       rdf:type owl:Class ;
-      rdfs:comment "The production reduction sustainable at 30 days prior to delivery with no inventory or cost penalties."^^xsd:string ;
+      rdfs:comment "The production reduction sustainable at 30 days prior to delivery with no inventory or cost penalties."@en ;
       rdfs:subClassOf :DownsideSCAdaptability ;
       skos:prefLabel "AG.2.12"^^xsd:string .
 
 scor:DownsideSCAdaptability
       rdf:type owl:Class ;
-      rdfs:comment """The reduction in quantities ordered sustainable at 30 days prior to delivery with no inventory or cost penalties."""^^xsd:string ;
+      rdfs:comment "The reduction in quantities ordered sustainable at 30 days prior to delivery with no inventory or cost penalties."@en ;
       rdfs:subClassOf scor:Agility ;
       skos:prefLabel "AG.1.3"^^xsd:string .
 
 scor:DownsideSourceAdaptability
       rdf:type owl:Class ;
-      rdfs:comment """The raw material quantity reduction sustainable at 30 days prior to delivery with no inventory or cost penalties."""^^xsd:string ;
+      rdfs:comment "The raw material quantity reduction sustainable at 30 days prior to delivery with no inventory or cost penalties." @en ;
       rdfs:subClassOf :DownsideSCAdaptability ;
       skos:prefLabel "AG.2.11"^^xsd:string .
 
 scor:OrderFullfilmentCycleTime
       rdf:type owl:Class ;
-      rdfs:comment "The average actual cycle consistently achieved to fulfill customers orders"^^xsd:string ;
+      rdfs:comment "The average actual cycle consistently achieved to fulfill customers orders" @en;
       rdfs:subClassOf scor:Responsiveness ;
       skos:prefLabel "RS.1.1"^^xsd:string .
 	  
 scor:SourceCycleTime
       rdf:type owl:Class ;
-      rdfs:comment "The average time associated with Source Processes. (Processes: sS1, sS2, sS3)"^^xsd:string ;
+      rdfs:comment "The average time associated with Source Processes. (Processes: sS1, sS2, sS3)" @en ;
       rdfs:subClassOf :OrderFullfilmentCycleTime ;
       skos:prefLabel "RS.2.1"^^xsd:string .
 
 scor:OverallValueAtRisk
       rdf:type owl:Class ;
-      rdfs:comment """Risk management in organizations traditionally resides within the finance function, due to its inherent focus on financial impact on the organization."""^^xsd:string ;
+      rdfs:comment "Risk management in organizations traditionally resides within the finance function, due to its inherent focus on financial impact on the organization." @en ;
       rdfs:subClassOf scor:Agility ;
       skos:prefLabel "AG.1.4"^^xsd:string .
 
 scor:SupplierCustomerProductRiskRating
       rdf:type owl:Class ;
-      rdfs:comment """The numerical risk rating for supplier, customer or product. Normalized and used for comparison purposes."""^^xsd:string ;
+      rdfs:comment "The numerical risk rating for supplier, customer or product. Normalized and used for comparison purposes." @en ;
       rdfs:label "Supplier's/Customer's/Products's Risk Rating"^^xsd:string ;
       rdfs:subClassOf :DownsideSCAdaptability ;
       skos:prefLabel "AG.2.14"^^xsd:string .
 
 scor:UpsideDeliverAdaptability
       rdf:type owl:Class ;
-      rdfs:comment """The maximum sustainable percentage increase in quantities delivered that can be achieved in 30 days with the assumption of unconstrained finished good availability."""^^xsd:string ;
+      rdfs:comment "The maximum sustainable percentage increase in quantities delivered that can be achieved in 30 days with the assumption of unconstrained finished good availability."@en ;
       rdfs:subClassOf :UpsideSCAdaptability ;
       skos:prefLabel "AG.2.8"^^xsd:string .
 
@@ -613,7 +615,7 @@ scor:UpsideDeliverFlexibility
 
 scor:UpsideDeliverReturnAdaptability
       rdf:type owl:Class ;
-      rdfs:comment """The maximum sustainable percentage increase in returns of finished goods from customers that can be achieved in 30 days."""^^xsd:string ;
+      rdfs:comment "The maximum sustainable percentage increase in returns of finished goods from customers that can be achieved in 30 days."@en ;
       rdfs:subClassOf :UpsideSCAdaptability ;
       skos:prefLabel "AG.2.10"^^xsd:string .
 
@@ -624,72 +626,72 @@ scor:UpsideDeliverReturnFlexibility
 
 scor:UpsideMakeAdaptability
       rdf:type owl:Class ;
-      rdfs:comment """The maximum sustainable percentage increase in production that can be achieved in 30 days with the assumption of no raw material constraints."""^^xsd:string ;
+      rdfs:comment "The maximum sustainable percentage increase in production that can be achieved in 30 days with the assumption of no raw material constraints." ;
       rdfs:subClassOf :UpsideSCAdaptability ;
       skos:prefLabel "AG.2.7"^^xsd:string .
 
 scor:UpsideMakeFlexibility
       rdf:type owl:Class ;
-      rdfs:comment """The number of days required to achieve an unplanned sustainable 20% increase in production with the assumption of no raw material constraints."""^^xsd:string ;
+      rdfs:comment "The number of days required to achieve an unplanned sustainable 20% increase in production with the assumption of no raw material constraints."@en ;
       rdfs:subClassOf :UpsideSCFlexibility ;
       skos:prefLabel "AG.2.2"^^xsd:string .
 
 scor:UpsideSCAdaptability
       rdf:type owl:Class ;
-      rdfs:comment """The maximum sustainable percentage increase in quantity delivered that can be achieved in 30 days."""^^xsd:string ;
+      rdfs:comment "The maximum sustainable percentage increase in quantity delivered that can be achieved in 30 days."@en ;
       rdfs:subClassOf scor:Agility ;
       skos:prefLabel "AG.1.2"^^xsd:string .
 
 scor:UpsideSCFlexibility
       rdf:type owl:Class ;
-      rdfs:comment """The number of days required to achieve an unplanned sustainable 20% increase in quantities delivered."""^^xsd:string ;
+      rdfs:comment "The number of days required to achieve an unplanned sustainable 20% increase in quantities delivered."@en ;
       rdfs:subClassOf scor:Agility ;
       skos:prefLabel "AG.1.1"^^xsd:string .
 
 scor:UpsideSourceAdaptability
       rdf:type owl:Class ;
-      rdfs:comment """The maximum sustainable percentage increase in raw material quantities that can be acquired/received in 30 days."""^^xsd:string ;
+      rdfs:comment "The maximum sustainable percentage increase in raw material quantities that can be acquired/received in 30 days."@en ;
       rdfs:subClassOf :UpsideSCAdaptability ;
       skos:prefLabel "AG.2.6"^^xsd:string .
 
 scor:UpsideSourceFlexibility
       rdf:type owl:Class ;
-      rdfs:comment """The number of days required to achieve an unplanned sustainable 20% increase in quantity of raw  materials."""^^xsd:string ;
+      rdfs:comment "The number of days required to achieve an unplanned sustainable 20% increase in quantity of raw  materials."@en ;
       rdfs:subClassOf :UpsideSCFlexibility ;
       skos:prefLabel "AG.2.1"^^xsd:string .
 
 scor:UpsideSourceReturnAdaptability
       rdf:type owl:Class ;
-      rdfs:comment """The maximum sustainable percentage increase in returns of raw materials to suppliers that can be achieved in 30 days."""^^xsd:string ;
+      rdfs:comment "The maximum sustainable percentage increase in returns of raw materials to suppliers that can be achieved in 30 days."@en ;
       rdfs:subClassOf :UpsideSCAdaptability ;
       skos:prefLabel "AG.2.9"^^xsd:string .
 
 scor:UpsideSourceReturnFlexibility
       rdf:type owl:Class ;
-      rdfs:comment """The number of days required to achieve an unplanned sustainable 20% increase in the return of raw materials to suppliers."""^^xsd:string ;
+      rdfs:comment "The number of days required to achieve an unplanned sustainable 20% increase in the return of raw materials to suppliers."@en ;
       rdfs:subClassOf :UpsideSCFlexibility ;
       skos:prefLabel "AG.2.4"^^xsd:string .
 
 scor:Scope
       rdf:type owl:Class ;
-      rdfs:comment "Types of focus measure for performance attributes." ;
+      rdfs:comment "Types of focus measure for performance attributes."@en ;
       rdfs:label "Scope" .
 	  
 scor:Customer
       rdf:type owl:Class ;
-      rdfs:comment "Customer focus for performance attributes" ;
+      rdfs:comment "Customer focus for performance attributes"@en ;
       rdfs:label "Customer" ;
       rdfs:subClassOf scor:Scope .
 	  
 scor:Internal
       rdf:type owl:Class ;
-      rdfs:comment "Internal focus for performance attributes" ;
+      rdfs:comment "Internal focus for performance attributes"@en ;
       rdfs:label "Internal" ;
       rdfs:subClassOf scor:Scope .
 	  
 scor:Supplier
       rdf:type owl:Class ;
-      rdfs:comment "Supplier focus for performance attributes" ;
+      rdfs:comment "Supplier focus for performance attributes"@en ;
       rdfs:label "Supplier" ;
       rdfs:subClassOf scor:Scope .
 	  
