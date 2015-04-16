@@ -307,14 +307,14 @@ scor:ManageSupplyChainRisk
 scor:IdentifyPrioritizeAggregateSCRequirements
       rdf:type owl:Class ;
       rdfs:comment "The process of identifying, aggregating, and prioritizing, all sources of demand for the integrated supply chain of a product or service at the appropriate level, horizon and interval."@en ;
-      rdfs:label "Identify, Prioritize	Aggregate Supply Chain Requirements" ;
+      rdfs:label "Identify, Prioritize Aggregate Supply Chain Requirements" ;
       rdfs:subClassOf scor:PlanSupplyChain ;
       skos:altLabel "sP1.1" .
 
 scor:IdentifyPrioritizeAggregateSCResources
       rdf:type owl:Class ;
       rdfs:comment "The process of identifying, prioritizing, and aggregating, as a whole with constituent parts, all sources of supply that are required and add value in the supply chain of a product or service at the appropriate level, horizon and interval."@en ;
-      rdfs:label "Identify, Prioritize	Aggregate Supply Chain Resources" ;
+      rdfs:label "Identify, Prioritize Aggregate Supply Chain Resources" ;
       rdfs:subClassOf scor:PlanSupplyChain ;
       skos:altLabel "sP1.2" .
 	  
@@ -330,7 +330,127 @@ scor:EstablishCommunicateSCPlans
       rdfs:comment "The establishment and communication of courses of action over the appropriate time-defined (long-term, annual, monthly, weekly) planning horizon and interval, representing a projected appropriation of supply-chain resources to meet supply chain requirements." @en ;
       rdfs:label "Establish and Communicate Supply Chain Plans" ;
       rdfs:subClassOf scor:PlanSupplyChain ;
-      skos:altLabel "sP1.4" .	  
+      skos:altLabel "sP1.4" .	
+
+# Plan Source
+
+scor:IdentifyPrioritizeAggregateProductRequirements
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, prioritizing, and considering, as a whole with constituent parts, all sources of demand for a product or service in the supply chain." @en ;
+      rdfs:label "Identify, Prioritize and Aggregate Product Requirements" ;
+      rdfs:subClassOf scor:PlanSource ;
+      skos:altLabel "sP2.1" .	
+
+scor:IdentifyAssessAggregateProductResources
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, evaluating, and considering, as a whole with constituent parts, all material and other resources used to add value in the supply chain for a product or services." @en ;
+      rdfs:label "Identify, Assess and Aggregate Product Resources" ;
+      rdfs:subClassOf scor:PlanSource ;
+      skos:altLabel "sP2.2" .		
+
+scor:BalanceProductResourcesWithProductRequirements
+      rdf:type owl:Class ;
+      rdfs:comment "The process of developing a time-phased course of action that commits resources to meet requirements." @en ;
+      rdfs:label "Balance Product Resources with Product Requirements" ;
+      rdfs:subClassOf scor:PlanSource ;
+      skos:altLabel "sP2.3" .
+
+scor:EstablishSourcingPlans
+      rdf:type owl:Class ;
+      rdfs:comment "The establishment of courses of action over specified time periods that represent a projected appropriation of supply resources to meet sourcing plan requirements." @en ;
+      rdfs:label "Establish Sourcing Plans" ;
+      rdfs:subClassOf scor:PlanSource ;
+      skos:altLabel "sP2.4" .		
+
+# Plan Make
+	  
+scor:IdentifyPrioritizeAggregateProductionRequirements
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, prioritizing, and considering as a whole with constituent parts, all sources of demand in the creation of a product or service." @en ;
+      rdfs:label "Identify, Prioritize and Aggregate Production Requirements" ;
+      rdfs:subClassOf scor:PlanMake ;
+      skos:altLabel "sP3.1" .
+	  
+scor:IdentifyAssessAggregateProductionResources
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, evaluating, and considering, as a whole with constituent parts, all things that add value in the creation of a product or performance of a service." @en ;
+      rdfs:label "Identify, Assess and Aggregate Production Resources" ;
+      rdfs:subClassOf scor:PlanMake ;
+      skos:altLabel "sP3.2" .	
+	  
+scor:BalanceProductionResourcesWithProductionRequirements
+      rdf:type owl:Class ;
+      rdfs:comment "The process of developing a time-phased course of action that commits creation and operation resources to meet creation and operation requirements." @en ;
+      rdfs:label "Balance Production Resources with Production Requirements" ;
+      rdfs:subClassOf scor:PlanMake ;
+      skos:altLabel "sP3.3" .	  
+	  
+scor:EstablishProductionPlans
+      rdf:type owl:Class ;
+      rdfs:comment "The establishment of courses of action over specified time periods that represent a projected appropriation of supply resources to meet production and operating plan requirements." @en ;
+      rdfs:label "Establish Production Plans" ;
+      rdfs:subClassOf scor:PlanMake ;
+      skos:altLabel "sP3.4" .
+
+# Plan Deliver
+
+scor:IdentifyPrioritizeAggregateDeliveryRequirements
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, prioritizing, and considering, as a whole with constituent parts, all sources of demand in the delivery of a product or service." @en ;
+      rdfs:label "Identify, Prioritize and Aggregate Delivery Requirements" ;
+      rdfs:subClassOf scor:PlanDeliver ;
+      skos:altLabel "sP4.1" .
+	  
+scor:IdentifyAssessAggregateDeliveryResources
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, evaluating, and considering, as a whole with constituent parts, all things that add value in the delivery of a product or service." @en ;
+      rdfs:label "Identify, Assess and Aggregate Delivery Resources" ;
+      rdfs:subClassOf scor:PlanDeliver ;
+      skos:altLabel "sP4.2" .
+	  
+scor:BalanceDeliveryResourcesCapabilitiesWithDeliveryRequirements
+      rdf:type owl:Class ;
+      rdfs:comment "The process of developing a time-phased course of action that commits delivery resources to meet delivery requirements." @en ;
+      rdfs:label "Balance Delivery Resources and Capabilities with Delivery Requirements" ;
+      rdfs:subClassOf scor:PlanDeliver ;
+      skos:altLabel "sP4.3" .
+	  
+scor:EstablishDeliveryPlans
+      rdf:type owl:Class ;
+      rdfs:comment "The establishment of courses of action over specified time periods that represent a projected appropriation of delivery resources to meet delivery requirements." @en ;
+      rdfs:label "Establish Delivery Plans" ;
+      rdfs:subClassOf scor:PlanDeliver ;
+      skos:altLabel "sP4.4" .	
+
+# Plan Return
+
+scor:AssessAggregateReturnRequirements
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, evaluating, and considering, as a whole with constituent parts, all sources of demand for the return of a product." @en ;
+      rdfs:label "Assess and Aggregate Return Requirements" ;
+      rdfs:subClassOf scor:PlanReturn ;
+      skos:altLabel "sP5.1" .	
+
+scor:IdentifyAssessAggregateReturnResources
+      rdf:type owl:Class ;
+      rdfs:comment "The process of identifying, evaluating, and consideration for all resources that add value to, execute, or constrain the processes for the return of a product.." @en ;
+      rdfs:label "Identify, Assess and Aggregate Return Resources" ;
+      rdfs:subClassOf scor:PlanReturn ;
+      skos:altLabel "sP5.2" .	  
+	
+scor:BalanceReturnResourcesWithReturnRequirements
+      rdf:type owl:Class ;
+      rdfs:comment "The process of developing courses of action that make feasible the commitment the appropriate return resources and or assets to satisfy return requirements." @en ;
+      rdfs:label "Balance Return Resources with Return Requirements" ;
+      rdfs:subClassOf scor:PlanReturn ;
+      skos:altLabel "sP5.3" .	
+	  
+scor:EstablishCommunicateReturnPlans
+      rdf:type owl:Class ;
+      rdfs:comment "The establishment and communication of courses of action over specified time periods that represent a projected appropriation of required return resources and or assets to meet return process requirements." @en ;
+      rdfs:label "Establish and Communicate Return Plans" ;
+      rdfs:subClassOf scor:PlanReturn ;
+      skos:altLabel "sP5.4" .		  
 
 # End of Level 3 Processes 
 	  
