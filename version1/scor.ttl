@@ -457,6 +457,132 @@ scor:EstablishCommunicateReturnPlans
       rdfs:subClassOf scor:PlanReturn ;
       skos:altLabel "sP5.4" .		  
 
+# Source Stoked Product
+
+scor:ScheduleProductDeliveries
+      rdf:type owl:Class ;
+      rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against an existing contract or purchase order." @en ;
+      rdfs:label "Schedule Product Deliveries" ;
+      rdfs:subClassOf scor:SourceStockedProduct ;
+      skos:altLabel "sS1.1" .	  
+	  
+scor:ReceiveProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process and associated activities of receiving product to contract requirements." @en ;
+      rdfs:label "Receive Product" ;
+      rdfs:subClassOf scor:SourceStockedProduct ;
+      skos:altLabel "sS1.2" .	
+	  
+scor:VerifyProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process and associated activities of receiving product to contract requirements." @en ;
+      rdfs:label "Verify Product" ;
+      rdfs:subClassOf scor:SourceStockedProduct ;
+      skos:altLabel "sS1.3" .	  
+
+scor:TransferProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The transfer of accepted product to the appropriate stocking location within the supply chain." @en ;
+      rdfs:label "Transfer Product" ;
+      rdfs:subClassOf scor:SourceStockedProduct ;
+      skos:altLabel "sS1.4" .
+	  
+scor:AuthorizeSupplierPayment
+      rdf:type owl:Class ;
+      rdfs:comment "The process of authorizing payments and paying suppliers for product or services." @en ;
+      rdfs:label "Authorize Supplier Payment" ;
+      rdfs:subClassOf scor:SourceStockedProduct ;
+      skos:altLabel "sS1.5" .	
+
+# Source MakeToOrderProduct
+
+scor:ScheduleProductDeliveries
+      rdf:type owl:Class ;
+      rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against the contract." @en ;
+      rdfs:label "Schedule Product Deliveries" ;
+      rdfs:subClassOf scor:SourceMakeToOrderProduct ;
+      skos:altLabel "sS2.1" .
+	  
+scor:SourceMakeToOrderReceiveProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process and associated activities of receiving product to contract requirements." @en ;
+      rdfs:label "Receive Product" ;
+      rdfs:subClassOf scor:SourceMakeToOrderProduct ;
+      skos:altLabel "sS2.2" .
+	  
+scor:SourceMakeToOrderVerifyProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process and actions required determining product conformance to requirements and criteria." @en ;
+      rdfs:label "Verify Product" ;
+      rdfs:subClassOf scor:SourceMakeToOrderProduct ;
+      skos:altLabel "sS2.3" .
+	  
+scor:SourceMakeToOrderTransferProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The transfer of accepted product to the appropriate stocking location within the supply chain." @en ;
+      rdfs:label "Transfer Product" ;
+      rdfs:subClassOf scor:SourceMakeToOrderProduct ;
+      skos:altLabel "sS2.4" .
+	  
+scor:SourceMakeToOrderAuthorizeSupplierPayment
+      rdf:type owl:Class ;
+      rdfs:comment "The process of authorizing payments and paying suppliers for product or services." @en ;
+      rdfs:label "Supplier Payment" ;
+      rdfs:subClassOf scor:SourceMakeToOrderProduct ;
+      skos:altLabel "sS2.4" .
+
+# SourceEngineerToOrderProduct	
+  
+scor:IdentifySourcesOfSupply
+      rdf:type owl:Class ;
+      rdfs:comment "The identification and qualification of potential suppliers capable of designing and delivering product that will meet all of the required product specifications." @en ;
+      rdfs:label "Identify Sources of Supply" ;
+      rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
+      skos:altLabel "sS3.1" .	 
+
+scor:SelectFinalSupplierNegotiate
+      rdf:type owl:Class ;
+      rdfs:comment "The identification of the final supplier(s) based on the evaluation of RFQs, supplier qualifications and the generation of a contract defining the costs and terms and conditions of product availability." @en ;
+      rdfs:label "Select Final Supplier and Negotiate" ;
+      rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
+      skos:altLabel "sS3.2" .
+
+scor:ScheduleProductDeliveries
+      rdf:type owl:Class ;
+      rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against the contract." @en ;
+      rdfs:label "Schedule Product Deliveries" ;
+      rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
+      skos:altLabel "sS3.3" .
+	  
+scor:SourceEngineerToOrderReceiveProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process and associated activities of receiving product to contract requirements." @en ;
+      rdfs:label "Receive Product" ;
+      rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
+      skos:altLabel "sS3.4" .
+	  
+scor:SourceEngineerToOrderVerifyProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process and actions required determining product conformance to requirements and criteria." @en ;
+      rdfs:label "Verify Product" ;
+      rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
+      skos:altLabel "sS3.5" .	
+	  
+scor:SourceEngineerToOrderTransferProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The transfer of accepted product to the appropriate stocking location within the supply chain." @en ;
+      rdfs:label "Transfer Product" ;
+      rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
+      skos:altLabel "sS3.6" .
+	  
+scor:SourceEngineerToOrderAuthorizeSupplierPayment
+      rdf:type owl:Class ;
+      rdfs:comment "The process of authorizing payments and paying suppliers for product or services. This process includes invoice collection, invoice matching and the issuance of checks." @en ;
+      rdfs:label "Authorize Supplier Payment" ;
+      rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
+      skos:altLabel "sS3.7" .	  
+	  
+	  
 # End of Level 3 Processes 
 	  
 # Metrics
