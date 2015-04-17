@@ -631,9 +631,60 @@ scor:WasteDisposal
       rdfs:comment "Activities associated with collecting and managing waste produced during the produce and test process including scrap material and non-conforming product." @en ;
       rdfs:label "Waste Disposal" ;
       rdfs:subClassOf scor:MakeToStock ;
-      skos:altLabel "sM1.7" .	  
+      skos:altLabel "sM1.7" .
+
+# Make MakeToOrder	  
 	  
+scor:MakeToOrderScheduleProductionActivities
+      rdf:type owl:Class ;
+      rdfs:comment "Given plans for the production of specific parts, products, or formulations in specific quantities and planned availability of required sourced products, the scheduling of the operations to be preformed in accordance with these plans." @en ;
+      rdfs:label "Schedule Production Activities" ;
+      rdfs:subClassOf scor:MakeToOrder ;
+      skos:altLabel "sM2.1" .
 	  
+scor:IssueSourcedInProcessProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The selection and physical movement of sourced/in-process products (e.g., raw materials, fabricated components, subassemblies, required ingredients or intermediate formulations) from a stocking location (e.g., stockroom, a location on the production floor, a supplier) to a specific point of use location." @en ;
+      rdfs:label "Issue Sourced In-Process Product" ;
+      rdfs:subClassOf scor:MakeToOrder ;
+      skos:altLabel "sM2.2" .
+	  
+scor:MakeToOrderProduceTest
+      rdf:type owl:Class ;
+      rdfs:comment "The series of activities performed upon sourced/in-process product to convert it from the raw or semi-finished state to a state of completion and greater value." @en ;
+      rdfs:label "Produce and Test" ;
+      rdfs:subClassOf scor:MakeToOrder ;
+      skos:altLabel "sM2.3" .
+	  
+scor:MakeToOrderPackage
+      rdf:type owl:Class ;
+      rdfs:comment "The series of activities that containerize completed products for storage or sale to end-users." @en ;
+      rdfs:label "Package" ;
+      rdfs:subClassOf scor:MakeToOrder ;
+      skos:altLabel "sM2.4" .	
+	  
+scor:StageFinishedProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The movement of packaged products into a temporary holding location to await movement to a finished goods location." @en ;
+      rdfs:label "Stage Finished Product" ;
+      rdfs:subClassOf scor:MakeToOrder ;
+      skos:altLabel "sM2.5" .	
+
+scor:ReleaseFinishedProductToDeliver
+      rdf:type owl:Class ;
+      rdfs:comment "Activities associated with post-production documentation, testing, or certification required prior to delivery of finished product to customer." @en ;
+      rdfs:label "Release Finished Product to Deliver" ;
+      rdfs:subClassOf scor:MakeToOrder ;
+      skos:altLabel "sM2.6" .	  
+	  
+scor:MakeToOrderWasteDisposal
+      rdf:type owl:Class ;
+      rdfs:comment "Activities associated with collecting and managing waste produced during the produce and test process including scrap material and non-conforming product." @en ;
+      rdfs:label "Waste Disposal" ;
+      rdfs:subClassOf scor:MakeToOrder ;
+      skos:altLabel "sM2.7" .
+	  
+  
 # End of Level 3 Processes 
 	  
 # Metrics
