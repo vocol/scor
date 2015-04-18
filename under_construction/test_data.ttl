@@ -1,0 +1,44 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 	 <http://www.w3.org/2002/07/owl#> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix : 		 <http://www.ok-fraunhofer.de/2015/04/scor#> .
+
+
+#---------------- Deliveries -------------------------
+
+#--- Delivery 1 --------------------------------------
+
+#--- General information 
+:delivery_id_1 :hasProduct "SmartCardModule" ;
+ 			   :hasCommitDate "01-01-2015" ;
+ 			   :hasSupplier :Infineon ;
+               :hasCustomer :Siemens . 
+
+#--- SCOR Information 
+:delivery_id_1 a 			    :DeliverStockedProduct ;
+			   :hasMetricRL_33  90 ;    # Deliver Item Accuracy
+			   :hasMetricRL_35  100 ;   # Delivery Quantity Accuracy
+			   :hasMetricRL_32  75 ;    # Customer CommitDateAchievement Time Customer Receiving
+			   :hasMetricRL_34  82 ;    # Delivery Location Accuracy
+			   :hasMetricRL_31  92 ;    # Compliance Documentation Accuracy
+			   :hasMetricRL_43  98 ;    # Other Required Documentaiton Accuracy 
+			   :hasMetricRL_45  100 ;   # Payment Documentation Accuracy
+			   :hasMetricRL_50  100 ;   # Shipping Documentation Accuracy
+			   :hasMetricRL_12  100 ;   # % of Faultless Installations
+			   :hasMetricRL_41  100 ;   # Orders Delivered Damage Free Conformance
+			   :hasMetricRL_42  94 .    # Orders Delivered Defect Free Confromanace 
+
+
+#--- Delivery 2 --------------------------------------
+
+:delivery_id_2 a :DeliverMakeToOrderProduct .
+
+
+#--- Delivery 3 --------------------------------------
+
+:delivery_id_3 a :DeliverEngineerToOrderProduct .
+
+#--- Delivery 4 --------------------------------------
+
+:delivery_id_4 a :DeliverRetailProduct .
