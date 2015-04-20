@@ -2,7 +2,6 @@
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.w3.org/2004/02/skos/core
 
-@prefix :        <http://www.semanticweb.org/owl/owlapi/turtle#> .
 @prefix daq:     <http://purl.org/eis/vocab/daq#> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix gr:      <http://purl.org/goodrelations/v1#> .
@@ -13,6 +12,19 @@
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml:     <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix : <#> .
+
+
+## your dataset
+<http://eis.iai.uni-bonn.de/openscorvoc#> rdf:type void:Dataset ;
+ foaf:homepage <http://eis.iai.uni-bonn.de/> ;
+ dcterms:title "OpenScorVoc" ;
+ dcterms:description "Open Supply Chain Operation Reference Dataset" ;
+ dcterms:publisher <http://eis.iai.uni-bonn.de/Irlan.html> ;
+ dcterms:license <http://www.opendatacommons.org/licenses/pddl/1.0/> .
 
 <http://eis.iai.uni-bonn.de/openscorvoc#>
       rdf:type owl:Ontology ;
@@ -740,8 +752,380 @@ scor:EngineerToOrderWasteDisposal
       rdfs:comment "Activities associated with collecting and managing waste produced during the produce and test process including scrap material and non-conforming product." @en ;
       rdfs:label "Waste Disposal" ;
       rdfs:subClassOf scor:EngineerToOrder ;
-      skos:altLabel "sM3.8" .	  
-  
+      skos:altLabel "sM3.8" .	
+
+# Deliver Stocked Product	 
+
+scor:ProcessInquiryQuote
+      rdf:type owl:Class ;
+      rdfs:comment "Receive and respond to general customer inquiries and requests for quotes." @en ;
+      rdfs:label "Process Inquiry and Quote" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.1" .
+	  
+scor:ReceiveEnterValidateOrder
+      rdf:type owl:Class ;
+      rdfs:comment "Receive orders from the customer and enter them into a company's order processing system." @en ;
+      rdfs:label "Receive, Enter, and Validate Order" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.2" .	  
+	  
+scor:ReserveInventoryDetermineDeliveryDate
+      rdf:type owl:Class ;
+      rdfs:comment "Inventory (both on hand and scheduled) is identified and reserved for specific orders and a delivery date is committed and scheduled." @en ;
+      rdfs:label "Reserve Inventory and Determine Delivery Date" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.3" .	 
+	  
+scor:ConsolidateOrders
+      rdf:type owl:Class ;
+      rdfs:comment "The process of analyzing orders to determine the groupings that result in least cost/best service fulfillment and transportation." @en ;
+      rdfs:label "Consolidate Orders" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.4" .
+	  
+scor:BuildLoads
+      rdf:type owl:Class ;
+      rdfs:comment "Transportation modes are selected and efficient loads are built." @en ;
+      rdfs:label "Build Loads" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.5" .	  
+	  
+scor:RouteShipments
+      rdf:type owl:Class ;
+      rdfs:comment "Loads are consolidated and routed by mode, lane and location." @en ;
+      rdfs:label "Route Shipments" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.6" .	  
+	  
+scor:SelectCarriersRateShipments
+      rdf:type owl:Class ;
+      rdfs:comment "Specific carriers are selected by lowest cost per route and shipments are rated and tendered." @en ;
+      rdfs:label "Select Carriers and Rate Shipments" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.7" .
+	  
+scor:ReceiveProductFromSourceMake
+      rdf:type owl:Class ;
+      rdfs:comment "The activities such as receiving product, verifying, recording product receipt, determining put-away location, putting away and recording location that a company performs at its own warehouses." @en ;
+      rdfs:label "Receive Product from Source or Make" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.8" .
+	  
+scor:PickProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The series of activities including retrieving orders to pick, determining inventory availability, building the pick wave, picking the product, recording the pick and delivering product to shipping in response to an order." @en ;
+      rdfs:label "Pick Product" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.9" .
+	  
+scor:PackProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The activities such as sorting / combining the products, packing / kitting the products, paste labels, barcodes etc. and delivering the products to the shipping area for loading." @en ;
+      rdfs:label "Pack Product" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.10" .	
+	  
+scor:LoadVehicleGenerateShippingDocuments
+      rdf:type owl:Class ;
+      rdfs:comment "The series of tasks including placing/loading product onto modes of transportation, and generating the documentation necessary to meet internal, customer, carrier and government needs." @en ;
+      rdfs:label "Load Vehicle and Generate Shipping Documents" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.11" .	
+	  
+scor:ShipProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process of shipping the product to the customer site." @en ;
+      rdfs:label "Ship Product" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.12" .	  
+	  
+scor:ReceiveVerifyProductByCustomer
+      rdf:type owl:Class ;
+      rdfs:comment "The process of receiving the shipment by the customer (either at customer site or at shipping area in case of self-collection) and verifying that the order was shipped complete and that the product meets delivery terms." @en ;
+      rdfs:label "Receive and verify Product by Customer" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.13" .
+	  
+scor:InstallProduct
+      rdf:type owl:Class ;
+      rdfs:comment "the process of preparing, testing and installing the product at the customer site. The product is fully functional upon completion." @en ;
+      rdfs:label "Install Product" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.14" .	
+	  
+scor:Invoice
+      rdf:type owl:Class ;
+      rdfs:comment "A signal is sent to the financial organization that the order has been shipped and that the billing process should begin and payment be received or be closed out if payment has already been received." @en ;
+      rdfs:label "Invoice" ;
+      rdfs:subClassOf scor:DeliverStockedProduct ;
+      skos:altLabel "sD1.15" .	  
+	  
+#Deliver Make-to-Order Product	  
+
+scor:DeliverMakeToOrderProductProcessInquiryQuote
+      rdf:type owl:Class ;
+      rdfs:comment "Receive and respond to general customer inquiries and requests for quotes." @en ;
+      rdfs:label "Process Inquiry and Quote" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.1" .
+	  
+scor:ReceiveConfigureEnterValidateOrder
+      rdf:type owl:Class ;
+      rdfs:comment "Receive orders from the customer and enter them into a company's order processing system." @en ;
+      rdfs:label "Receive, Configure, Enter and Validate Order" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.2" .
+	  
+scor:ReserveInventoryDetermineDeliveryDate
+      rdf:type owl:Class ;
+      rdfs:comment "nventory and/or planned capacity is identified and reserved for specific orders, and a delivery date is committed and scheduled." @en ;
+      rdfs:label "Reserve Inventory and Determine Delivery Date" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.3" .
+	  
+scor:ConsolidateOrders
+      rdf:type owl:Class ;
+      rdfs:comment "The process of analyzing orders to determine the groupings that result in least cost/best service fulfillment and transportation." @en ;
+      rdfs:label "Consolidate Orders" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.4" .
+	  
+scor:DeliverMakeToOrderProductProcessBuildLoads
+      rdf:type owl:Class ;
+      rdfs:comment "Transportation modes are selected and efficient loads are built." @en ;
+      rdfs:label "Build Loads" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.5" .
+	  
+scor:DeliverMakeToOrderProductProcessRouteShipments
+      rdf:type owl:Class ;
+      rdfs:comment "Loads are consolidated and routed by mode, lane, and location." @en ;
+      rdfs:label "Route Shipments" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.6" .
+	  
+scor:DeliverMakeToOrderProductSelectCarriersRateShipments
+      rdf:type owl:Class ;
+      rdfs:comment "Specific carriers are selected by lowest cost per route and shipments are rated and tendered." @en ;
+      rdfs:label "Select Carriers and Rate Shipments" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.7" .
+	  
+scor:DeliverMakeToOrderProductReceiveProductFromSourceMake
+      rdf:type owl:Class ;
+      rdfs:comment "The activities such as receiving product, verifying, recording product receipt, determining put-away location, putting away and recording location for goods received from either Make or Source." @en ;
+      rdfs:label "Receive Product from Source or Make" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.8" .
+	  
+scor:DeliverMakeToOrderProductPickProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The series of activities including retrieving orders to pick, verifying inventory availability, building the pick wave, picking the product, recording the pick and delivering product to packing area in response to an order." @en ;
+      rdfs:label "Pick Product" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.9" .
+	  
+scor:DeliverMakeToOrderProductPackProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The activities such as sorting / combining the products, packing / kitting the products, paste labels, barcodes etc. and delivering the products to the shipping area for loading." @en ;
+      rdfs:label "Pack Product" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.10" .
+	  
+scor:LoadProductGenerateShippingDocs
+      rdf:type owl:Class ;
+      rdfs:comment "The series of tasks including placing/loading product onto modes of transportation, and generating the documentation necessary to meet internal, customer, carrier and government needs." @en ;
+      rdfs:label "Load Product Generate Shipping Docs" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.11" .
+	  
+scor:DeliverMakeToOrderProductShipProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process of shipping the product to the customer site." @en ;
+      rdfs:label "Ship Product" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.12" .
+	  
+scor:DeliverMakeToOrderProductReceiveVerifyProductByCustomer
+      rdf:type owl:Class ;
+      rdfs:comment "The process of receiving the shipment at the customer (either at customer site or at shipping area in case of self-collection) and verifying that the order was shipped complete and that the product meets delivery terms." @en ;
+      rdfs:label "Ship Product" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.13" .  
+	  
+scor:DeliverMakeToOrderProductInstallProduct
+      rdf:type owl:Class ;
+      rdfs:comment "the process of preparing, testing and installing the product at the customer site." @en ;
+      rdfs:label "Install Product" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.14" . 
+	  
+scor:DeliverMakeToOrderProductInvoice
+      rdf:type owl:Class ;
+      rdfs:comment "A signal is sent to the financial organization that the order has been shipped and that the billing process should begin and payment be received or be closed out if payment has already been received." @en ;
+      rdfs:label "Invoice" ;
+      rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
+      skos:altLabel "sD2.15" .  
+	
+# Deliver Engineer-to-Order Product
+
+scor:ObtainRespondToRFPRFQ
+      rdf:type owl:Class ;
+      rdfs:comment "The process of receiving a request for proposal or request for quote, evaluating the request (estimating the schedule, developing costs estimates, establishing price), and responding to the potential customer." @en ; 
+      rdfs:label "Obtain and Respond to RFP-RFQ" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.1" .  
+
+scor:NegotiateReceiveContract
+      rdf:type owl:Class ;
+      rdfs:comment "The process of negotiating order details with customer (eg, price, schedule, product performance) and finalizing the contract." @en ; 
+      rdfs:label "Negotiate and Receive Contract" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.2" . 
+	  
+scor:EnterOrderCommitResourcesLaunchProgram
+      rdf:type owl:Class ;
+      rdfs:comment "The process of entering/finalizing the customers order, approving the planned resources (e.g., engineering, manufacturing, etc.) and officially launching the program." @en ; 
+      rdfs:label "Enter Order, Commit Resources Launch Program" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.3" . 
+	  
+scor:ScheduleInstallation
+      rdf:type owl:Class ;
+      rdfs:comment "The process of evaluating the design and build schedules relative to customer requested installation date to determine installation schedule." @en ; 
+      rdfs:label "Schedule Installation" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.4" . 	
+	  
+scor:DeliverEngineerToOrderProductBuildLoads
+      rdf:type owl:Class ;
+      rdfs:comment "The process of evaluating the design and build schedules relative to customer requested installation date to determine installation schedule." @en ; 
+      rdfs:label "Build Loads" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.5" . 	
+
+scor:DeliverEngineerToOrderProductRouteShipments
+      rdf:type owl:Class ;
+      rdfs:comment "Loads are consolidated and routed by mode, lane, and location." @en ; 
+      rdfs:label "Route Shipments" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.6" . 
+	  
+scor:DeliverEngineerToOrderProductSelectCarriersRateShipments
+      rdf:type owl:Class ;
+      rdfs:comment "Specific carriers are selected by lowest cost per route and shipments are rated and tendered." @en ; 
+      rdfs:label "Select Carriers Rate Shipments" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.7" . 
+	  
+scor:DeliverEngineerToOrderProductReceiveProductFromSourceMake
+      rdf:type owl:Class ;
+      rdfs:comment "The activities such as receiving product, verifying, recording product receipt, determining put-away location, putting away and recording location for goods received from either Make or Source." @en ; 
+      rdfs:label "Receive Product from Source or Make" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.8" . 
+	  
+scor:DeliverEngineerToOrderProductPickProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The series of activities including retrieving orders to pick, verifying inventory availability, building the pick wave, picking the product, recording the pick and delivering product to packing area in response to an order." @en ; 
+      rdfs:label "Pick Product" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.9" .	 
+
+scor:DeliverEngineerToOrderProductPackProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The activities such as sorting / combining the products, packing / kitting the products, paste labels, barcodes etc. and delivering the products to the shipping area for loading." @en ; 
+      rdfs:label "Pack Product" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.10" .	
+	  
+scor:DeliverEngineerToOrderProductLoadProductGenerateShippingDocs
+      rdf:type owl:Class ;
+      rdfs:comment "The series of tasks including placing/loading product onto modes of transportation, and generating the documentation necessary to meet internal, customer, carrier and government needs." @en ; 
+      rdfs:label "Load Product & Generate Shipping Docs" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.11" .	
+	  
+scor:DeliverEngineerToOrderProductShipProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process of shipping the product to the customer site." @en ; 
+      rdfs:label "Ship Product" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.12" .	
+	  
+scor:DeliverEngineerToOrderProductReceiveVerifyProductByCustomer
+      rdf:type owl:Class ;
+      rdfs:comment "The process of receiving the shipment (either at customer site or at shipping area in case of self-collection) and verifying that the order was shipped complete and that the product meets delivery terms." @en ; 
+      rdfs:label "Receive and verify Product by Customer" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.13" .	
+	  
+scor:DeliverEngineerToOrderProductInstallProduct
+      rdf:type owl:Class ;
+      rdfs:comment "The process of preparing, testing and installing the product at the customer site. The product is fully functional upon completion." @en ; 
+      rdfs:label "Install Product" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.14" .	
+	  
+scor:DeliverEngineerToOrderProductInvoice
+      rdf:type owl:Class ;
+      rdfs:comment "A signal is sent to the financial organization that the order has been shipped and that the billing process should begin and payment be received or be closed out if payment has already been received." @en ; 
+      rdfs:label "Invoice" ;
+      rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
+      skos:altLabel "sD3.15" .	
+
+# DeliverRetailProduct
+
+scor:GenerateStockingSchedule
+      rdf:type owl:Class ;
+      rdfs:comment "The process of scheduling resources to support item-stocking requirements." @en ; 
+      rdfs:label "Generate Stocking Schedule" ;
+      rdfs:subClassOf scor:DeliverRetailProduct ;
+      skos:altLabel "sD4.1" .	
+	  
+scor:ReceiveProductAtStore
+      rdf:type owl:Class ;
+      rdfs:comment "The activities such as receiving product, verifying, recording product receipt, determining put-away location, putting away and recording location that a company performs at its own stores." @en ; 
+      rdfs:label "Receive Product at Store" ;
+      rdfs:subClassOf scor:DeliverRetailProduct ;
+      skos:altLabel "sD4.2" .
+	  
+scor:PickProductFromBackroom
+      rdf:type owl:Class ;
+      rdfs:comment "The process of retrieving restocking orders to pick, determining inventory availability, building a pick wave, picking item and quantity from a designated backroom warehouse location, recording the resulting inventory transaction, and delivering the product to point of stock." @en ; 
+      rdfs:label "Pick Product from backroom" ;
+      rdfs:subClassOf scor:DeliverRetailProduct ;
+      skos:altLabel "sD4.3" .
+	  
+scor:StockShelf
+      rdf:type owl:Class ;
+      rdfs:comment "For restocks, the tasks associated with identifying the item location, stocking the shelf according to merchandise plans, and recording the appropriate inventory transaction." @en ; 
+      rdfs:label "Stock Shelf" ;
+      rdfs:subClassOf scor:DeliverRetailProduct ;
+      skos:altLabel "sD4.4" .
+	  
+scor:FillShoppingCart
+      rdf:type owl:Class ;
+      rdfs:comment "Typical set of tasks associated with product selection, storage and movement through to checkout." @en ; 
+      rdfs:label "Fill Shopping Cart" ;
+      rdfs:subClassOf scor:DeliverRetailProduct ;
+      skos:altLabel "sD4.5" .
+	  
+scor:Checkout
+      rdf:type owl:Class ;
+      rdfs:comment "The processes and tasks associated with product checkout including scanning, method of payment, credit application and approval, service agreement, order confirmation, and/or invoice or receipt." @en ; 
+      rdfs:label "Checkout" ;
+      rdfs:subClassOf scor:DeliverRetailProduct ;
+      skos:altLabel "sD4.6" .
+	  
+scor:DeliverInstall
+      rdf:type owl:Class ;
+      rdfs:comment "The process of preparing and installing the product at the customer site. The product is fully functional upon completion." @en ; 
+      rdfs:label "Deliver and/or install" ;
+      rdfs:subClassOf scor:DeliverRetailProduct ;
+      skos:altLabel "sD4.7" .	 
+	  
 # End of Level 3 Processes 
 	  
 # Metrics
