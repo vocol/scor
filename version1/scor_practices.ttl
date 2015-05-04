@@ -1,7 +1,5 @@
 # baseURI: http://eis.iai.uni-bonn.de/#
-# imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.w3.org/2004/02/skos/core
-# This file is a part of OpenSCORVoc and contains person and practices
 
 @prefix :        <http://www.semanticweb.org/owl/owlapi/turtle#> .
 @prefix daq:     <http://purl.org/eis/vocab/daq#> .
@@ -10,10 +8,14 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix scor:    <http://eis.iai.uni-bonn.de/openscorvoc#> .
+@prefix scor:    <http://purl.org/eis/vocab/scor/#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml:     <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/eis/vocab/scor/#>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> .
 
 scor:People
       rdf:type owl:Class ;
@@ -23,171 +25,212 @@ scor:People
 scor:Practice
       rdf:type owl:Class ;
       rdfs:comment "A practice is a unique way to configure a process or a set of processes" ;
-      rdfs:label "Practice" .
+      rdfs:label "Practice" .	  
 	  
 scor:BestPractice
       rdf:type owl:Class ;
       rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proven and positive impact on supply chain performance" ;
-      rdfs:label "BestPractice" ;
+      rdfs:label "Best Practice" ;
       rdfs:subClassOf scor:Practice ;
       skos:altLabel "BP.B" .
-
+	  
 scor:EmergingPractice
       rdf:type owl:Class ;
       rdfs:comment "Introduce new technology, knowledge or radically different ways of organizing processes" ;
-      rdfs:label "EmergingPractice" ;
+      rdfs:label "Emerging Practice" ;
       rdfs:subClassOf scor:Practice ;
-      skos:altLabel "BP.E" .
+      skos:altLabel "BP.E" .	 
 
 scor:StandardPractice
       rdf:type owl:Class ;
       rdfs:comment "How a wide range of companies have historically done business by default or happenstance" ;
       rdfs:label "StandardPractice" ;
       rdfs:subClassOf scor:Practice ;
-      skos:altLabel "BP.S" .	  
+      skos:prefLabel "BP.S" .	  
 
+scor:BarCodingRFID
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Bar coding is the practice of adding machine readable labels to packaging of goods, in order to increase reading speed and reducing reading errors." @en  ;
+	  rdfs:label "Bar Coding RFID" @en ;
+      skos:prefLabel "BP.153" @en  .
+	  
+scor:BusinessRuleManagement
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Business rules are in a (human-readable) form that are used by, but not embedded in, supply chain systems" @en ;
+      rdfs:label "Business Rule Management" @en ;
+	  skos:prefLabel "BP.023" @en .
+
+scor:BusinessRuleReview
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Is performed by supply chain middle and upper level management of an organization." @en ;
+	  rdfs:label "Business Rule Review" @en ;
+      skos:prefLabel "BP.035" @en .
+
+scor:CarcassDisassembly
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Returned Maintenance, Repair, Operations (MRO) items are disassembled to the bill of material level and component parts are tested." @en ;
+	  rdfs:label "Carcass Disassembly" @en ;
+      skos:prefLabel "BP.137" @en .
+
+scor:CarcassPrepositioning
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "The practice of making disposition decisions for reparable parts/cores/carcasses early in the (Return Material Authorization) RMA process." @en ;
+      rdfs:label "Carcass Prepositioning" @en ;
+      skos:prefLabel "BP.109" @en .
+
+scor:DemandManagement
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Takes Demand Planning to the next level and integrates the plan up and down the supply chain as well as across the enterprise." @en ;
+	  rdfs:label "Demand Management" @en ;
+      skos:prefLabel "BP.020" @en .
+
+scor:DemandPlanningForecasting
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Use state-of-the-art forecasting algorithms for product life-cycle planning and trade promotion planning." @en  ;
+      rdfs:label "Demand Planning Forecasting" @en ;
+      skos:prefLabel "BP.014" @en .
+
+scor:DigitalPackagingOnDemand
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "The use of digital packaging printing to create custom product packaging unique to the customer and the product requirements." @en  ;
+      rdfs:label "Digital Packaging on Demand" @en ;
+      skos:prefLabel "BP.121" @en .
+
+scor:EmbedSpecializedServices
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Add additional capability, processes and expertise by embedding specialized packaging, product completion and pack out services on-site from a 3rd party provider." @en  ;
+      rdfs:label "Embed Specialized Services" @en ;
+      skos:prefLabel "BP.117" @en .
+
+scor:EnterpriseLevelSpendAnalysis
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Spend analysis involved collection of data across procures to pay process in an enterprise and slicing and dicing these data into useful information." @en  ;
+      rdfs:label "Enterprise Level Spend Analysis" @en ;
+      skos:prefLabel "BP.161" @en  .
+
+scor:LeanPlanning
+      rdf:type scor:EmergingPractice ;
+	  rdfs:comment "Creates real world project plans which robustly model the project from initiation to final delivery." @en  ;
+      rdfs:label "Lean Planning" @en ;
+      skos:prefLabel "BP.049" @en  .
+
+scor:LoanerProgram
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "In order to minimize lost productivity, many companies offer a loaner program for their customers when they need to return a defective product." @en  ;
+      rdfs:label "Loaner Program" @en ;
+      skos:prefLabel "BP.079" @en  .
+
+scor:LongTermSupplierAgreementPartnership
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "The Long Term Supplier Agreement/Partnership is a communication framework of buyer and supplier relationship." @en  ;
+      rdfs:label "Long Term Supplier Agreement Partnership" @en ;
+      skos:prefLabel "BP.162" @en  .
+
+scor:MixedModeReverseMaterialIssue
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Backflush is a concept where issuing of the material automatically happens once the finished product is ready." @en  ;
+      rdfs:label "Mixed Mode Reverse Material Issue" @en ;
+      skos:prefLabel "BP.171" @en  .
+
+scor:MobileAccessOfInformation
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Mobile access to information in supply chain means information on status metrics supply and demand are available in the internet smart phones and other similar mobile devices." @en  ;
+      rdfs:label "Mobile Access of Information" @en ;
+      skos:prefLabel "BP.098" @en  .
+
+scor:ProductionSchedulingOptimizationUsingTech
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Effective scheduling should not only include production related attributes (e.g. rated/demonstrated capacity asset loading sequencing changeover constraints etc.) but also other directly and indirectly related processes." @en  ;
+      rdfs:label "Production Scheduling Optimization Using Tech" @en ;
+      skos:prefLabel "BP.172" @en  .
+
+scor:ReturnPolicyConformanceIntegration
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "The practice of implementing standard procedures and enableing technology to ensure conformance to return policies." @en  ;
+      rdfs:label "Return Policy Conformance Integration" @en ;
+      skos:prefLabel "BP.108" @en  .
+
+scor:ReturnsReceivingRefurbishment
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "The practice of refurbishing materials during the receiving processes (i.e. Source processes) for returned materials." @en  ;
+      rdfs:label "Returns Receiving Refurbishment" @en ;
+      skos:prefLabel "BP.073" @en  .
+
+scor:SelfServiceWarrantyClaimSubmittal
+      rdf:type scor:EmergingPractice ;
+	  rdfs:comment "enables customers and service providers to submit warranty claims over the web, reducing internal validation and processing workload. " @en;
+	  rdfs:label "Self-Service Warranty Claim Submittal" @en ;
+      skos:prefLabel "BP.025" @en  .
+
+scor:SupplyChainOptimization
+      rdf:type scor:EmergingPractice ;
+	  rdfs:comment "A part of the enterprise strategic plan for leading edge companies" @en ;
+	  rdfs:label "Supply Chain Optimization" @en ;
+      skos:prefLabel "BP.024" @en  .
+
+scor:SupplyNetworkPlanning
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Simulate and implement comprehensive tactical planning and sourcing decisions based on a single, globally consistent model." @en  ;
+      rdfs:label "Supply Network Planning" @en ;
+      skos:prefLabel "BP.016" @en  .
+
+scor:ThreeDPrintRapidProtoyping
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "3D printing is a phrase used to describe the process of creating three dimensional objects from digital file using a materials printer, in a manner similar to printing images on paper." @en  ;
+	  rdfs:label "3D Print Rapid Protoyping" @en ;
+      skos:prefLabel "BP.120" @en  .
+
+scor:TransportationManagementOutsourcing
+      rdf:type scor:EmergingPractice ;
+      rdfs:comment "Outsourcing transportation creates an opportunity for small businesses to combine their transportation spend and get a lower overall tariff rate." @en  ;
+	  rdfs:label "Transportation Management Outsourcing" @en ;
+      skos:prefLabel "BP.118" @en  .
+	  
+# Best Practices individuals	  
+	  
+scor:SCRiskManagement
+      rdf:type scor:BestPractice ;
+      rdfs:comment "the systematic identification, assessment and mitigation of potential disruptions in logistics networks" @en  ;
+      rdfs:label "Supply Chain Risk Management" @en  ;
+      skos:prefLabel "BP.001" @en  .	
+	  
+scor:RiskManagementStrategies
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Risk management strategies are developed and communicated. Commonly used strategies are Risk Mitigation, Risk Avoidance, Risk Transfer and also Risk Acceptance" @en  ;
+      rdfs:label "Risk Management Strategies" @en  ;
+      skos:prefLabel "BP.002" @en  .	
+	  
+scor:SingleMinuteExchangeOfDie
+      rdf:type scor:BestPractice ;
+      rdfs:comment "The practice of reducing the time it takes to change a production line, equipment or machine from running one product to the next" @en  ;
+      rdfs:label "Single-Minute Exchange of Die (SMED)" @en  ;
+      skos:prefLabel "BP.003" @en  .
+	  
+scor:NetworkPrioritizationForRiskIdentification
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Network prioritization for risk identification is the process of prioritizing parts of a supply chain for risk analysis based on the overall risk potential in each portion of the supply chain" @en  ;
+      rdfs:label "Network Prioritization for Risk Identification" @en  ;
+      skos:prefLabel "BP.004" @en  .
+	  
+scor:SelfInvoicing
+      rdf:type scor:BestPractice ;
+      rdfs:comment "The practice where a customer generates the invoices for the products or services it consumed from a supplier" @en  ;
+      rdfs:label "Self-Invoicing" @en  ;
+      skos:prefLabel "BP.005" @en  .	
+	  
+scor:BaselineInventoryMonitoring
+      rdf:type scor:BestPractice ;
+      rdfs:comment "To avoid overstock situations, we regularly review Baseline inventory levels. Baseline inventory is defined as the lowest stock level that a particular SKU actually had during the last 12 months." @en  ;
+      rdfs:label "Baseline Inventory Monitoring" @en  ;
+      skos:prefLabel "BP.007" @en  .
+	  
+scor:ProductionLineSequencing
+      rdf:type scor:BestPractice ;
+      rdfs:comment "The practice where materials are ordered, shipped, received and/or staged in the same sequence as they will be consumed." @en  ;
+      rdfs:label "Production Line Sequencing" @en  ;
+      skos:prefLabel "BP.011" @en  .	
+	  
 scor:hasPracticeId
       rdf:type owl:DatatypeProperty ;
       rdfs:domain scor:Practice ;
       rdfs:range xsd:string .
-
-scor:BarCodingRFID
-      rdf:type owl:Class ;
-      rdfs:comment """Bar coding is the practice of adding machine readable labels to packaging of goods, in order to increase reading speed and reducing reading errors."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.153"^^xsd:string .
-
-scor:BusinessRuleManagement
-      rdf:type owl:Class ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.023"^^xsd:string .
-
-scor:BusinessRuleReview
-      rdf:type owl:Class ;
-      rdfs:comment "is performed by supply chain middle and upper level management of an organization."^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.035"^^xsd:string .
-
-scor:CarcassDisassembly
-      rdf:type owl:Class ;
-      rdfs:comment """Returned Maintenance, Repair, Operations (MRO) items are disassembled to the bill of material level and component parts are tested."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.137"^^xsd:string .
-
-scor:CarcassPrepositioning
-      rdf:type owl:Class ;
-      rdfs:comment """The practice of making disposition decisions for reparable parts/cores/carcasses early in the (Return Material Authorization) RMA process."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.109"^^xsd:string .
-
-scor:DemandManagement
-      rdf:type owl:Class ;
-      rdfs:comment "takes Demand Planning to the next level and integrates the plan up and down the supply chain as well as across the enterprise."^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.020"^^xsd:string .
-
-scor:DemandPlanningForecasting
-      rdf:type owl:Class ;
-      rdfs:comment "Use state-of-the-art forecasting algorithms for product life-cycle planning and trade promotion planning."^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.014"^^xsd:string .
-
-scor:DigitalPackagingOnDemand
-      rdf:type owl:Class ;
-      rdfs:comment """The use of digital packaging printing to create custom product packaging unique to the customer and the product requirements."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.121"^^xsd:string .
-
-scor:EmbedSpecializedServices
-      rdf:type owl:Class ;
-      rdfs:comment """Add additional capability, processes and expertise by embedding specialized packaging, product completion and pack out services on-site from a 3rd party provider."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.117"^^xsd:string .
-
-scor:EnterpriseLevelSpendAnalysis
-      rdf:type owl:Class ;
-      rdfs:comment """Spend analysis involved collection of data across procures to pay process in an enterprise and slicing and dicing these data into useful information."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.161"^^xsd:string .
-
-scor:LeanPlanning
-      rdf:type owl:Class ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.049"^^xsd:string .
-
-scor:LoanerProgram
-      rdf:type owl:Class ;
-      rdfs:comment """In order to minimize lost productivity, many companies offer a loaner program for their customers when they need to return a defective product."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.079"^^xsd:string .
-
-scor:LongTermSupplierAgreementPartnership
-      rdf:type owl:Class ;
-      rdfs:comment """The Long Term Supplier Agreement/Partnership is a communication framework of buyer and supplier relationship."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.162"^^xsd:string .
-
-scor:MixedModeReverseMaterialIssue
-      rdf:type owl:Class ;
-      rdfs:comment """Backflush is a concept where issuing of the material automatically happens once the finished product is ready."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.171"^^xsd:string .
-
-scor:MobileAccessOfInformation
-      rdf:type owl:Class ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.098"^^xsd:string .
-
-scor:ProductionSchedulingOptimizationUsingTech
-      rdf:type owl:Class ;
-      rdfs:comment """Effective scheduling should not only include production related attributes (e.g. rated/demonstrated capacity asset loading sequencing changeover constraints etc.) but also other directly and indirectly related processes."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.172"^^xsd:string .
-
-scor:ReturnPolicyConformanceIntegration
-      rdf:type owl:Class ;
-      rdfs:comment """The practice of implementing standard procedures and enableing technology to ensure conformance to return policies."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.108"^^xsd:string .
-
-scor:ReturnsReceivingRefurbishment
-      rdf:type owl:Class ;
-      rdfs:comment "The practice of refurbishing materials during the receiving processes (i.e. Source processes) for returned materials."^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.073"^^xsd:string .
-
-scor:SCRiskManagement
-      rdf:type scor:BestPractice ;
-      rdfs:comment "the systematic identification, assessment and mitigation of potential disruptions in logistics networks"^^xsd:string ;
-      rdfs:label "Supply Chain Risk Management"^^xsd:string ;
-	  skos:prefLabel "BP.001"^^xsd:string .
-
-scor:Self-ServiceWarrantyClaimSubmittal
-      rdf:type owl:Class ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.025"^^xsd:string .
-
-scor:SupplyChainOptimization
-      rdf:type owl:Class ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.024"^^xsd:string .
-
-scor:SupplyNetworkPlanning
-      rdf:type owl:Class ;
-      rdfs:comment "Simulate and implement comprehensive tactical planning and sourcing decisions based on a single, globally consistent model."^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.016"^^xsd:string .
-
-scor:ThreeDPrintRapidProtoyping
-      rdf:type owl:Class ;
-      rdfs:comment """3D printing is a phrase used to describe the process of creating three dimensional objects from digital file using a materials printer, in a manner similar to printing images on paper."""^^xsd:string ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.120"^^xsd:string .
-
-scor:TransportationManagementOutsourcing
-      rdf:type owl:Class ;
-      rdfs:subClassOf scor:EmergingPractice ;
-      skos:prefLabel "BP.118"^^xsd:string .
-
-skos:altLabel
-      rdf:type owl:AnnotationProperty .
