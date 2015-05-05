@@ -10,10 +10,10 @@
 #--- Delivery 1 --------------------------------------
 
 #--- General information 
-:delivery_id_1 :hasProduct "SmartCardModule" ;
+:delivery_id_1 :hasProduct    "SmartCardModule" ;
  			   :hasCommitDate "01-01-2015" ;
- 			   :hasSupplier :Infineon ;
-               :hasCustomer :Siemens . 
+ 			   :hasSupplier   :Infineon ;
+               :hasCustomer   :Siemens . 
 
 #--- SCOR Information 
 :delivery_id_1 a 			    :DeliverStockedProduct ;

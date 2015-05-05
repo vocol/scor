@@ -58,6 +58,7 @@ scor:ManageSupplyChainRisk                  rdfs:subClassOf scor:Enable .
 scor:DeliverStockedProduct         rdfs:subClassOf scor:Deliver .
 scor:DeliverMakeToOrderProduct     rdfs:subClassOf scor:Deliver .
 scor:DeliverEngineerToOrderProduct rdfs:subClassOf scor:Deliver .
+scor:DeliverRetailProduct 		   rdfs:subClassOf scor:Deliver .
 
 #---------------------------------------------------------------------
 
