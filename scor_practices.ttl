@@ -2,9 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 
 @prefix :        <http://www.semanticweb.org/owl/owlapi/turtle#> .
-@prefix daq:     <http://purl.org/eis/vocab/daq#> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
-@prefix gr:      <http://purl.org/goodrelations/v1#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -46,7 +44,12 @@ scor:StandardPractice
       rdfs:comment "How a wide range of companies have historically done business by default or happenstance" ;
       rdfs:label "StandardPractice" ;
       rdfs:subClassOf scor:Practice ;
-      skos:prefLabel "BP.S" .	  
+      skos:prefLabel "BP.S" .	
+
+scor:hasPracticeId
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain scor:Practice ;
+      rdfs:range xsd:string .	  
 
 scor:BarCodingRFID
       rdf:type scor:EmergingPractice ;
@@ -230,7 +233,252 @@ scor:ProductionLineSequencing
       rdfs:label "Production Line Sequencing" @en  ;
       skos:prefLabel "BP.011" @en  .	
 	  
-scor:hasPracticeId
-      rdf:type owl:DatatypeProperty ;
-      rdfs:domain scor:Practice ;
-      rdfs:range xsd:string .
+scor:PullBasedInventoryReplenishment
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Pull-based (Demand) replenishment is an approach that utilizes customer demand (`pull`) to replace and optimize inventory while reducing total net landed cost." @en  ;
+      rdfs:label "Pull-Based Inventory Replenishment" @en  ;
+      skos:prefLabel "BP.027" @en  .
+
+scor:InventoryOptimization
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Use of multi-echelon (simultaneous across all inventory stocking points in supply chain) stochastic (random variability) optimization." @en  ;
+      rdfs:label "Inventory Optimization" @en  ;
+      skos:prefLabel "BP.028" @en  .
+	  
+scor:InventoryManagementBP029
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Supply chains and supply networks both describe the flow and movement of materials & information, by linking organizations together to serve the end-customer." @en  ;
+      rdfs:label "Inventory Management Using Supply Chain Network Optimization" @en  ;
+      skos:prefLabel "BP.029" @en  .
+	  
+scor:InventoryRecordAccuracy
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Establish disciplined monthly process to ensure timely reporting of accurate inventory (physical inventory matches ERP inventory & identify sitting inventory not identified by a SKU) at the manufacturing and terminal locations." @en  ;
+      rdfs:label "Inventory Record Accuracy" @en  ;
+      skos:prefLabel "BP.030" @en  .
+	  
+scor:ReduceSlowMovingInventory
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Analyze and determine what inventory can be written off due to age, shelf-life, and/or lack of demand." @en  ;
+      rdfs:label "Reduce / Write-off Slow Moving Inventory" @en  ;
+      skos:prefLabel "BP.032" @en  .	
+	  
+scor:TraditionalDemandForecastingImprovement
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Use of more sophisticated qualitative and quantitative forecasting processes and tools to improve customer demand forecast typically at SKU level." @en  ;
+      rdfs:label "Traditional Demand Forecasting Improvement" @en  ;
+      skos:prefLabel "BP.033" @en  .
+	  
+scor:ExtendInventoryBP34
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Collaborative inventory planning can be used as a way to extend supply chain planning with key customers." @en  ;
+      rdfs:label "Extend Inventory Planning using Collaboration (Key Suppliers)" @en  ;
+      skos:prefLabel "BP.034" @en  .	
+	  
+scor:ConsignmentInventoryWithSuppliers
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Consignment inventory is a family of business models in which the buyer of a product provides certain information to a supplier of that product and the supplier takes full responsibility for maintaining an agreed of the material, usually at the buyer's consumption location (usually a store)." @en  ;
+      rdfs:label "Consignment Inventory with Key Suppliers" @en  ;
+      skos:prefLabel "BP.036" @en  .
+	  
+scor:ManufacturingDirectDropShipment
+      rdf:type scor:BestPractice ;
+      rdfs:comment "The practice of shipping products and goods directly from the manufacturing plant to the customer (bypassing consolidation activities in warehouses and/or distribution centers)." @en  ;
+      rdfs:label "Manufacturing Direct/Drop Shipment" @en  ;
+      skos:prefLabel "BP.037" @en  .
+	  
+scor:BatchSizeReduction
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Use Lean principles to reduce size of manufacturing batch sizes to better match customer demand vs. asset utilization/quality issues." @en  ;
+      rdfs:label "Batch Size Reduction" @en  ;
+      skos:prefLabel "BP.038" @en  .
+
+scor:RightSizeFrequencyOfProductionWheel
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Use Lean principles to increase frequency/agility of production wheel, or production cycle in order to modify production planning and right-size finished goods and work-in-process inventory." @en  ;
+      rdfs:label "Right Size Frequency of Production Wheel" @en  ;
+      skos:prefLabel "BP.039" @en  .
+
+scor:MTOOrderFulfillmentStrategy
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Evaluate potential to change order fulfillment strategy from Make-To-Stock (MTS) to Make-To-Order (MTO) SKU by SKU to offset need to carry inventory due to infrequent demand or low demand." @en  ;
+      rdfs:label "MTO Order Fulfillment Strategy" @en  ;
+      skos:prefLabel "BP.040" @en  .
+
+scor:TransportationOptimization
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Evaluate potential to change inbound/outbound transportation mode to `faster` mode depending on freight terms (FOB, etc.) to accelerate transfer of inventory title to customer and/or better match demand/supply to optimize inventory balances." @en  ;
+      rdfs:label "Transportation Optimization" @en  ;
+      skos:prefLabel "BP.041" @en  .
+
+scor:ReviewOfProcurementTermsConditions
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Evaluate potential to change inbound/outbound transportation mode to `faster` mode depending on freight terms (FOB, etc.) to accelerate transfer of inventory title to customer and/or better match demand/supply to optimize inventory balances." @en  ;
+      rdfs:label "Regular Review of Procurement Terms and Conditions" @en  ;
+      skos:prefLabel "BP.042" @en  .
+
+scor:ConsignmentInventoryReduction
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Analyze potential to reduce consignment inventory commitments. These are typically included as part of the terms and conditions of customer contracts." @en  ;
+      rdfs:label "Consignment Inventory Reduction" @en  ;
+      skos:prefLabel "BP.043" @en  .
+
+scor:InventoryFinancingEvaluation
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Evaluate potential to use external finance company to `purchase inventory` while in-transit or in certain circumstances and sell back to the company prior to delivery to customer." @en  ;
+      rdfs:label "Inventory Financing Evaluation" @en  ;
+      skos:prefLabel "BP.044" @en  .
+
+scor:FinishedGoodsInventoryPostponement
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Provide process to determine and execute optimum placement and volume for Inventory in the Value Stream (Chain). Requires analysis of Value Stream and identification of opportunities for Demand Pooling of materials." @en  ;
+      rdfs:label "Finished Goods Inventory Postponement" @en  ;
+      skos:prefLabel "BP.047" @en  .
+
+scor:InventoryIncentives
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Balance cost/value of offering discounts for customers to move forward orders on specific finished good products in inventory." @en  ;
+      rdfs:label "Inventory incentives / promotions for customers" @en  ;
+      skos:prefLabel "BP.048" @en  .
+	  
+scor:CustomerIncentives
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Provide a one time improvement in finished good inventory; Requires analysis of value/cost trade-off to insure proper incentive." @en  ;
+      rdfs:label "Customer Incentives/Promotions for Large Inventory Purchases" @en  ;
+      skos:prefLabel "BP.050" @en  .	  
+ 
+scor:EmbedInventoryManagementGoals
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Develop method to embed and track specific inventory management goals for the business for all functions within the business due to cross-functional issues associated with inventory vs. service level." @en  ;
+      rdfs:label "Embed Inventory Management Goals" @en  ;
+      skos:prefLabel "BP.051" @en  .
+	  
+scor:DesignForLogisticsManagement
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Develop method to embed and track specific inventory management goals for the business for all functions within the business due to cross-functional issues associated with inventory vs. service level." @en  ;
+      rdfs:label "Design for Logistics (DFL) Management" @en  ;
+      skos:prefLabel "BP.052" @en  .
+	  
+scor:ManufacturingReliabilityImprovement
+      rdf:type scor:BestPractice ;
+      rdfs:comment "The practice includes use of reliability tools and implementation of work process roles within manufacturing to address manufacturing reliability." @en  ;
+      rdfs:label "Manufacturing Reliability Improvement" @en  ;
+      skos:prefLabel "BP.053" @en  .	  
+	  
+scor:ManufacturingQualityImprovementsBP054
+      rdf:type scor:BestPractice ;
+      rdfs:comment "This consists of efforts to address manufacturing quality & improving manufacturing cost/capacity and service factor." @en  ;
+      rdfs:label "Manufacturing Quality Improvements for Return Reduction" @en  ;
+      skos:prefLabel "BP.054" @en  .		  
+	  
+scor:FreightCarrierDeliveryBP55
+      rdf:type scor:BestPractice ;
+      rdfs:comment "The practice of formal freight carrier performance reviews to reduce the risk of landed cost budget variances." @en  ;
+      rdfs:label "Freight Carrier Delivery Performance Evaluation" @en  ;
+      skos:prefLabel "BP.055" @en  .	  
+	  
+scor:SupplierRawMaterialBP56
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Provide analysis of potential value that could be gained from raw material inventory reduction (in addition to traditional manufacturing quality/capacity and service factors)." @en  ;
+      rdfs:label "Supplier Raw Material Quality Improvement" @en  ;
+      skos:prefLabel "BP.056" @en  .	  
+	  
+scor:InventoryManagementTraining
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Develop a training curriculum and monitor key employee participation/completion in the areas of inventory management (particularly with schedulers, planners, SC managers) as well as exposure to  emerging best practices/technology (e.g., inventory optimization.)." @en  ;
+      rdfs:label "Inventory Management Training" @en  ;
+      skos:prefLabel "BP.058" @en  .	  
+	  
+scor:EmployeeIncentivesInventoryBP59
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Effective inventory management is the result of outstanding inventory control and inventory management." @en  ;
+      rdfs:label "Employee Incentives for Effective Inventory Management" @en  ;
+      skos:prefLabel "BP.059" @en  .		  
+	  
+scor:OrderLeadTimeCorrectiveAction
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Attaining acceptable delivery performance is the most significant manufacturing challenge faced by many organizations." @en  ;
+      rdfs:label "Order Lead Time Corrective Action" @en  ;
+      skos:prefLabel "BP.060" @en  .	  
+	  
+scor:ReduceNonStrategicInventoryLevel
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Unsold inventory is not `money in the bank`. A company should identify idle assets by analyzing production records, reviewing stock status reports to isolate inventory that is slow moving or out of balance, and sell/reduce the nonstrategic inventory." @en  ;
+      rdfs:label "Reduce Non-Strategic Inventory Level" @en  ;
+      skos:prefLabel "BP.061" @en  .	
+
+scor:MasterDataAccuracy
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Re-validate existing Master Data (order lead times, replenishment times, transit times, etc.) to ensure it matches current operational capabilities and performance." @en  ;
+      rdfs:label "Master Data Accuracy" @en  ;
+      skos:prefLabel "BP.061" @en  .
+	  
+scor:OptimizeSourcingDecisionsBP63
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Assess potential to change sourcing decisions to local source point (likely the optimal source point) to reduce overall replenishment lead time." @en  ;
+      rdfs:label "Optimize Sourcing Decisions to Local Source Point" @en  ;
+      skos:prefLabel "BP.063" @en  .		  
+	  
+scor:SafetyStockReduction
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Pursue a more aggressive Reorder Point / safety stock target replenishment stance that places more risk on the chance of a stock out." @en  ;
+      rdfs:label "Safety Stock Reduction" @en  ;
+      skos:prefLabel "BP.064" @en  .		  
+	  
+scor:SeasonalPackagingChange
+      rdf:type scor:BestPractice ;
+      rdfs:comment "What constitutes seasonal varies from organization to organization. From a requirements determination perspective however seasonal items may be classified as items that have less than six months of demand in the preceding 12 months." @en  ;
+      rdfs:label "Seasonal Packaging Reduction/Removal" @en  ;
+      skos:prefLabel "BP.065" @en  .		  
+	  
+scor:ReduceReturnsInventoryBP66
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Evaluate and establish a business returns policy (buyer`s remorse, defectives, warranty, overstock, Root Cause Investigation to determine & eliminate return cause, etc.) including determining its impact to overall inventory management." @en  ;
+      rdfs:label "Returns Policy to Reduce Returns Inventory" @en  ;
+      skos:prefLabel "BP.066" @en  .	  
+	  
+scor:ReturnsInventoryReduction
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Develop a process for efficiently receiving, processing and disposition of returned products." @en  ;
+      rdfs:label "Returns Inventory Reduction" @en  ;
+      skos:prefLabel "BP.067" @en  .	  
+	  
+scor:SupplierDeliveryPerformanceAnalysis
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Track and analyze the on time delivery performance for suppliers.." @en  ;
+      rdfs:label "Supplier Delivery Performance Analysis" @en  ;
+      skos:prefLabel "BP.068" @en  .	
+
+scor:RawMaterialsReceivingProcess
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Develop process for efficiently receiving and processing raw materials from suppliers to minimize receipt of raw materials." @en  ;
+      rdfs:label "Raw Materials Receiving Process" @en  ;
+      skos:prefLabel "BP.069" @en  .	
+
+scor:PlanningInventoryTraining
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Improve employee knowledge of inventory control to increase level of performance in inventory management." @en  ;
+      rdfs:label "Planning/scheduling inventory training" @en  ;
+      skos:prefLabel "BP.070" @en  .
+
+scor:CostsInventoryStockingBP71
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Balance the trade-off between logistics cost reduction and increased capital costs." @en  ;
+      rdfs:label "Freight Costs and Inventory Stocking Optimization" @en  ;
+      skos:prefLabel "BP.071" @en  .
+
+scor:InboundRMAEnabledProcessing
+      rdf:type scor:BestPractice ;
+      rdfs:comment "This practice of requiring and enforcing a return shipment is accopanied by a company-issued Return Material (or Merchandise) Authorization (or Agreement) (RMA)." @en  ;
+      rdfs:label "Inbound RMA-enabled Processing" @en  ;
+      skos:prefLabel "BP.072" @en  .
+
+scor:ProcessMetricsAlignment
+      rdf:type scor:BestPractice ;
+      rdfs:comment "Metric alignment refers to the organized and deliberate development of metrics across an organization. The process starts with organizational/business or supply chain metrics then decomposes to organizational processes at level-2, level-3, and further if desired." @en  ;
+      rdfs:label "Process/Metrics Alignment" @en  ;
+      skos:prefLabel "BP.074" @en  .
+	  
+	  
+	  
+	  
