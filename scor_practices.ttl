@@ -51,6 +51,147 @@ scor:hasPracticeId
       rdfs:domain scor:Practice ;
       rdfs:range xsd:string .	  
 
+# Standart Practice Individuals	  
+scor:ConsignmentInventory
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "The organization of source processes where the ownership of materials transfers are based on a signal further down in the supply chain (for example Make or Deliver)." @en  ;
+	  rdfs:label "Consignment Inventory" @en ;
+      skos:prefLabel "BP.006" @en  .	 
+
+scor:SlowMovingInventoryMonitoring
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Slow-moving inventory is defined as the value of those SKUs whose stock level is higher than the total consumption within the last 12 months" @en  ;
+	  rdfs:label "Slow-moving Inventory Monitoring" @en ;
+      skos:prefLabel "BP.008" @en  .	
+	  
+scor:Kanban
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "A inventory replenishment technique where a material is replenished based on consumption" @en  ;
+	  rdfs:label "Kanban" @en ;
+      skos:prefLabel "BP.009" @en  .	
+
+scor:MinMaxReplenishment
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "A inventory replenishment practice where purchase requisitions or purchase orders are created when inventory for an item drops below the Minimum inventory level" @en  ;
+	  rdfs:label "Min-Max Replenishment" @en ;
+      skos:prefLabel "BP.010" @en  .
+
+scor:LotTracking
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "The practice of storing information about the history and/or genealogy of a product or material" @en  ;
+	  rdfs:label "Lot Tracking" @en ;
+      skos:prefLabel "BP.012" @en  .
+	  
+scor:ItemRationalization
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Rationalization of inventory at the item/part/SKU number level" @en  ;
+	  rdfs:label "Item Rationalization" @en ;
+      skos:prefLabel "BP.013" @en  .	  
+	  
+scor:SafetyStockPlanning
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Meet desired customer service levels while maintaining a minimum amount of safety stock" @en  ;
+	  rdfs:label "Safety Stock Planning" @en ;
+      skos:prefLabel "BP.015" @en  .	  
+
+scor:DistributionPlanning
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Determine the best short-term strategy to meet demand and to replenish stocking locations" @en  ;
+	  rdfs:label "Distribution Planning" @en ;
+      skos:prefLabel "BP.017" @en  .	
+	  
+scor:ABCInventoryClassificationSystem
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "The ABC classification system is the Pareto analysis of a range of inventory items, into three or four inventory categories" @en  ;
+	  rdfs:label "ABC Inventory Classification System" @en ;
+      skos:prefLabel "BP.018" @en  .		  
+	  
+scor:DemandPlanning
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Demand Planning is the process used for developing an accurate and comprehensive material forecast" @en  ;
+	  rdfs:label "Demand Planning" @en ;
+      skos:prefLabel "BP.019" @en  .
+	  
+scor:SalesOperationsPlanning
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Mid to Long Term supply chain planning practice which seeks to compare the forecast sales plan to the company resources, and analyze where any imbalances to the plan might exist" @en  ;
+	  rdfs:label "Sales and Operations Planning" @en ;
+      skos:prefLabel "BP.021" @en  .	  
+	  
+scor:MRPI
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "A 'plan' scheme of different inventory management practices has been adopted by a company in a mixed model manufacturing environment" @en  ;
+	  rdfs:label "MRP I" @en ;
+      skos:prefLabel "BP.022" @en  .	  
+	  
+scor:ImproveSOPprocess
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Establish disciplined monthly cross-functional process to increase accuracy of demand management, establish biz inventory policy, and agreement on demand and supply balancing" @en  ;
+	  rdfs:label "Improve S and	OP process" @en ;
+      skos:prefLabel "BP.026" @en  .
+
+scor:StockKeepingUnit
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Inventory reduction practice to determine which SKUs that can be terminated t using SKU Cost of Sales Analysis" @en  ;
+	  rdfs:label "Stock keeping Unit (SKU) Rationalization/Cost of Sales Analysis" @en ;
+      skos:prefLabel "BP.031" @en  .
+
+scor:DelayInboundSupplierShipments
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Analyze and execute a delay in inbound supplier raw material shipments to reduce raw material costs at summer break, end-of-year or other scheduled plant closure" @en  ;
+	  rdfs:label "Delay Inbound Supplier Shipments" @en ;
+      skos:prefLabel "BP.045" @en  .	
+	  
+scor:ExpediteOutboundCustomerShipments
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "The practice of analyzing the cost of maintaining inventory vs. the cost of transportation for opportunities to optimize total cost" @en  ;
+	  rdfs:label "Expedite Outbound Customer Shipments" @en ;
+      skos:prefLabel "BP.046" @en  .		  
+	  
+scor:ReturnAuthorization
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "The Return Authorization (Return Material Authorization/Return Merchandise Authorization/Goods Return Authorization) process provides the inputs into the reverse logistics plan" @en  ;
+	  rdfs:label "Return Authorization" @en ;
+      skos:prefLabel "BP.135" @en  .	
+
+scor:OutsourcedReverseLogistics
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "Rather than manage returns as part of a service organization or operations many companies turn to outsourced service providers including Contract Manufacturers, EMS providers and Third Party Logistics providers for returns management" @en  ;
+	  rdfs:label "Outsourced Reverse Logistics" @en ;
+      skos:prefLabel "BP.136" @en  .
+	  
+scor:PurchaseOrderManagement
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "The practice of issuing a purchase order for a number of products which are required in the short to mid term" @en  ;
+	  rdfs:label "Purchase Order Management" @en ;
+      skos:prefLabel "BP.144" @en  .
+
+scor:CrossDocking
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "the practice of unloading materials from an incoming vehicle and loading these materials directly onto outbound vehicles without putting away into the regular storage locations in a warehouse" @en  ;
+	  rdfs:label "Cross-Docking" @en ;
+      skos:prefLabel "BP.146" @en  .
+
+scor:WayDeliveryVerification
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "The practice of checking received invoices from suppliers against the quantities received and against the associated Purchase Order, Contract or Vendor Schedule" @en  ;
+	  rdfs:label "3-Way Delivery Verification" @en ;
+      skos:prefLabel "BP.148" @en  .
+
+scor:RotableSparesPool
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "An inventory of serviceable parts that can replace a customers broken part to increase their recovery time" @en  ;
+	  rdfs:label "Rotable Spares Pool" @en ;
+      skos:prefLabel "BP.168" @en  .
+
+scor:BeyondEconomicRepairManagement
+      rdf:type scor:StandardPractice ;
+      rdfs:comment "The practice of assessing items as they are removed for Maintenance, Repair and Overhaul to determine whether repair would cost more than buying a replacement part" @en  ;
+	  rdfs:label "Beyond Economic Repair (BER) Management" @en ;
+      skos:prefLabel "BP.169" @en  .
+	  
+# Emerging Practice Individuals
+	  
 scor:BarCodingRFID
       rdf:type scor:EmergingPractice ;
       rdfs:comment "Bar coding is the practice of adding machine readable labels to packaging of goods, in order to increase reading speed and reducing reading errors." @en  ;
