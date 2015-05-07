@@ -1,0 +1,70 @@
+# baseURI: http://purl.org/eis/vocab/scor/#
+
+@prefix :        <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <https://schema.org/> .
+@prefix scor:    <http://purl.org/eis/vocab/scor/#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+scor:
+     rdf:type owl:Ontology ;
+     owl:imports <http://www.w3.org/2004/02/skos/core> .
+
+scor:Aptitude
+      rdf:type owl:Class ;
+      rdfs:comment "A natural, acquired, learned or developed ability to perform a certain kind of work at a" @en  ;
+      rdfs:label "Aptitude" @en  .
+
+scor:Competency
+      rdf:type owl:Class ;
+      rdfs:comment "Describes the level or state of qualification to perform a certain role or tasks" @en  ;
+      rdfs:label "Competency" @en  .
+
+scor:Experience
+      rdf:type owl:Class ;
+      rdfs:comment " the knowledge or ability acquired by observation or active participation. " @en  ;
+      rdfs:label "Experience" @en  .
+
+scor:Skill
+      rdf:type owl:Class ;
+      rdfs:comment "The capacity to deliver pre-determined results with minimal input of time and energy" @en  ;
+      rdfs:label "Skill" @en  .
+
+scor:Training
+      rdf:type owl:Class ;
+      rdfs:comment "Develops a skill or type of behavior through instruction" @en  ;
+      rdfs:label "Training" @en  .
+
+scor:hasAptitude
+      rdf:type rdf:Property ;
+      rdfs:domain :Skill ;
+      rdfs:label "hasAptitude" @en  ;
+      rdfs:range scor:Aptitude .
+
+scor:hasExperience
+      rdf:type rdf:Property ;
+      rdfs:domain :Skill ;
+      rdfs:label "hasExperience" @en  ;
+      rdfs:range scor:Experience .
+
+scor:hasSkill
+      rdf:type rdf:Property ;
+      rdfs:domain schema:Person ;
+      rdfs:label "A person has an Skill " @en  ;
+      rdfs:range scor:Skill .
+
+scor:hasTraining
+      rdf:type rdf:Property ;
+      rdfs:domain :Skill ;
+      rdfs:label "hasTraining" @en  ;
+      rdfs:range scor:Training .
+
+schema:Person
+      rdf:type owl:Class ;
+      rdfs:comment "Models person in a Supply Chain" ;
+      rdfs:label "Person" .
