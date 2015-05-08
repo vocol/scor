@@ -68,3 +68,248 @@ schema:Person
       rdf:type owl:Class ;
       rdfs:comment "Models person in a Supply Chain" ;
       rdfs:label "Person" .
+
+# Skills individuals	  
+	  
+scor:3WayReceivingMatch
+      rdf:type scor:Skill ;
+      rdfs:comment "Knowledge of the process of reconciling invoices with purchase orders and goods received notes in order to authorise payment of invoices" @en  ;
+	  rdfs:label "3-way Receiving Match" @en ;
+      skos:prefLabel "HS.0001" @en  .  
+	  
+scor:AcceptanceTesting
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of Functional and/or Quality Assurance testing of product to ensure it will perform in accordance with its intended contractual agreement for form, fit and function" @en  ;
+	  rdfs:label "Acceptance testing" @en ;
+      skos:prefLabel "HS.0002" @en  .  
+	  
+scor:Accounting
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of collecting, analyzing, and communicating financial information about a business entity to specified stakeholders" @en  ;
+	  rdfs:label "Accounting" @en ;
+      skos:prefLabel "HS.0003" @en  .  	  
+	  
+scor:AdvertisingMethodologies
+      rdf:type scor:Skill ;
+      rdfs:comment "Knowledge of effective procurement or business development communication techniques to inform and/or solicit potential suppliers regarding product or service specifications" @en  ;
+	  rdfs:label "Advertising Methodologies" @en ;
+      skos:prefLabel "HS.0004" @en  .  
+
+scor:AssemblyProcessDesign
+      rdf:type scor:Skill ;
+      rdfs:comment "The arrangement of workers, machines, and equipment in which the product being assembled passes consecutively from operation to operation until completed" @en  ;
+	  rdfs:label "Assembly Process Design" @en ;
+      skos:prefLabel "HS.0005" @en  .  
+
+scor:AssetManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The process (which require's the use of spreadsheets or software) to identify, collect, maintain and track the companies assets" @en  ;
+	  rdfs:label "Asset Management" @en ;
+      skos:prefLabel "HS.0006" @en  .  
+
+scor:AvailabilityManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of managing and allocating available resources and inventory (at various levels) based on business rules" @en  ;
+	  rdfs:label "Availability Management" @en ;
+      skos:prefLabel "HS.0007" @en  . 
+
+scor:BarCodeHandlingRFID
+      rdf:type scor:Skill ;
+      rdfs:comment "Basic working knowledge of the concept of applying or incorporating onto/into a product an optical machine-readable representation of data (bar code) and /or using radio waves with radio-frequency identification tags (RFID) for the purpose of the identification and tracking of that product" @en  ;
+	  rdfs:label "Bar Code Handling/RFID" @en ;
+      skos:prefLabel "HS.0009" @en  . 
+
+scor:BasicFinance
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge and ability to effectively interpret and communicate general financial accounting practices and principles which maintain company and regulatory compliance" @en  ;
+	  rdfs:label "Basic Finance" @en ;
+      skos:prefLabel "HS.0010" @en  . 
+
+scor:BasicTransportationManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The management of transportation operations of all types, including tracking and managing every aspect of vehicle maintenance" @en  ;
+	  rdfs:label "Basic Transportation Management" @en ;
+      skos:prefLabel "HS.0011" @en  . 
+	  
+scor:Benchmarking
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of the process of capturing and comparing one's own business processes and performance metrics to industry peers and/or best practices from other industries" @en  ;
+	  rdfs:label "Benchmarking" @en ;
+      skos:prefLabel "HS.0012" @en  . 	  
+	  
+scor:BlanketPurchaseOrderProcess
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of the procurement process for soliciting, issuing and administering open-ended (period for performance) type purchase orders or contracts" @en  ;
+	  rdfs:label "Blanket purchase order process" @en ;
+      skos:prefLabel "HS.0013" @en  . 	 	  
+	  
+scor:BuildScheduleEvaluation
+      rdf:type scor:Skill ;
+      rdfs:comment "Analyzing a product installation schedule against the constraints and requirements in order to ensure feasibility to effectively and efficiently complete the installation process" @en  ;
+	  rdfs:label "Build Schedule Evaluation" @en ;
+      skos:prefLabel "HS.0014" @en  . 		  
+	  
+scor:CADCAM
+      rdf:type scor:Skill ;
+      rdfs:comment "The process to use computer technology to aid in the design, analysis, and manufacture of products" @en  ;
+	  rdfs:label "CAD/CAM" @en ;
+      skos:prefLabel "HS.0015" @en  . 		  
+	  
+scor:CapacityPlanningManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of determining and managing the production capacity needed by an organization to meet changing demands for its products" @en  ;
+	  rdfs:label "Capacity Planning/Management" @en ;
+      skos:prefLabel "HS.0016" @en  . 			  
+	  
+scor:CarrierSelection
+      rdf:type scor:Skill ;
+      rdfs:comment "Selection of a transportation mode and service provider in order to meet due dates, cost and service objectives" @en  ;
+	  rdfs:label "Carrier Selection" @en ;
+      skos:prefLabel "HS.0018" @en  . 		  
+
+scor:ChangeNoticeDevelopment
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of the procurement process and the ability to clearly disseminate specific contractual or technical requirements which have changed to Sourced contractors, suppliers or vendors" @en  ;
+	  rdfs:label "Change Notice Development" @en ;
+      skos:prefLabel "HS.0019" @en  . 		
+
+scor:CompetitiveBidding
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of procurement process for requesting and receiving bids/quotes from competing contractors, suppliers, or vendors based on product part numbers, scope, specifications, terms and conditions" @en  ;
+	  rdfs:label "Competitive Bidding" @en ;
+      skos:prefLabel "HS.0020" @en  . 	
+
+scor:ConsignmentAgreementDevelopment
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of Consignment Agreements which are when one party provides goods/services to another party for sale by that other party" @en  ;
+	  rdfs:label "Consignment Agreement Development" @en ;
+      skos:prefLabel "HS.0021" @en  . 
+
+scor:ContractManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "Experience in solicitation process, bid/proposal evaluation, contract award and post award administration, and closeout" @en  ;
+	  rdfs:label "Contract Management" @en ;
+      skos:prefLabel "HS.0022" @en  . 
+
+scor:ControlsCompliance
+      rdf:type scor:Skill ;
+      rdfs:comment "Awareness of relevant regulations, laws and requirements, whether external or internal, and the ability to devise, implement and document the relevant and necessary controls in order to maintain compliance and successfully pass auditing requirements" @en  ;
+	  rdfs:label "Controls and Compliance" @en ;
+      skos:prefLabel "HS.0023" @en  . 
+
+scor:CostPriceAnalysis
+      rdf:type scor:Skill ;
+      rdfs:comment "Basic financial understanding of analyzing the costs/prices associated with a bid/proposal/quotation for a sourced product for the purpose of attaining best cost/price and/or best value for that product" @en  ;
+	  rdfs:label "Cost/Price Analysis" @en ;
+      skos:prefLabel "HS.0024" @en  . 
+	  
+scor:BusinessPolicyManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "A documented set of basic principles and associated guidelines, formulated and enforced by the governing body or an assigned committee of an organization that direct and limit a company's decisions and actions in pursuit of its objectives" @en  ;
+	  rdfs:label "Business Rule/Policy Management" @en ;
+      skos:prefLabel "HS.0025" @en  . 	  
+	  
+scor:CreditCollectionManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "Set of activities to assess and rate the credit risk of a customer, identify/block non-creditworthy customers, manage outstanding balances, process credits, and investigate/pursue overdues" @en  ;
+	  rdfs:label "Credit/Collection Management" @en ;
+      skos:prefLabel "HS.0026" @en  . 	
+	  
+scor:CrossDocking
+      rdf:type scor:Skill ;
+      rdfs:comment "Basic knowledge of linking, staging and moving received sourced products with/to existing open orders minimizing the need for product inventory or storage" @en  ;
+	  rdfs:label "Cross Docking" @en ;
+      skos:prefLabel "HS.0027" @en  . 	
+
+scor:CustomerOrderManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The process or the work flow associated with the identification, receipt, acceptance, picking, packing, delivery and of the packed item(s) to a shipping carrier" @en  ;
+	  rdfs:label "Customer Order Management" @en ;
+      skos:prefLabel "HS.0028" @en  . 	
+
+scor:CustomerRelationshipManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "Managing a company's relations and interactions with clients and sales prospects, possibly including the synchronization of business processes with the objective of identifying, attracting, and managing new and existing customers" @en  ;
+	  rdfs:label "Customer Relationship Management (CRM)" @en ;
+      skos:prefLabel "HS.0029" @en  . 	
+
+scor:CustomerRepair
+      rdf:type scor:Skill ;
+      rdfs:comment "The actions, tasks and responsibilities concerned with the decision to repair all mechanical/electrical out of order/broken products in line with the internal return rules" @en  ;
+	  rdfs:label "Customer Repair and Return Policy and Process" @en ;
+      skos:prefLabel "HS.0031" @en  . 
+
+scor:CustomerSupplierCommunication
+      rdf:type scor:Skill ;
+      rdfs:comment "Process of transferring customer/supplier information by speech or writing" @en  ;
+	  rdfs:label "Customer/Supplier Communication" @en ;
+      skos:prefLabel "HS.0032" @en  . 
+
+scor:DataManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of the processes required to develop, execute and sustain plans, policies, programs and practices that control, protect, deliver and enhance the value of data and information systems/assets" @en  ;
+	  rdfs:label "Data management" @en ;
+      skos:prefLabel "HS.0033" @en  . 
+
+scor:DiscrepancyReportingResolution
+      rdf:type scor:Skill ;
+      rdfs:comment "Knowledge of techniques, systems, tools and human skills required to establish effective procedures to identify defective and missing product and then report onward, either internally or externally, ensuring closure on reports and improvements to avoid future repetition" @en  ;
+	  rdfs:label "Discrepancy Reporting and Resolution" @en ;
+      skos:prefLabel "HS.0034" @en  . 
+	  
+scor:DeliveryBalancing
+      rdf:type scor:Skill ;
+      rdfs:comment "Delivery balancing is one part of Master Scheduling and involves the balancing of deliveries from suppliers against constrained criteria" @en  ;
+	  rdfs:label "Delivery Balancing" @en ;
+      skos:prefLabel "HS.0035" @en  . 	  
+	  
+scor:DeliveryScheduling
+      rdf:type scor:Skill ;
+      rdfs:comment "Basic knowledge of scheduling and managing sourced product deliveries in order to meet the requirements of inventory replenishment or scheduled production plans" @en  ;
+	  rdfs:label "Delivery Scheduling" @en ;
+      skos:prefLabel "HS.0036" @en  . 	
+
+scor:DemandManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The manufacturing management process by which raw materials and production capacity are optimally allocated to meet demand" @en  ;
+	  rdfs:label "Demand Management" @en ;
+      skos:prefLabel "HS.0037" @en  . 	
+	  
+scor:DesignEngineeringScheduleDevelopment
+      rdf:type scor:Skill ;
+      rdfs:comment "Analyzing the constraints and requirements of a product design cycle in order to evaluate and ensure the timely availability of the product design for building and installation of a product" @en  ;
+	  rdfs:label "Design/Engineering Schedule Development" @en ;
+      skos:prefLabel "HS.0038" @en  . 
+
+scor:DrivingCertification
+      rdf:type scor:Skill ;
+      rdfs:comment "Ownership of the official, valid (not expired) document stating that the person is authorized and able to drive (a) class/es of vehicles" @en  ;
+	  rdfs:label "Driving Certification" @en ;
+      skos:prefLabel "HS.0039" @en  .
+ 	  
+scor:EHSregulations
+      rdf:type scor:Skill ;
+      rdfs:comment "The actions, tasks, and responsibilities concerned with the observance and application of the environment, health, and safety rules and standards" @en  ;
+	  rdfs:label "EHS regulations" @en ;
+      skos:prefLabel "HS.0041" @en  .	
+
+scor:EnablingTechnology
+      rdf:type scor:Skill ;
+      rdfs:comment "Working awareness of relevant technology that could/can be used to improve the effectiveness or efficiency of operations within Source, but also widely across the Supply Chain or the enterprise" @en  ;
+	  rdfs:label "Enabling Technology" @en ;
+      skos:prefLabel "HS.0042" @en  .	
+
+scor:Engineering
+      rdf:type scor:Skill ;
+      rdfs:comment "The discipline, art and profession of acquiring and applying technical, scientific, and mathematical knowledge to design and implement materials, structures, machines, devices, systems, and processes that safely realize a desired objective or invention" @en  ;
+	  rdfs:label "Engineering" @en ;
+      skos:prefLabel "HS.0043" @en  .		  
+	  
+scor:EnterpriseBusinessProcess
+      rdf:type scor:Skill ;
+      rdfs:comment "The end-to-end (cross-departmental, and often, cross-company) coordination of work activities that create and deliver ultimate value to customers" @en  ;
+	  rdfs:label "Enterprise Business Process" @en ;
+      skos:prefLabel "HS.0044" @en  .		  
+	  
+	  
+	  
