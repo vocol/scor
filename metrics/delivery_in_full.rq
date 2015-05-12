@@ -1,9 +1,0 @@
-PREFIX    :   <http://www.ok-fraunhofer.de/2015/04/scor#> 
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#> 
-
-SELECT (xsd:double((?value1+?value2)/2) AS ?metricResult)
-WHERE 
-{
-	?order :hasMetricRL_33 ?value1 .
-	?order :hasMetricRL_50 ?value2 .
-}
