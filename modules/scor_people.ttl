@@ -311,10 +311,143 @@ scor:EnterpriseBusinessProcess
 	  rdfs:label "Enterprise Business Process" @en ;
       skos:prefLabel "HS.0044" @en  .		  
 
-scor:EnterpriseBusinessProcess
+scor:EnvironmentalRequirements
       rdf:type scor:Skill ;
       rdfs:comment "Familiarity and understanding of internal and external goals, objectives, rules and laws pertaining to the operation of the Source function within the organization" @en  ;
 	  rdfs:label "Enterprise Business Process" @en ;
-      skos:prefLabel "HS.0045" @en  .		  
+      skos:prefLabel "HS.0045" @en  .	
+
+scor:ERPSystems
+      rdf:type scor:Skill ;
+      rdfs:comment "Working awareness of and conversant with installing and operating appropriate Enterprise Resource Planning (ERP) systems relevant to the organisation concerned" @en  ;
+	  rdfs:label "ERP Systems" @en ;
+      skos:prefLabel "HS.0046" @en  .
+
+scor:Forecasting
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of predicting production requirements to meet estimated sales in a particular forecasting period" @en  ;
+	  rdfs:label "Forecasting" @en ;
+      skos:prefLabel "HS.0048" @en  .
+
+scor:IDDamageInspection
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge and ability to identify and inspect Sourced products for compliance with contractual part numbers, specifications, drawings, etc, including quality requirements and damage-free product receipt" @en  ;
+	  rdfs:label "ID and Damage Inspection" @en ;
+      skos:prefLabel "HS.0049" @en  .
+	  
+scor:ImportExportRegulations
+      rdf:type scor:Skill ;
+      rdfs:comment "The knowledge and understanding of the laws and regulations governing the import and export requirements of materials" @en  ;
+	  rdfs:label "Import/Export Regulations" @en ;
+      skos:prefLabel "HS.0050" @en  .	  
+	  
+scor:InstallationRequirements
+      rdf:type scor:Skill ;
+      rdfs:comment "The information, resources and skills requirements to effectively install purchased products as per customer requirements" @en  ;
+	  rdfs:label "Import/Export Regulations" @en ;
+      skos:prefLabel "HS.0051" @en  .	
+
+scor:InstallationScheduling
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of managing requirement and constraints associated with a installation schedule in order to effectively schedule product installation as per customer requirements" @en  ;
+	  rdfs:label "Installation Scheduling" @en ;
+      skos:prefLabel "HS.0052" @en  .	
+	  
+scor:InstalledBaseManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "Actions, tasks and responsibilities concerned with maintenance and update of info related to the number of units of the company products/platform actually installed and in use around the world" @en  ;
+	  rdfs:label "Installed base management" @en ;
+      skos:prefLabel "HS.0053" @en  .		  
+	  
+scor:IntellectualProperty
+      rdf:type scor:Skill ;
+      rdfs:comment "Conversant with and effectively manage Proprietary Data and Intellectual property on behalf of the organisation" @en  ;
+	  rdfs:label "Intellectual Property/Proprietary Data" @en ;
+      skos:prefLabel "HS.0054" @en  .		  
+	  
+scor:InternationalTrade
+      rdf:type scor:Skill ;
+      rdfs:comment "The exchange of capital, goods, and services across international borders or territories" @en  ;
+	  rdfs:label "International Trade" @en ;
+      skos:prefLabel "HS.0055" @en  .	  
+	  
+scor:InterpretingSpecifications
+      rdf:type scor:Skill ;
+      rdfs:comment "Basic working knowledge and ability to read, interpret, understand, and effectively communicate technical specifications and/or drawings to support timely design and delivery of products meeting minimum requirements" @en  ;
+	  rdfs:label "Interpreting Specifications" @en ;
+      skos:prefLabel "HS.0056" @en  .	 
+
+scor:InventoryManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The formal management of the timing and quantities of goods to be ordered and stocked by an organization in order that demand can always be satisfied without excess expenditure" @en  ;
+	  rdfs:label "Inventory Management" @en ;
+      skos:prefLabel "HS.0058" @en  .	 
+
+scor:IssueProposalQuote
+      rdf:type scor:Skill ;
+      rdfs:comment "The compilation of all required specifications and details need to generate and communicate an RFP/Q" @en  ;
+	  rdfs:label "Issue Proposal/Quote" @en ;
+      skos:prefLabel "HS.0060" @en  .	
+
+scor:ItemMaster
+      rdf:type scor:Skill ;
+      rdfs:comment "The ability to understand, interpret and effectively communicate a part master record (item master) or bill of materials (BOM) of parts lists that details description, unit of measure, dimensions, group/ family classification, production or sourcing data, quality requirements and/or restrictions" @en  ;
+	  rdfs:label "Item Master/BOM/BoL Interpretation" @en ;
+      skos:prefLabel "HS.0061" @en  .
+	  
+scor:KittingPacking
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of aggregating and packing all elements belonging to a customer order" @en  ;
+	  rdfs:label "Kitting/Packing" @en ;
+      skos:prefLabel "HS.0062" @en  .		
+	  
+scor:LaborCostsVerification
+      rdf:type scor:Skill ;
+      rdfs:comment "Capability of calculating, understanding, reporting on, and if necessary, be able to taking corrective action to control labour costs within one's area of responsibility against budgets or objectives that have been set" @en  ;
+	  rdfs:label "Labor Costs Verification" @en ;
+      skos:prefLabel "HS.0063" @en  .	  
+	  
+scor:LeadTimeValidation
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of analyzing and validating feasibility of customer required lead-times" @en  ;
+	  rdfs:label "Lead-time validation" @en ;
+      skos:prefLabel "HS.0064" @en  .	 	  
+	  
+scor:LeanManufacturing
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of identifying processes that impede the optimization of production" @en  ;
+	  rdfs:label "Lean Manufacturing" @en ;
+      skos:prefLabel "HS.0065" @en  .	  
+	  
+scor:LegislationStandards
+      rdf:type scor:Skill ;
+      rdfs:comment "Knowledge to manage conformance systems and actions for receiving product and relates to general legislation affecting the product being received as well as the specific standards or specifications that applies to the product" @en  ;
+	  rdfs:label "Legislation and Standards" @en ;
+      skos:prefLabel "HS.0066" @en  .	
+
+scor:LinearProgramming
+      rdf:type scor:Skill ;
+      rdfs:comment "The branch of mathematics concerned with the minimization or maximization of a linear function of several variables and inequalities; used in many branches of industry to minimize costs or maximize production" @en  ;
+	  rdfs:label "Linear programming" @en ;
+      skos:prefLabel "HS.0067" @en  .	
+
+scor:LoadBuilding
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of order consolidation to meet service, cost, delivery and product specification requirements" @en  ;
+	  rdfs:label "Load Building" @en ;
+      skos:prefLabel "HS.0068" @en  .	
+
+scor:LogisticsManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The process for planning, implementing, and controlling the flow and storage of goods, services, and related information between the point of origin and the point of consumption in order to meet customers’ requirements and thus add value for the customer" @en  ;
+	  rdfs:label "Logistics Management" @en ;
+      skos:prefLabel "HS.0069" @en  .		  
+	  
+scor:LogisticsNetworkModeling
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of planning, implementing, and controlling the flow and storage of goods, services, and related information between the point of origin and the point of consumption in order to meet customers' requirements" @en  ;
+	  rdfs:label "Logistics network modeling" @en ;
+      skos:prefLabel "HS.0070" @en  .	
+	  
 	  
 	  
