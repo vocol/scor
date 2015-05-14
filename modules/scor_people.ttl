@@ -310,6 +310,11 @@ scor:EnterpriseBusinessProcess
       rdfs:comment "The end-to-end (cross-departmental, and often, cross-company) coordination of work activities that create and deliver ultimate value to customers" @en  ;
 	  rdfs:label "Enterprise Business Process" @en ;
       skos:prefLabel "HS.0044" @en  .		  
-	  
+
+scor:EnterpriseBusinessProcess
+      rdf:type scor:Skill ;
+      rdfs:comment "Familiarity and understanding of internal and external goals, objectives, rules and laws pertaining to the operation of the Source function within the organization" @en  ;
+	  rdfs:label "Enterprise Business Process" @en ;
+      skos:prefLabel "HS.0045" @en  .		  
 	  
 	  
