@@ -449,5 +449,71 @@ scor:LogisticsNetworkModeling
 	  rdfs:label "Logistics network modeling" @en ;
       skos:prefLabel "HS.0070" @en  .	
 	  
+scor:LogisticsFreight
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of the management and integration of information, sourced product/material, transportation, inventory, warehousing, material-handling, and packaging, and occasionally security, between the point of origin and the point of consumption in order to meet customer requirements" @en  ;
+	  rdfs:label "Logistics/Freight" @en ;
+      skos:prefLabel "HS.0071" @en  .	
+	  
+scor:PerformanceManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "A framework that identifies opportunities for performance improvement through use of performance measures such as standards and indicators" @en  ;
+	  rdfs:label "Performance Management" @en ;
+      skos:prefLabel "HS.0072" @en  .	
+
+scor:ManufacturingResourceCommitment
+      rdf:type scor:Skill ;
+      rdfs:comment "The efficient and effective allocation of an organization's manufacturing resources and assets with the objective of meeting customer demands/requirements" @en  ;
+	  rdfs:label "Manufacturing Resource Commitment" @en ;
+      skos:prefLabel "HS.0073" @en  .	
+
+scor:MasterScheduling
+      rdf:type scor:Skill ;
+      rdfs:comment "Knowledge of co-ordinating and keeping track of all the different components related to the Source activity" @en  ;
+	  rdfs:label "Master Scheduling" @en ;
+      skos:prefLabel "HS.0074" @en  .	
+	  
+scor:MaterialHandlingEquipment
+      rdf:type scor:Skill ;
+      rdfs:comment "The ability to manipulate various types of material handling systems (e.g. forklifts, conveyors, palletizers, etc.) to pick, pack, and store orders and inventory" @en  ;
+	  rdfs:label "Material handling equipment usage" @en ;
+      skos:prefLabel "HS.0075" @en  .	
+	  
+scor:MilestonePerformancePayments
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of contractual requirements for the authorization of monetary payments for the successful completion of pre-defined development or performance milestones" @en  ;
+	  rdfs:label "Milestone/Performance Payments" @en ;
+      skos:prefLabel "HS.0076" @en  .	
+	  
+scor:MPSMethodsTechniques
+      rdf:type scor:Skill ;
+      rdfs:comment "The techniques used in material requirements planning systems to develop a detailed plan for product manufacturing" @en  ;
+	  rdfs:label "MPS Methodologies and Techniques" @en ;
+      skos:prefLabel "HS.0077" @en  .
+	  
+scor:MROManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "All actions which have the objective of retaining or restoring an item in or to a state in which it can perform its required function" @en  ;
+	  rdfs:label "MRO Management" @en ;
+      skos:prefLabel "HS.0078" @en  .	
+	  
+scor:MRPSystems
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of ensuring materials and products are available for production and delivery to customers, maintaining the lowest possible level of inventory and planning manufacturing activities, delivery schedules and purchasing activities" @en  ;
+	  rdfs:label "MRP Systems" @en ;
+      skos:prefLabel "HS.0079" @en  .	
+	  
+scor:EnvironmentalInterpretation
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge and understanding of strict regulatory adherence to health and environmental requirements/restrictions associated with particular products as detailed on Material Safely Data Sheets (MSDS) or Certificates of Compliance CoC" @en  ;
+	  rdfs:label "Environmental Interpretation" @en ;
+      skos:prefLabel "HS.0080" @en  .	
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	  
 	  
