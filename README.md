@@ -9,7 +9,7 @@
 		http://purl.org/eis/vocab/scor
 
 	Usage
-		arq --query metrics/reliability/delivery_in_full.rq --data test_data/test_data.ttl 
+		`arq --query metrics/reliability/delivery_in_full.rq --data test_data/test_data.ttl` 
 	
-	(using [https://jena.apache.org/documentation/query/](ARQ)] SPARQL Processor of the Jena Framework)	
+	(using [https://jena.apache.org/documentation/query/](ARQ) SPARQL Processor of the Jena Framework)	
 
