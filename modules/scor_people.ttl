@@ -509,11 +509,118 @@ scor:EnvironmentalInterpretation
 	  rdfs:label "Environmental Interpretation" @en ;
       skos:prefLabel "HS.0080" @en  .	
 	  
+scor:OfficeAutomationTools
+      rdf:type scor:Skill ;
+      rdfs:comment "Familiarity with relevant Office Automation Tools and be able to deploy against financial justification as appropriate taking account of project and change management requirements" @en  ;
+	  rdfs:label "Office automation tools" @en ;
+      skos:prefLabel "HS.0081" @en  .	  
 	  
+scor:Optimization
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of improving various aspects of the business resulting in (such as) increased profits, improved product or greater customer satisfaction" @en  ;
+	  rdfs:label "Optimization" @en ;
+      skos:prefLabel "HS.0082" @en  .	  
 	  
+scor:OrderManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The process or the work flow associated with the identification, receipt, acceptance, picking, packing, delivery and of the packed item(s) to a shipping carrier" @en  ;
+	  rdfs:label "Order Management" @en ;
+      skos:prefLabel "HS.0083" @en  .	  	  
 	  
+scor:Outsourcing
+      rdf:type scor:Skill ;
+      rdfs:comment "A company that contracts with another company to provide services that might otherwise be performed by in-house employees" @en  ;
+	  rdfs:label "Outsourcing" @en ;
+      skos:prefLabel "HS.0085" @en  .	  
 	  
+scor:Packaging
+      rdf:type scor:Skill ;
+      rdfs:comment "The proceesses of coordinating a system of preparing goods for transport, warehousing, logistics, sale, and end use" @en  ;
+	  rdfs:label "Packaging" @en ;
+      skos:prefLabel "HS.0086" @en  .	  
 	  
+scor:PaymentProcessing
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of the processes and policies required for contractual authorization of payments for sourced products and services" @en  ;
+	  rdfs:label "Payment Processing" @en ;
+      skos:prefLabel "HS.0087" @en  .		  
 	  
+scor:PhysicalCapability
+      rdf:type scor:Skill ;
+      rdfs:comment "The ability to complete a process through the use of dexterity, strength or other capacities" @en  ;
+	  rdfs:label "Physical Capability" @en ;
+      skos:prefLabel "HS.0088" @en  .		  
+	  
+scor:PhysicalDistributionSystems
+      rdf:type scor:Skill ;
+      rdfs:comment "The set of activities concerned with efficient movement of finished goods from the end of the production operation to the consumer" @en  ;
+	  rdfs:label "Physical Distribution Systems" @en ;
+      skos:prefLabel "HS.0089" @en  .	
+
+scor:PickingProcess
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of selecting and collecting SKUs and materials in a specified order and quantity with the objective of satisfying customers orders" @en  ;
+	  rdfs:label "Picking process / order batching" @en ;
+      skos:prefLabel "HS.0090" @en  .
+
+scor:PlanogramUsageStrategies
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of using a planogram to diagram fixtures and products to illustrate how and where retail products should be displayed, usually on a store shelf in order to increase customer purchases" @en  ;
+	  rdfs:label "Planogram usage and strategies" @en ;
+      skos:prefLabel "HS.0091" @en  .
+
+scor:PricingManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The analysis and setting of prices (on a per unit or volume basis) to meet required characteristics, business rules and/or business performance requirements" @en  ;
+	  rdfs:label "Pricing Management" @en ;
+      skos:prefLabel "HS.0092" @en  .
+
+scor:Prioritization
+      rdf:type scor:Skill ;
+      rdfs:comment "The knowledge and ability to arrange process steps, jobs or orders in queue, or product receipts in the proper sequence in order to meet product/service production and deliveries as scheduled" @en  ;
+	  rdfs:label "Prioritization" @en ;
+      skos:prefLabel "HS.0093" @en  .
+
+scor:Procurement
+      rdf:type scor:Skill ;
+      rdfs:comment "Working knowledge of the process for acquiring goods and/or services at the best possible total cost of ownership, in the right quantity, quality, at the right time and in the right place, with all required documentation" @en  ;
+	  rdfs:label "Procurement" @en ;
+      skos:prefLabel "HS.0094" @en  .
+	  
+scor:ProductConfigurationValidation
+      rdf:type scor:Skill ;
+      rdfs:comment "The analysis of stated product and configuration specifications against required and feasible product's performance, functional, and physical requirements" @en  ;
+	  rdfs:label "Product and Configuration Validation" @en ;
+      skos:prefLabel "HS.0095" @en  .	  
+	  
+scor:ProductCheckoutProcess
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of removing a product from inventory and exchanging funds for the value of the product in a retail supply chain" @en  ;
+	  rdfs:label "Product checkout process" @en ;
+      skos:prefLabel "HS.0096" @en  .	 	  
+	  
+scor:ProductDevelopment
+      rdf:type scor:Skill ;
+      rdfs:comment "Familiarity and awareness of the Product Development process and its key steps and the interaction with the Source activity" @en  ;
+	  rdfs:label "Product Development" @en ;
+      skos:prefLabel "HS.0097" @en  .		  
+	  
+scor:ProductInformationManagement
+      rdf:type scor:Skill ;
+      rdfs:comment "The use of software or other tools to capture and maintain information on products and/or services through their life cycle" @en  ;
+	  rdfs:label "Product Information Management" @en ;
+      skos:prefLabel "HS.0098" @en  .			  
+	  
+scor:Production
+      rdf:type scor:Skill ;
+      rdfs:comment "The process of using machines, tools, materials and labor to make things for use or sale" @en  ;
+	  rdfs:label "Production" @en ;
+      skos:prefLabel "HS.0099" @en  .	  
+	  
+scor:ProductionPlanning
+      rdf:type scor:Skill ;
+      rdfs:comment "Actions, tasks and responsibilities concerned with the planning, scheduling and releasing of production orders in order to satisfy demand while optimizing the available and planned resources/capacity" @en  ;
+	  rdfs:label "Production" @en ;
+      skos:prefLabel "HS.0101" @en  .	  
 	  
 	  
