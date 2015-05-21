@@ -617,6 +617,3 @@ scor:ProcessMetricsAlignment
       rdfs:label "Process/Metrics Alignment" @en  ;
       skos:prefLabel "BP.074" @en  .
 	  
-	  
-	  
-	  
