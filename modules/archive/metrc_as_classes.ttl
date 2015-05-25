@@ -1,0 +1,380 @@
+# Metrics
+
+scor:Agility
+      rdf:type owl:Class ;
+      rdfs:comment "The Agility attribute describes the ability to respond to external influences; the ability to and speed of change."@en ;
+      rdfs:label "Agility" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
+
+scor:Assets
+      rdf:type owl:Class ;
+      rdfs:comment "The Assets attribute describes the ability to efficiently utilize assets."@en ;
+      rdfs:label "Assets" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
+
+scor:AdditionalRequiredDocumentationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DocumentationAccuracy ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .	  
+	  
+scor:CashToCashCycleTime
+      rdf:type owl:Class ;
+      rdfs:comment "The time it takes for an investment made to flow back into a company after it has been spent for raw materials"@en ;
+      rdfs:label "CashToCashCycleTime" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AM.1.1" .
+
+scor:ComplianceDocumentationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DocumentationAccuracy ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:Cost
+      rdf:type owl:Class ;
+      rdfs:comment "The Cost attribute describes the cost of operating the process."@en ;
+      rdfs:label "Cost" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
+
+scor:CustomerCommitDateAchievementTimeCustomerReceiving
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DeliveryPerformanceToCustomerCommitDate ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DeliveryItemAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PercentOfOrdersDeliveredInFull ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DeliveryLocationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DeliveryPerformanceToCustomerCommitDate ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DeliveryPerformanceToCustomerCommitDate
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectOrderFulfillment ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DeliveryQuantityAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PercentOfOrdersDeliveredInFull ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DocumentationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectOrderFulfillment ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:DownsideAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "Downside  Adaptability" ;
+      rdfs:label "DownsideAdaptability" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AG.1.3" .
+
+scor:KeyPerformanceIndicator
+      rdf:type owl:Class ;
+      rdfs:comment "Diagnostics for the overall health of the supply chain. Benchmarking Key Performance Indicators helps establishing realistic targets to support the strategic directions"@en ;
+      rdfs:label "KeyPerformanceIndicator" ;
+      rdfs:subClassOf daq:Metric .
+
+scor:OrderDeliveredDamageFreeConformance
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:OrderDeliveredDefectFreeConformance
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:OrderFulfillmentCycleTime
+      rdf:type owl:Class ;
+      rdfs:comment "Order Fulfillment Cycle Time" ;
+      rdfs:label "OrderFulfillmentCycleTime" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "RS.1.1" .
+
+scor:OverallValueAtRisk
+      rdf:type owl:Class ;
+      rdfs:comment "Overall Value-at-Risk" ;
+      rdfs:label "OverallValueAtRisk" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AG.1.4" .
+
+scor:PaymentDocumenationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DocumentationAccuracy ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PercentOfFaultnessInstallations
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PercentOfOrdersDeliveredInFull
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectOrderFulfillment ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PercentOrdersLinesReceivedDamageFree
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PerfectCondition
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectOrderFulfillment ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:PerfectOrderFulfillment
+      rdf:type owl:Class ;
+      rdfs:comment "Delivered complete, on time according the client's specifications of time. Documentation complete. Faultlessly installed"@en ;
+      rdfs:label "PerfectOrderFulfillment" ;
+      rdfs:subClassOf scor:Reliability , scor:KeyPerformanceIndicator ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" ;
+      skos:altLabel "RL.1.1" .
+
+scor:PerformanceAttribute
+      rdf:type owl:Class ;
+      rdfs:comment "A performance attribute is a grouping or categorization of metrics used to express a specific strategy"@en ;
+      rdfs:label "PerformanceAttribute" .
+
+scor:Reliability
+      rdf:type owl:Class ;
+      rdfs:comment "The Reliability attribute addresses the ability to perform tasks as required. Reliability focuses on the predictability of the outcome of a process."@en;
+      rdfs:label "Reliability" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
+
+scor:Responsiveness
+      rdf:type owl:Class ;
+      rdfs:comment "The Responsiveness attribute describes the speed at which tasks are performed. Responsiveness addresses repeated speed of doing business."@en ;
+      rdfs:label "Responsiveness" ;
+      rdfs:subClassOf scor:PerformanceAttribute .
+
+scor:ReturnOnFixedAssets
+      rdf:type owl:Class ;
+      rdfs:comment "Measures the return an organization receives on its invested capital in supply chain fixed assets. This includes the fixed assets used in Plan, Source, Make,Deliver, and Return"@en ;
+      rdfs:label "ReturnOnFixedAssets" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AM.1.2." .
+
+scor:ReturnOnWorkingCapital
+      rdf:type owl:Class ;
+      rdfs:comment "Assesses the magnitude of investment relative to a company's working capital position versus the revenue generated from a supply chain."@en ;
+      rdfs:label "ReturnOnWorkingCapital" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AM.1.3." .
+
+scor:ShippingDocumenationAccuracy
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:DocumentationAccuracy ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:TotalCostToServe
+      rdf:type owl:Class ;
+      rdfs:comment "The sum of the Supply Chain Cost to deliver products and services to customers"@en ;
+      rdfs:label "TotalCostToServe" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "CO.1.001" .
+
+scor:UpsideAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "Upside Adaptability" ;
+      rdfs:label "UpsideAdaptability" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AG.1.2" .
+
+scor:UpsideFlexibility
+      rdf:type owl:Class ;
+      rdfs:comment "Upside Flexibility" ;
+      rdfs:label "UpsideFlexibility" ;
+      rdfs:subClassOf scor:KeyPerformanceIndicator ;
+      skos:altLabel "AG.1.1" .
+
+scor:WarrantyReturns
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:PerfectCondition ;
+      scor:isCalculatedBy "[Total Perfect Orders] / [Total Number of Orders] x 100%" .
+
+scor:hasMetric
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain scor:Process ;
+      rdfs:range daq:Metric .
+
+scor:hasMetricID
+      rdf:type owl:AnnotationProperty ;
+      rdfs:comment "" ;
+      rdfs:domain daq:Metric ;
+      rdfs:label "has metric ID" ;
+      rdfs:range xsd:string .
+
+scor:hasProcessID
+      rdf:type owl:AnnotationProperty ;
+      rdfs:comment "Represents a unique identifier of a process within the SCOR model"@en ;
+      rdfs:label "has process ID" ;
+      rdfs:range xsd:string .
+
+scor:hasProcessStepList
+      rdf:type owl:DatatypeProperty , owl:ObjectProperty ;
+      rdfs:comment "Represents a unique identifier of a process within the SCOR model"@en ;
+      rdfs:domain scor:Process ;
+      rdfs:label "has process step list" ;
+      rdfs:range xsd:string .
+
+scor:isCalculatedBy
+      rdf:type owl:AnnotationProperty ;
+      rdfs:label "is calculated by" ;
+      rdfs:range xsd:string .
+
+scor:measure
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain scor:KeyPerformanceIndicator ;
+      rdfs:range scor:PerformanceAttribute .
+
+daq:Metric
+      rdf:type owl:Class ;
+      rdfs:comment "A metric is a standard for measurement of the performance of a process." @en;
+      rdfs:label "Metric" .
+
+scor:AuthorizeSupplierPaymentCycleTime
+      rdf:type owl:Class ;
+      rdfs:subClassOf scor:SourceCycleTime ;
+      skos:prefLabel "RS.3.8"^^xsd:string .
+
+scor:DownsideDeliverAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "Downside Deliver Adaptability = The reduction in delivered quantities sustainable at 30 days prior to delivery with no inventory or cost penalties." @en ;
+      rdfs:subClassOf scor:DownsideSCAdaptability ;
+	  rdfs:label "Downside Deliver Adaptability";
+      skos:prefLabel "AG.2.13"^^xsd:string .
+
+scor:DownsideMakeAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "The production reduction sustainable at 30 days prior to delivery with no inventory or cost penalties."@en ;
+      rdfs:subClassOf scor:DownsideSCAdaptability ;
+	  rdfs:label "Downside Make Adaptability";
+      skos:prefLabel "AG.2.12"^^xsd:string .
+
+scor:DownsideSCAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "The reduction in quantities ordered sustainable at 30 days prior to delivery with no inventory or cost penalties."@en ;
+      rdfs:subClassOf scor:Agility ;
+	  rdfs:label "Downside Supply Chain Adaptability";
+      skos:prefLabel "AG.1.3"^^xsd:string .
+
+scor:DownsideSourceAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "The raw material quantity reduction sustainable at 30 days prior to delivery with no inventory or cost penalties." @en ;
+      rdfs:subClassOf scor:DownsideSCAdaptability ;
+	  rdfs:label "Downside Source Adaptability";
+      skos:prefLabel "AG.2.11"^^xsd:string .
+
+scor:OrderFullfilmentCycleTime
+      rdf:type owl:Class ;
+      rdfs:comment "The average actual cycle consistently achieved to fulfill customers orders" @en;
+      rdfs:subClassOf scor:Responsiveness ;
+	  rdfs:label "Order Fullfilment Cycle Time";
+      skos:prefLabel "RS.1.1"^^xsd:string .
+	  
+scor:SourceCycleTime
+      rdf:type owl:Class ;
+      rdfs:comment "The average time associated with Source Processes. (Processes: sS1, sS2, sS3)" @en ;
+      rdfs:subClassOf scor:OrderFullfilmentCycleTime ;
+	  rdfs:label "Source Cycle Time";
+      skos:prefLabel "RS.2.1"^^xsd:string .
+
+scor:OverallValueAtRisk
+      rdf:type owl:Class ;
+      rdfs:comment "Risk management in organizations traditionally resides within the finance function, due to its inherent focus on financial impact on the organization." @en ;
+      rdfs:subClassOf scor:Agility ;
+      skos:prefLabel "AG.1.4"^^xsd:string .
+
+scor:SupplierCustomerProductRiskRating
+      rdf:type owl:Class ;
+      rdfs:comment "The numerical risk rating for supplier, customer or product. Normalized and used for comparison purposes." @en ;
+      rdfs:label "Supplier's/Customer's/Products's Risk Rating"^^xsd:string ;
+      rdfs:subClassOf scor:DownsideSCAdaptability ;
+      skos:prefLabel "AG.2.14"^^xsd:string .
+
+scor:UpsideDeliverAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "The maximum sustainable percentage increase in quantities delivered that can be achieved in 30 days with the assumption of unconstrained finished good availability."@en ;
+	  rdfs:label "Upside Deliver Adaptability"^^xsd:string ;
+      rdfs:subClassOf scor:UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.8"^^xsd:string .
+
+scor:UpsideDeliverFlexibility
+      rdf:type owl:Class ;
+	  rdfs:label "Upside Deliver Flexibility"^^xsd:string ;
+      rdfs:subClassOf scor:UpsideSCFlexibility ;
+      skos:prefLabel "AG.2.3"^^xsd:string .
+
+scor:UpsideDeliverReturnAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "The maximum sustainable percentage increase in returns of finished goods from customers that can be achieved in 30 days."@en ;
+	  rdfs:label "Upside Deliver Return Adaptability"^^xsd:string ;
+      rdfs:subClassOf scor:UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.10"^^xsd:string .
+
+scor:UpsideDeliverReturnFlexibility
+      rdf:type owl:Class ;
+	  rdfs:label "Upside Deliver Return Flexibility"^^xsd:string ;
+      rdfs:subClassOf scor:UpsideSCFlexibility ;
+      skos:prefLabel "AG.2.5"^^xsd:string .
+
+scor:UpsideMakeAdaptability
+      rdf:type owl:Class ;
+	  rdfs:label "Upside Make Adaptability"^^xsd:string ;
+      rdfs:comment "The maximum sustainable percentage increase in production that can be achieved in 30 days with the assumption of no raw material constraints." ;
+      rdfs:subClassOf scor:UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.7"^^xsd:string .
+
+scor:UpsideMakeFlexibility
+      rdf:type owl:Class ;
+	  rdfs:label "Upside Make Flexibility"^^xsd:string ;
+      rdfs:comment "The number of days required to achieve an unplanned sustainable 20% increase in production with the assumption of no raw material constraints."@en ;
+      rdfs:subClassOf scor:UpsideSCFlexibility ;
+      skos:prefLabel "AG.2.2"^^xsd:string .
+
+scor:UpsideSCAdaptability
+      rdf:type owl:Class ;
+	  rdfs:label "Upside Supply Chain Adaptability"^^xsd:string ;
+      rdfs:comment "The maximum sustainable percentage increase in quantity delivered that can be achieved in 30 days."@en ;
+      rdfs:subClassOf scor:Agility ;
+      skos:prefLabel "AG.1.2"^^xsd:string .
+
+scor:UpsideSCFlexibility
+      rdf:type owl:Class ;
+	  rdfs:label "Upside Supply Chain Flexibility"^^xsd:string ;
+      rdfs:comment "The number of days required to achieve an unplanned sustainable 20% increase in quantities delivered."@en ;
+      rdfs:subClassOf scor:Agility ;
+      skos:prefLabel "AG.1.1"^^xsd:string .
+
+scor:UpsideSourceAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "The maximum sustainable percentage increase in raw material quantities that can be acquired/received in 30 days."@en ;
+	  rdfs:label "Upside Source Adaptability"^^xsd:string ;
+      rdfs:subClassOf scor:UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.6"^^xsd:string .
+
+scor:UpsideSourceFlexibility
+      rdf:type owl:Class ;
+      rdfs:comment "The number of days required to achieve an unplanned sustainable 20% increase in quantity of raw  materials."@en ;
+      rdfs:subClassOf scor:UpsideSCFlexibility ;
+	  rdfs:label "Upside Source Flexibility"^^xsd:string ;
+      skos:prefLabel "AG.2.1"^^xsd:string .
+
+scor:UpsideSourceReturnAdaptability
+      rdf:type owl:Class ;
+      rdfs:comment "The maximum sustainable percentage increase in returns of raw materials to suppliers that can be achieved in 30 days."@en ;
+	  rdfs:label "Upside Source Return Adaptability"^^xsd:string ;
+      rdfs:subClassOf scor:UpsideSCAdaptability ;
+      skos:prefLabel "AG.2.9"^^xsd:string .
+
+scor:UpsideSourceReturnFlexibility
+      rdf:type owl:Class ;
+      rdfs:comment "The number of days required to achieve an unplanned sustainable 20% increase in the return of raw materials to suppliers."@en ;
+	  rdfs:label "Upside Source Return Flexibility"^^xsd:string ;
+      rdfs:subClassOf scor:UpsideSCFlexibility ;
+      skos:prefLabel "AG.2.4"^^xsd:string .
