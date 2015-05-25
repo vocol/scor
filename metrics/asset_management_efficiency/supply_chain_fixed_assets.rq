@@ -1,0 +1,16 @@
+PREFIX    :   <http://www.ok-fraunhofer.de/2015/04/scor#> 
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT (xsd:double((?value1
+				   +?value2
+				   +?value3
+				   +?value4
+				   +?value5)) AS ?metricResult)
+WHERE 
+{
+	?order :hasMetricAM_11  ?value1 .
+	?order :hasMetricAM_18  ?value2 .
+	?order :hasMetricAM_20  ?value3 .
+	?order :hasMetricAM_24  ?value4 .
+	?order :hasMetricAM_27  ?value5 .
+}

@@ -1251,6 +1251,10 @@ scor:StandardPractice
 #############################################################################################
 #### Properties
 
+scor:hasStep rdf:type    rdf:ObjectProperty ;
+             rdfs:domain scor:Process ;
+             rdfs:range  scor:Process .
+
 scor:hasPracticeId
       rdf:type owl:DatatypeProperty ;
       rdfs:domain scor:Practice ;

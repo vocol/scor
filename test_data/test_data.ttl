@@ -10,13 +10,13 @@
 #--- Delivery 1 --------------------------------------
 
 #--- General information 
-:delivery_id_1 :hasProduct    "SmartCardModule" ;
+:delivery_id_1 :hasProduct "SmartCardModule" ;
  			   :hasCommitDate "01-01-2015" ;
  			   :hasSupplier   :Infineon ;
-               :hasCustomer   :Siemens . 
+             		   :hasCustomer   :Siemens . 
 
 #--- SCOR Information 
-:delivery_id_1 a 			    :DeliverStockedProduct ;
+:delivery_id_1 a 	   :DeliverStockedProduct ;
 			   :hasMetricRL_33  90 ;    # Deliver Item Accuracy
 			   :hasMetricRL_35  100 ;   # Delivery Quantity Accuracy
 			   :hasMetricRL_32  75 ;    # Customer CommitDateAchievement Time Customer Receiving
