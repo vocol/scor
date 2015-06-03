@@ -1248,29 +1248,32 @@ scor:StandardPractice
 #############################################################################################
 #### Properties
 
-scor:hasProcessID  owl:DatatypeProperty ;
+scor:hasProcessID a owl:DatatypeProperty ;
+      rdfs:label "hasProcessId" @en  ;
       rdfs:domain scor:Process ;
       rdfs:range xsd:float . 
 
 scor:hasStep rdf:type    rdf:ObjectProperty ;
+             rdfs:label "hasStep" @en  ;
              rdfs:domain scor:Process ;
              rdfs:range  scor:Process .
 
 scor:hasPracticeId
       rdf:type owl:DatatypeProperty ;
+      rdfs:label "hasPracticeID" @en  ;
       rdfs:domain scor:Practice ;
       rdfs:range xsd:string .   
 
 
 scor:hasAptitude
       rdf:type rdf:Property ;
-      rdfs:domain :Skill ;
+      rdfs:domain scor:Skill ;
       rdfs:label "hasAptitude" @en  ;
       rdfs:range scor:Aptitude .
 
 scor:hasExperience
       rdf:type rdf:Property ;
-      rdfs:domain :Skill ;
+      rdfs:domain scor:Skill ;
       rdfs:label "hasExperience" @en  ;
       rdfs:range scor:Experience .
 
@@ -1282,7 +1285,7 @@ scor:hasSkill
 
 scor:hasTraining
       rdf:type rdf:Property ;
-      rdfs:domain :Skill ;
+      rdfs:domain scor:Skill ;
       rdfs:label "hasTraining" @en  ;
       rdfs:range scor:Training .
 
