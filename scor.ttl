@@ -18,7 +18,7 @@
 
 <http://eis.iai.uni-bonn.de/scorvoc#> rdf:type void:Dataset ;
  foaf:homepage <http://eis.iai.uni-bonn.de/> ;
- dcterms:title "SSCORVoc" ;
+ dcterms:title "SCORVoc" ;
  dcterms:description "Open Supply Chain Operation Reference Dataset" ;
  dcterms:publisher <http://eis.iai.uni-bonn.de/Irlan.html> ;
  dcterms:publisher <http://eis.iai.uni-bonn.de/NiklasPetersen.html> ;
@@ -2662,4 +2662,3 @@ scor:ProcessMetricsAlignment
       rdfs:comment "Metric alignment refers to the organized and deliberate development of metrics across an organization. The process starts with organizational/business or supply chain metrics then decomposes to organizational processes at level-2, level-3, and further if desired." @en  ;
       rdfs:label "Process/Metrics Alignment" @en  ;
       skos:prefLabel "BP.074" @en  .
-        
