@@ -48,7 +48,7 @@ scor:Plan
       rdfs:label "Plan" ;
       rdfs:subClassOf scor:Process ;
       scor:hasProcessID "P" ;
-      skos:altLabel "sP" 
+      skos:altLabel "sP" .
 	  
 scor:Source
       rdf:type owl:Class ;
