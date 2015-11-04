@@ -36,7 +36,6 @@ scor:Plan
     rdfs:comment "Describes the planning activities associated with operating a supply chain. This includes gathering customer requirements, collecting information on available resources, and balancing requirements and resources to determine planned capabilities and resource gaps. This is followed by identifying the actions required to correct any gaps."@en ;
     rdfs:label "Plan" ;
     rdfs:subClassOf scor:Process ;
-    scor:hasProcessID "P" ;
     skos:notation "sP" .
 
 scor:Source
@@ -44,7 +43,6 @@ scor:Source
     rdfs:comment "Order, deliver, receipt and transfer of raw material items, subassemblies, product and/or services"@en ;
     rdfs:label "Source" ;
     rdfs:subClassOf scor:Process ;
-    scor:hasProcessID "S" ;
     skos:notation "sS" .
 
 scor:Make
@@ -52,7 +50,6 @@ scor:Make
     rdfs:comment "Adds value to products through mixing, separating, forming, machining, and chemical processes"@en ;
     rdfs:label "Make" ;
     rdfs:subClassOf scor:Process ;
-    scor:hasProcessID "M" ;
     skos:notation "sM" .
 
 scor:Deliver
@@ -60,7 +57,6 @@ scor:Deliver
     rdfs:comment "Performs customer-facing order management and order fulfillment activities"@en ;
     rdfs:label "Deliver" ;
     rdfs:subClassOf scor:Process ;
-    scor:hasProcessID "D" ;
     skos:notation "sD" .
 
 scor:Return
@@ -68,7 +64,6 @@ scor:Return
     rdfs:comment "Moves material from a customer back through the supply chain to address defects in product, ordering, or manufacturing, or to perform upkeep activities"@en ;
     rdfs:label "Return" ;
     rdfs:subClassOf scor:Process ;
-    scor:hasProcessID "R" ;
     skos:notation "sR" .
 
 scor:Enable
@@ -76,7 +71,6 @@ scor:Enable
     rdfs:comment "Establishing, maintaining and monitoring information, relationships, resources, assets, business rules, compliance and contracts required to operate the supply chain"@en ;
     rdfs:label "Enable" ;
     rdfs:subClassOf scor:Process ;
-    scor:hasProcessID "E" ;
     skos:notation "sE" .
 
 # Level 2 Processes
@@ -171,7 +165,6 @@ scor:DeliverStockedProduct
     rdfs:comment "Delivers product that is sourced or made based on aggregated customer orders, projected orders/demand and inventory re-ordering parameters"@en ;
     rdfs:label "Deliver Stocked Product" ;
     rdfs:subClassOf scor:Deliver ;
-    scor:hasProcessID "sD1" ;
     skos:notation "sD1" .
 
 scor:DeliverMakeToOrderProduct
@@ -179,7 +172,6 @@ scor:DeliverMakeToOrderProduct
     rdfs:comment "Delivers product that is sourced, configured, manufactured, and/or assembled from standard raw materials, parts, ingredients or sub-assemblies, in response to a specific firm customer order"@en ;
     rdfs:label "Deliver Make-to-Order Product" ;
     rdfs:subClassOf scor:Deliver ;
-    scor:hasProcessID "sD2" ;
     skos:notation "sD2" .
 
 scor:DeliverEngineerToOrderProduct
@@ -187,7 +179,6 @@ scor:DeliverEngineerToOrderProduct
     rdfs:comment "Obtaining, responding to, and allocating resources for a customer order that has unique requirements or specifications and delivering a product that is partially or fully designed, redesigned, manufactured, and/or assembled from a bill of materials or recipe that includes one or more custom parts or ingredients"@en ;
     rdfs:label "Deliver Engineer-to-Order Product" ;
     rdfs:subClassOf scor:Deliver ;
-    scor:hasProcessID "sD3" ;
     skos:notation "sD3" .
 
 scor:DeliverRetailProduct
@@ -1227,7 +1218,7 @@ scor:EmergingPractice
 scor:StandardPractice
     rdf:type owl:Class ;
     rdfs:comment "How a wide range of companies have historically done business by default or happenstance" ;
-    rdfs:label "StandardPractice" ;
+    rdfs:label "Standard Practice" ;
     rdfs:subClassOf scor:Practice ;
     skos:notation "BP.S" .
 
@@ -1237,22 +1228,17 @@ scor:StandardPractice
 #############################################################################################
 #### Properties
 
-scor:hasProcessID a owl:DatatypeProperty ;
-    rdfs:label "hasProcessId"@en  ;
+scor:hasStep
+    rdf:type owl:ObjectProperty ;
+    rdfs:label "hasStep"@en  ;
     rdfs:domain scor:Process ;
-    rdfs:range xsd:float .
-
-scor:hasStep rdf:type    rdf:ObjectProperty ;
-           rdfs:label "hasStep"@en  ;
-           rdfs:domain scor:Process ;
-           rdfs:range  scor:Process .
+    rdfs:range  scor:Process .
 
 scor:hasPracticeId
     rdf:type owl:DatatypeProperty ;
     rdfs:label "hasPracticeID"@en  ;
     rdfs:domain scor:Practice ;
     rdfs:range xsd:string .
-
 
 scor:hasAptitude
     rdf:type rdf:Property ;
