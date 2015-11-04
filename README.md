@@ -1,8 +1,8 @@
 	
-# SCORvoc
+# SCORVoc
 
-Welcome to the working enviroment of the SCORvoc Vocabulary.
-SCORvoc is a RDF vocabulary which formalizes the SCOR model. 
+Welcome to the working enviroment of the SCORVoc Vocabulary.
+SCORVoc is a RDF vocabulary which formalizes the SCOR model. 
 
 	http://www.apics.org/sites/apics-supply-chain-council/frameworks/scor
 
