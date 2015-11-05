@@ -6,6 +6,7 @@
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann:   <http://purl.org/vocab/vann/> .
 @prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix doap:   <http://usefulinc.com/ns/doap#> .
 @prefix schema: <http://schema.org/> .
 @prefix scor:   <http://purl.org/eis/vocab/scor#> .
 
@@ -22,11 +23,19 @@ scor:
     owl:versionInfo "SNAPSHOT" ;
     vann:preferredNamespacePrefix "scor" ;
     vann:preferredNamespaceUri "http://purl.org/eis/vocab/scor#" ;
-    rdfs:seeAlso <https://github.com/vocol/scor> ,
-        <http://eis.iai.uni-bonn.de/About.html> ,
-        <http://www.apics.org/sites/apics-supply-chain-council/frameworks/scor> ;
+    doap:homepage <https://github.com/vocol/scor> ;
+    doap:implements <http://www.apics.org/sites/apics-supply-chain-council/frameworks/scor> ;
+    doap:bug-database <https://github.com/vocol/scor/issues> ;
+    doap:download-page <https://github.com/vocol/scor/releases> ;
+    doap:wiki <https://github.com/vocol/scor/wiki> ;
+    doap:repository <https://github.com/vocol/scor.git> ;
     rdfs:isDefinedBy scor: ;
  .
+
+<https://github.com/vocol/scor.git>
+    rdf:type doap:GitRepository ;
+    rdfs:label "SCORVoc GitHub Repository" ;
+.
 
 <http://eis.iai.uni-bonn.de/Irlan>
     rdf:type schema:Person;
@@ -43,7 +52,8 @@ scor:
 <http://sebastian.tramp.name>
     rdf:type schema:Person;
     rdfs:label "Sebastian Tramp";
-    schema:affiliation <https://ns.eccenca.com/eccenca-GmbH>;
+    owl:sameAs <http://aksw.org/SebastianTramp>, <https://ns.eccenca.com/stramp> ;
+    schema:affiliation <https://ns.eccenca.com/eccenca-GmbH> ;
 .
 
 <http://dbpedia.org/resource/University_of_Bonn>
@@ -56,12 +66,114 @@ scor:
     rdfs:label "eccenca GmbH";
 .
 
+<http://www.opendatacommons.org/licenses/pddl/1.0/>
+    rdfs:label "ODC Public Domain Dedication and Licence (PDDL) 1.0"@en ;
+.
+
 # Level 0
+
+scor:Aptitude
+    rdf:type owl:Class ;
+    rdfs:comment "A natural, acquired, learned or developed ability to perform a certain kind of work at a"@en  ;
+    rdfs:label "Aptitude"@en  ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:Competency
+    rdf:type owl:Class ;
+    rdfs:comment "Describes the level or state of qualification to perform a certain role or tasks"@en  ;
+    rdfs:label "Competency"@en  ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:Experience
+    rdf:type owl:Class ;
+    rdfs:comment " the knowledge or ability acquired by observation or active participation. "@en  ;
+    rdfs:label "Experience"@en  ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:Skill
+    rdf:type owl:Class ;
+    rdfs:comment "The capacity to deliver pre-determined results with minimal input of time and energy"@en  ;
+    rdfs:label "Skill"@en  ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:Training
+    rdf:type owl:Class ;
+    rdfs:comment "Develops a skill or type of behavior through instruction"@en  ;
+    rdfs:label "Training"@en  ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+schema:Person
+    rdf:type owl:Class ;
+    rdfs:comment "Models person in a Supply Chain" ;
+    rdfs:label "Person"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:Practice
+    rdf:type owl:Class ;
+    rdfs:comment "A practice is a unique way to configure a process or a set of processes" ;
+    rdfs:label "Practice"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
 
 scor:Process
     rdf:type owl:Class ;
     rdfs:comment "A process is a unique activity performed to meet predefined outcomes"@en ;
     rdfs:label "Process"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+# Level 1 Practice
+
+scor:BestPractice
+    rdf:type owl:Class ;
+    rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proved and positive impact on supply chain performance" ;
+    rdfs:label "Best Practice"@en ;
+    rdfs:subClassOf scor:Practice ;
+    skos:notation "BP.B" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:EmergingPractice
+    rdf:type owl:Class ;
+    rdfs:comment "Introduce new technology, knowledge or radically different ways of organizing processes" ;
+    rdfs:label "Emerging Practice"@en ;
+    rdfs:subClassOf scor:Practice ;
+    skos:notation "BP.E" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:StandardPractice
+    rdf:type owl:Class ;
+    rdfs:comment "How a wide range of companies have historically done business by default or happenstance" ;
+    rdfs:label "Standard Practice"@en ;
+    rdfs:subClassOf scor:Practice ;
+    skos:notation "BP.S" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -1330,7 +1442,7 @@ scor:Invoice
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-#Deliver Make-to-Order Product
+# Deliver Make-to-Order Product
 
 scor:DeliverMakeToOrderProductProcessInquiryQuote
     rdf:type owl:Class ;
@@ -1742,109 +1854,6 @@ scor:DeliverInstall
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
-
-
-#############################################################################################
-#############################################################################################
-#############################################################################################
-#### non-proccess classes
-
-scor:Aptitude
-    rdf:type owl:Class ;
-    rdfs:comment "A natural, acquired, learned or developed ability to perform a certain kind of work at a"@en  ;
-    rdfs:label "Aptitude"@en  ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-scor:Competency
-    rdf:type owl:Class ;
-    rdfs:comment "Describes the level or state of qualification to perform a certain role or tasks"@en  ;
-    rdfs:label "Competency"@en  ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-scor:Experience
-    rdf:type owl:Class ;
-    rdfs:comment " the knowledge or ability acquired by observation or active participation. "@en  ;
-    rdfs:label "Experience"@en  ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-scor:Skill
-    rdf:type owl:Class ;
-    rdfs:comment "The capacity to deliver pre-determined results with minimal input of time and energy"@en  ;
-    rdfs:label "Skill"@en  ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-scor:Training
-    rdf:type owl:Class ;
-    rdfs:comment "Develops a skill or type of behavior through instruction"@en  ;
-    rdfs:label "Training"@en  ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-schema:Person
-    rdf:type owl:Class ;
-    rdfs:comment "Models person in a Supply Chain" ;
-    rdfs:label "Person"@en ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-scor:Practice
-    rdf:type owl:Class ;
-    rdfs:comment "A practice is a unique way to configure a process or a set of processes" ;
-    rdfs:label "Practice"@en ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-scor:BestPractice
-    rdf:type owl:Class ;
-    rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proved and positive impact on supply chain performance" ;
-    rdfs:label "Best Practice"@en ;
-    rdfs:subClassOf scor:Practice ;
-    skos:notation "BP.B" ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-scor:EmergingPractice
-    rdf:type owl:Class ;
-    rdfs:comment "Introduce new technology, knowledge or radically different ways of organizing processes" ;
-    rdfs:label "Emerging Practice"@en ;
-    rdfs:subClassOf scor:Practice ;
-    skos:notation "BP.E" ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-scor:StandardPractice
-    rdf:type owl:Class ;
-    rdfs:comment "How a wide range of companies have historically done business by default or happenstance" ;
-    rdfs:label "Standard Practice"@en ;
-    rdfs:subClassOf scor:Practice ;
-    skos:notation "BP.S" ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
 
 #############################################################################################
 #############################################################################################
