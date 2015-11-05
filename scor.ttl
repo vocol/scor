@@ -72,6 +72,14 @@ scor:
 
 # Level 0
 
+[]
+    rdf:type owl:AllDifferent ;
+    owl:distinctMembers (
+      scor:Aptitude scor:Competency scor:Experience scor:Skill
+      scor:Training scor:Practice scor:Process
+      schema:Person
+    ) .
+
 scor:Aptitude
     rdf:type owl:Class ;
     rdfs:comment "A natural, acquired, learned or developed ability to perform a certain kind of work at a"@en  ;
@@ -143,6 +151,12 @@ scor:Process
 
 # Level 1 Practice
 
+[]
+    rdf:type owl:AllDifferent ;
+    owl:distinctMembers (
+      scor:BestPractice scor:EmergingPractice scor:StandardPractice
+    ) .
+
 scor:BestPractice
     rdf:type owl:Class ;
     rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proved and positive impact on supply chain performance"@en ;
@@ -177,6 +191,12 @@ scor:StandardPractice
  .
 
 # Level 1 Processes
+
+[]
+    rdf:type owl:AllDifferent ;
+    owl:distinctMembers (
+      scor:Plan scor:Source scor:Make scor:Deliver scor:Return scor:Enable
+    ) .
 
 scor:Plan
     rdf:type owl:Class ;
@@ -254,6 +274,12 @@ scor:Enable
 
 # Plan
 
+[]
+    rdf:type owl:AllDifferent ;
+    owl:distinctMembers (
+      scor:PlanSupplyChain scor:PlanSource scor:PlanMake scor:PlanDeliver scor:PlanReturn
+    ) .
+
 scor:PlanSupplyChain
     rdf:type owl:Class ;
     rdfs:subClassOf scor:Plan ;
@@ -316,6 +342,12 @@ scor:PlanReturn
 
 # Source
 
+[]
+    rdf:type owl:AllDifferent ;
+    owl:distinctMembers (
+      scor:SourceStockedProduct scor:SourceMakeToOrderProduct scor:SourceEngineerToOrderProduct
+    ) .
+
 scor:SourceStockedProduct
     rdf:type owl:Class ;
     rdfs:subClassOf scor:Source ;
@@ -351,6 +383,12 @@ scor:SourceEngineerToOrderProduct
 
 # Make
 
+[]
+    rdf:type owl:AllDifferent ;
+    owl:distinctMembers (
+      scor:MakeToStock scor:MakeToOrder scor:EngineerToOrder
+    ) .
+
 scor:MakeToStock
     rdf:type owl:Class ;
     rdfs:subClassOf scor:Make ;
@@ -385,6 +423,13 @@ scor:EngineerToOrder
  .
 
 # Deliver
+
+[]
+    rdf:type owl:AllDifferent ;
+    owl:distinctMembers (
+      scor:DeliverStockedProduct scor:DeliverMakeToOrderProduct
+      scor:DeliverEngineerToOrderProduct scor:DeliverRetailProduct
+    ) .
 
 scor:DeliverStockedProduct
     rdf:type owl:Class ;
@@ -431,6 +476,14 @@ scor:DeliverRetailProduct
  .
 
 # Return
+
+[]
+    rdf:type owl:AllDifferent ;
+    owl:distinctMembers (
+        scor:DeliverReturnDefectiveProduct scor:DeliverReturnMROProduct
+        scor:DeliverReturnExcessProduct scor:ReturnMROProduct
+        scor:SourceReturnDefectiveProduct scor:SourceReturnExcessProduct
+    ) .
 
 scor:DeliverReturnDefectiveProduct
     rdf:type owl:Class ;
@@ -499,6 +552,16 @@ scor:SourceReturnExcessProduct
  .
 
 # Enable
+
+[]
+    rdf:type owl:AllDifferent ;
+    owl:distinctMembers (
+        scor:ManagePerformance scor:ManageSupplyChainBusinessRules
+        scor:ManageDataInformation scor:ManageSupplyChainHumanResources
+        scor:ManageSupplyChainAssets scor:ManageSupplyChainContracts
+        scor:ManageSupplyChainNetworks scor:ManageRegulatoryCompliance
+        scor:ManageSupplyChainRisk
+    ) .
 
 scor:ManageSupplyChainBusinessRules
     rdf:type owl:Class ;
