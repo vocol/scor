@@ -14,6 +14,7 @@ scor:
     rdfs:comment "A vocabulary which represents the Supply Chain Operations Reference (SCOR) standard."@en ;
     rdfs:label "SCORVoc"@en;
     dct:creator <http://eis.iai.uni-bonn.de/Irlan>, <http://eis.iai.uni-bonn.de/NiklasPetersen>, <http://sebastian.tramp.name> ;
+    dct:publisher <http://dbpedia.org/resource/University_of_Bonn>, <https://ns.eccenca.com/eccenca-GmbH> ;
     dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
     dct:created "2015-03-01"^^xsd:date ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -26,6 +27,34 @@ scor:
         <http://www.apics.org/sites/apics-supply-chain-council/frameworks/scor> ;
     rdfs:isDefinedBy scor: ;
  .
+
+<http://eis.iai.uni-bonn.de/Irlan>
+    rdf:type schema:Person;
+    rdfs:label "Irlán Grangel-González";
+    schema:affiliation <http://dbpedia.org/resource/University_of_Bonn>;
+.
+
+<http://eis.iai.uni-bonn.de/NiklasPetersen>
+    rdf:type schema:Person;
+    rdfs:label "Niklas Petersen";
+    schema:affiliation <http://dbpedia.org/resource/University_of_Bonn>;
+.
+
+<http://sebastian.tramp.name>
+    rdf:type schema:Person;
+    rdfs:label "Sebastian Tramp";
+    schema:affiliation <https://ns.eccenca.com/eccenca-GmbH>;
+.
+
+<http://dbpedia.org/resource/University_of_Bonn>
+    rdf:type schema:CollegeOrUniversity;
+    rdfs:label "University of Bonn"@en, "Rheinische Friedrich-Wilhelms-Universität Bonn"@de;
+.
+
+<https://ns.eccenca.com/eccenca-GmbH>
+    rdf:type schema:Corporation;
+    rdfs:label "eccenca GmbH";
+.
 
 # Level 0
 
@@ -364,7 +393,7 @@ scor:ManageSupplyChainBusinessRules
 
 scor:ManagePerformance
     rdf:type owl:Class ;
-    rdfs:comment "Reporting performance, identifying gaps in performance, performing root cause analysis, and developing and launching corrective actions to close gaps in perfromance"@en ;
+    rdfs:comment "Reporting performance, identifying gaps in performance, performing root cause analysis, and developing and launching corrective actions to close gaps in performance"@en ;
     rdfs:label "Manage Performance"@en ;
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE2" ;
@@ -457,11 +486,7 @@ scor:Return  rdfs:subClassOf scor:Process .
 scor:Source  rdfs:subClassOf scor:Process .
 scor:Make    rdfs:subClassOf scor:Process .
 scor:Enable  rdfs:subClassOf scor:Process .
-scor:Deliver rdfs:subClassOf scor:Process ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
+scor:Deliver rdfs:subClassOf scor:Process .
 
 #---------------------------------------------------------------------
 
@@ -471,11 +496,7 @@ scor:PlanSupplyChain rdfs:subClassOf scor:Plan .
 scor:PlanSource    rdfs:subClassOf scor:Plan .
 scor:PlanMake      rdfs:subClassOf scor:Plan .
 scor:PlanDeliver     rdfs:subClassOf scor:Plan .
-scor:PlanReturn    rdfs:subClassOf scor:Plan ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
+scor:PlanReturn    rdfs:subClassOf scor:Plan .
 
 #---------------------------------------------------------------------
 
@@ -484,21 +505,13 @@ scor:SourceReturnMROProduct      rdfs:subClassOf scor:Return .
 scor:SourceReturnExecessProduct    rdfs:subClassOf scor:Return .
 scor:DeliverReturnDefectiveProduct rdfs:subClassOf scor:Return .
 scor:DeliverReturnMROProduct     rdfs:subClassOf scor:Return .
-scor:DeliverReturnExcessProduct    rdfs:subClassOf scor:Return ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
+scor:DeliverReturnExcessProduct    rdfs:subClassOf scor:Return .
 
 #---------------------------------------------------------------------
 
 scor:SourceStockedProduct       rdfs:subClassOf scor:Make .
 scor:SourceMakeToOrderProduct     rdfs:subClassOf scor:Make .
-scor:SourceEngineerToOrderProduct rdfs:subClassOf scor:Make ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
+scor:SourceEngineerToOrderProduct rdfs:subClassOf scor:Make .
 
 #---------------------------------------------------------------------
 
@@ -510,23 +523,14 @@ scor:ManageSupplyChainAssets              rdfs:subClassOf scor:Enable .
 scor:ManageSupplyChainContact             rdfs:subClassOf scor:Enable .
 scor:ManageSupplyChainNetwork             rdfs:subClassOf scor:Enable .
 scor:ManageSupplyChainRegulartoryCompliance rdfs:subClassOf scor:Enable .
-scor:ManageSupplyChainRisk                rdfs:subClassOf scor:Enable ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
+scor:ManageSupplyChainRisk                rdfs:subClassOf scor:Enable .
 
 #---------------------------------------------------------------------
 
 scor:DeliverStockedProduct       rdfs:subClassOf scor:Deliver .
 scor:DeliverMakeToOrderProduct     rdfs:subClassOf scor:Deliver .
 scor:DeliverEngineerToOrderProduct rdfs:subClassOf scor:Deliver .
-scor:DeliverRetailProduct            rdfs:subClassOf scor:Deliver ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
+scor:DeliverRetailProduct            rdfs:subClassOf scor:Deliver .
 
 # Level 3 Processes
 
@@ -1394,7 +1398,7 @@ scor:ReceiveConfigureEnterValidateOrder
 
 scor:ReserveInventoryDetermineDeliveryDate
     rdf:type owl:Class ;
-    rdfs:comment "nventory and/or planned capacity is identified and reserved for specific orders, and a delivery date is committed and scheduled."@en ;
+    rdfs:comment "Inventory and/or planned capacity is identified and reserved for specific orders, and a delivery date is committed and scheduled."@en ;
     rdfs:label "Reserve Inventory and Determine Delivery Date"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.3" ;
@@ -1550,7 +1554,7 @@ scor:ObtainRespondToRFPRFQ
 
 scor:NegotiateReceiveContract
     rdf:type owl:Class ;
-    rdfs:comment "The process of negotiating order details with customer (eg, price, schedule, product performance) and finalizing the contract."@en ;
+    rdfs:comment "The process of negotiating order details with customer (e.g., price, schedule, product performance) and finalizing the contract."@en ;
     rdfs:label "Negotiate and Receive Contract"@en ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.2" ;
@@ -1841,7 +1845,7 @@ schema:Person
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-    scor:Practice
+scor:Practice
     rdf:type owl:Class ;
     rdfs:comment "A practice is a unique way to configure a process or a set of processes" ;
     rdfs:label "Practice"@en ;
@@ -1852,7 +1856,7 @@ schema:Person
 
 scor:BestPractice
     rdf:type owl:Class ;
-    rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proven and positive impact on supply chain performance" ;
+    rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proved and positive impact on supply chain performance" ;
     rdfs:label "Best Practice"@en ;
     rdfs:subClassOf scor:Practice ;
     skos:notation "BP.B" ;
@@ -1932,7 +1936,8 @@ scor:hasExperience
 scor:hasSkill
     rdf:type rdf:Property ;
     rdfs:domain schema:Person ;
-    rdfs:label "A person has an Skill "@en  ;
+    rdfs:label "hasSkill"@en  ;
+    rdfs:comment "A person has an Skill "@en  ;
     rdfs:range scor:Skill ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -1953,8 +1958,9 @@ scor:hasTraining
 #### Metric Properties
 
 
-scor:hasMetric   a owl:DatatypeProperty ;
-               rdfs:range xsd:float ;
+scor:hasMetric
+    rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:float ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2385,8 +2391,8 @@ scor:hasMetricRL_59 rdfs:domain [owl:unionOf (scor:Make1_3
 
 scor:3WayReceivingMatch
     rdf:type scor:Skill ;
-    rdfs:comment "Knowledge of the process of reconciling invoices with purchase orders and goods received notes in order to authorise payment of invoices"@en  ;
-      rdfs:label "3-way Receiving Match"@en ;
+    rdfs:comment "Knowledge of the process of reconciling invoices with purchase orders and goods received notes in order to authorize payment of invoices"@en  ;
+    rdfs:label "3-way Receiving Match"@en ;
     skos:notation "HS.0001"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2406,7 +2412,7 @@ scor:AcceptanceTesting
 scor:Accounting
     rdf:type scor:Skill ;
     rdfs:comment "The process of collecting, analyzing, and communicating financial information about a business entity to specified stakeholders"@en  ;
-      rdfs:label "Accounting"@en ;
+    rdfs:label "Accounting"@en ;
     skos:notation "HS.0003"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2426,7 +2432,7 @@ scor:AdvertisingMethodologies
 scor:AssemblyProcessDesign
     rdf:type scor:Skill ;
     rdfs:comment "The arrangement of workers, machines, and equipment in which the product being assembled passes consecutively from operation to operation until completed"@en  ;
-      rdfs:label "Assembly Process Design"@en ;
+    rdfs:label "Assembly Process Design"@en ;
     skos:notation "HS.0005"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2435,8 +2441,8 @@ scor:AssemblyProcessDesign
 
 scor:AssetManagement
     rdf:type scor:Skill ;
-    rdfs:comment "The process (which require's the use of spreadsheets or software) to identify, collect, maintain and track the companies assets"@en  ;
-      rdfs:label "Asset Management"@en ;
+    rdfs:comment "The process (which requires the use of spreadsheets or software) to identify, collect, maintain and track the companies assets"@en  ;
+    rdfs:label "Asset Management"@en ;
     skos:notation "HS.0006"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2446,7 +2452,7 @@ scor:AssetManagement
 scor:AvailabilityManagement
     rdf:type scor:Skill ;
     rdfs:comment "The process of managing and allocating available resources and inventory (at various levels) based on business rules"@en  ;
-      rdfs:label "Availability Management"@en ;
+    rdfs:label "Availability Management"@en ;
     skos:notation "HS.0007"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2456,7 +2462,7 @@ scor:AvailabilityManagement
 scor:BarCodeHandlingRFID
     rdf:type scor:Skill ;
     rdfs:comment "Basic working knowledge of the concept of applying or incorporating onto/into a product an optical machine-readable representation of data (bar code) and /or using radio waves with radio-frequency identification tags (RFID) for the purpose of the identification and tracking of that product"@en  ;
-      rdfs:label "Bar Code Handling/RFID"@en ;
+    rdfs:label "Bar Code Handling/RFID"@en ;
     skos:notation "HS.0009"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2466,7 +2472,7 @@ scor:BarCodeHandlingRFID
 scor:BasicFinance
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge and ability to effectively interpret and communicate general financial accounting practices and principles which maintain company and regulatory compliance"@en  ;
-      rdfs:label "Basic Finance"@en ;
+    rdfs:label "Basic Finance"@en ;
     skos:notation "HS.0010"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2476,7 +2482,7 @@ scor:BasicFinance
 scor:BasicTransportationManagement
     rdf:type scor:Skill ;
     rdfs:comment "The management of transportation operations of all types, including tracking and managing every aspect of vehicle maintenance"@en  ;
-      rdfs:label "Basic Transportation Management"@en ;
+    rdfs:label "Basic Transportation Management"@en ;
     skos:notation "HS.0011"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2486,7 +2492,7 @@ scor:BasicTransportationManagement
 scor:Benchmarking
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of the process of capturing and comparing one's own business processes and performance metrics to industry peers and/or best practices from other industries"@en  ;
-      rdfs:label "Benchmarking"@en ;
+    rdfs:label "Benchmarking"@en ;
     skos:notation "HS.0012"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2496,7 +2502,7 @@ scor:Benchmarking
 scor:BlanketPurchaseOrderProcess
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of the procurement process for soliciting, issuing and administering open-ended (period for performance) type purchase orders or contracts"@en  ;
-      rdfs:label "Blanket purchase order process"@en ;
+    rdfs:label "Blanket purchase order process"@en ;
     skos:notation "HS.0013"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2506,7 +2512,7 @@ scor:BlanketPurchaseOrderProcess
 scor:BuildScheduleEvaluation
     rdf:type scor:Skill ;
     rdfs:comment "Analyzing a product installation schedule against the constraints and requirements in order to ensure feasibility to effectively and efficiently complete the installation process"@en  ;
-      rdfs:label "Build Schedule Evaluation"@en ;
+    rdfs:label "Build Schedule Evaluation"@en ;
     skos:notation "HS.0014"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2516,7 +2522,7 @@ scor:BuildScheduleEvaluation
 scor:CADCAM
     rdf:type scor:Skill ;
     rdfs:comment "The process to use computer technology to aid in the design, analysis, and manufacture of products"@en  ;
-      rdfs:label "CAD/CAM"@en ;
+    rdfs:label "CAD/CAM"@en ;
     skos:notation "HS.0015"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2526,7 +2532,7 @@ scor:CADCAM
 scor:CapacityPlanningManagement
     rdf:type scor:Skill ;
     rdfs:comment "The process of determining and managing the production capacity needed by an organization to meet changing demands for its products"@en  ;
-      rdfs:label "Capacity Planning/Management"@en ;
+    rdfs:label "Capacity Planning/Management"@en ;
     skos:notation "HS.0016"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2536,7 +2542,7 @@ scor:CapacityPlanningManagement
 scor:CarrierSelection
     rdf:type scor:Skill ;
     rdfs:comment "Selection of a transportation mode and service provider in order to meet due dates, cost and service objectives"@en  ;
-      rdfs:label "Carrier Selection"@en ;
+    rdfs:label "Carrier Selection"@en ;
     skos:notation "HS.0018"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2546,7 +2552,7 @@ scor:CarrierSelection
 scor:ChangeNoticeDevelopment
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of the procurement process and the ability to clearly disseminate specific contractual or technical requirements which have changed to Sourced contractors, suppliers or vendors"@en  ;
-      rdfs:label "Change Notice Development"@en ;
+    rdfs:label "Change Notice Development"@en ;
     skos:notation "HS.0019"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2556,7 +2562,7 @@ scor:ChangeNoticeDevelopment
 scor:CompetitiveBidding
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of procurement process for requesting and receiving bids/quotes from competing contractors, suppliers, or vendors based on product part numbers, scope, specifications, terms and conditions"@en  ;
-      rdfs:label "Competitive Bidding"@en ;
+    rdfs:label "Competitive Bidding"@en ;
     skos:notation "HS.0020"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2566,7 +2572,7 @@ scor:CompetitiveBidding
 scor:ConsignmentAgreementDevelopment
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of Consignment Agreements which are when one party provides goods/services to another party for sale by that other party"@en  ;
-      rdfs:label "Consignment Agreement Development"@en ;
+    rdfs:label "Consignment Agreement Development"@en ;
     skos:notation "HS.0021"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2576,7 +2582,7 @@ scor:ConsignmentAgreementDevelopment
 scor:ContractManagement
     rdf:type scor:Skill ;
     rdfs:comment "Experience in solicitation process, bid/proposal evaluation, contract award and post award administration, and closeout"@en  ;
-      rdfs:label "Contract Management"@en ;
+    rdfs:label "Contract Management"@en ;
     skos:notation "HS.0022"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2586,7 +2592,7 @@ scor:ContractManagement
 scor:ControlsCompliance
     rdf:type scor:Skill ;
     rdfs:comment "Awareness of relevant regulations, laws and requirements, whether external or internal, and the ability to devise, implement and document the relevant and necessary controls in order to maintain compliance and successfully pass auditing requirements"@en  ;
-      rdfs:label "Controls and Compliance"@en ;
+    rdfs:label "Controls and Compliance"@en ;
     skos:notation "HS.0023"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2596,7 +2602,7 @@ scor:ControlsCompliance
 scor:CostPriceAnalysis
     rdf:type scor:Skill ;
     rdfs:comment "Basic financial understanding of analyzing the costs/prices associated with a bid/proposal/quotation for a sourced product for the purpose of attaining best cost/price and/or best value for that product"@en  ;
-      rdfs:label "Cost/Price Analysis"@en ;
+    rdfs:label "Cost/Price Analysis"@en ;
     skos:notation "HS.0024"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2606,7 +2612,7 @@ scor:CostPriceAnalysis
 scor:BusinessPolicyManagement
     rdf:type scor:Skill ;
     rdfs:comment "A documented set of basic principles and associated guidelines, formulated and enforced by the governing body or an assigned committee of an organization that direct and limit a company's decisions and actions in pursuit of its objectives"@en  ;
-      rdfs:label "Business Rule/Policy Management"@en ;
+    rdfs:label "Business Rule/Policy Management"@en ;
     skos:notation "HS.0025"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2616,7 +2622,7 @@ scor:BusinessPolicyManagement
 scor:CreditCollectionManagement
     rdf:type scor:Skill ;
     rdfs:comment "Set of activities to assess and rate the credit risk of a customer, identify/block non-creditworthy customers, manage outstanding balances, process credits, and investigate/pursue overdues"@en  ;
-      rdfs:label "Credit/Collection Management"@en ;
+    rdfs:label "Credit/Collection Management"@en ;
     skos:notation "HS.0026"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2626,7 +2632,7 @@ scor:CreditCollectionManagement
 scor:CrossDocking
     rdf:type scor:Skill ;
     rdfs:comment "Basic knowledge of linking, staging and moving received sourced products with/to existing open orders minimizing the need for product inventory or storage"@en  ;
-      rdfs:label "Cross Docking"@en ;
+    rdfs:label "Cross Docking"@en ;
     skos:notation "HS.0027"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2636,7 +2642,7 @@ scor:CrossDocking
 scor:CustomerOrderManagement
     rdf:type scor:Skill ;
     rdfs:comment "The process or the work flow associated with the identification, receipt, acceptance, picking, packing, delivery and of the packed item(s) to a shipping carrier"@en  ;
-      rdfs:label "Customer Order Management"@en ;
+    rdfs:label "Customer Order Management"@en ;
     skos:notation "HS.0028"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2646,7 +2652,7 @@ scor:CustomerOrderManagement
 scor:CustomerRelationshipManagement
     rdf:type scor:Skill ;
     rdfs:comment "Managing a company's relations and interactions with clients and sales prospects, possibly including the synchronization of business processes with the objective of identifying, attracting, and managing new and existing customers"@en  ;
-      rdfs:label "Customer Relationship Management (CRM)"@en ;
+    rdfs:label "Customer Relationship Management (CRM)"@en ;
     skos:notation "HS.0029"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2656,7 +2662,7 @@ scor:CustomerRelationshipManagement
 scor:CustomerRepair
     rdf:type scor:Skill ;
     rdfs:comment "The actions, tasks and responsibilities concerned with the decision to repair all mechanical/electrical out of order/broken products in line with the internal return rules"@en  ;
-      rdfs:label "Customer Repair and Return Policy and Process"@en ;
+    rdfs:label "Customer Repair and Return Policy and Process"@en ;
     skos:notation "HS.0031"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2666,7 +2672,7 @@ scor:CustomerRepair
 scor:CustomerSupplierCommunication
     rdf:type scor:Skill ;
     rdfs:comment "Process of transferring customer/supplier information by speech or writing"@en  ;
-      rdfs:label "Customer/Supplier Communication"@en ;
+    rdfs:label "Customer/Supplier Communication"@en ;
     skos:notation "HS.0032"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2676,7 +2682,7 @@ scor:CustomerSupplierCommunication
 scor:DataManagement
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of the processes required to develop, execute and sustain plans, policies, programs and practices that control, protect, deliver and enhance the value of data and information systems/assets"@en  ;
-      rdfs:label "Data management"@en ;
+    rdfs:label "Data management"@en ;
     skos:notation "HS.0033"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2686,7 +2692,7 @@ scor:DataManagement
 scor:DiscrepancyReportingResolution
     rdf:type scor:Skill ;
     rdfs:comment "Knowledge of techniques, systems, tools and human skills required to establish effective procedures to identify defective and missing product and then report onward, either internally or externally, ensuring closure on reports and improvements to avoid future repetition"@en  ;
-      rdfs:label "Discrepancy Reporting and Resolution"@en ;
+    rdfs:label "Discrepancy Reporting and Resolution"@en ;
     skos:notation "HS.0034"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2696,7 +2702,7 @@ scor:DiscrepancyReportingResolution
 scor:DeliveryBalancing
     rdf:type scor:Skill ;
     rdfs:comment "Delivery balancing is one part of Master Scheduling and involves the balancing of deliveries from suppliers against constrained criteria"@en  ;
-      rdfs:label "Delivery Balancing"@en ;
+    rdfs:label "Delivery Balancing"@en ;
     skos:notation "HS.0035"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2706,7 +2712,7 @@ scor:DeliveryBalancing
 scor:DeliveryScheduling
     rdf:type scor:Skill ;
     rdfs:comment "Basic knowledge of scheduling and managing sourced product deliveries in order to meet the requirements of inventory replenishment or scheduled production plans"@en  ;
-      rdfs:label "Delivery Scheduling"@en ;
+    rdfs:label "Delivery Scheduling"@en ;
     skos:notation "HS.0036"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2716,7 +2722,7 @@ scor:DeliveryScheduling
 scor:DemandManagement
     rdf:type scor:Skill ;
     rdfs:comment "The manufacturing management process by which raw materials and production capacity are optimally allocated to meet demand"@en  ;
-      rdfs:label "Demand Management"@en ;
+    rdfs:label "Demand Management"@en ;
     skos:notation "HS.0037"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2726,7 +2732,7 @@ scor:DemandManagement
 scor:DesignEngineeringScheduleDevelopment
     rdf:type scor:Skill ;
     rdfs:comment "Analyzing the constraints and requirements of a product design cycle in order to evaluate and ensure the timely availability of the product design for building and installation of a product"@en  ;
-      rdfs:label "Design/Engineering Schedule Development"@en ;
+    rdfs:label "Design/Engineering Schedule Development"@en ;
     skos:notation "HS.0038"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2736,7 +2742,7 @@ scor:DesignEngineeringScheduleDevelopment
 scor:DrivingCertification
     rdf:type scor:Skill ;
     rdfs:comment "Ownership of the official, valid (not expired) document stating that the person is authorized and able to drive (a) class/es of vehicles"@en  ;
-      rdfs:label "Driving Certification"@en ;
+    rdfs:label "Driving Certification"@en ;
     skos:notation "HS.0039"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2746,7 +2752,7 @@ scor:DrivingCertification
 scor:EHSregulations
     rdf:type scor:Skill ;
     rdfs:comment "The actions, tasks, and responsibilities concerned with the observance and application of the environment, health, and safety rules and standards"@en  ;
-      rdfs:label "EHS regulations"@en ;
+    rdfs:label "EHS regulations"@en ;
     skos:notation "HS.0041"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2756,7 +2762,7 @@ scor:EHSregulations
 scor:EnablingTechnology
     rdf:type scor:Skill ;
     rdfs:comment "Working awareness of relevant technology that could/can be used to improve the effectiveness or efficiency of operations within Source, but also widely across the Supply Chain or the enterprise"@en  ;
-      rdfs:label "Enabling Technology"@en ;
+    rdfs:label "Enabling Technology"@en ;
     skos:notation "HS.0042"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2766,7 +2772,7 @@ scor:EnablingTechnology
 scor:Engineering
     rdf:type scor:Skill ;
     rdfs:comment "The discipline, art and profession of acquiring and applying technical, scientific, and mathematical knowledge to design and implement materials, structures, machines, devices, systems, and processes that safely realize a desired objective or invention"@en  ;
-      rdfs:label "Engineering"@en ;
+    rdfs:label "Engineering"@en ;
     skos:notation "HS.0043"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2776,7 +2782,7 @@ scor:Engineering
 scor:EnterpriseBusinessProcess
     rdf:type scor:Skill ;
     rdfs:comment "The end-to-end (cross-departmental, and often, cross-company) coordination of work activities that create and deliver ultimate value to customers"@en  ;
-      rdfs:label "Enterprise Business Process"@en ;
+    rdfs:label "Enterprise Business Process"@en ;
     skos:notation "HS.0044"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2786,7 +2792,7 @@ scor:EnterpriseBusinessProcess
 scor:EnvironmentalRequirements
     rdf:type scor:Skill ;
     rdfs:comment "Familiarity and understanding of internal and external goals, objectives, rules and laws pertaining to the operation of the Source function within the organization"@en  ;
-      rdfs:label "Enterprise Business Process"@en ;
+    rdfs:label "Enterprise Business Process"@en ;
     skos:notation "HS.0045"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2796,7 +2802,7 @@ scor:EnvironmentalRequirements
 scor:ERPSystems
     rdf:type scor:Skill ;
     rdfs:comment "Working awareness of and conversant with installing and operating appropriate Enterprise Resource Planning (ERP) systems relevant to the organisation concerned"@en  ;
-      rdfs:label "ERP Systems"@en ;
+    rdfs:label "ERP Systems"@en ;
     skos:notation "HS.0046"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2806,7 +2812,7 @@ scor:ERPSystems
 scor:Forecasting
     rdf:type scor:Skill ;
     rdfs:comment "The process of predicting production requirements to meet estimated sales in a particular forecasting period"@en  ;
-      rdfs:label "Forecasting"@en ;
+    rdfs:label "Forecasting"@en ;
     skos:notation "HS.0048"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2816,7 +2822,7 @@ scor:Forecasting
 scor:IDDamageInspection
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge and ability to identify and inspect Sourced products for compliance with contractual part numbers, specifications, drawings, etc, including quality requirements and damage-free product receipt"@en  ;
-      rdfs:label "ID and Damage Inspection"@en ;
+    rdfs:label "ID and Damage Inspection"@en ;
     skos:notation "HS.0049"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2826,7 +2832,7 @@ scor:IDDamageInspection
 scor:ImportExportRegulations
     rdf:type scor:Skill ;
     rdfs:comment "The knowledge and understanding of the laws and regulations governing the import and export requirements of materials"@en  ;
-      rdfs:label "Import/Export Regulations"@en ;
+    rdfs:label "Import/Export Regulations"@en ;
     skos:notation "HS.0050"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2836,7 +2842,7 @@ scor:ImportExportRegulations
 scor:InstallationRequirements
     rdf:type scor:Skill ;
     rdfs:comment "The information, resources and skills requirements to effectively install purchased products as per customer requirements"@en  ;
-      rdfs:label "Import/Export Regulations"@en ;
+    rdfs:label "Installation Requirements"@en ;
     skos:notation "HS.0051"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2846,7 +2852,7 @@ scor:InstallationRequirements
 scor:InstallationScheduling
     rdf:type scor:Skill ;
     rdfs:comment "The process of managing requirement and constraints associated with a installation schedule in order to effectively schedule product installation as per customer requirements"@en  ;
-      rdfs:label "Installation Scheduling"@en ;
+    rdfs:label "Installation Scheduling"@en ;
     skos:notation "HS.0052"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2856,7 +2862,7 @@ scor:InstallationScheduling
 scor:InstalledBaseManagement
     rdf:type scor:Skill ;
     rdfs:comment "Actions, tasks and responsibilities concerned with maintenance and update of info related to the number of units of the company products/platform actually installed and in use around the world"@en  ;
-      rdfs:label "Installed base management"@en ;
+    rdfs:label "Installed base management"@en ;
     skos:notation "HS.0053"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2865,8 +2871,8 @@ scor:InstalledBaseManagement
 
 scor:IntellectualProperty
     rdf:type scor:Skill ;
-    rdfs:comment "Conversant with and effectively manage Proprietary Data and Intellectual property on behalf of the organisation"@en  ;
-      rdfs:label "Intellectual Property/Proprietary Data"@en ;
+    rdfs:comment "Conversant with and effectively manage Proprietary Data and Intellectual property on behalf of the organization"@en  ;
+    rdfs:label "Intellectual Property/Proprietary Data"@en ;
     skos:notation "HS.0054"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2876,7 +2882,7 @@ scor:IntellectualProperty
 scor:InternationalTrade
     rdf:type scor:Skill ;
     rdfs:comment "The exchange of capital, goods, and services across international borders or territories"@en  ;
-      rdfs:label "International Trade"@en ;
+    rdfs:label "International Trade"@en ;
     skos:notation "HS.0055"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2886,7 +2892,7 @@ scor:InternationalTrade
 scor:InterpretingSpecifications
     rdf:type scor:Skill ;
     rdfs:comment "Basic working knowledge and ability to read, interpret, understand, and effectively communicate technical specifications and/or drawings to support timely design and delivery of products meeting minimum requirements"@en  ;
-      rdfs:label "Interpreting Specifications"@en ;
+    rdfs:label "Interpreting Specifications"@en ;
     skos:notation "HS.0056"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2896,7 +2902,7 @@ scor:InterpretingSpecifications
 scor:InventoryManagement
     rdf:type scor:Skill ;
     rdfs:comment "The formal management of the timing and quantities of goods to be ordered and stocked by an organization in order that demand can always be satisfied without excess expenditure"@en  ;
-      rdfs:label "Inventory Management"@en ;
+    rdfs:label "Inventory Management"@en ;
     skos:notation "HS.0058"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2906,7 +2912,7 @@ scor:InventoryManagement
 scor:IssueProposalQuote
     rdf:type scor:Skill ;
     rdfs:comment "The compilation of all required specifications and details need to generate and communicate an RFP/Q"@en  ;
-      rdfs:label "Issue Proposal/Quote"@en ;
+    rdfs:label "Issue Proposal/Quote"@en ;
     skos:notation "HS.0060"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2916,7 +2922,7 @@ scor:IssueProposalQuote
 scor:ItemMaster
     rdf:type scor:Skill ;
     rdfs:comment "The ability to understand, interpret and effectively communicate a part master record (item master) or bill of materials (BOM) of parts lists that details description, unit of measure, dimensions, group/ family classification, production or sourcing data, quality requirements and/or restrictions"@en  ;
-      rdfs:label "Item Master/BOM/BoL Interpretation"@en ;
+    rdfs:label "Item Master/BOM/BoL Interpretation"@en ;
     skos:notation "HS.0061"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2926,7 +2932,7 @@ scor:ItemMaster
 scor:KittingPacking
     rdf:type scor:Skill ;
     rdfs:comment "The process of aggregating and packing all elements belonging to a customer order"@en  ;
-      rdfs:label "Kitting/Packing"@en ;
+    rdfs:label "Kitting/Packing"@en ;
     skos:notation "HS.0062"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2936,7 +2942,7 @@ scor:KittingPacking
 scor:LaborCostsVerification
     rdf:type scor:Skill ;
     rdfs:comment "Capability of calculating, understanding, reporting on, and if necessary, be able to taking corrective action to control labour costs within one's area of responsibility against budgets or objectives that have been set"@en  ;
-      rdfs:label "Labor Costs Verification"@en ;
+    rdfs:label "Labor Costs Verification"@en ;
     skos:notation "HS.0063"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2946,7 +2952,7 @@ scor:LaborCostsVerification
 scor:LeadTimeValidation
     rdf:type scor:Skill ;
     rdfs:comment "The process of analyzing and validating feasibility of customer required lead-times"@en  ;
-      rdfs:label "Lead-time validation"@en ;
+    rdfs:label "Lead-time validation"@en ;
     skos:notation "HS.0064"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2956,7 +2962,7 @@ scor:LeadTimeValidation
 scor:LeanManufacturing
     rdf:type scor:Skill ;
     rdfs:comment "The process of identifying processes that impede the optimization of production"@en  ;
-      rdfs:label "Lean Manufacturing"@en ;
+    rdfs:label "Lean Manufacturing"@en ;
     skos:notation "HS.0065"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2966,7 +2972,7 @@ scor:LeanManufacturing
 scor:LegislationStandards
     rdf:type scor:Skill ;
     rdfs:comment "Knowledge to manage conformance systems and actions for receiving product and relates to general legislation affecting the product being received as well as the specific standards or specifications that applies to the product"@en  ;
-      rdfs:label "Legislation and Standards"@en ;
+    rdfs:label "Legislation and Standards"@en ;
     skos:notation "HS.0066"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2976,7 +2982,7 @@ scor:LegislationStandards
 scor:LinearProgramming
     rdf:type scor:Skill ;
     rdfs:comment "The branch of mathematics concerned with the minimization or maximization of a linear function of several variables and inequalities; used in many branches of industry to minimize costs or maximize production"@en  ;
-      rdfs:label "Linear programming"@en ;
+    rdfs:label "Linear programming"@en ;
     skos:notation "HS.0067"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2986,7 +2992,7 @@ scor:LinearProgramming
 scor:LoadBuilding
     rdf:type scor:Skill ;
     rdfs:comment "The process of order consolidation to meet service, cost, delivery and product specification requirements"@en  ;
-      rdfs:label "Load Building"@en ;
+    rdfs:label "Load Building"@en ;
     skos:notation "HS.0068"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -2996,7 +3002,7 @@ scor:LoadBuilding
 scor:LogisticsManagement
     rdf:type scor:Skill ;
     rdfs:comment "The process for planning, implementing, and controlling the flow and storage of goods, services, and related information between the point of origin and the point of consumption in order to meet customers’ requirements and thus add value for the customer"@en  ;
-      rdfs:label "Logistics Management"@en ;
+    rdfs:label "Logistics Management"@en ;
     skos:notation "HS.0069"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3006,7 +3012,7 @@ scor:LogisticsManagement
 scor:LogisticsNetworkModeling
     rdf:type scor:Skill ;
     rdfs:comment "The process of planning, implementing, and controlling the flow and storage of goods, services, and related information between the point of origin and the point of consumption in order to meet customers' requirements"@en  ;
-      rdfs:label "Logistics network modeling"@en ;
+    rdfs:label "Logistics network modeling"@en ;
     skos:notation "HS.0070"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3016,7 +3022,7 @@ scor:LogisticsNetworkModeling
 scor:LogisticsFreight
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of the management and integration of information, sourced product/material, transportation, inventory, warehousing, material-handling, and packaging, and occasionally security, between the point of origin and the point of consumption in order to meet customer requirements"@en  ;
-      rdfs:label "Logistics/Freight"@en ;
+    rdfs:label "Logistics/Freight"@en ;
     skos:notation "HS.0071"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3026,7 +3032,7 @@ scor:LogisticsFreight
 scor:PerformanceManagement
     rdf:type scor:Skill ;
     rdfs:comment "A framework that identifies opportunities for performance improvement through use of performance measures such as standards and indicators"@en  ;
-      rdfs:label "Performance Management"@en ;
+    rdfs:label "Performance Management"@en ;
     skos:notation "HS.0072"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3036,7 +3042,7 @@ scor:PerformanceManagement
 scor:ManufacturingResourceCommitment
     rdf:type scor:Skill ;
     rdfs:comment "The efficient and effective allocation of an organization's manufacturing resources and assets with the objective of meeting customer demands/requirements"@en  ;
-      rdfs:label "Manufacturing Resource Commitment"@en ;
+    rdfs:label "Manufacturing Resource Commitment"@en ;
     skos:notation "HS.0073"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3046,7 +3052,7 @@ scor:ManufacturingResourceCommitment
 scor:MasterScheduling
     rdf:type scor:Skill ;
     rdfs:comment "Knowledge of co-ordinating and keeping track of all the different components related to the Source activity"@en  ;
-      rdfs:label "Master Scheduling"@en ;
+    rdfs:label "Master Scheduling"@en ;
     skos:notation "HS.0074"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3056,7 +3062,7 @@ scor:MasterScheduling
 scor:MaterialHandlingEquipment
     rdf:type scor:Skill ;
     rdfs:comment "The ability to manipulate various types of material handling systems (e.g. forklifts, conveyors, palletizers, etc.) to pick, pack, and store orders and inventory"@en  ;
-      rdfs:label "Material handling equipment usage"@en ;
+    rdfs:label "Material handling equipment usage"@en ;
     skos:notation "HS.0075"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3066,7 +3072,7 @@ scor:MaterialHandlingEquipment
 scor:MilestonePerformancePayments
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of contractual requirements for the authorization of monetary payments for the successful completion of pre-defined development or performance milestones"@en  ;
-      rdfs:label "Milestone/Performance Payments"@en ;
+    rdfs:label "Milestone/Performance Payments"@en ;
     skos:notation "HS.0076"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3076,7 +3082,7 @@ scor:MilestonePerformancePayments
 scor:MPSMethodsTechniques
     rdf:type scor:Skill ;
     rdfs:comment "The techniques used in material requirements planning systems to develop a detailed plan for product manufacturing"@en  ;
-      rdfs:label "MPS Methodologies and Techniques"@en ;
+    rdfs:label "MPS Methodologies and Techniques"@en ;
     skos:notation "HS.0077"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3086,7 +3092,7 @@ scor:MPSMethodsTechniques
 scor:MROManagement
     rdf:type scor:Skill ;
     rdfs:comment "All actions which have the objective of retaining or restoring an item in or to a state in which it can perform its required function"@en  ;
-      rdfs:label "MRO Management"@en ;
+    rdfs:label "MRO Management"@en ;
     skos:notation "HS.0078"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3096,7 +3102,7 @@ scor:MROManagement
 scor:MRPSystems
     rdf:type scor:Skill ;
     rdfs:comment "The process of ensuring materials and products are available for production and delivery to customers, maintaining the lowest possible level of inventory and planning manufacturing activities, delivery schedules and purchasing activities"@en  ;
-      rdfs:label "MRP Systems"@en ;
+    rdfs:label "MRP Systems"@en ;
     skos:notation "HS.0079"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3106,7 +3112,7 @@ scor:MRPSystems
 scor:EnvironmentalInterpretation
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge and understanding of strict regulatory adherence to health and environmental requirements/restrictions associated with particular products as detailed on Material Safely Data Sheets (MSDS) or Certificates of Compliance CoC"@en  ;
-      rdfs:label "Environmental Interpretation"@en ;
+    rdfs:label "Environmental Interpretation"@en ;
     skos:notation "HS.0080"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3116,7 +3122,7 @@ scor:EnvironmentalInterpretation
 scor:OfficeAutomationTools
     rdf:type scor:Skill ;
     rdfs:comment "Familiarity with relevant Office Automation Tools and be able to deploy against financial justification as appropriate taking account of project and change management requirements"@en  ;
-      rdfs:label "Office automation tools"@en ;
+    rdfs:label "Office automation tools"@en ;
     skos:notation "HS.0081"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3126,7 +3132,7 @@ scor:OfficeAutomationTools
 scor:Optimization
     rdf:type scor:Skill ;
     rdfs:comment "The process of improving various aspects of the business resulting in (such as) increased profits, improved product or greater customer satisfaction"@en  ;
-      rdfs:label "Optimization"@en ;
+    rdfs:label "Optimization"@en ;
     skos:notation "HS.0082"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3136,7 +3142,7 @@ scor:Optimization
 scor:OrderManagement
     rdf:type scor:Skill ;
     rdfs:comment "The process or the work flow associated with the identification, receipt, acceptance, picking, packing, delivery and of the packed item(s) to a shipping carrier"@en  ;
-      rdfs:label "Order Management"@en ;
+    rdfs:label "Order Management"@en ;
     skos:notation "HS.0083"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3146,7 +3152,7 @@ scor:OrderManagement
 scor:Outsourcing
     rdf:type scor:Skill ;
     rdfs:comment "A company that contracts with another company to provide services that might otherwise be performed by in-house employees"@en  ;
-      rdfs:label "Outsourcing"@en ;
+    rdfs:label "Outsourcing"@en ;
     skos:notation "HS.0085"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3155,8 +3161,8 @@ scor:Outsourcing
 
 scor:Packaging
     rdf:type scor:Skill ;
-    rdfs:comment "The proceesses of coordinating a system of preparing goods for transport, warehousing, logistics, sale, and end use"@en  ;
-      rdfs:label "Packaging"@en ;
+    rdfs:comment "The processes of coordinating a system of preparing goods for transport, warehousing, logistics, sale, and end use"@en  ;
+    rdfs:label "Packaging"@en ;
     skos:notation "HS.0086"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3166,7 +3172,7 @@ scor:Packaging
 scor:PaymentProcessing
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of the processes and policies required for contractual authorization of payments for sourced products and services"@en  ;
-      rdfs:label "Payment Processing"@en ;
+    rdfs:label "Payment Processing"@en ;
     skos:notation "HS.0087"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3176,7 +3182,7 @@ scor:PaymentProcessing
 scor:PhysicalCapability
     rdf:type scor:Skill ;
     rdfs:comment "The ability to complete a process through the use of dexterity, strength or other capacities"@en  ;
-      rdfs:label "Physical Capability"@en ;
+    rdfs:label "Physical Capability"@en ;
     skos:notation "HS.0088"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3186,7 +3192,7 @@ scor:PhysicalCapability
 scor:PhysicalDistributionSystems
     rdf:type scor:Skill ;
     rdfs:comment "The set of activities concerned with efficient movement of finished goods from the end of the production operation to the consumer"@en  ;
-      rdfs:label "Physical Distribution Systems"@en ;
+    rdfs:label "Physical Distribution Systems"@en ;
     skos:notation "HS.0089"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3196,7 +3202,7 @@ scor:PhysicalDistributionSystems
 scor:PickingProcess
     rdf:type scor:Skill ;
     rdfs:comment "The process of selecting and collecting SKUs and materials in a specified order and quantity with the objective of satisfying customers orders"@en  ;
-      rdfs:label "Picking process / order batching"@en ;
+    rdfs:label "Picking process / order batching"@en ;
     skos:notation "HS.0090"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3206,7 +3212,7 @@ scor:PickingProcess
 scor:PlanogramUsageStrategies
     rdf:type scor:Skill ;
     rdfs:comment "The process of using a planogram to diagram fixtures and products to illustrate how and where retail products should be displayed, usually on a store shelf in order to increase customer purchases"@en  ;
-      rdfs:label "Planogram usage and strategies"@en ;
+    rdfs:label "Planogram usage and strategies"@en ;
     skos:notation "HS.0091"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3216,7 +3222,7 @@ scor:PlanogramUsageStrategies
 scor:PricingManagement
     rdf:type scor:Skill ;
     rdfs:comment "The analysis and setting of prices (on a per unit or volume basis) to meet required characteristics, business rules and/or business performance requirements"@en  ;
-      rdfs:label "Pricing Management"@en ;
+    rdfs:label "Pricing Management"@en ;
     skos:notation "HS.0092"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3226,7 +3232,7 @@ scor:PricingManagement
 scor:Prioritization
     rdf:type scor:Skill ;
     rdfs:comment "The knowledge and ability to arrange process steps, jobs or orders in queue, or product receipts in the proper sequence in order to meet product/service production and deliveries as scheduled"@en  ;
-      rdfs:label "Prioritization"@en ;
+    rdfs:label "Prioritization"@en ;
     skos:notation "HS.0093"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3236,7 +3242,7 @@ scor:Prioritization
 scor:Procurement
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of the process for acquiring goods and/or services at the best possible total cost of ownership, in the right quantity, quality, at the right time and in the right place, with all required documentation"@en  ;
-      rdfs:label "Procurement"@en ;
+    rdfs:label "Procurement"@en ;
     skos:notation "HS.0094"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3246,7 +3252,7 @@ scor:Procurement
 scor:ProductConfigurationValidation
     rdf:type scor:Skill ;
     rdfs:comment "The analysis of stated product and configuration specifications against required and feasible product's performance, functional, and physical requirements"@en  ;
-      rdfs:label "Product and Configuration Validation"@en ;
+    rdfs:label "Product and Configuration Validation"@en ;
     skos:notation "HS.0095"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3256,7 +3262,7 @@ scor:ProductConfigurationValidation
 scor:ProductCheckoutProcess
     rdf:type scor:Skill ;
     rdfs:comment "The process of removing a product from inventory and exchanging funds for the value of the product in a retail supply chain"@en  ;
-      rdfs:label "Product checkout process"@en ;
+    rdfs:label "Product checkout process"@en ;
     skos:notation "HS.0096"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3266,7 +3272,7 @@ scor:ProductCheckoutProcess
 scor:ProductDevelopment
     rdf:type scor:Skill ;
     rdfs:comment "Familiarity and awareness of the Product Development process and its key steps and the interaction with the Source activity"@en  ;
-      rdfs:label "Product Development"@en ;
+    rdfs:label "Product Development"@en ;
     skos:notation "HS.0097"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3276,7 +3282,7 @@ scor:ProductDevelopment
 scor:ProductInformationManagement
     rdf:type scor:Skill ;
     rdfs:comment "The use of software or other tools to capture and maintain information on products and/or services through their life cycle"@en  ;
-      rdfs:label "Product Information Management"@en ;
+    rdfs:label "Product Information Management"@en ;
     skos:notation "HS.0098"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3286,7 +3292,7 @@ scor:ProductInformationManagement
 scor:Production
     rdf:type scor:Skill ;
     rdfs:comment "The process of using machines, tools, materials and labor to make things for use or sale"@en  ;
-      rdfs:label "Production"@en ;
+    rdfs:label "Production"@en ;
     skos:notation "HS.0099"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3296,7 +3302,7 @@ scor:Production
 scor:ProductionPlanning
     rdf:type scor:Skill ;
     rdfs:comment "Actions, tasks and responsibilities concerned with the planning, scheduling and releasing of production orders in order to satisfy demand while optimizing the available and planned resources/capacity"@en  ;
-      rdfs:label "Production"@en ;
+    rdfs:label "Production Planning"@en ;
     skos:notation "HS.0101"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3308,7 +3314,7 @@ scor:ProductionPlanning
 scor:ConsignmentInventory
     rdf:type scor:StandardPractice ;
     rdfs:comment "The organization of source processes where the ownership of materials transfers are based on a signal further down in the supply chain (for example Make or Deliver)."@en  ;
-      rdfs:label "Consignment Inventory"@en ;
+    rdfs:label "Consignment Inventory"@en ;
     skos:notation "BP.006"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3318,7 +3324,7 @@ scor:ConsignmentInventory
 scor:SlowMovingInventoryMonitoring
     rdf:type scor:StandardPractice ;
     rdfs:comment "Slow-moving inventory is defined as the value of those SKUs whose stock level is higher than the total consumption within the last 12 months"@en  ;
-      rdfs:label "Slow-moving Inventory Monitoring"@en ;
+    rdfs:label "Slow-moving Inventory Monitoring"@en ;
     skos:notation "BP.008"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3328,7 +3334,7 @@ scor:SlowMovingInventoryMonitoring
 scor:Kanban
     rdf:type scor:StandardPractice ;
     rdfs:comment "A inventory replenishment technique where a material is replenished based on consumption"@en  ;
-      rdfs:label "Kanban"@en ;
+    rdfs:label "Kanban"@en ;
     skos:notation "BP.009"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3338,7 +3344,7 @@ scor:Kanban
 scor:MinMaxReplenishment
     rdf:type scor:StandardPractice ;
     rdfs:comment "A inventory replenishment practice where purchase requisitions or purchase orders are created when inventory for an item drops below the Minimum inventory level"@en  ;
-      rdfs:label "Min-Max Replenishment"@en ;
+    rdfs:label "Min-Max Replenishment"@en ;
     skos:notation "BP.010"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3348,7 +3354,7 @@ scor:MinMaxReplenishment
 scor:LotTracking
     rdf:type scor:StandardPractice ;
     rdfs:comment "The practice of storing information about the history and/or genealogy of a product or material"@en  ;
-      rdfs:label "Lot Tracking"@en ;
+    rdfs:label "Lot Tracking"@en ;
     skos:notation "BP.012"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3358,7 +3364,7 @@ scor:LotTracking
 scor:ItemRationalization
     rdf:type scor:StandardPractice ;
     rdfs:comment "Rationalization of inventory at the item/part/SKU number level"@en  ;
-      rdfs:label "Item Rationalization"@en ;
+    rdfs:label "Item Rationalization"@en ;
     skos:notation "BP.013"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3368,7 +3374,7 @@ scor:ItemRationalization
 scor:SafetyStockPlanning
     rdf:type scor:StandardPractice ;
     rdfs:comment "Meet desired customer service levels while maintaining a minimum amount of safety stock"@en  ;
-      rdfs:label "Safety Stock Planning"@en ;
+    rdfs:label "Safety Stock Planning"@en ;
     skos:notation "BP.015"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3378,7 +3384,7 @@ scor:SafetyStockPlanning
 scor:DistributionPlanning
     rdf:type scor:StandardPractice ;
     rdfs:comment "Determine the best short-term strategy to meet demand and to replenish stocking locations"@en  ;
-      rdfs:label "Distribution Planning"@en ;
+    rdfs:label "Distribution Planning"@en ;
     skos:notation "BP.017"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3388,7 +3394,7 @@ scor:DistributionPlanning
 scor:ABCInventoryClassificationSystem
     rdf:type scor:StandardPractice ;
     rdfs:comment "The ABC classification system is the Pareto analysis of a range of inventory items, into three or four inventory categories"@en  ;
-      rdfs:label "ABC Inventory Classification System"@en ;
+    rdfs:label "ABC Inventory Classification System"@en ;
     skos:notation "BP.018"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3398,7 +3404,7 @@ scor:ABCInventoryClassificationSystem
 scor:DemandPlanning
     rdf:type scor:StandardPractice ;
     rdfs:comment "Demand Planning is the process used for developing an accurate and comprehensive material forecast"@en  ;
-      rdfs:label "Demand Planning"@en ;
+    rdfs:label "Demand Planning"@en ;
     skos:notation "BP.019"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3408,7 +3414,7 @@ scor:DemandPlanning
 scor:SalesOperationsPlanning
     rdf:type scor:StandardPractice ;
     rdfs:comment "Mid to Long Term supply chain planning practice which seeks to compare the forecast sales plan to the company resources, and analyze where any imbalances to the plan might exist"@en  ;
-      rdfs:label "Sales and Operations Planning"@en ;
+    rdfs:label "Sales and Operations Planning"@en ;
     skos:notation "BP.021"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3418,7 +3424,7 @@ scor:SalesOperationsPlanning
 scor:MRPI
     rdf:type scor:StandardPractice ;
     rdfs:comment "A 'plan' scheme of different inventory management practices has been adopted by a company in a mixed model manufacturing environment"@en  ;
-      rdfs:label "MRP I"@en ;
+    rdfs:label "MRP I"@en ;
     skos:notation "BP.022"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3428,7 +3434,7 @@ scor:MRPI
 scor:ImproveSOPprocess
     rdf:type scor:StandardPractice ;
     rdfs:comment "Establish disciplined monthly cross-functional process to increase accuracy of demand management, establish biz inventory policy, and agreement on demand and supply balancing"@en  ;
-      rdfs:label "Improve S and OP process"@en ;
+    rdfs:label "Improve S and OP process"@en ;
     skos:notation "BP.026"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3438,7 +3444,7 @@ scor:ImproveSOPprocess
 scor:StockKeepingUnit
     rdf:type scor:StandardPractice ;
     rdfs:comment "Inventory reduction practice to determine which SKUs that can be terminated t using SKU Cost of Sales Analysis"@en  ;
-      rdfs:label "Stock keeping Unit (SKU) Rationalization/Cost of Sales Analysis"@en ;
+    rdfs:label "Stock keeping Unit (SKU) Rationalization/Cost of Sales Analysis"@en ;
     skos:notation "BP.031"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3448,7 +3454,7 @@ scor:StockKeepingUnit
 scor:DelayInboundSupplierShipments
     rdf:type scor:StandardPractice ;
     rdfs:comment "Analyze and execute a delay in inbound supplier raw material shipments to reduce raw material costs at summer break, end-of-year or other scheduled plant closure"@en  ;
-      rdfs:label "Delay Inbound Supplier Shipments"@en ;
+    rdfs:label "Delay Inbound Supplier Shipments"@en ;
     skos:notation "BP.045"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3458,7 +3464,7 @@ scor:DelayInboundSupplierShipments
 scor:ExpediteOutboundCustomerShipments
     rdf:type scor:StandardPractice ;
     rdfs:comment "The practice of analyzing the cost of maintaining inventory vs. the cost of transportation for opportunities to optimize total cost"@en  ;
-      rdfs:label "Expedite Outbound Customer Shipments"@en ;
+    rdfs:label "Expedite Outbound Customer Shipments"@en ;
     skos:notation "BP.046"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3468,7 +3474,7 @@ scor:ExpediteOutboundCustomerShipments
 scor:ReturnAuthorization
     rdf:type scor:StandardPractice ;
     rdfs:comment "The Return Authorization (Return Material Authorization/Return Merchandise Authorization/Goods Return Authorization) process provides the inputs into the reverse logistics plan"@en  ;
-      rdfs:label "Return Authorization"@en ;
+    rdfs:label "Return Authorization"@en ;
     skos:notation "BP.135"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3478,7 +3484,7 @@ scor:ReturnAuthorization
 scor:OutsourcedReverseLogistics
     rdf:type scor:StandardPractice ;
     rdfs:comment "Rather than manage returns as part of a service organization or operations many companies turn to outsourced service providers including Contract Manufacturers, EMS providers and Third Party Logistics providers for returns management"@en  ;
-      rdfs:label "Outsourced Reverse Logistics"@en ;
+    rdfs:label "Outsourced Reverse Logistics"@en ;
     skos:notation "BP.136"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3488,7 +3494,7 @@ scor:OutsourcedReverseLogistics
 scor:PurchaseOrderManagement
     rdf:type scor:StandardPractice ;
     rdfs:comment "The practice of issuing a purchase order for a number of products which are required in the short to mid term"@en  ;
-      rdfs:label "Purchase Order Management"@en ;
+    rdfs:label "Purchase Order Management"@en ;
     skos:notation "BP.144"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3498,7 +3504,7 @@ scor:PurchaseOrderManagement
 scor:CrossDocking
     rdf:type scor:StandardPractice ;
     rdfs:comment "the practice of unloading materials from an incoming vehicle and loading these materials directly onto outbound vehicles without putting away into the regular storage locations in a warehouse"@en  ;
-      rdfs:label "Cross-Docking"@en ;
+    rdfs:label "Cross-Docking"@en ;
     skos:notation "BP.146"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3508,7 +3514,7 @@ scor:CrossDocking
 scor:WayDeliveryVerification
     rdf:type scor:StandardPractice ;
     rdfs:comment "The practice of checking received invoices from suppliers against the quantities received and against the associated Purchase Order, Contract or Vendor Schedule"@en  ;
-      rdfs:label "3-Way Delivery Verification"@en ;
+    rdfs:label "3-Way Delivery Verification"@en ;
     skos:notation "BP.148"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3518,7 +3524,7 @@ scor:WayDeliveryVerification
 scor:RotableSparesPool
     rdf:type scor:StandardPractice ;
     rdfs:comment "An inventory of serviceable parts that can replace a customers broken part to increase their recovery time"@en  ;
-      rdfs:label "Rotable Spares Pool"@en ;
+    rdfs:label "Rotable Spares Pool"@en ;
     skos:notation "BP.168"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3528,7 +3534,7 @@ scor:RotableSparesPool
 scor:BeyondEconomicRepairManagement
     rdf:type scor:StandardPractice ;
     rdfs:comment "The practice of assessing items as they are removed for Maintenance, Repair and Overhaul to determine whether repair would cost more than buying a replacement part"@en  ;
-      rdfs:label "Beyond Economic Repair (BER) Management"@en ;
+    rdfs:label "Beyond Economic Repair (BER) Management"@en ;
     skos:notation "BP.169"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3580,8 +3586,8 @@ scor:BusinessRuleManagement
 
 scor:SupplyChainOptimization
     rdf:type scor:EmergingPractice ;
-      rdfs:comment "A part of the enterprise strategic plan for leading edge companies"@en ;
-      rdfs:label "Supply Chain Optimization"@en ;
+    rdfs:comment "A part of the enterprise strategic plan for leading edge companies"@en ;
+    rdfs:label "Supply Chain Optimization"@en ;
     skos:notation "BP.024"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3590,8 +3596,8 @@ scor:SupplyChainOptimization
 
 scor:SelfServiceWarrantyClaimSubmittal
     rdf:type scor:EmergingPractice ;
-      rdfs:comment "enables customers and service providers to submit warranty claims over the web, reducing internal validation and processing workload. "@en;
-      rdfs:label "Self-Service Warranty Claim Submittal"@en ;
+    rdfs:comment "enables customers and service providers to submit warranty claims over the web, reducing internal validation and processing workload. "@en;
+    rdfs:label "Self-Service Warranty Claim Submittal"@en ;
     skos:notation "BP.025"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3601,7 +3607,7 @@ scor:SelfServiceWarrantyClaimSubmittal
 scor:BusinessRuleReview
     rdf:type scor:EmergingPractice ;
     rdfs:comment "Is performed by supply chain middle and upper level management of an organization."@en ;
-      rdfs:label "Business Rule Review"@en ;
+    rdfs:label "Business Rule Review"@en ;
     skos:notation "BP.035"@en ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3610,7 +3616,7 @@ scor:BusinessRuleReview
 
 scor:LeanPlanning
     rdf:type scor:EmergingPractice ;
-      rdfs:comment "Creates real world project plans which robustly model the project from initiation to final delivery."@en  ;
+    rdfs:comment "Creates real world project plans which robustly model the project from initiation to final delivery."@en  ;
     rdfs:label "Lean Planning"@en ;
     skos:notation "BP.049"@en  ;
     rdfs:isDefinedBy scor: ;
@@ -3681,7 +3687,7 @@ scor:EmbedSpecializedServices
 scor:TransportationManagementOutsourcing
     rdf:type scor:EmergingPractice ;
     rdfs:comment "Outsourcing transportation creates an opportunity for small businesses to combine their transportation spend and get a lower overall tariff rate."@en  ;
-      rdfs:label "Transportation Management Outsourcing"@en ;
+    rdfs:label "Transportation Management Outsourcing"@en ;
     skos:notation "BP.118"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3691,7 +3697,7 @@ scor:TransportationManagementOutsourcing
 scor:ThreeDPrintRapidProtoyping
     rdf:type scor:EmergingPractice ;
     rdfs:comment "3D printing is a phrase used to describe the process of creating three dimensional objects from digital file using a materials printer, in a manner similar to printing images on paper."@en  ;
-      rdfs:label "3D Print Rapid Protoyping"@en ;
+    rdfs:label "3D Print Rapid Protoyping"@en ;
     skos:notation "BP.120"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3711,7 +3717,7 @@ scor:DigitalPackagingOnDemand
 scor:CarcassDisassembly
     rdf:type scor:EmergingPractice ;
     rdfs:comment "Returned Maintenance, Repair, Operations (MRO) items are disassembled to the bill of material level and component parts are tested."@en ;
-      rdfs:label "Carcass Disassembly"@en ;
+    rdfs:label "Carcass Disassembly"@en ;
     skos:notation "BP.137"@en ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3721,7 +3727,7 @@ scor:CarcassDisassembly
 scor:BarCodingRFID
     rdf:type scor:EmergingPractice ;
     rdfs:comment "Bar coding is the practice of adding machine readable labels to packaging of goods, in order to increase reading speed and reducing reading errors."@en  ;
-      rdfs:label "Bar Coding RFID"@en ;
+    rdfs:label "Bar Coding RFID"@en ;
     skos:notation "BP.153"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -4233,7 +4239,7 @@ scor:CostsInventoryStockingBP71
 
 scor:InboundRMAEnabledProcessing
     rdf:type scor:BestPractice ;
-    rdfs:comment "This practice of requiring and enforcing a return shipment is accopanied by a company-issued Return Material (or Merchandise) Authorization (or Agreement) (RMA)."@en  ;
+    rdfs:comment "This practice of requiring and enforcing a return shipment is accompanied by a company-issued Return Material (or Merchandise) Authorization (or Agreement) (RMA)."@en  ;
     rdfs:label "Inbound RMA-enabled Processing"@en  ;
     skos:notation "BP.072"@en  ;
     rdfs:isDefinedBy scor: ;
@@ -4250,5 +4256,4 @@ scor:ProcessMetricsAlignment
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
-
 
