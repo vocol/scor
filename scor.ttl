@@ -5,6 +5,7 @@
 @prefix dct:    <http://purl.org/dc/terms/> .
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix schema: <http://schema.org/> .
 @prefix scor:   <http://purl.org/eis/vocab/scor#> .
 
@@ -33,6 +34,8 @@ scor:Process
     rdfs:comment "A process is a unique activity performed to meet predefined outcomes"@en ;
     rdfs:label "Process"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Level 1 Processes
@@ -44,6 +47,8 @@ scor:Plan
     rdfs:subClassOf scor:Process ;
     skos:notation "sP" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Source
@@ -53,6 +58,8 @@ scor:Source
     rdfs:subClassOf scor:Process ;
     skos:notation "sS" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Make
@@ -62,6 +69,8 @@ scor:Make
     rdfs:subClassOf scor:Process ;
     skos:notation "sM" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Deliver
@@ -71,6 +80,8 @@ scor:Deliver
     rdfs:subClassOf scor:Process ;
     skos:notation "sD" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Return
@@ -80,6 +91,8 @@ scor:Return
     rdfs:subClassOf scor:Process ;
     skos:notation "sR" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Enable
@@ -89,6 +102,8 @@ scor:Enable
     rdfs:subClassOf scor:Process ;
     skos:notation "sE" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Level 2 Processes
@@ -102,6 +117,8 @@ scor:PlanSupplyChain
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PlanSource
@@ -111,6 +128,8 @@ scor:PlanSource
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PlanMake
@@ -120,6 +139,8 @@ scor:PlanMake
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PlanDeliver
@@ -129,6 +150,8 @@ scor:PlanDeliver
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PlanReturn
@@ -138,6 +161,8 @@ scor:PlanReturn
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Source
@@ -149,6 +174,8 @@ scor:SourceStockedProduct
     rdfs:subClassOf scor:Source ;
     skos:notation "sS1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceMakeToOrderProduct
@@ -158,6 +185,8 @@ scor:SourceMakeToOrderProduct
     rdfs:subClassOf scor:Source ;
     skos:notation "sS2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceEngineerToOrderProduct
@@ -167,6 +196,8 @@ scor:SourceEngineerToOrderProduct
     rdfs:subClassOf scor:Source ;
     skos:notation "sS3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Make
@@ -178,6 +209,8 @@ scor:MakeToStock
     rdfs:subClassOf scor:Make ;
     skos:notation "sM1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MakeToOrder
@@ -187,6 +220,8 @@ scor:MakeToOrder
     rdfs:subClassOf scor:Make ;
     skos:notation "sM2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EngineerToOrder
@@ -196,6 +231,8 @@ scor:EngineerToOrder
     rdfs:subClassOf scor:Make ;
     skos:notation "sM3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Deliver
@@ -207,6 +244,8 @@ scor:DeliverStockedProduct
     rdfs:subClassOf scor:Deliver ;
     skos:notation "sD1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProduct
@@ -216,6 +255,8 @@ scor:DeliverMakeToOrderProduct
     rdfs:subClassOf scor:Deliver ;
     skos:notation "sD2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProduct
@@ -225,6 +266,8 @@ scor:DeliverEngineerToOrderProduct
     rdfs:subClassOf scor:Deliver ;
     skos:notation "sD3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverRetailProduct
@@ -234,6 +277,8 @@ scor:DeliverRetailProduct
     rdfs:subClassOf scor:Deliver ;
     skos:notation "sD4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Return
@@ -245,6 +290,8 @@ scor:DeliverReturnDefectiveProduct
     rdfs:subClassOf scor:Return ;
     skos:notation "sDR1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverReturnMROProduct
@@ -254,6 +301,8 @@ scor:DeliverReturnMROProduct
     rdfs:subClassOf scor:Return ;
     skos:notation "sDR2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverReturnExcessProduct
@@ -263,6 +312,8 @@ scor:DeliverReturnExcessProduct
     rdfs:subClassOf scor:Return ;
     skos:notation "sDR3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReturnMROProduct
@@ -272,6 +323,8 @@ scor:ReturnMROProduct
     rdfs:subClassOf scor:Return ;
     skos:notation "sSR2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceReturnDefectiveProduct
@@ -281,6 +334,8 @@ scor:SourceReturnDefectiveProduct
     rdfs:subClassOf scor:Return ;
     skos:notation "sSR1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceReturnExcessProduct
@@ -290,6 +345,8 @@ scor:SourceReturnExcessProduct
     rdfs:subClassOf scor:Return ;
     skos:notation "sSR3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Enable
@@ -301,6 +358,8 @@ scor:ManageSupplyChainBusinessRules
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManagePerformance
@@ -310,6 +369,8 @@ scor:ManagePerformance
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManageDataInformation
@@ -319,6 +380,8 @@ scor:ManageDataInformation
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManageSupplyChainHumanResources
@@ -328,6 +391,8 @@ scor:ManageSupplyChainHumanResources
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManageSupplyChainAssets
@@ -337,6 +402,8 @@ scor:ManageSupplyChainAssets
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManageSupplyChainContracts
@@ -346,6 +413,8 @@ scor:ManageSupplyChainContracts
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE6" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManageSupplyChainNetworks
@@ -355,6 +424,8 @@ scor:ManageSupplyChainNetworks
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE7" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManageRegulatoryCompliance
@@ -364,6 +435,8 @@ scor:ManageRegulatoryCompliance
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE8" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManageSupplyChainRisk
@@ -373,6 +446,8 @@ scor:ManageSupplyChainRisk
     rdfs:subClassOf scor:Enable ;
     skos:notation "sE9" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Hierarchy of level 1-2 processes
@@ -384,6 +459,8 @@ scor:Make    rdfs:subClassOf scor:Process .
 scor:Enable  rdfs:subClassOf scor:Process .
 scor:Deliver rdfs:subClassOf scor:Process ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #---------------------------------------------------------------------
@@ -396,6 +473,8 @@ scor:PlanMake      rdfs:subClassOf scor:Plan .
 scor:PlanDeliver     rdfs:subClassOf scor:Plan .
 scor:PlanReturn    rdfs:subClassOf scor:Plan ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #---------------------------------------------------------------------
@@ -407,6 +486,8 @@ scor:DeliverReturnDefectiveProduct rdfs:subClassOf scor:Return .
 scor:DeliverReturnMROProduct     rdfs:subClassOf scor:Return .
 scor:DeliverReturnExcessProduct    rdfs:subClassOf scor:Return ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #---------------------------------------------------------------------
@@ -415,6 +496,8 @@ scor:SourceStockedProduct       rdfs:subClassOf scor:Make .
 scor:SourceMakeToOrderProduct     rdfs:subClassOf scor:Make .
 scor:SourceEngineerToOrderProduct rdfs:subClassOf scor:Make ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #---------------------------------------------------------------------
@@ -429,6 +512,8 @@ scor:ManageSupplyChainNetwork             rdfs:subClassOf scor:Enable .
 scor:ManageSupplyChainRegulartoryCompliance rdfs:subClassOf scor:Enable .
 scor:ManageSupplyChainRisk                rdfs:subClassOf scor:Enable ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #---------------------------------------------------------------------
@@ -438,6 +523,8 @@ scor:DeliverMakeToOrderProduct     rdfs:subClassOf scor:Deliver .
 scor:DeliverEngineerToOrderProduct rdfs:subClassOf scor:Deliver .
 scor:DeliverRetailProduct            rdfs:subClassOf scor:Deliver ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 
@@ -452,6 +539,8 @@ scor:IdentifyPrioritizeAggregateSCRequirements
     rdfs:subClassOf scor:PlanSupplyChain ;
     skos:notation "sP1.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IdentifyPrioritizeAggregateSCResources
@@ -461,6 +550,8 @@ scor:IdentifyPrioritizeAggregateSCResources
     rdfs:subClassOf scor:PlanSupplyChain ;
     skos:notation "sP1.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BalanceSCResourcesWithSCRequirements
@@ -470,6 +561,8 @@ scor:BalanceSCResourcesWithSCRequirements
     rdfs:subClassOf scor:PlanSupplyChain ;
     skos:notation "sP1.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EstablishCommunicateSCPlans
@@ -479,6 +572,8 @@ scor:EstablishCommunicateSCPlans
     rdfs:subClassOf scor:PlanSupplyChain ;
     skos:notation "sP1.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Plan Source
@@ -490,6 +585,8 @@ scor:IdentifyPrioritizeAggregateProductRequirements
     rdfs:subClassOf scor:PlanSource ;
     skos:notation "sP2.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IdentifyAssessAggregateProductResources
@@ -499,6 +596,8 @@ scor:IdentifyAssessAggregateProductResources
     rdfs:subClassOf scor:PlanSource ;
     skos:notation "sP2.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BalanceProductResourcesWithProductRequirements
@@ -508,6 +607,8 @@ scor:BalanceProductResourcesWithProductRequirements
     rdfs:subClassOf scor:PlanSource ;
     skos:notation "sP2.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EstablishSourcingPlans
@@ -517,6 +618,8 @@ scor:EstablishSourcingPlans
     rdfs:subClassOf scor:PlanSource ;
     skos:notation "sP2.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Plan Make
@@ -528,6 +631,8 @@ scor:IdentifyPrioritizeAggregateProductionRequirements
     rdfs:subClassOf scor:PlanMake ;
     skos:notation "sP3.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IdentifyAssessAggregateProductionResources
@@ -537,6 +642,8 @@ scor:IdentifyAssessAggregateProductionResources
     rdfs:subClassOf scor:PlanMake ;
     skos:notation "sP3.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BalanceProductionResourcesWithProductionRequirements
@@ -546,6 +653,8 @@ scor:BalanceProductionResourcesWithProductionRequirements
     rdfs:subClassOf scor:PlanMake ;
     skos:notation "sP3.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EstablishProductionPlans
@@ -555,6 +664,8 @@ scor:EstablishProductionPlans
     rdfs:subClassOf scor:PlanMake ;
     skos:notation "sP3.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Plan Deliver
@@ -566,6 +677,8 @@ scor:IdentifyPrioritizeAggregateDeliveryRequirements
     rdfs:subClassOf scor:PlanDeliver ;
     skos:notation "sP4.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IdentifyAssessAggregateDeliveryResources
@@ -575,6 +688,8 @@ scor:IdentifyAssessAggregateDeliveryResources
     rdfs:subClassOf scor:PlanDeliver ;
     skos:notation "sP4.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BalanceDeliveryResourcesCapabilitiesWithDeliveryRequirements
@@ -584,6 +699,8 @@ scor:BalanceDeliveryResourcesCapabilitiesWithDeliveryRequirements
     rdfs:subClassOf scor:PlanDeliver ;
     skos:notation "sP4.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EstablishDeliveryPlans
@@ -593,6 +710,8 @@ scor:EstablishDeliveryPlans
     rdfs:subClassOf scor:PlanDeliver ;
     skos:notation "sP4.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Plan Return
@@ -604,6 +723,8 @@ scor:AssessAggregateReturnRequirements
     rdfs:subClassOf scor:PlanReturn ;
     skos:notation "sP5.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IdentifyAssessAggregateReturnResources
@@ -613,6 +734,8 @@ scor:IdentifyAssessAggregateReturnResources
     rdfs:subClassOf scor:PlanReturn ;
     skos:notation "sP5.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BalanceReturnResourcesWithReturnRequirements
@@ -622,6 +745,8 @@ scor:BalanceReturnResourcesWithReturnRequirements
     rdfs:subClassOf scor:PlanReturn ;
     skos:notation "sP5.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EstablishCommunicateReturnPlans
@@ -631,6 +756,8 @@ scor:EstablishCommunicateReturnPlans
     rdfs:subClassOf scor:PlanReturn ;
     skos:notation "sP5.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Source Stoked Product
@@ -642,6 +769,8 @@ scor:ScheduleProductDeliveries
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReceiveProduct
@@ -651,6 +780,8 @@ scor:ReceiveProduct
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:VerifyProduct
@@ -660,6 +791,8 @@ scor:VerifyProduct
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:TransferProduct
@@ -669,6 +802,8 @@ scor:TransferProduct
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:AuthorizeSupplierPayment
@@ -678,6 +813,8 @@ scor:AuthorizeSupplierPayment
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Source MakeToOrderProduct
@@ -689,6 +826,8 @@ scor:ScheduleProductDeliveries
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceMakeToOrderReceiveProduct
@@ -698,6 +837,8 @@ scor:SourceMakeToOrderReceiveProduct
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceMakeToOrderVerifyProduct
@@ -707,6 +848,8 @@ scor:SourceMakeToOrderVerifyProduct
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceMakeToOrderTransferProduct
@@ -716,6 +859,8 @@ scor:SourceMakeToOrderTransferProduct
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceMakeToOrderAuthorizeSupplierPayment
@@ -725,6 +870,8 @@ scor:SourceMakeToOrderAuthorizeSupplierPayment
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # SourceEngineerToOrderProduct
@@ -736,6 +883,8 @@ scor:IdentifySourcesOfSupply
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SelectFinalSupplierNegotiate
@@ -745,6 +894,8 @@ scor:SelectFinalSupplierNegotiate
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ScheduleProductDeliveries
@@ -754,6 +905,8 @@ scor:ScheduleProductDeliveries
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceEngineerToOrderReceiveProduct
@@ -763,6 +916,8 @@ scor:SourceEngineerToOrderReceiveProduct
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceEngineerToOrderVerifyProduct
@@ -772,6 +927,8 @@ scor:SourceEngineerToOrderVerifyProduct
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceEngineerToOrderTransferProduct
@@ -781,6 +938,8 @@ scor:SourceEngineerToOrderTransferProduct
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.6" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SourceEngineerToOrderAuthorizeSupplierPayment
@@ -790,6 +949,8 @@ scor:SourceEngineerToOrderAuthorizeSupplierPayment
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.7" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Make MakeToStock
@@ -801,6 +962,8 @@ scor:ScheduleProductionActivities
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IssueMaterial
@@ -810,6 +973,8 @@ scor:IssueMaterial
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ProduceTest
@@ -819,6 +984,8 @@ scor:ProduceTest
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Package
@@ -828,6 +995,8 @@ scor:Package
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:StageProduct
@@ -837,6 +1006,8 @@ scor:StageProduct
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReleaseProductToDeliver
@@ -846,6 +1017,8 @@ scor:ReleaseProductToDeliver
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.6" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:WasteDisposal
@@ -855,6 +1028,8 @@ scor:WasteDisposal
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.7" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Make MakeToOrder
@@ -866,6 +1041,8 @@ scor:MakeToOrderScheduleProductionActivities
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IssueSourcedInProcessProduct
@@ -875,6 +1052,8 @@ scor:IssueSourcedInProcessProduct
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MakeToOrderProduceTest
@@ -884,6 +1063,8 @@ scor:MakeToOrderProduceTest
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MakeToOrderPackage
@@ -893,6 +1074,8 @@ scor:MakeToOrderPackage
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:StageFinishedProduct
@@ -902,6 +1085,8 @@ scor:StageFinishedProduct
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReleaseFinishedProductToDeliver
@@ -911,6 +1096,8 @@ scor:ReleaseFinishedProductToDeliver
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.6" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MakeToOrderWasteDisposal
@@ -920,6 +1107,8 @@ scor:MakeToOrderWasteDisposal
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.7" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Make Engineer to Order
@@ -931,6 +1120,8 @@ scor:FinalizeProductionEngineering
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EngineerToOrderScheduleProductionActivities
@@ -940,6 +1131,8 @@ scor:EngineerToOrderScheduleProductionActivities
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EngineerToOrderSourcedInProcessProduct
@@ -949,6 +1142,8 @@ scor:EngineerToOrderSourcedInProcessProduct
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EngineerToOrderProduceTest
@@ -958,6 +1153,8 @@ scor:EngineerToOrderProduceTest
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EngineerToOrderPackage
@@ -967,6 +1164,8 @@ scor:EngineerToOrderPackage
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EngineerToOrderStageFinishedProduct
@@ -976,6 +1175,8 @@ scor:EngineerToOrderStageFinishedProduct
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.6" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EngineerToOrderReleaseProductToDeliver
@@ -985,6 +1186,8 @@ scor:EngineerToOrderReleaseProductToDeliver
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.7" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EngineerToOrderWasteDisposal
@@ -994,6 +1197,8 @@ scor:EngineerToOrderWasteDisposal
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.8" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Deliver Stocked Product
@@ -1005,6 +1210,8 @@ scor:ProcessInquiryQuote
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReceiveEnterValidateOrder
@@ -1014,6 +1221,8 @@ scor:ReceiveEnterValidateOrder
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReserveInventoryDetermineDeliveryDate
@@ -1023,6 +1232,8 @@ scor:ReserveInventoryDetermineDeliveryDate
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ConsolidateOrders
@@ -1032,6 +1243,8 @@ scor:ConsolidateOrders
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BuildLoads
@@ -1041,6 +1254,8 @@ scor:BuildLoads
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:RouteShipments
@@ -1050,6 +1265,8 @@ scor:RouteShipments
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.6" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SelectCarriersRateShipments
@@ -1059,6 +1276,8 @@ scor:SelectCarriersRateShipments
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.7" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReceiveProductFromSourceMake
@@ -1068,6 +1287,8 @@ scor:ReceiveProductFromSourceMake
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.8" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PickProduct
@@ -1077,6 +1298,8 @@ scor:PickProduct
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.9" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PackProduct
@@ -1086,6 +1309,8 @@ scor:PackProduct
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.10" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LoadVehicleGenerateShippingDocuments
@@ -1095,6 +1320,8 @@ scor:LoadVehicleGenerateShippingDocuments
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.11" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ShipProduct
@@ -1104,6 +1331,8 @@ scor:ShipProduct
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.12" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReceiveVerifyProductByCustomer
@@ -1113,6 +1342,8 @@ scor:ReceiveVerifyProductByCustomer
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.13" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InstallProduct
@@ -1122,6 +1353,8 @@ scor:InstallProduct
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.14" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Invoice
@@ -1131,6 +1364,8 @@ scor:Invoice
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.15" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #Deliver Make-to-Order Product
@@ -1142,6 +1377,8 @@ scor:DeliverMakeToOrderProductProcessInquiryQuote
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReceiveConfigureEnterValidateOrder
@@ -1151,6 +1388,8 @@ scor:ReceiveConfigureEnterValidateOrder
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReserveInventoryDetermineDeliveryDate
@@ -1160,6 +1399,8 @@ scor:ReserveInventoryDetermineDeliveryDate
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ConsolidateOrders
@@ -1169,6 +1410,8 @@ scor:ConsolidateOrders
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductProcessBuildLoads
@@ -1178,6 +1421,8 @@ scor:DeliverMakeToOrderProductProcessBuildLoads
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductProcessRouteShipments
@@ -1187,6 +1432,8 @@ scor:DeliverMakeToOrderProductProcessRouteShipments
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.6" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductSelectCarriersRateShipments
@@ -1196,6 +1443,8 @@ scor:DeliverMakeToOrderProductSelectCarriersRateShipments
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.7" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductReceiveProductFromSourceMake
@@ -1205,6 +1454,8 @@ scor:DeliverMakeToOrderProductReceiveProductFromSourceMake
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.8" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductPickProduct
@@ -1214,6 +1465,8 @@ scor:DeliverMakeToOrderProductPickProduct
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.9" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductPackProduct
@@ -1223,6 +1476,8 @@ scor:DeliverMakeToOrderProductPackProduct
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.10" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LoadProductGenerateShippingDocs
@@ -1232,6 +1487,8 @@ scor:LoadProductGenerateShippingDocs
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.11" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductShipProduct
@@ -1241,6 +1498,8 @@ scor:DeliverMakeToOrderProductShipProduct
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.12" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductReceiveVerifyProductByCustomer
@@ -1250,6 +1509,8 @@ scor:DeliverMakeToOrderProductReceiveVerifyProductByCustomer
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.13" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductInstallProduct
@@ -1259,6 +1520,8 @@ scor:DeliverMakeToOrderProductInstallProduct
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.14" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverMakeToOrderProductInvoice
@@ -1268,6 +1531,8 @@ scor:DeliverMakeToOrderProductInvoice
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.15" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Deliver Engineer-to-Order Product
@@ -1279,6 +1544,8 @@ scor:ObtainRespondToRFPRFQ
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:NegotiateReceiveContract
@@ -1288,6 +1555,8 @@ scor:NegotiateReceiveContract
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EnterOrderCommitResourcesLaunchProgram
@@ -1297,6 +1566,8 @@ scor:EnterOrderCommitResourcesLaunchProgram
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ScheduleInstallation
@@ -1306,6 +1577,8 @@ scor:ScheduleInstallation
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductBuildLoads
@@ -1315,6 +1588,8 @@ scor:DeliverEngineerToOrderProductBuildLoads
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductRouteShipments
@@ -1324,6 +1599,8 @@ scor:DeliverEngineerToOrderProductRouteShipments
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.6" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductSelectCarriersRateShipments
@@ -1333,6 +1610,8 @@ scor:DeliverEngineerToOrderProductSelectCarriersRateShipments
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.7" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductReceiveProductFromSourceMake
@@ -1342,6 +1621,8 @@ scor:DeliverEngineerToOrderProductReceiveProductFromSourceMake
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.8" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductPickProduct
@@ -1351,6 +1632,8 @@ scor:DeliverEngineerToOrderProductPickProduct
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.9" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductPackProduct
@@ -1360,6 +1643,8 @@ scor:DeliverEngineerToOrderProductPackProduct
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.10" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductLoadProductGenerateShippingDocs
@@ -1369,6 +1654,8 @@ scor:DeliverEngineerToOrderProductLoadProductGenerateShippingDocs
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.11" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductShipProduct
@@ -1378,6 +1665,8 @@ scor:DeliverEngineerToOrderProductShipProduct
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.12" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductReceiveVerifyProductByCustomer
@@ -1387,6 +1676,8 @@ scor:DeliverEngineerToOrderProductReceiveVerifyProductByCustomer
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.13" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductInstallProduct
@@ -1396,6 +1687,8 @@ scor:DeliverEngineerToOrderProductInstallProduct
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.14" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverEngineerToOrderProductInvoice
@@ -1405,6 +1698,8 @@ scor:DeliverEngineerToOrderProductInvoice
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.15" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # DeliverRetailProduct
@@ -1416,6 +1711,8 @@ scor:GenerateStockingSchedule
     rdfs:subClassOf scor:DeliverRetailProduct ;
     skos:notation "sD4.1" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReceiveProductAtStore
@@ -1425,6 +1722,8 @@ scor:ReceiveProductAtStore
     rdfs:subClassOf scor:DeliverRetailProduct ;
     skos:notation "sD4.2" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PickProductFromBackroom
@@ -1434,6 +1733,8 @@ scor:PickProductFromBackroom
     rdfs:subClassOf scor:DeliverRetailProduct ;
     skos:notation "sD4.3" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:StockShelf
@@ -1443,6 +1744,8 @@ scor:StockShelf
     rdfs:subClassOf scor:DeliverRetailProduct ;
     skos:notation "sD4.4" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:FillShoppingCart
@@ -1452,6 +1755,8 @@ scor:FillShoppingCart
     rdfs:subClassOf scor:DeliverRetailProduct ;
     skos:notation "sD4.5" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Checkout
@@ -1461,6 +1766,8 @@ scor:Checkout
     rdfs:subClassOf scor:DeliverRetailProduct ;
     skos:notation "sD4.6" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliverInstall
@@ -1470,6 +1777,8 @@ scor:DeliverInstall
     rdfs:subClassOf scor:DeliverRetailProduct ;
     skos:notation "sD4.7" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 
@@ -1483,6 +1792,8 @@ scor:Aptitude
     rdfs:comment "A natural, acquired, learned or developed ability to perform a certain kind of work at a"@en  ;
     rdfs:label "Aptitude"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Competency
@@ -1490,6 +1801,8 @@ scor:Competency
     rdfs:comment "Describes the level or state of qualification to perform a certain role or tasks"@en  ;
     rdfs:label "Competency"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Experience
@@ -1497,6 +1810,8 @@ scor:Experience
     rdfs:comment " the knowledge or ability acquired by observation or active participation. "@en  ;
     rdfs:label "Experience"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Skill
@@ -1504,6 +1819,8 @@ scor:Skill
     rdfs:comment "The capacity to deliver pre-determined results with minimal input of time and energy"@en  ;
     rdfs:label "Skill"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Training
@@ -1511,6 +1828,8 @@ scor:Training
     rdfs:comment "Develops a skill or type of behavior through instruction"@en  ;
     rdfs:label "Training"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 schema:Person
@@ -1518,6 +1837,8 @@ schema:Person
     rdfs:comment "Models person in a Supply Chain" ;
     rdfs:label "Person"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
     scor:Practice
@@ -1525,6 +1846,8 @@ schema:Person
     rdfs:comment "A practice is a unique way to configure a process or a set of processes" ;
     rdfs:label "Practice"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BestPractice
@@ -1534,6 +1857,8 @@ scor:BestPractice
     rdfs:subClassOf scor:Practice ;
     skos:notation "BP.B" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EmergingPractice
@@ -1543,6 +1868,8 @@ scor:EmergingPractice
     rdfs:subClassOf scor:Practice ;
     skos:notation "BP.E" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:StandardPractice
@@ -1552,6 +1879,8 @@ scor:StandardPractice
     rdfs:subClassOf scor:Practice ;
     skos:notation "BP.S" ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 
@@ -1566,6 +1895,8 @@ scor:hasStep
     rdfs:domain scor:Process ;
     rdfs:range  scor:Process ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasPracticeId
@@ -1574,6 +1905,8 @@ scor:hasPracticeId
     rdfs:domain scor:Practice ;
     rdfs:range xsd:string ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasAptitude
@@ -1582,6 +1915,8 @@ scor:hasAptitude
     rdfs:label "hasAptitude"@en  ;
     rdfs:range scor:Aptitude ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasExperience
@@ -1590,6 +1925,8 @@ scor:hasExperience
     rdfs:label "hasExperience"@en  ;
     rdfs:range scor:Experience ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasSkill
@@ -1598,6 +1935,8 @@ scor:hasSkill
     rdfs:label "A person has an Skill "@en  ;
     rdfs:range scor:Skill ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasTraining
@@ -1606,6 +1945,8 @@ scor:hasTraining
     rdfs:label "hasTraining"@en  ;
     rdfs:range scor:Training ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 ######################
@@ -1615,6 +1956,8 @@ scor:hasTraining
 scor:hasMetric   a owl:DatatypeProperty ;
                rdfs:range xsd:float ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 
@@ -1622,10 +1965,14 @@ scor:hasMetric   a owl:DatatypeProperty ;
 
 scor:hasMetricRL_1 rdfs:domain scor:Make1_6 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_2 rdfs:domain scor:Make1_6 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #3 seems to be deprecated #
@@ -1634,20 +1981,28 @@ scor:hasMetricRL_4 rdfs:domain [owl:unionOf (scor:Deliver1_10
                                            scor:Deliver2_9
                                            scor:Deliver3_8)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_5 rdfs:domain [owl:unionOf (scor:SourceReturn1_5
                                            scor:SourceReturn2_5
                                            scor:SourceReturn3_5)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_6 rdfs:domain scor:SourceReturn2_2 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_7 rdfs:domain scor:Deliver4_5 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #8 seems to be deprecated
@@ -1657,96 +2012,132 @@ scor:hasMetricRL_7 rdfs:domain scor:Deliver4_5 ;
 scor:hasMetricRL_10 rdfs:domain [owl:unionOf (scor:SourecReturn3
                                             scor:DeliverReturn3)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_11 rdfs:domain [owl:unionOf (scor:Deliver1_15
                                             scor:Deliver2_15
                                             scor:Deliver3_15)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_12 rdfs:domain scor:Deliver1_14 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_13 rdfs:domain scor:DeliverReturn2 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_14 rdfs:domain scor:Make2_6 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_15 rdfs:domain scor:Make2_6 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_16 rdfs:domain scor:Deliver1_7 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_17 rdfs:domain scor:Source3_2 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_18 rdfs:domain [owl:unionOf (scor:Source1_2
                                             scor:Source2_2
                                             scor:Source3_4)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_19 rdfs:domain [owl:unionOf (scor:Source1_3
                                             scor:Source2_3
                                             scor:Source3_5)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_20 rdfs:domain [owl:unionOf (scor:Source1_2
                                             scor:Source2_2
                                             scor:Source3_4)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_21 rdfs:domain [owl:unionOf (scor:Source1_3
                                             scor:Source2_3
                                             scor:Source3_5)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_23 rdfs:domain [owl:unionOf (scor:Source1_2
                                             scor:Source2_2
                                             scor:Source3_4)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_24 rdfs:domain [owl:unionOf (scor:Source1_3
                                             scor:Source2_3
                                             scor:Source3_5)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_25 rdfs:domain [owl:unionOf (scor:Source1_4
                                             scor:Source2_4
                                             scor:Source3_6)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_26 rdfs:domain [owl:unionOf (scor:Source1_4
                                             scor:Source2_4
                                             scor:Source3_6)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_27 rdfs:domain [owl:unionOf (scor:Source1_1
                                             scor:Source2_1
                                             scor:Source3_3)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_28 rdfs:domain [owl:unionOf (scor:SourceReturn1_4
                                             scor:SourceReturn2_4
                                             scor:SourceReturn3_4)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #29 seems to be deprecated
@@ -1760,12 +2151,16 @@ scor:hasMetricRL_31 rdfs:domain [owl:unionOf (scor:Make1_4
                                             scor:Deliver2_11
                                             scor:Deliver3_11)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_32 rdfs:domain [owl:unionOf (scor:Deliver1_13
                                             scor:Deliver2_13
                                             scor:Deliver3_13)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_33 rdfs:domain [owl:unionOf (scor:Deliver1_2
@@ -1784,6 +2179,8 @@ scor:hasMetricRL_33 rdfs:domain [owl:unionOf (scor:Deliver1_2
                                             scor:Deliver3_12
                                             scor:Deliver3_13)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_34 rdfs:domain [owl:unionOf (scor:Deliver1_2
@@ -1802,6 +2199,8 @@ scor:hasMetricRL_34 rdfs:domain [owl:unionOf (scor:Deliver1_2
                                             scor:Deliver3_12
                                             scor:Deliver3_13)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_35 rdfs:domain [owl:unionOf (scor:Deliver1_2
@@ -1820,6 +2219,8 @@ scor:hasMetricRL_35 rdfs:domain [owl:unionOf (scor:Deliver1_2
                                             scor:Deliver3_12
                                             scor:Deliver3_13)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_36 rdfs:domain [owl:unionOf (scor:Plan1_3
@@ -1828,6 +2229,8 @@ scor:hasMetricRL_36 rdfs:domain [owl:unionOf (scor:Plan1_3
                                             scor:Deliver1_3
                                             scor:Deliver1_9)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_37 rdfs:domain [owl:unionOf (scor:Plan1_1
@@ -1840,28 +2243,38 @@ scor:hasMetricRL_37 rdfs:domain [owl:unionOf (scor:Plan1_1
                                             scor:Enable6
                                             scor:Enable7)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #38 seems to be deprecated
 
 scor:hasMetricRL_39 rdfs:domain scor:SourceReturn3_2 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_40 rdfs:domain scor:SourceReturn3_1 ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_41 rdfs:domain [owl:unionOf (scor:Deliver1_13
                                             scor:Deliver2_13
                                             scor:Deliver3_13)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_42 rdfs:domain [owl:unionOf (scor:Deliver1_13
                                             scor:Deliver2_13
                                             scor:Deliver3_13)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 
@@ -1869,6 +2282,8 @@ scor:hasMetricRL_43 rdfs:domain [owl:unionOf (scor:Deliver1_11
                                             scor:Deliver2_11
                                             scor:Deliver3_11)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #44 seems to be deprecated
@@ -1877,6 +2292,8 @@ scor:hasMetricRL_45 rdfs:domain [owl:unionOf (scor:Deliver1_11
                                             scor:Deliver2_11
                                             scor:Deliver3_11)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #46 seems to be deprecated
@@ -1885,6 +2302,8 @@ scor:hasMetricRL_47 rdfs:domain [owl:unionOf (scor:SourceReturn1_5
                                             scor:SourceReturn2_5
                                             scor:SourceReturn3_5)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #48 seems to be deprecated
@@ -1893,12 +2312,16 @@ scor:hasMetricRL_49 rdfs:domain [owl:unionOf (scor:Make1_1
                                             scor:Make2_1
                                             scor:Make3_2)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_50 rdfs:domain [owl:unionOf (scor:Deliver1_11
                                             scor:Deliver2_11
                                             scor:Deliver3_11)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 #51-54 seem to be deprecated
@@ -1906,6 +2329,8 @@ scor:hasMetricRL_50 rdfs:domain [owl:unionOf (scor:Deliver1_11
 scor:hasMetricRL_55 rdfs:domain [owl:unionOf (scor:Make1_3
                                             scor:Make1_4)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_56 rdfs:domain [owl:unionOf (scor:Make1_3
@@ -1915,12 +2340,16 @@ scor:hasMetricRL_56 rdfs:domain [owl:unionOf (scor:Make1_3
                                             scor:Make3_4
                                             scor:Make3_5)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_57 rdfs:domain [owl:unionOf (scor:Make1_7
                                             scor:Make2_7
                                             scor:Make3_8)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_58 rdfs:domain [owl:unionOf (scor:Make1
@@ -1933,12 +2362,16 @@ scor:hasMetricRL_58 rdfs:domain [owl:unionOf (scor:Make1
                                             scor:Make3_4
                                             scor:Make3_5)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:hasMetricRL_59 rdfs:domain [owl:unionOf (scor:Make1_3
                                             scor:Make2_3
                                             scor:Make3_4)] ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 
@@ -1956,6 +2389,8 @@ scor:3WayReceivingMatch
       rdfs:label "3-way Receiving Match"@en ;
     skos:notation "HS.0001"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:AcceptanceTesting
@@ -1964,6 +2399,8 @@ scor:AcceptanceTesting
       rdfs:label "Acceptance testing"@en ;
     skos:notation "HS.0002"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Accounting
@@ -1972,6 +2409,8 @@ scor:Accounting
       rdfs:label "Accounting"@en ;
     skos:notation "HS.0003"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:AdvertisingMethodologies
@@ -1980,6 +2419,8 @@ scor:AdvertisingMethodologies
       rdfs:label "Advertising Methodologies"@en ;
     skos:notation "HS.0004"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:AssemblyProcessDesign
@@ -1988,6 +2429,8 @@ scor:AssemblyProcessDesign
       rdfs:label "Assembly Process Design"@en ;
     skos:notation "HS.0005"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:AssetManagement
@@ -1996,6 +2439,8 @@ scor:AssetManagement
       rdfs:label "Asset Management"@en ;
     skos:notation "HS.0006"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:AvailabilityManagement
@@ -2004,6 +2449,8 @@ scor:AvailabilityManagement
       rdfs:label "Availability Management"@en ;
     skos:notation "HS.0007"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BarCodeHandlingRFID
@@ -2012,6 +2459,8 @@ scor:BarCodeHandlingRFID
       rdfs:label "Bar Code Handling/RFID"@en ;
     skos:notation "HS.0009"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BasicFinance
@@ -2020,6 +2469,8 @@ scor:BasicFinance
       rdfs:label "Basic Finance"@en ;
     skos:notation "HS.0010"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BasicTransportationManagement
@@ -2028,6 +2479,8 @@ scor:BasicTransportationManagement
       rdfs:label "Basic Transportation Management"@en ;
     skos:notation "HS.0011"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Benchmarking
@@ -2036,6 +2489,8 @@ scor:Benchmarking
       rdfs:label "Benchmarking"@en ;
     skos:notation "HS.0012"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BlanketPurchaseOrderProcess
@@ -2044,6 +2499,8 @@ scor:BlanketPurchaseOrderProcess
       rdfs:label "Blanket purchase order process"@en ;
     skos:notation "HS.0013"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BuildScheduleEvaluation
@@ -2052,6 +2509,8 @@ scor:BuildScheduleEvaluation
       rdfs:label "Build Schedule Evaluation"@en ;
     skos:notation "HS.0014"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CADCAM
@@ -2060,6 +2519,8 @@ scor:CADCAM
       rdfs:label "CAD/CAM"@en ;
     skos:notation "HS.0015"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CapacityPlanningManagement
@@ -2068,6 +2529,8 @@ scor:CapacityPlanningManagement
       rdfs:label "Capacity Planning/Management"@en ;
     skos:notation "HS.0016"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CarrierSelection
@@ -2076,6 +2539,8 @@ scor:CarrierSelection
       rdfs:label "Carrier Selection"@en ;
     skos:notation "HS.0018"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ChangeNoticeDevelopment
@@ -2084,6 +2549,8 @@ scor:ChangeNoticeDevelopment
       rdfs:label "Change Notice Development"@en ;
     skos:notation "HS.0019"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CompetitiveBidding
@@ -2092,6 +2559,8 @@ scor:CompetitiveBidding
       rdfs:label "Competitive Bidding"@en ;
     skos:notation "HS.0020"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ConsignmentAgreementDevelopment
@@ -2100,6 +2569,8 @@ scor:ConsignmentAgreementDevelopment
       rdfs:label "Consignment Agreement Development"@en ;
     skos:notation "HS.0021"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ContractManagement
@@ -2108,6 +2579,8 @@ scor:ContractManagement
       rdfs:label "Contract Management"@en ;
     skos:notation "HS.0022"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ControlsCompliance
@@ -2116,6 +2589,8 @@ scor:ControlsCompliance
       rdfs:label "Controls and Compliance"@en ;
     skos:notation "HS.0023"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CostPriceAnalysis
@@ -2124,6 +2599,8 @@ scor:CostPriceAnalysis
       rdfs:label "Cost/Price Analysis"@en ;
     skos:notation "HS.0024"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BusinessPolicyManagement
@@ -2132,6 +2609,8 @@ scor:BusinessPolicyManagement
       rdfs:label "Business Rule/Policy Management"@en ;
     skos:notation "HS.0025"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CreditCollectionManagement
@@ -2140,6 +2619,8 @@ scor:CreditCollectionManagement
       rdfs:label "Credit/Collection Management"@en ;
     skos:notation "HS.0026"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CrossDocking
@@ -2148,6 +2629,8 @@ scor:CrossDocking
       rdfs:label "Cross Docking"@en ;
     skos:notation "HS.0027"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CustomerOrderManagement
@@ -2156,6 +2639,8 @@ scor:CustomerOrderManagement
       rdfs:label "Customer Order Management"@en ;
     skos:notation "HS.0028"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CustomerRelationshipManagement
@@ -2164,6 +2649,8 @@ scor:CustomerRelationshipManagement
       rdfs:label "Customer Relationship Management (CRM)"@en ;
     skos:notation "HS.0029"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CustomerRepair
@@ -2172,6 +2659,8 @@ scor:CustomerRepair
       rdfs:label "Customer Repair and Return Policy and Process"@en ;
     skos:notation "HS.0031"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CustomerSupplierCommunication
@@ -2180,6 +2669,8 @@ scor:CustomerSupplierCommunication
       rdfs:label "Customer/Supplier Communication"@en ;
     skos:notation "HS.0032"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DataManagement
@@ -2188,6 +2679,8 @@ scor:DataManagement
       rdfs:label "Data management"@en ;
     skos:notation "HS.0033"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DiscrepancyReportingResolution
@@ -2196,6 +2689,8 @@ scor:DiscrepancyReportingResolution
       rdfs:label "Discrepancy Reporting and Resolution"@en ;
     skos:notation "HS.0034"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliveryBalancing
@@ -2204,6 +2699,8 @@ scor:DeliveryBalancing
       rdfs:label "Delivery Balancing"@en ;
     skos:notation "HS.0035"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DeliveryScheduling
@@ -2212,6 +2709,8 @@ scor:DeliveryScheduling
       rdfs:label "Delivery Scheduling"@en ;
     skos:notation "HS.0036"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DemandManagement
@@ -2220,6 +2719,8 @@ scor:DemandManagement
       rdfs:label "Demand Management"@en ;
     skos:notation "HS.0037"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DesignEngineeringScheduleDevelopment
@@ -2228,6 +2729,8 @@ scor:DesignEngineeringScheduleDevelopment
       rdfs:label "Design/Engineering Schedule Development"@en ;
     skos:notation "HS.0038"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DrivingCertification
@@ -2236,6 +2739,8 @@ scor:DrivingCertification
       rdfs:label "Driving Certification"@en ;
     skos:notation "HS.0039"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EHSregulations
@@ -2244,6 +2749,8 @@ scor:EHSregulations
       rdfs:label "EHS regulations"@en ;
     skos:notation "HS.0041"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EnablingTechnology
@@ -2252,6 +2759,8 @@ scor:EnablingTechnology
       rdfs:label "Enabling Technology"@en ;
     skos:notation "HS.0042"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Engineering
@@ -2260,6 +2769,8 @@ scor:Engineering
       rdfs:label "Engineering"@en ;
     skos:notation "HS.0043"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EnterpriseBusinessProcess
@@ -2268,6 +2779,8 @@ scor:EnterpriseBusinessProcess
       rdfs:label "Enterprise Business Process"@en ;
     skos:notation "HS.0044"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EnvironmentalRequirements
@@ -2276,6 +2789,8 @@ scor:EnvironmentalRequirements
       rdfs:label "Enterprise Business Process"@en ;
     skos:notation "HS.0045"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ERPSystems
@@ -2284,6 +2799,8 @@ scor:ERPSystems
       rdfs:label "ERP Systems"@en ;
     skos:notation "HS.0046"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Forecasting
@@ -2292,6 +2809,8 @@ scor:Forecasting
       rdfs:label "Forecasting"@en ;
     skos:notation "HS.0048"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IDDamageInspection
@@ -2300,6 +2819,8 @@ scor:IDDamageInspection
       rdfs:label "ID and Damage Inspection"@en ;
     skos:notation "HS.0049"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ImportExportRegulations
@@ -2308,6 +2829,8 @@ scor:ImportExportRegulations
       rdfs:label "Import/Export Regulations"@en ;
     skos:notation "HS.0050"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InstallationRequirements
@@ -2316,6 +2839,8 @@ scor:InstallationRequirements
       rdfs:label "Import/Export Regulations"@en ;
     skos:notation "HS.0051"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InstallationScheduling
@@ -2324,6 +2849,8 @@ scor:InstallationScheduling
       rdfs:label "Installation Scheduling"@en ;
     skos:notation "HS.0052"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InstalledBaseManagement
@@ -2332,6 +2859,8 @@ scor:InstalledBaseManagement
       rdfs:label "Installed base management"@en ;
     skos:notation "HS.0053"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IntellectualProperty
@@ -2340,6 +2869,8 @@ scor:IntellectualProperty
       rdfs:label "Intellectual Property/Proprietary Data"@en ;
     skos:notation "HS.0054"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InternationalTrade
@@ -2348,6 +2879,8 @@ scor:InternationalTrade
       rdfs:label "International Trade"@en ;
     skos:notation "HS.0055"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InterpretingSpecifications
@@ -2356,6 +2889,8 @@ scor:InterpretingSpecifications
       rdfs:label "Interpreting Specifications"@en ;
     skos:notation "HS.0056"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InventoryManagement
@@ -2364,6 +2899,8 @@ scor:InventoryManagement
       rdfs:label "Inventory Management"@en ;
     skos:notation "HS.0058"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:IssueProposalQuote
@@ -2372,6 +2909,8 @@ scor:IssueProposalQuote
       rdfs:label "Issue Proposal/Quote"@en ;
     skos:notation "HS.0060"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ItemMaster
@@ -2380,6 +2919,8 @@ scor:ItemMaster
       rdfs:label "Item Master/BOM/BoL Interpretation"@en ;
     skos:notation "HS.0061"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:KittingPacking
@@ -2388,6 +2929,8 @@ scor:KittingPacking
       rdfs:label "Kitting/Packing"@en ;
     skos:notation "HS.0062"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LaborCostsVerification
@@ -2396,6 +2939,8 @@ scor:LaborCostsVerification
       rdfs:label "Labor Costs Verification"@en ;
     skos:notation "HS.0063"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LeadTimeValidation
@@ -2404,6 +2949,8 @@ scor:LeadTimeValidation
       rdfs:label "Lead-time validation"@en ;
     skos:notation "HS.0064"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LeanManufacturing
@@ -2412,6 +2959,8 @@ scor:LeanManufacturing
       rdfs:label "Lean Manufacturing"@en ;
     skos:notation "HS.0065"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LegislationStandards
@@ -2420,6 +2969,8 @@ scor:LegislationStandards
       rdfs:label "Legislation and Standards"@en ;
     skos:notation "HS.0066"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LinearProgramming
@@ -2428,6 +2979,8 @@ scor:LinearProgramming
       rdfs:label "Linear programming"@en ;
     skos:notation "HS.0067"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LoadBuilding
@@ -2436,6 +2989,8 @@ scor:LoadBuilding
       rdfs:label "Load Building"@en ;
     skos:notation "HS.0068"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LogisticsManagement
@@ -2444,6 +2999,8 @@ scor:LogisticsManagement
       rdfs:label "Logistics Management"@en ;
     skos:notation "HS.0069"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LogisticsNetworkModeling
@@ -2452,6 +3009,8 @@ scor:LogisticsNetworkModeling
       rdfs:label "Logistics network modeling"@en ;
     skos:notation "HS.0070"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LogisticsFreight
@@ -2460,6 +3019,8 @@ scor:LogisticsFreight
       rdfs:label "Logistics/Freight"@en ;
     skos:notation "HS.0071"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PerformanceManagement
@@ -2468,6 +3029,8 @@ scor:PerformanceManagement
       rdfs:label "Performance Management"@en ;
     skos:notation "HS.0072"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManufacturingResourceCommitment
@@ -2476,6 +3039,8 @@ scor:ManufacturingResourceCommitment
       rdfs:label "Manufacturing Resource Commitment"@en ;
     skos:notation "HS.0073"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MasterScheduling
@@ -2484,6 +3049,8 @@ scor:MasterScheduling
       rdfs:label "Master Scheduling"@en ;
     skos:notation "HS.0074"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MaterialHandlingEquipment
@@ -2492,6 +3059,8 @@ scor:MaterialHandlingEquipment
       rdfs:label "Material handling equipment usage"@en ;
     skos:notation "HS.0075"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MilestonePerformancePayments
@@ -2500,6 +3069,8 @@ scor:MilestonePerformancePayments
       rdfs:label "Milestone/Performance Payments"@en ;
     skos:notation "HS.0076"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MPSMethodsTechniques
@@ -2508,6 +3079,8 @@ scor:MPSMethodsTechniques
       rdfs:label "MPS Methodologies and Techniques"@en ;
     skos:notation "HS.0077"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MROManagement
@@ -2516,6 +3089,8 @@ scor:MROManagement
       rdfs:label "MRO Management"@en ;
     skos:notation "HS.0078"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MRPSystems
@@ -2524,6 +3099,8 @@ scor:MRPSystems
       rdfs:label "MRP Systems"@en ;
     skos:notation "HS.0079"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EnvironmentalInterpretation
@@ -2532,6 +3109,8 @@ scor:EnvironmentalInterpretation
       rdfs:label "Environmental Interpretation"@en ;
     skos:notation "HS.0080"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:OfficeAutomationTools
@@ -2540,6 +3119,8 @@ scor:OfficeAutomationTools
       rdfs:label "Office automation tools"@en ;
     skos:notation "HS.0081"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Optimization
@@ -2548,6 +3129,8 @@ scor:Optimization
       rdfs:label "Optimization"@en ;
     skos:notation "HS.0082"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:OrderManagement
@@ -2556,6 +3139,8 @@ scor:OrderManagement
       rdfs:label "Order Management"@en ;
     skos:notation "HS.0083"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Outsourcing
@@ -2564,6 +3149,8 @@ scor:Outsourcing
       rdfs:label "Outsourcing"@en ;
     skos:notation "HS.0085"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Packaging
@@ -2572,6 +3159,8 @@ scor:Packaging
       rdfs:label "Packaging"@en ;
     skos:notation "HS.0086"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PaymentProcessing
@@ -2580,6 +3169,8 @@ scor:PaymentProcessing
       rdfs:label "Payment Processing"@en ;
     skos:notation "HS.0087"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PhysicalCapability
@@ -2588,6 +3179,8 @@ scor:PhysicalCapability
       rdfs:label "Physical Capability"@en ;
     skos:notation "HS.0088"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PhysicalDistributionSystems
@@ -2596,6 +3189,8 @@ scor:PhysicalDistributionSystems
       rdfs:label "Physical Distribution Systems"@en ;
     skos:notation "HS.0089"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PickingProcess
@@ -2604,6 +3199,8 @@ scor:PickingProcess
       rdfs:label "Picking process / order batching"@en ;
     skos:notation "HS.0090"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PlanogramUsageStrategies
@@ -2612,6 +3209,8 @@ scor:PlanogramUsageStrategies
       rdfs:label "Planogram usage and strategies"@en ;
     skos:notation "HS.0091"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PricingManagement
@@ -2620,6 +3219,8 @@ scor:PricingManagement
       rdfs:label "Pricing Management"@en ;
     skos:notation "HS.0092"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Prioritization
@@ -2628,6 +3229,8 @@ scor:Prioritization
       rdfs:label "Prioritization"@en ;
     skos:notation "HS.0093"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Procurement
@@ -2636,6 +3239,8 @@ scor:Procurement
       rdfs:label "Procurement"@en ;
     skos:notation "HS.0094"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ProductConfigurationValidation
@@ -2644,6 +3249,8 @@ scor:ProductConfigurationValidation
       rdfs:label "Product and Configuration Validation"@en ;
     skos:notation "HS.0095"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ProductCheckoutProcess
@@ -2652,6 +3259,8 @@ scor:ProductCheckoutProcess
       rdfs:label "Product checkout process"@en ;
     skos:notation "HS.0096"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ProductDevelopment
@@ -2660,6 +3269,8 @@ scor:ProductDevelopment
       rdfs:label "Product Development"@en ;
     skos:notation "HS.0097"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ProductInformationManagement
@@ -2668,6 +3279,8 @@ scor:ProductInformationManagement
       rdfs:label "Product Information Management"@en ;
     skos:notation "HS.0098"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Production
@@ -2676,6 +3289,8 @@ scor:Production
       rdfs:label "Production"@en ;
     skos:notation "HS.0099"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ProductionPlanning
@@ -2684,6 +3299,8 @@ scor:ProductionPlanning
       rdfs:label "Production"@en ;
     skos:notation "HS.0101"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 
@@ -2694,6 +3311,8 @@ scor:ConsignmentInventory
       rdfs:label "Consignment Inventory"@en ;
     skos:notation "BP.006"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SlowMovingInventoryMonitoring
@@ -2702,6 +3321,8 @@ scor:SlowMovingInventoryMonitoring
       rdfs:label "Slow-moving Inventory Monitoring"@en ;
     skos:notation "BP.008"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Kanban
@@ -2710,6 +3331,8 @@ scor:Kanban
       rdfs:label "Kanban"@en ;
     skos:notation "BP.009"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MinMaxReplenishment
@@ -2718,6 +3341,8 @@ scor:MinMaxReplenishment
       rdfs:label "Min-Max Replenishment"@en ;
     skos:notation "BP.010"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LotTracking
@@ -2726,6 +3351,8 @@ scor:LotTracking
       rdfs:label "Lot Tracking"@en ;
     skos:notation "BP.012"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ItemRationalization
@@ -2734,6 +3361,8 @@ scor:ItemRationalization
       rdfs:label "Item Rationalization"@en ;
     skos:notation "BP.013"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SafetyStockPlanning
@@ -2742,6 +3371,8 @@ scor:SafetyStockPlanning
       rdfs:label "Safety Stock Planning"@en ;
     skos:notation "BP.015"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DistributionPlanning
@@ -2750,6 +3381,8 @@ scor:DistributionPlanning
       rdfs:label "Distribution Planning"@en ;
     skos:notation "BP.017"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ABCInventoryClassificationSystem
@@ -2758,6 +3391,8 @@ scor:ABCInventoryClassificationSystem
       rdfs:label "ABC Inventory Classification System"@en ;
     skos:notation "BP.018"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DemandPlanning
@@ -2766,6 +3401,8 @@ scor:DemandPlanning
       rdfs:label "Demand Planning"@en ;
     skos:notation "BP.019"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SalesOperationsPlanning
@@ -2774,6 +3411,8 @@ scor:SalesOperationsPlanning
       rdfs:label "Sales and Operations Planning"@en ;
     skos:notation "BP.021"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MRPI
@@ -2782,6 +3421,8 @@ scor:MRPI
       rdfs:label "MRP I"@en ;
     skos:notation "BP.022"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ImproveSOPprocess
@@ -2790,6 +3431,8 @@ scor:ImproveSOPprocess
       rdfs:label "Improve S and OP process"@en ;
     skos:notation "BP.026"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:StockKeepingUnit
@@ -2798,6 +3441,8 @@ scor:StockKeepingUnit
       rdfs:label "Stock keeping Unit (SKU) Rationalization/Cost of Sales Analysis"@en ;
     skos:notation "BP.031"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DelayInboundSupplierShipments
@@ -2806,6 +3451,8 @@ scor:DelayInboundSupplierShipments
       rdfs:label "Delay Inbound Supplier Shipments"@en ;
     skos:notation "BP.045"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ExpediteOutboundCustomerShipments
@@ -2814,6 +3461,8 @@ scor:ExpediteOutboundCustomerShipments
       rdfs:label "Expedite Outbound Customer Shipments"@en ;
     skos:notation "BP.046"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReturnAuthorization
@@ -2822,6 +3471,8 @@ scor:ReturnAuthorization
       rdfs:label "Return Authorization"@en ;
     skos:notation "BP.135"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:OutsourcedReverseLogistics
@@ -2830,6 +3481,8 @@ scor:OutsourcedReverseLogistics
       rdfs:label "Outsourced Reverse Logistics"@en ;
     skos:notation "BP.136"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PurchaseOrderManagement
@@ -2838,6 +3491,8 @@ scor:PurchaseOrderManagement
       rdfs:label "Purchase Order Management"@en ;
     skos:notation "BP.144"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CrossDocking
@@ -2846,6 +3501,8 @@ scor:CrossDocking
       rdfs:label "Cross-Docking"@en ;
     skos:notation "BP.146"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:WayDeliveryVerification
@@ -2854,6 +3511,8 @@ scor:WayDeliveryVerification
       rdfs:label "3-Way Delivery Verification"@en ;
     skos:notation "BP.148"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:RotableSparesPool
@@ -2862,6 +3521,8 @@ scor:RotableSparesPool
       rdfs:label "Rotable Spares Pool"@en ;
     skos:notation "BP.168"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BeyondEconomicRepairManagement
@@ -2870,6 +3531,8 @@ scor:BeyondEconomicRepairManagement
       rdfs:label "Beyond Economic Repair (BER) Management"@en ;
     skos:notation "BP.169"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 # Emerging Practice Individuals
@@ -2881,6 +3544,8 @@ scor:DemandPlanningForecasting
     rdfs:label "Demand Planning Forecasting"@en ;
     skos:notation "BP.014"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SupplyNetworkPlanning
@@ -2889,6 +3554,8 @@ scor:SupplyNetworkPlanning
     rdfs:label "Supply Network Planning"@en ;
     skos:notation "BP.016"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DemandManagement
@@ -2897,6 +3564,8 @@ scor:DemandManagement
       rdfs:label "Demand Management"@en ;
     skos:notation "BP.020"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BusinessRuleManagement
@@ -2905,6 +3574,8 @@ scor:BusinessRuleManagement
     rdfs:label "Business Rule Management"@en ;
       skos:notation "BP.023"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SupplyChainOptimization
@@ -2913,6 +3584,8 @@ scor:SupplyChainOptimization
       rdfs:label "Supply Chain Optimization"@en ;
     skos:notation "BP.024"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SelfServiceWarrantyClaimSubmittal
@@ -2921,6 +3594,8 @@ scor:SelfServiceWarrantyClaimSubmittal
       rdfs:label "Self-Service Warranty Claim Submittal"@en ;
     skos:notation "BP.025"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BusinessRuleReview
@@ -2929,6 +3604,8 @@ scor:BusinessRuleReview
       rdfs:label "Business Rule Review"@en ;
     skos:notation "BP.035"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LeanPlanning
@@ -2937,6 +3614,8 @@ scor:LeanPlanning
     rdfs:label "Lean Planning"@en ;
     skos:notation "BP.049"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReturnsReceivingRefurbishment
@@ -2945,6 +3624,8 @@ scor:ReturnsReceivingRefurbishment
     rdfs:label "Returns Receiving Refurbishment"@en ;
     skos:notation "BP.073"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LoanerProgram
@@ -2953,6 +3634,8 @@ scor:LoanerProgram
     rdfs:label "Loaner Program"@en ;
     skos:notation "BP.079"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MobileAccessOfInformation
@@ -2961,6 +3644,8 @@ scor:MobileAccessOfInformation
     rdfs:label "Mobile Access of Information"@en ;
     skos:notation "BP.098"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReturnPolicyConformanceIntegration
@@ -2969,6 +3654,8 @@ scor:ReturnPolicyConformanceIntegration
     rdfs:label "Return Policy Conformance Integration"@en ;
     skos:notation "BP.108"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CarcassPrepositioning
@@ -2977,6 +3664,8 @@ scor:CarcassPrepositioning
     rdfs:label "Carcass Prepositioning"@en ;
     skos:notation "BP.109"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EmbedSpecializedServices
@@ -2985,6 +3674,8 @@ scor:EmbedSpecializedServices
     rdfs:label "Embed Specialized Services"@en ;
     skos:notation "BP.117"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:TransportationManagementOutsourcing
@@ -2993,6 +3684,8 @@ scor:TransportationManagementOutsourcing
       rdfs:label "Transportation Management Outsourcing"@en ;
     skos:notation "BP.118"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ThreeDPrintRapidProtoyping
@@ -3001,6 +3694,8 @@ scor:ThreeDPrintRapidProtoyping
       rdfs:label "3D Print Rapid Protoyping"@en ;
     skos:notation "BP.120"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DigitalPackagingOnDemand
@@ -3009,6 +3704,8 @@ scor:DigitalPackagingOnDemand
     rdfs:label "Digital Packaging on Demand"@en ;
     skos:notation "BP.121"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CarcassDisassembly
@@ -3017,6 +3714,8 @@ scor:CarcassDisassembly
       rdfs:label "Carcass Disassembly"@en ;
     skos:notation "BP.137"@en ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BarCodingRFID
@@ -3025,6 +3724,8 @@ scor:BarCodingRFID
       rdfs:label "Bar Coding RFID"@en ;
     skos:notation "BP.153"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EnterpriseLevelSpendAnalysis
@@ -3033,6 +3734,8 @@ scor:EnterpriseLevelSpendAnalysis
     rdfs:label "Enterprise Level Spend Analysis"@en ;
     skos:notation "BP.161"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:LongTermSupplierAgreementPartnership
@@ -3041,6 +3744,8 @@ scor:LongTermSupplierAgreementPartnership
     rdfs:label "Long Term Supplier Agreement Partnership"@en ;
     skos:notation "BP.162"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MixedModeReverseMaterialIssue
@@ -3049,6 +3754,8 @@ scor:MixedModeReverseMaterialIssue
     rdfs:label "Mixed Mode Reverse Material Issue"@en ;
     skos:notation "BP.171"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ProductionSchedulingOptimizationUsingTech
@@ -3057,6 +3764,8 @@ scor:ProductionSchedulingOptimizationUsingTech
     rdfs:label "Production Scheduling Optimization Using Tech"@en ;
     skos:notation "BP.172"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 
@@ -3068,6 +3777,8 @@ scor:SCRiskManagement
     rdfs:label "Supply Chain Risk Management"@en  ;
     skos:notation "BP.001"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:RiskManagementStrategies
@@ -3076,6 +3787,8 @@ scor:RiskManagementStrategies
     rdfs:label "Risk Management Strategies"@en  ;
     skos:notation "BP.002"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SingleMinuteExchangeOfDie
@@ -3084,6 +3797,8 @@ scor:SingleMinuteExchangeOfDie
     rdfs:label "Single-Minute Exchange of Die (SMED)"@en  ;
     skos:notation "BP.003"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:NetworkPrioritizationForRiskIdentification
@@ -3092,6 +3807,8 @@ scor:NetworkPrioritizationForRiskIdentification
     rdfs:label "Network Prioritization for Risk Identification"@en  ;
     skos:notation "BP.004"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SelfInvoicing
@@ -3100,6 +3817,8 @@ scor:SelfInvoicing
     rdfs:label "Self-Invoicing"@en  ;
     skos:notation "BP.005"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BaselineInventoryMonitoring
@@ -3108,6 +3827,8 @@ scor:BaselineInventoryMonitoring
     rdfs:label "Baseline Inventory Monitoring"@en  ;
     skos:notation "BP.007"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ProductionLineSequencing
@@ -3116,6 +3837,8 @@ scor:ProductionLineSequencing
     rdfs:label "Production Line Sequencing"@en  ;
     skos:notation "BP.011"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PullBasedInventoryReplenishment
@@ -3124,6 +3847,8 @@ scor:PullBasedInventoryReplenishment
     rdfs:label "Pull-Based Inventory Replenishment"@en  ;
     skos:notation "BP.027"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InventoryOptimization
@@ -3132,6 +3857,8 @@ scor:InventoryOptimization
     rdfs:label "Inventory Optimization"@en  ;
     skos:notation "BP.028"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InventoryManagementBP029
@@ -3140,6 +3867,8 @@ scor:InventoryManagementBP029
     rdfs:label "Inventory Management Using Supply Chain Network Optimization"@en  ;
     skos:notation "BP.029"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InventoryRecordAccuracy
@@ -3148,6 +3877,8 @@ scor:InventoryRecordAccuracy
     rdfs:label "Inventory Record Accuracy"@en  ;
     skos:notation "BP.030"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReduceSlowMovingInventory
@@ -3156,6 +3887,8 @@ scor:ReduceSlowMovingInventory
     rdfs:label "Reduce / Write-off Slow Moving Inventory"@en  ;
     skos:notation "BP.032"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:TraditionalDemandForecastingImprovement
@@ -3164,6 +3897,8 @@ scor:TraditionalDemandForecastingImprovement
     rdfs:label "Traditional Demand Forecasting Improvement"@en  ;
     skos:notation "BP.033"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ExtendInventoryBP34
@@ -3172,6 +3907,8 @@ scor:ExtendInventoryBP34
     rdfs:label "Extend Inventory Planning using Collaboration (Key Suppliers)"@en  ;
     skos:notation "BP.034"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ConsignmentInventoryWithSuppliers
@@ -3180,6 +3917,8 @@ scor:ConsignmentInventoryWithSuppliers
     rdfs:label "Consignment Inventory with Key Suppliers"@en  ;
     skos:notation "BP.036"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManufacturingDirectDropShipment
@@ -3188,6 +3927,8 @@ scor:ManufacturingDirectDropShipment
     rdfs:label "Manufacturing Direct/Drop Shipment"@en  ;
     skos:notation "BP.037"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:BatchSizeReduction
@@ -3196,6 +3937,8 @@ scor:BatchSizeReduction
     rdfs:label "Batch Size Reduction"@en  ;
     skos:notation "BP.038"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:RightSizeFrequencyOfProductionWheel
@@ -3204,6 +3947,8 @@ scor:RightSizeFrequencyOfProductionWheel
     rdfs:label "Right Size Frequency of Production Wheel"@en  ;
     skos:notation "BP.039"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MTOOrderFulfillmentStrategy
@@ -3212,6 +3957,8 @@ scor:MTOOrderFulfillmentStrategy
     rdfs:label "MTO Order Fulfillment Strategy"@en  ;
     skos:notation "BP.040"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:TransportationOptimization
@@ -3220,6 +3967,8 @@ scor:TransportationOptimization
     rdfs:label "Transportation Optimization"@en  ;
     skos:notation "BP.041"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReviewOfProcurementTermsConditions
@@ -3228,6 +3977,8 @@ scor:ReviewOfProcurementTermsConditions
     rdfs:label "Regular Review of Procurement Terms and Conditions"@en  ;
     skos:notation "BP.042"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ConsignmentInventoryReduction
@@ -3236,6 +3987,8 @@ scor:ConsignmentInventoryReduction
     rdfs:label "Consignment Inventory Reduction"@en  ;
     skos:notation "BP.043"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InventoryFinancingEvaluation
@@ -3244,6 +3997,8 @@ scor:InventoryFinancingEvaluation
     rdfs:label "Inventory Financing Evaluation"@en  ;
     skos:notation "BP.044"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:FinishedGoodsInventoryPostponement
@@ -3252,6 +4007,8 @@ scor:FinishedGoodsInventoryPostponement
     rdfs:label "Finished Goods Inventory Postponement"@en  ;
     skos:notation "BP.047"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InventoryIncentives
@@ -3260,6 +4017,8 @@ scor:InventoryIncentives
     rdfs:label "Inventory incentives / promotions for customers"@en  ;
     skos:notation "BP.048"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CustomerIncentives
@@ -3268,6 +4027,8 @@ scor:CustomerIncentives
     rdfs:label "Customer Incentives/Promotions for Large Inventory Purchases"@en  ;
     skos:notation "BP.050"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EmbedInventoryManagementGoals
@@ -3276,6 +4037,8 @@ scor:EmbedInventoryManagementGoals
     rdfs:label "Embed Inventory Management Goals"@en  ;
     skos:notation "BP.051"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:DesignForLogisticsManagement
@@ -3284,6 +4047,8 @@ scor:DesignForLogisticsManagement
     rdfs:label "Design for Logistics (DFL) Management"@en  ;
     skos:notation "BP.052"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManufacturingReliabilityImprovement
@@ -3292,6 +4057,8 @@ scor:ManufacturingReliabilityImprovement
     rdfs:label "Manufacturing Reliability Improvement"@en  ;
     skos:notation "BP.053"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ManufacturingQualityImprovementsBP054
@@ -3300,6 +4067,8 @@ scor:ManufacturingQualityImprovementsBP054
     rdfs:label "Manufacturing Quality Improvements for Return Reduction"@en  ;
     skos:notation "BP.054"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:FreightCarrierDeliveryBP55
@@ -3308,6 +4077,8 @@ scor:FreightCarrierDeliveryBP55
     rdfs:label "Freight Carrier Delivery Performance Evaluation"@en  ;
     skos:notation "BP.055"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SupplierRawMaterialBP56
@@ -3316,6 +4087,8 @@ scor:SupplierRawMaterialBP56
     rdfs:label "Supplier Raw Material Quality Improvement"@en  ;
     skos:notation "BP.056"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InventoryManagementTraining
@@ -3324,6 +4097,8 @@ scor:InventoryManagementTraining
     rdfs:label "Inventory Management Training"@en  ;
     skos:notation "BP.058"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:EmployeeIncentivesInventoryBP59
@@ -3332,6 +4107,8 @@ scor:EmployeeIncentivesInventoryBP59
     rdfs:label "Employee Incentives for Effective Inventory Management"@en  ;
     skos:notation "BP.059"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:OrderLeadTimeCorrectiveAction
@@ -3340,6 +4117,8 @@ scor:OrderLeadTimeCorrectiveAction
     rdfs:label "Order Lead Time Corrective Action"@en  ;
     skos:notation "BP.060"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReduceNonStrategicInventoryLevel
@@ -3348,6 +4127,8 @@ scor:ReduceNonStrategicInventoryLevel
     rdfs:label "Reduce Non-Strategic Inventory Level"@en  ;
     skos:notation "BP.061"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:MasterDataAccuracy
@@ -3356,6 +4137,8 @@ scor:MasterDataAccuracy
     rdfs:label "Master Data Accuracy"@en  ;
     skos:notation "BP.061"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:OptimizeSourcingDecisionsBP63
@@ -3364,6 +4147,8 @@ scor:OptimizeSourcingDecisionsBP63
     rdfs:label "Optimize Sourcing Decisions to Local Source Point"@en  ;
     skos:notation "BP.063"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SafetyStockReduction
@@ -3372,6 +4157,8 @@ scor:SafetyStockReduction
     rdfs:label "Safety Stock Reduction"@en  ;
     skos:notation "BP.064"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SeasonalPackagingChange
@@ -3380,6 +4167,8 @@ scor:SeasonalPackagingChange
     rdfs:label "Seasonal Packaging Reduction/Removal"@en  ;
     skos:notation "BP.065"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReduceReturnsInventoryBP66
@@ -3388,6 +4177,8 @@ scor:ReduceReturnsInventoryBP66
     rdfs:label "Returns Policy to Reduce Returns Inventory"@en  ;
     skos:notation "BP.066"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ReturnsInventoryReduction
@@ -3396,6 +4187,8 @@ scor:ReturnsInventoryReduction
     rdfs:label "Returns Inventory Reduction"@en  ;
     skos:notation "BP.067"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:SupplierDeliveryPerformanceAnalysis
@@ -3404,6 +4197,8 @@ scor:SupplierDeliveryPerformanceAnalysis
     rdfs:label "Supplier Delivery Performance Analysis"@en  ;
     skos:notation "BP.068"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:RawMaterialsReceivingProcess
@@ -3412,6 +4207,8 @@ scor:RawMaterialsReceivingProcess
     rdfs:label "Raw Materials Receiving Process"@en  ;
     skos:notation "BP.069"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:PlanningInventoryTraining
@@ -3420,6 +4217,8 @@ scor:PlanningInventoryTraining
     rdfs:label "Planning/scheduling inventory training"@en  ;
     skos:notation "BP.070"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:CostsInventoryStockingBP71
@@ -3428,6 +4227,8 @@ scor:CostsInventoryStockingBP71
     rdfs:label "Freight Costs and Inventory Stocking Optimization"@en  ;
     skos:notation "BP.071"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:InboundRMAEnabledProcessing
@@ -3436,6 +4237,8 @@ scor:InboundRMAEnabledProcessing
     rdfs:label "Inbound RMA-enabled Processing"@en  ;
     skos:notation "BP.072"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:ProcessMetricsAlignment
@@ -3444,6 +4247,8 @@ scor:ProcessMetricsAlignment
     rdfs:label "Process/Metrics Alignment"@en  ;
     skos:notation "BP.074"@en  ;
     rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 
