@@ -119,16 +119,13 @@ scor:Training
 
 schema:Person
     rdf:type owl:Class ;
-    rdfs:comment "Models person in a Supply Chain" ;
+    rdfs:comment "Models person in a Supply Chain"@en ;
     rdfs:label "Person"@en ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
  .
 
 scor:Practice
     rdf:type owl:Class ;
-    rdfs:comment "A practice is a unique way to configure a process or a set of processes" ;
+    rdfs:comment "A practice is a unique way to configure a process or a set of processes"@en ;
     rdfs:label "Practice"@en ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -148,7 +145,7 @@ scor:Process
 
 scor:BestPractice
     rdf:type owl:Class ;
-    rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proved and positive impact on supply chain performance" ;
+    rdfs:comment "Best practices are 'current', 'structured' and 'repeatable' practices that have had a proved and positive impact on supply chain performance"@en ;
     rdfs:label "Best Practice"@en ;
     rdfs:subClassOf scor:Practice ;
     skos:notation "BP.B" ;
@@ -159,7 +156,7 @@ scor:BestPractice
 
 scor:EmergingPractice
     rdf:type owl:Class ;
-    rdfs:comment "Introduce new technology, knowledge or radically different ways of organizing processes" ;
+    rdfs:comment "Introduce new technology, knowledge or radically different ways of organizing processes"@en ;
     rdfs:label "Emerging Practice"@en ;
     rdfs:subClassOf scor:Practice ;
     skos:notation "BP.E" ;
@@ -170,7 +167,7 @@ scor:EmergingPractice
 
 scor:StandardPractice
     rdf:type owl:Class ;
-    rdfs:comment "How a wide range of companies have historically done business by default or happenstance" ;
+    rdfs:comment "How a wide range of companies have historically done business by default or happenstance"@en ;
     rdfs:label "Standard Practice"@en ;
     rdfs:subClassOf scor:Practice ;
     skos:notation "BP.S" ;
@@ -839,7 +836,7 @@ scor:EstablishCommunicateReturnPlans
 scor:ScheduleProductDeliveries
     rdf:type owl:Class ;
     rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against an existing contract or purchase order."@en ;
-    rdfs:label "Schedule Product Deliveries"@en ;
+    rdfs:label "Schedule Product Deliveries (Source Stocked Product)"@en ;
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.1" ;
     rdfs:isDefinedBy scor: ;
@@ -850,7 +847,7 @@ scor:ScheduleProductDeliveries
 scor:ReceiveProduct
     rdf:type owl:Class ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
-    rdfs:label "Receive Product"@en ;
+    rdfs:label "Receive Product (Source Stocked Product)"@en ;
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.2" ;
     rdfs:isDefinedBy scor: ;
@@ -861,7 +858,7 @@ scor:ReceiveProduct
 scor:VerifyProduct
     rdf:type owl:Class ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
-    rdfs:label "Verify Product"@en ;
+    rdfs:label "Verify Product (Source Stocked Product)"@en ;
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.3" ;
     rdfs:isDefinedBy scor: ;
@@ -872,7 +869,7 @@ scor:VerifyProduct
 scor:TransferProduct
     rdf:type owl:Class ;
     rdfs:comment "The transfer of accepted product to the appropriate stocking location within the supply chain."@en ;
-    rdfs:label "Transfer Product"@en ;
+    rdfs:label "Transfer Product (Source Stocked Product)"@en ;
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.4" ;
     rdfs:isDefinedBy scor: ;
@@ -883,7 +880,7 @@ scor:TransferProduct
 scor:AuthorizeSupplierPayment
     rdf:type owl:Class ;
     rdfs:comment "The process of authorizing payments and paying suppliers for product or services."@en ;
-    rdfs:label "Authorize Supplier Payment"@en ;
+    rdfs:label "Authorize Supplier Payment (Source Stocked Product)"@en ;
     rdfs:subClassOf scor:SourceStockedProduct ;
     skos:notation "sS1.5" ;
     rdfs:isDefinedBy scor: ;
@@ -896,7 +893,7 @@ scor:AuthorizeSupplierPayment
 scor:ScheduleProductDeliveries
     rdf:type owl:Class ;
     rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against the contract."@en ;
-    rdfs:label "Schedule Product Deliveries"@en ;
+    rdfs:label "Schedule Product Deliveries (Source Make To Order Product)"@en ;
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.1" ;
     rdfs:isDefinedBy scor: ;
@@ -907,7 +904,7 @@ scor:ScheduleProductDeliveries
 scor:SourceMakeToOrderReceiveProduct
     rdf:type owl:Class ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
-    rdfs:label "Receive Product"@en ;
+    rdfs:label "Receive Product (Source Make To Order Product)"@en ;
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.2" ;
     rdfs:isDefinedBy scor: ;
@@ -918,7 +915,7 @@ scor:SourceMakeToOrderReceiveProduct
 scor:SourceMakeToOrderVerifyProduct
     rdf:type owl:Class ;
     rdfs:comment "The process and actions required determining product conformance to requirements and criteria."@en ;
-    rdfs:label "Verify Product"@en ;
+    rdfs:label "Verify Product (Source Make To Order Product)"@en ;
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.3" ;
     rdfs:isDefinedBy scor: ;
@@ -929,7 +926,7 @@ scor:SourceMakeToOrderVerifyProduct
 scor:SourceMakeToOrderTransferProduct
     rdf:type owl:Class ;
     rdfs:comment "The transfer of accepted product to the appropriate stocking location within the supply chain."@en ;
-    rdfs:label "Transfer Product"@en ;
+    rdfs:label "Transfer Product (Source Make To Order Product)"@en ;
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.4" ;
     rdfs:isDefinedBy scor: ;
@@ -940,7 +937,7 @@ scor:SourceMakeToOrderTransferProduct
 scor:SourceMakeToOrderAuthorizeSupplierPayment
     rdf:type owl:Class ;
     rdfs:comment "The process of authorizing payments and paying suppliers for product or services."@en ;
-    rdfs:label "Supplier Payment"@en ;
+    rdfs:label "Supplier Payment (Source Make To Order Product)"@en ;
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
     skos:notation "sS2.4" ;
     rdfs:isDefinedBy scor: ;
@@ -975,7 +972,7 @@ scor:SelectFinalSupplierNegotiate
 scor:ScheduleProductDeliveries
     rdf:type owl:Class ;
     rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against the contract."@en ;
-    rdfs:label "Schedule Product Deliveries"@en ;
+    rdfs:label "Schedule Product Deliveries (Source Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.3" ;
     rdfs:isDefinedBy scor: ;
@@ -986,7 +983,7 @@ scor:ScheduleProductDeliveries
 scor:SourceEngineerToOrderReceiveProduct
     rdf:type owl:Class ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
-    rdfs:label "Receive Product"@en ;
+    rdfs:label "Receive Product (Source Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.4" ;
     rdfs:isDefinedBy scor: ;
@@ -997,7 +994,7 @@ scor:SourceEngineerToOrderReceiveProduct
 scor:SourceEngineerToOrderVerifyProduct
     rdf:type owl:Class ;
     rdfs:comment "The process and actions required determining product conformance to requirements and criteria."@en ;
-    rdfs:label "Verify Product"@en ;
+    rdfs:label "Verify Product (Source Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.5" ;
     rdfs:isDefinedBy scor: ;
@@ -1008,7 +1005,7 @@ scor:SourceEngineerToOrderVerifyProduct
 scor:SourceEngineerToOrderTransferProduct
     rdf:type owl:Class ;
     rdfs:comment "The transfer of accepted product to the appropriate stocking location within the supply chain."@en ;
-    rdfs:label "Transfer Product"@en ;
+    rdfs:label "Transfer Product (Source Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.6" ;
     rdfs:isDefinedBy scor: ;
@@ -1019,7 +1016,7 @@ scor:SourceEngineerToOrderTransferProduct
 scor:SourceEngineerToOrderAuthorizeSupplierPayment
     rdf:type owl:Class ;
     rdfs:comment "The process of authorizing payments and paying suppliers for product or services. This process includes invoice collection, invoice matching and the issuance of checks."@en ;
-    rdfs:label "Authorize Supplier Payment"@en ;
+    rdfs:label "Authorize Supplier Payment (Source Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:SourceEngineerToOrderProduct ;
     skos:notation "sS3.7" ;
     rdfs:isDefinedBy scor: ;
@@ -1032,7 +1029,7 @@ scor:SourceEngineerToOrderAuthorizeSupplierPayment
 scor:ScheduleProductionActivities
     rdf:type owl:Class ;
     rdfs:comment "Given plans for the production of specific parts, products, or formulations in specified quantities and planned availability of required sourced products, the scheduling of the operations to be performed in accordance with these plans."@en ;
-    rdfs:label "Schedule Production Activities"@en ;
+    rdfs:label "Schedule Production Activities (Make To Stock)"@en ;
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.1" ;
     rdfs:isDefinedBy scor: ;
@@ -1054,7 +1051,7 @@ scor:IssueMaterial
 scor:ProduceTest
     rdf:type owl:Class ;
     rdfs:comment "The series of activities performed upon sourced/in-process product to convert it from the raw or semi-finished state to a state of completion and greater value."@en ;
-    rdfs:label "Produce and Test"@en ;
+    rdfs:label "Produce and Test (Make To Stock)"@en ;
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.3" ;
     rdfs:isDefinedBy scor: ;
@@ -1065,7 +1062,7 @@ scor:ProduceTest
 scor:Package
     rdf:type owl:Class ;
     rdfs:comment "The series of activities that containerize completed products for storage or sale to end-users."@en ;
-    rdfs:label "Package"@en ;
+    rdfs:label "Package (Make To Stock)"@en ;
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.4" ;
     rdfs:isDefinedBy scor: ;
@@ -1087,7 +1084,7 @@ scor:StageProduct
 scor:ReleaseProductToDeliver
     rdf:type owl:Class ;
     rdfs:comment "Activities associated with post-production documentation, testing, or certification required prior to delivery of finished product to customer."@en ;
-    rdfs:label "Release Product to Deliver"@en ;
+    rdfs:label "Release Product to Deliver (Make To Stock)"@en ;
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.6" ;
     rdfs:isDefinedBy scor: ;
@@ -1098,7 +1095,7 @@ scor:ReleaseProductToDeliver
 scor:WasteDisposal
     rdf:type owl:Class ;
     rdfs:comment "Activities associated with collecting and managing waste produced during the produce and test process including scrap material and non-conforming product."@en ;
-    rdfs:label "Waste Disposal"@en ;
+    rdfs:label "Waste Disposal (Make To Stock)"@en ;
     rdfs:subClassOf scor:MakeToStock ;
     skos:notation "sM1.7" ;
     rdfs:isDefinedBy scor: ;
@@ -1111,7 +1108,7 @@ scor:WasteDisposal
 scor:MakeToOrderScheduleProductionActivities
     rdf:type owl:Class ;
     rdfs:comment "Given plans for the production of specific parts, products, or formulations in specific quantities and planned availability of required sourced products, the scheduling of the operations to be preformed in accordance with these plans."@en ;
-    rdfs:label "Schedule Production Activities"@en ;
+    rdfs:label "Schedule Production Activities (Make To Order)"@en ;
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.1" ;
     rdfs:isDefinedBy scor: ;
@@ -1122,7 +1119,7 @@ scor:MakeToOrderScheduleProductionActivities
 scor:IssueSourcedInProcessProduct
     rdf:type owl:Class ;
     rdfs:comment "The selection and physical movement of sourced/in-process products (e.g., raw materials, fabricated components, subassemblies, required ingredients or intermediate formulations) from a stocking location (e.g., stockroom, a location on the production floor, a supplier) to a specific point of use location."@en ;
-    rdfs:label "Issue Sourced In-Process Product"@en ;
+    rdfs:label "Issue Sourced In-Process Product (Make To Order)"@en ;
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.2" ;
     rdfs:isDefinedBy scor: ;
@@ -1133,7 +1130,7 @@ scor:IssueSourcedInProcessProduct
 scor:MakeToOrderProduceTest
     rdf:type owl:Class ;
     rdfs:comment "The series of activities performed upon sourced/in-process product to convert it from the raw or semi-finished state to a state of completion and greater value."@en ;
-    rdfs:label "Produce and Test"@en ;
+    rdfs:label "Produce and Test (Make to Order)"@en ;
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.3" ;
     rdfs:isDefinedBy scor: ;
@@ -1144,7 +1141,7 @@ scor:MakeToOrderProduceTest
 scor:MakeToOrderPackage
     rdf:type owl:Class ;
     rdfs:comment "The series of activities that containerize completed products for storage or sale to end-users."@en ;
-    rdfs:label "Package"@en ;
+    rdfs:label "Package (Make To Order)"@en ;
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.4" ;
     rdfs:isDefinedBy scor: ;
@@ -1155,7 +1152,7 @@ scor:MakeToOrderPackage
 scor:StageFinishedProduct
     rdf:type owl:Class ;
     rdfs:comment "The movement of packaged products into a temporary holding location to await movement to a finished goods location."@en ;
-    rdfs:label "Stage Finished Product"@en ;
+    rdfs:label "Stage Finished Product (Make To Order)"@en ;
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.5" ;
     rdfs:isDefinedBy scor: ;
@@ -1177,7 +1174,7 @@ scor:ReleaseFinishedProductToDeliver
 scor:MakeToOrderWasteDisposal
     rdf:type owl:Class ;
     rdfs:comment "Activities associated with collecting and managing waste produced during the produce and test process including scrap material and non-conforming product."@en ;
-    rdfs:label "Waste Disposal"@en ;
+    rdfs:label "Waste Disposal (Make To Order)"@en ;
     rdfs:subClassOf scor:MakeToOrder ;
     skos:notation "sM2.7" ;
     rdfs:isDefinedBy scor: ;
@@ -1201,7 +1198,7 @@ scor:FinalizeProductionEngineering
 scor:EngineerToOrderScheduleProductionActivities
     rdf:type owl:Class ;
     rdfs:comment "Given plans for the production of specific parts, products, or formulations in specified quantities and planned availability of required sourced products, the scheduling of the operations to be performed in accordance with these plans"@en ;
-    rdfs:label "Schedule Production Activities"@en ;
+    rdfs:label "Schedule Production Activities (Engineer To Order)"@en ;
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.2" ;
     rdfs:isDefinedBy scor: ;
@@ -1212,7 +1209,7 @@ scor:EngineerToOrderScheduleProductionActivities
 scor:EngineerToOrderSourcedInProcessProduct
     rdf:type owl:Class ;
     rdfs:comment "The selection and physical movement of sourced/in-process products (e.g., raw materials, fabricated components, subassemblies, required ingredients or intermediate formulations) from a stocking location (e.g., stockroom, a location on the production floor, a supplier) to a specific point of use location"@en ;
-    rdfs:label "Issue Sourced In-Process Product"@en ;
+    rdfs:label "Issue Sourced In-Process Product (Engineer To Order)"@en ;
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.3" ;
     rdfs:isDefinedBy scor: ;
@@ -1223,7 +1220,7 @@ scor:EngineerToOrderSourcedInProcessProduct
 scor:EngineerToOrderProduceTest
     rdf:type owl:Class ;
     rdfs:comment "The series of activities performed upon sourced/in-process product to convert it from the raw or semi-finished state to a state of completion and greater value"@en ;
-    rdfs:label "Produce and Test"@en ;
+    rdfs:label "Produce and Test (Engineer to Order)"@en ;
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.4" ;
     rdfs:isDefinedBy scor: ;
@@ -1234,7 +1231,7 @@ scor:EngineerToOrderProduceTest
 scor:EngineerToOrderPackage
     rdf:type owl:Class ;
     rdfs:comment "The series of activities that containerize completed products for storage or sale to end-users."@en ;
-    rdfs:label "Package"@en ;
+    rdfs:label "Package (Engineer To Order)"@en ;
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.5" ;
     rdfs:isDefinedBy scor: ;
@@ -1245,7 +1242,7 @@ scor:EngineerToOrderPackage
 scor:EngineerToOrderStageFinishedProduct
     rdf:type owl:Class ;
     rdfs:comment "The movement of packaged products into a temporary holding location to await movement to a finished goods location."@en ;
-    rdfs:label "Stage Finished Product"@en ;
+    rdfs:label "Stage Finished Product (Engineer To Order)"@en ;
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.6" ;
     rdfs:isDefinedBy scor: ;
@@ -1256,7 +1253,7 @@ scor:EngineerToOrderStageFinishedProduct
 scor:EngineerToOrderReleaseProductToDeliver
     rdf:type owl:Class ;
     rdfs:comment "Activities associated with post-production documentation, testing, or certification required prior to delivery of finished product to customer."@en ;
-    rdfs:label "Release Product to Deliver"@en ;
+    rdfs:label "Release Product to Deliver (Engineer To Order)"@en ;
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.7" ;
     rdfs:isDefinedBy scor: ;
@@ -1267,7 +1264,7 @@ scor:EngineerToOrderReleaseProductToDeliver
 scor:EngineerToOrderWasteDisposal
     rdf:type owl:Class ;
     rdfs:comment "Activities associated with collecting and managing waste produced during the produce and test process including scrap material and non-conforming product."@en ;
-    rdfs:label "Waste Disposal"@en ;
+    rdfs:label "Waste Disposal (Engineer To Order)"@en ;
     rdfs:subClassOf scor:EngineerToOrder ;
     skos:notation "sM3.8" ;
     rdfs:isDefinedBy scor: ;
@@ -1280,7 +1277,7 @@ scor:EngineerToOrderWasteDisposal
 scor:ProcessInquiryQuote
     rdf:type owl:Class ;
     rdfs:comment "Receive and respond to general customer inquiries and requests for quotes."@en ;
-    rdfs:label "Process Inquiry and Quote"@en ;
+    rdfs:label "Process Inquiry and Quote (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.1" ;
     rdfs:isDefinedBy scor: ;
@@ -1302,7 +1299,7 @@ scor:ReceiveEnterValidateOrder
 scor:ReserveInventoryDetermineDeliveryDate
     rdf:type owl:Class ;
     rdfs:comment "Inventory (both on hand and scheduled) is identified and reserved for specific orders and a delivery date is committed and scheduled."@en ;
-    rdfs:label "Reserve Inventory and Determine Delivery Date"@en ;
+    rdfs:label "Reserve Inventory and Determine Delivery Date (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.3" ;
     rdfs:isDefinedBy scor: ;
@@ -1313,7 +1310,7 @@ scor:ReserveInventoryDetermineDeliveryDate
 scor:ConsolidateOrders
     rdf:type owl:Class ;
     rdfs:comment "The process of analyzing orders to determine the groupings that result in least cost/best service fulfillment and transportation."@en ;
-    rdfs:label "Consolidate Orders"@en ;
+    rdfs:label "Consolidate Orders (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.4" ;
     rdfs:isDefinedBy scor: ;
@@ -1324,7 +1321,7 @@ scor:ConsolidateOrders
 scor:BuildLoads
     rdf:type owl:Class ;
     rdfs:comment "Transportation modes are selected and efficient loads are built."@en ;
-    rdfs:label "Build Loads"@en ;
+    rdfs:label "Build Loads (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.5" ;
     rdfs:isDefinedBy scor: ;
@@ -1335,7 +1332,7 @@ scor:BuildLoads
 scor:RouteShipments
     rdf:type owl:Class ;
     rdfs:comment "Loads are consolidated and routed by mode, lane and location."@en ;
-    rdfs:label "Route Shipments"@en ;
+    rdfs:label "Route Shipments (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.6" ;
     rdfs:isDefinedBy scor: ;
@@ -1346,7 +1343,7 @@ scor:RouteShipments
 scor:SelectCarriersRateShipments
     rdf:type owl:Class ;
     rdfs:comment "Specific carriers are selected by lowest cost per route and shipments are rated and tendered."@en ;
-    rdfs:label "Select Carriers and Rate Shipments"@en ;
+    rdfs:label "Select Carriers and Rate Shipments (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.7" ;
     rdfs:isDefinedBy scor: ;
@@ -1357,7 +1354,7 @@ scor:SelectCarriersRateShipments
 scor:ReceiveProductFromSourceMake
     rdf:type owl:Class ;
     rdfs:comment "The activities such as receiving product, verifying, recording product receipt, determining put-away location, putting away and recording location that a company performs at its own warehouses."@en ;
-    rdfs:label "Receive Product from Source or Make"@en ;
+    rdfs:label "Receive Product from Source or Make (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.8" ;
     rdfs:isDefinedBy scor: ;
@@ -1368,7 +1365,7 @@ scor:ReceiveProductFromSourceMake
 scor:PickProduct
     rdf:type owl:Class ;
     rdfs:comment "The series of activities including retrieving orders to pick, determining inventory availability, building the pick wave, picking the product, recording the pick and delivering product to shipping in response to an order."@en ;
-    rdfs:label "Pick Product"@en ;
+    rdfs:label "Pick Product (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.9" ;
     rdfs:isDefinedBy scor: ;
@@ -1379,7 +1376,7 @@ scor:PickProduct
 scor:PackProduct
     rdf:type owl:Class ;
     rdfs:comment "The activities such as sorting / combining the products, packing / kitting the products, paste labels, barcodes etc. and delivering the products to the shipping area for loading."@en ;
-    rdfs:label "Pack Product"@en ;
+    rdfs:label "Pack Product (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.10" ;
     rdfs:isDefinedBy scor: ;
@@ -1401,7 +1398,7 @@ scor:LoadVehicleGenerateShippingDocuments
 scor:ShipProduct
     rdf:type owl:Class ;
     rdfs:comment "The process of shipping the product to the customer site."@en ;
-    rdfs:label "Ship Product"@en ;
+    rdfs:label "Ship Product (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.12" ;
     rdfs:isDefinedBy scor: ;
@@ -1412,7 +1409,7 @@ scor:ShipProduct
 scor:ReceiveVerifyProductByCustomer
     rdf:type owl:Class ;
     rdfs:comment "The process of receiving the shipment by the customer (either at customer site or at shipping area in case of self-collection) and verifying that the order was shipped complete and that the product meets delivery terms."@en ;
-    rdfs:label "Receive and verify Product by Customer"@en ;
+    rdfs:label "Receive and verify Product by Customer (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.13" ;
     rdfs:isDefinedBy scor: ;
@@ -1423,7 +1420,7 @@ scor:ReceiveVerifyProductByCustomer
 scor:InstallProduct
     rdf:type owl:Class ;
     rdfs:comment "the process of preparing, testing and installing the product at the customer site. The product is fully functional upon completion."@en ;
-    rdfs:label "Install Product"@en ;
+    rdfs:label "Install Product (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.14" ;
     rdfs:isDefinedBy scor: ;
@@ -1434,7 +1431,7 @@ scor:InstallProduct
 scor:Invoice
     rdf:type owl:Class ;
     rdfs:comment "A signal is sent to the financial organization that the order has been shipped and that the billing process should begin and payment be received or be closed out if payment has already been received."@en ;
-    rdfs:label "Invoice"@en ;
+    rdfs:label "Invoice (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
     skos:notation "sD1.15" ;
     rdfs:isDefinedBy scor: ;
@@ -1447,7 +1444,7 @@ scor:Invoice
 scor:DeliverMakeToOrderProductProcessInquiryQuote
     rdf:type owl:Class ;
     rdfs:comment "Receive and respond to general customer inquiries and requests for quotes."@en ;
-    rdfs:label "Process Inquiry and Quote"@en ;
+    rdfs:label "Process Inquiry and Quote (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.1" ;
     rdfs:isDefinedBy scor: ;
@@ -1469,7 +1466,7 @@ scor:ReceiveConfigureEnterValidateOrder
 scor:ReserveInventoryDetermineDeliveryDate
     rdf:type owl:Class ;
     rdfs:comment "Inventory and/or planned capacity is identified and reserved for specific orders, and a delivery date is committed and scheduled."@en ;
-    rdfs:label "Reserve Inventory and Determine Delivery Date"@en ;
+    rdfs:label "Reserve Inventory and Determine Delivery Date (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.3" ;
     rdfs:isDefinedBy scor: ;
@@ -1480,7 +1477,7 @@ scor:ReserveInventoryDetermineDeliveryDate
 scor:ConsolidateOrders
     rdf:type owl:Class ;
     rdfs:comment "The process of analyzing orders to determine the groupings that result in least cost/best service fulfillment and transportation."@en ;
-    rdfs:label "Consolidate Orders"@en ;
+    rdfs:label "Consolidate Orders (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.4" ;
     rdfs:isDefinedBy scor: ;
@@ -1491,7 +1488,7 @@ scor:ConsolidateOrders
 scor:DeliverMakeToOrderProductProcessBuildLoads
     rdf:type owl:Class ;
     rdfs:comment "Transportation modes are selected and efficient loads are built."@en ;
-    rdfs:label "Build Loads"@en ;
+    rdfs:label "Build Loads (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.5" ;
     rdfs:isDefinedBy scor: ;
@@ -1502,7 +1499,7 @@ scor:DeliverMakeToOrderProductProcessBuildLoads
 scor:DeliverMakeToOrderProductProcessRouteShipments
     rdf:type owl:Class ;
     rdfs:comment "Loads are consolidated and routed by mode, lane, and location."@en ;
-    rdfs:label "Route Shipments"@en ;
+    rdfs:label "Route Shipments (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.6" ;
     rdfs:isDefinedBy scor: ;
@@ -1513,7 +1510,7 @@ scor:DeliverMakeToOrderProductProcessRouteShipments
 scor:DeliverMakeToOrderProductSelectCarriersRateShipments
     rdf:type owl:Class ;
     rdfs:comment "Specific carriers are selected by lowest cost per route and shipments are rated and tendered."@en ;
-    rdfs:label "Select Carriers and Rate Shipments"@en ;
+    rdfs:label "Select Carriers and Rate Shipments (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.7" ;
     rdfs:isDefinedBy scor: ;
@@ -1524,7 +1521,7 @@ scor:DeliverMakeToOrderProductSelectCarriersRateShipments
 scor:DeliverMakeToOrderProductReceiveProductFromSourceMake
     rdf:type owl:Class ;
     rdfs:comment "The activities such as receiving product, verifying, recording product receipt, determining put-away location, putting away and recording location for goods received from either Make or Source."@en ;
-    rdfs:label "Receive Product from Source or Make"@en ;
+    rdfs:label "Receive Product from Source or Make (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.8" ;
     rdfs:isDefinedBy scor: ;
@@ -1535,7 +1532,7 @@ scor:DeliverMakeToOrderProductReceiveProductFromSourceMake
 scor:DeliverMakeToOrderProductPickProduct
     rdf:type owl:Class ;
     rdfs:comment "The series of activities including retrieving orders to pick, verifying inventory availability, building the pick wave, picking the product, recording the pick and delivering product to packing area in response to an order."@en ;
-    rdfs:label "Pick Product"@en ;
+    rdfs:label "Pick Product (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.9" ;
     rdfs:isDefinedBy scor: ;
@@ -1546,7 +1543,7 @@ scor:DeliverMakeToOrderProductPickProduct
 scor:DeliverMakeToOrderProductPackProduct
     rdf:type owl:Class ;
     rdfs:comment "The activities such as sorting / combining the products, packing / kitting the products, paste labels, barcodes etc. and delivering the products to the shipping area for loading."@en ;
-    rdfs:label "Pack Product"@en ;
+    rdfs:label "Pack Product (Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.10" ;
     rdfs:isDefinedBy scor: ;
@@ -1568,7 +1565,7 @@ scor:LoadProductGenerateShippingDocs
 scor:DeliverMakeToOrderProductShipProduct
     rdf:type owl:Class ;
     rdfs:comment "The process of shipping the product to the customer site."@en ;
-    rdfs:label "Ship Product"@en ;
+    rdfs:label "Ship Product (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.12" ;
     rdfs:isDefinedBy scor: ;
@@ -1579,7 +1576,7 @@ scor:DeliverMakeToOrderProductShipProduct
 scor:DeliverMakeToOrderProductReceiveVerifyProductByCustomer
     rdf:type owl:Class ;
     rdfs:comment "The process of receiving the shipment at the customer (either at customer site or at shipping area in case of self-collection) and verifying that the order was shipped complete and that the product meets delivery terms."@en ;
-    rdfs:label "Ship Product"@en ;
+    rdfs:label "Receive and verify Product by Customer (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.13" ;
     rdfs:isDefinedBy scor: ;
@@ -1590,7 +1587,7 @@ scor:DeliverMakeToOrderProductReceiveVerifyProductByCustomer
 scor:DeliverMakeToOrderProductInstallProduct
     rdf:type owl:Class ;
     rdfs:comment "the process of preparing, testing and installing the product at the customer site."@en ;
-    rdfs:label "Install Product"@en ;
+    rdfs:label "Install Product (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.14" ;
     rdfs:isDefinedBy scor: ;
@@ -1601,7 +1598,7 @@ scor:DeliverMakeToOrderProductInstallProduct
 scor:DeliverMakeToOrderProductInvoice
     rdf:type owl:Class ;
     rdfs:comment "A signal is sent to the financial organization that the order has been shipped and that the billing process should begin and payment be received or be closed out if payment has already been received."@en ;
-    rdfs:label "Invoice"@en ;
+    rdfs:label "Invoice (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
     skos:notation "sD2.15" ;
     rdfs:isDefinedBy scor: ;
@@ -1658,7 +1655,7 @@ scor:ScheduleInstallation
 scor:DeliverEngineerToOrderProductBuildLoads
     rdf:type owl:Class ;
     rdfs:comment "The process of evaluating the design and build schedules relative to customer requested installation date to determine installation schedule."@en ;
-    rdfs:label "Build Loads"@en ;
+    rdfs:label "Build Loads (Deliver Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.5" ;
     rdfs:isDefinedBy scor: ;
@@ -1669,7 +1666,7 @@ scor:DeliverEngineerToOrderProductBuildLoads
 scor:DeliverEngineerToOrderProductRouteShipments
     rdf:type owl:Class ;
     rdfs:comment "Loads are consolidated and routed by mode, lane, and location."@en ;
-    rdfs:label "Route Shipments"@en ;
+    rdfs:label "Route Shipments (Deliver Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.6" ;
     rdfs:isDefinedBy scor: ;
@@ -1691,7 +1688,7 @@ scor:DeliverEngineerToOrderProductSelectCarriersRateShipments
 scor:DeliverEngineerToOrderProductReceiveProductFromSourceMake
     rdf:type owl:Class ;
     rdfs:comment "The activities such as receiving product, verifying, recording product receipt, determining put-away location, putting away and recording location for goods received from either Make or Source."@en ;
-    rdfs:label "Receive Product from Source or Make"@en ;
+    rdfs:label "Receive Product from Source or Make (Deliver Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.8" ;
     rdfs:isDefinedBy scor: ;
@@ -1702,7 +1699,7 @@ scor:DeliverEngineerToOrderProductReceiveProductFromSourceMake
 scor:DeliverEngineerToOrderProductPickProduct
     rdf:type owl:Class ;
     rdfs:comment "The series of activities including retrieving orders to pick, verifying inventory availability, building the pick wave, picking the product, recording the pick and delivering product to packing area in response to an order."@en ;
-    rdfs:label "Pick Product"@en ;
+    rdfs:label "Pick Product (Deliver Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.9" ;
     rdfs:isDefinedBy scor: ;
@@ -1713,7 +1710,7 @@ scor:DeliverEngineerToOrderProductPickProduct
 scor:DeliverEngineerToOrderProductPackProduct
     rdf:type owl:Class ;
     rdfs:comment "The activities such as sorting / combining the products, packing / kitting the products, paste labels, barcodes etc. and delivering the products to the shipping area for loading."@en ;
-    rdfs:label "Pack Product"@en ;
+    rdfs:label "Pack Product (Deliver Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.10" ;
     rdfs:isDefinedBy scor: ;
@@ -1746,7 +1743,7 @@ scor:DeliverEngineerToOrderProductShipProduct
 scor:DeliverEngineerToOrderProductReceiveVerifyProductByCustomer
     rdf:type owl:Class ;
     rdfs:comment "The process of receiving the shipment (either at customer site or at shipping area in case of self-collection) and verifying that the order was shipped complete and that the product meets delivery terms."@en ;
-    rdfs:label "Receive and verify Product by Customer"@en ;
+    rdfs:label "Receive and verify Product by Customer (Deliver Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.13" ;
     rdfs:isDefinedBy scor: ;
@@ -1757,7 +1754,7 @@ scor:DeliverEngineerToOrderProductReceiveVerifyProductByCustomer
 scor:DeliverEngineerToOrderProductInstallProduct
     rdf:type owl:Class ;
     rdfs:comment "The process of preparing, testing and installing the product at the customer site. The product is fully functional upon completion."@en ;
-    rdfs:label "Install Product"@en ;
+    rdfs:label "Install Product (Deliver Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.14" ;
     rdfs:isDefinedBy scor: ;
@@ -1768,7 +1765,7 @@ scor:DeliverEngineerToOrderProductInstallProduct
 scor:DeliverEngineerToOrderProductInvoice
     rdf:type owl:Class ;
     rdfs:comment "A signal is sent to the financial organization that the order has been shipped and that the billing process should begin and payment be received or be closed out if payment has already been received."@en ;
-    rdfs:label "Invoice"@en ;
+    rdfs:label "Invoice (Deliver Engineer To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.15" ;
     rdfs:isDefinedBy scor: ;
@@ -1862,7 +1859,7 @@ scor:DeliverInstall
 
 scor:hasStep
     rdf:type owl:ObjectProperty ;
-    rdfs:label "hasStep"@en  ;
+    rdfs:label "hasStep"@en ;
     rdfs:domain scor:Process ;
     rdfs:range  scor:Process ;
     rdfs:isDefinedBy scor: ;
@@ -1872,7 +1869,7 @@ scor:hasStep
 
 scor:hasPracticeId
     rdf:type owl:DatatypeProperty ;
-    rdfs:label "hasPracticeID"@en  ;
+    rdfs:label "hasPracticeID"@en ;
     rdfs:domain scor:Practice ;
     rdfs:range xsd:string ;
     rdfs:isDefinedBy scor: ;
@@ -2759,7 +2756,7 @@ scor:EnterpriseBusinessProcess
 scor:EnvironmentalRequirements
     rdf:type scor:Skill ;
     rdfs:comment "Familiarity and understanding of internal and external goals, objectives, rules and laws pertaining to the operation of the Source function within the organization"@en  ;
-    rdfs:label "Enterprise Business Process"@en ;
+    rdfs:label "Environmental Requirements"@en ;
     skos:notation "HS.0045"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
