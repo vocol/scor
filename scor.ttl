@@ -71,6 +71,7 @@ scor:Process
 
 scor:Plan
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Process ;
     rdfs:comment "Describes the planning activities associated with operating a supply chain. This includes gathering customer requirements, collecting information on available resources, and balancing requirements and resources to determine planned capabilities and resource gaps. This is followed by identifying the actions required to correct any gaps."@en ;
     rdfs:label "Plan"@en ;
     rdfs:subClassOf scor:Process ;
@@ -82,6 +83,7 @@ scor:Plan
 
 scor:Source
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Process ;
     rdfs:comment "Order, deliver, receipt and transfer of raw material items, subassemblies, product and/or services"@en ;
     rdfs:label "Source"@en ;
     rdfs:subClassOf scor:Process ;
@@ -93,6 +95,7 @@ scor:Source
 
 scor:Make
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Process ;
     rdfs:comment "Adds value to products through mixing, separating, forming, machining, and chemical processes"@en ;
     rdfs:label "Make"@en ;
     rdfs:subClassOf scor:Process ;
@@ -104,6 +107,7 @@ scor:Make
 
 scor:Deliver
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Process ;
     rdfs:comment "Performs customer-facing order management and order fulfillment activities"@en ;
     rdfs:label "Deliver"@en ;
     rdfs:subClassOf scor:Process ;
@@ -115,6 +119,7 @@ scor:Deliver
 
 scor:Return
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Process ;
     rdfs:comment "Moves material from a customer back through the supply chain to address defects in product, ordering, or manufacturing, or to perform upkeep activities"@en ;
     rdfs:label "Return"@en ;
     rdfs:subClassOf scor:Process ;
@@ -126,6 +131,7 @@ scor:Return
 
 scor:Enable
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Process ;
     rdfs:comment "Establishing, maintaining and monitoring information, relationships, resources, assets, business rules, compliance and contracts required to operate the supply chain"@en ;
     rdfs:label "Enable"@en ;
     rdfs:subClassOf scor:Process ;
@@ -141,6 +147,7 @@ scor:Enable
 
 scor:PlanSupplyChain
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Plan ;
     rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of supply chain resources to meet supply chain requirements for the longest time fence constraints of supply resources"@en ;
     rdfs:label "Plan Supply Chain"@en ;
     rdfs:subClassOf scor:Plan ;
@@ -152,6 +159,7 @@ scor:PlanSupplyChain
 
 scor:PlanSource
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Plan ;
     rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of material resources to meet supply chain requirements"@en ;
     rdfs:label "Plan Source"@en ;
     rdfs:subClassOf scor:Plan ;
@@ -163,6 +171,7 @@ scor:PlanSource
 
 scor:PlanMake
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Plan ;
     rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of production resources to meet production requirements"@en ;
     rdfs:label "Plan Make"@en ;
     rdfs:subClassOf scor:Plan ;
@@ -174,6 +183,7 @@ scor:PlanMake
 
 scor:PlanDeliver
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Plan ;
     rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of delivery resources to meet delivery requirements"@en ;
     rdfs:label "Plan Deliver"@en ;
     rdfs:subClassOf scor:Plan ;
@@ -185,6 +195,7 @@ scor:PlanDeliver
 
 scor:PlanReturn
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Plan ;
     rdfs:comment "establish and adjust courses of action or tasks over specified time periods that represent a projected appropriation of return resources and assets to meet anticipated as well as unanticipated return requirements"@en ;
     rdfs:label "Plan Return"@en ;
     rdfs:subClassOf scor:Plan ;
@@ -198,9 +209,9 @@ scor:PlanReturn
 
 scor:SourceStockedProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Source ;
     rdfs:comment "The process of ordering, receiving and transferring raw material items, sub-assemblies, product and or services based on aggregated demand requirements."@en;
     rdfs:label "Source Stocked Product"@en ;
-    rdfs:subClassOf scor:Source ;
     skos:notation "sS1" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -209,9 +220,9 @@ scor:SourceStockedProduct
 
 scor:SourceMakeToOrderProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Source ;
     rdfs:comment "The processes of ordering and receiving product or material that is ordered (and may be configured) only when required by a specific customer order."@en ;
     rdfs:label "Source Make-to-Order Product"@en ;
-    rdfs:subClassOf scor:Source ;
     skos:notation "sS2" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -220,9 +231,9 @@ scor:SourceMakeToOrderProduct
 
 scor:SourceEngineerToOrderProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Source ;
     rdfs:comment "The processes of identifying and selecting sources of supply, negotiating, validating, scheduling, ordering and receiving parts, assemblies or specialized products or services that are designed, ordered and/or built based on the requirements or specifications of a specific customer order."@en ;
     rdfs:label "Source Engineer-to-Order Product"@en ;
-    rdfs:subClassOf scor:Source ;
     skos:notation "sS3" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -233,9 +244,9 @@ scor:SourceEngineerToOrderProduct
 
 scor:MakeToStock
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Make ;
     rdfs:comment "The process of manufacturing in a make-to-stock environment adds value to products through mixing, separating, forming, machining, and chemical processes."@en ;
     rdfs:label "Make-to-Stock"@en ;
-    rdfs:subClassOf scor:Make ;
     skos:notation "sM1" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -244,9 +255,9 @@ scor:MakeToStock
 
 scor:MakeToOrder
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Make ;
     rdfs:comment "The process of manufacturing in a make-to-order environment adds value to products through mixing, separating, forming, machining, and chemical processes for a specific customer order."@en ;
     rdfs:label "Make-to-Order"@en ;
-    rdfs:subClassOf scor:Make ;
     skos:notation "sM2" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -255,9 +266,9 @@ scor:MakeToOrder
 
 scor:EngineerToOrder
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Make ;
     rdfs:comment "The process of developing, designing, validating, and ultimately using a manufacturing process to produce products or services based on the requirements of a specific customer."@en;
     rdfs:label "Engineer-to-Order"@en ;
-    rdfs:subClassOf scor:Make ;
     skos:notation "sM3" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -268,9 +279,9 @@ scor:EngineerToOrder
 
 scor:DeliverStockedProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Deliver ;
     rdfs:comment "Delivers product that is sourced or made based on aggregated customer orders, projected orders/demand and inventory re-ordering parameters"@en ;
     rdfs:label "Deliver Stocked Product"@en ;
-    rdfs:subClassOf scor:Deliver ;
     skos:notation "sD1" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -279,9 +290,9 @@ scor:DeliverStockedProduct
 
 scor:DeliverMakeToOrderProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Deliver ;
     rdfs:comment "Delivers product that is sourced, configured, manufactured, and/or assembled from standard raw materials, parts, ingredients or sub-assemblies, in response to a specific firm customer order"@en ;
     rdfs:label "Deliver Make-to-Order Product"@en ;
-    rdfs:subClassOf scor:Deliver ;
     skos:notation "sD2" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -290,9 +301,9 @@ scor:DeliverMakeToOrderProduct
 
 scor:DeliverEngineerToOrderProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Deliver ;
     rdfs:comment "Obtaining, responding to, and allocating resources for a customer order that has unique requirements or specifications and delivering a product that is partially or fully designed, redesigned, manufactured, and/or assembled from a bill of materials or recipe that includes one or more custom parts or ingredients"@en ;
     rdfs:label "Deliver Engineer-to-Order Product"@en ;
-    rdfs:subClassOf scor:Deliver ;
     skos:notation "sD3" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -301,9 +312,9 @@ scor:DeliverEngineerToOrderProduct
 
 scor:DeliverRetailProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Deliver ;
     rdfs:comment "To acquire, merchandise, and sell finished goods at a retail store"@en ;
     rdfs:label "Deliver Retail Product"@en ;
-    rdfs:subClassOf scor:Deliver ;
     skos:notation "sD4" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -314,9 +325,9 @@ scor:DeliverRetailProduct
 
 scor:DeliverReturnDefectiveProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Return ;
     rdfs:comment "The receipt and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement"@en ;
     rdfs:label "Deliver Return Defective Product"@en ;
-    rdfs:subClassOf scor:Return ;
     skos:notation "sDR1" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -325,9 +336,9 @@ scor:DeliverReturnDefectiveProduct
 
 scor:DeliverReturnMROProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Return ;
     rdfs:comment "The receipt of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure"@en ;
     rdfs:label "Deliver Return MRO Product"@en ;
-    rdfs:subClassOf scor:Return ;
     skos:notation "sDR2" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -336,9 +347,9 @@ scor:DeliverReturnMROProduct
 
 scor:DeliverReturnExcessProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Return ;
     rdfs:comment "The receipt of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract"@en ;
     rdfs:label "Deliver Return Excess Product"@en ;
-    rdfs:subClassOf scor:Return ;
     skos:notation "sDR3" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -347,9 +358,9 @@ scor:DeliverReturnExcessProduct
 
 scor:ReturnMROProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Return ;
     rdfs:comment "The return of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure"@en ;
     rdfs:label "Return MRO Product"@en ;
-    rdfs:subClassOf scor:Return ;
     skos:notation "sSR2" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -358,9 +369,9 @@ scor:ReturnMROProduct
 
 scor:SourceReturnDefectiveProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Return ;
     rdfs:comment "The return and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement"@en ;
     rdfs:label "Source Return Defective Product"@en ;
-    rdfs:subClassOf scor:Return ;
     skos:notation "sSR1" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -369,9 +380,9 @@ scor:SourceReturnDefectiveProduct
 
 scor:SourceReturnExcessProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Return ;
     rdfs:comment "The return of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract"@en ;
     rdfs:label "Source Return Excess Product"@en ;
-    rdfs:subClassOf scor:Return ;
     skos:notation "sSR3" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -382,9 +393,9 @@ scor:SourceReturnExcessProduct
 
 scor:ManageSupplyChainBusinessRules
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Enable ;
     rdfs:comment "Establishing, documenting, communicating and publishing supply chain business rules"@en ;
     rdfs:label "Manage Supply Chain Business Rules"@en ;
-    rdfs:subClassOf scor:Enable ;
     skos:notation "sE1" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -393,9 +404,9 @@ scor:ManageSupplyChainBusinessRules
 
 scor:ManagePerformance
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Enable ;
     rdfs:comment "Reporting performance, identifying gaps in performance, performing root cause analysis, and developing and launching corrective actions to close gaps in performance"@en ;
     rdfs:label "Manage Performance"@en ;
-    rdfs:subClassOf scor:Enable ;
     skos:notation "sE2" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -404,9 +415,9 @@ scor:ManagePerformance
 
 scor:ManageDataInformation
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Enable ;
     rdfs:comment "Collecting, maintaining and publishing data and information required to plan, operate, measure and manage the supply chain"@en ;
     rdfs:label "Manage Data and Information"@en ;
-    rdfs:subClassOf scor:Enable ;
     skos:notation "sE3" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -415,9 +426,9 @@ scor:ManageDataInformation
 
 scor:ManageSupplyChainHumanResources
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Enable ;
     rdfs:comment "Developing, governing and maintaining an organization of permanent, temporary and outsourced staff, with the right qualifications, in support of the business objects and supply chain goals"@en ;
     rdfs:label "Manage Supply Chain Human Resources"@en ;
-    rdfs:subClassOf scor:Enable ;
     skos:notation "sE4" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -426,9 +437,9 @@ scor:ManageSupplyChainHumanResources
 
 scor:ManageSupplyChainAssets
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Enable ;
     rdfs:comment "Scheduling, maintaining and dispositioning of supply chain assets that operate supply chain processes"@en ;
     rdfs:label "Manage Supply Chain Assets"@en ;
-    rdfs:subClassOf scor:Enable ;
     skos:notation "sE5" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -437,9 +448,9 @@ scor:ManageSupplyChainAssets
 
 scor:ManageSupplyChainContracts
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Enable ;
     rdfs:comment "The management and communication of contractual agreements in support of business objectives and supply chain goals"@en ;
     rdfs:label "Manage Supply Chain Contracts"@en ;
-    rdfs:subClassOf scor:Enable ;
     skos:notation "sE6" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -448,9 +459,9 @@ scor:ManageSupplyChainContracts
 
 scor:ManageSupplyChainNetworks
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Enable ;
     rdfs:comment "Developing, governing and maintaining a network of supply chain assets"@en ;
     rdfs:label "Manage Supply Chain Networks"@en ;
-    rdfs:subClassOf scor:Enable ;
     skos:notation "sE7" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -459,9 +470,9 @@ scor:ManageSupplyChainNetworks
 
 scor:ManageRegulatoryCompliance
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Enable ;
     rdfs:comment "Identifying, collecting, assessing and integrating regulatory compliance requirements in standard supply chain processes, policies and business rules"@en ;
     rdfs:label "Manage Regulatory Compliance"@en ;
-    rdfs:subClassOf scor:Enable ;
     skos:notation "sE8" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -470,67 +481,14 @@ scor:ManageRegulatoryCompliance
 
 scor:ManageSupplyChainRisk
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:Enable ;
     rdfs:comment "Identification and assessment of potential disruptions (risks) in the supply chain and developing a plan to mitigate these threats to operating the supply chain"@en ;
     rdfs:label "Manage Supply Chain Risk"@en ;
-    rdfs:subClassOf scor:Enable ;
     skos:notation "sE9" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
-
-# Hierarchy of level 1-2 processes
-
-scor:Plan    rdfs:subClassOf scor:Process .
-scor:Return  rdfs:subClassOf scor:Process .
-scor:Source  rdfs:subClassOf scor:Process .
-scor:Make    rdfs:subClassOf scor:Process .
-scor:Enable  rdfs:subClassOf scor:Process .
-scor:Deliver rdfs:subClassOf scor:Process .
-
-#---------------------------------------------------------------------
-
-### Process Level 2
-
-scor:PlanSupplyChain rdfs:subClassOf scor:Plan .
-scor:PlanSource    rdfs:subClassOf scor:Plan .
-scor:PlanMake      rdfs:subClassOf scor:Plan .
-scor:PlanDeliver     rdfs:subClassOf scor:Plan .
-scor:PlanReturn    rdfs:subClassOf scor:Plan .
-
-#---------------------------------------------------------------------
-
-scor:SourceReturnDefectiveProduct  rdfs:subClassOf scor:Return .
-scor:SourceReturnMROProduct      rdfs:subClassOf scor:Return .
-scor:SourceReturnExecessProduct    rdfs:subClassOf scor:Return .
-scor:DeliverReturnDefectiveProduct rdfs:subClassOf scor:Return .
-scor:DeliverReturnMROProduct     rdfs:subClassOf scor:Return .
-scor:DeliverReturnExcessProduct    rdfs:subClassOf scor:Return .
-
-#---------------------------------------------------------------------
-
-scor:SourceStockedProduct       rdfs:subClassOf scor:Make .
-scor:SourceMakeToOrderProduct     rdfs:subClassOf scor:Make .
-scor:SourceEngineerToOrderProduct rdfs:subClassOf scor:Make .
-
-#---------------------------------------------------------------------
-
-scor:ManageSupplyChainBusinessRules       rdfs:subClassOf scor:Enable .
-scor:ManageSupplyChainPerformance         rdfs:subClassOf scor:Enable .
-scor:ManageSupplyChainDataAndInformation    rdfs:subClassOf scor:Enable .
-scor:ManageSupplyChainHumanRessources     rdfs:subClassOf scor:Enable .
-scor:ManageSupplyChainAssets              rdfs:subClassOf scor:Enable .
-scor:ManageSupplyChainContact             rdfs:subClassOf scor:Enable .
-scor:ManageSupplyChainNetwork             rdfs:subClassOf scor:Enable .
-scor:ManageSupplyChainRegulartoryCompliance rdfs:subClassOf scor:Enable .
-scor:ManageSupplyChainRisk                rdfs:subClassOf scor:Enable .
-
-#---------------------------------------------------------------------
-
-scor:DeliverStockedProduct       rdfs:subClassOf scor:Deliver .
-scor:DeliverMakeToOrderProduct     rdfs:subClassOf scor:Deliver .
-scor:DeliverEngineerToOrderProduct rdfs:subClassOf scor:Deliver .
-scor:DeliverRetailProduct            rdfs:subClassOf scor:Deliver .
 
 # Level 3 Processes
 
@@ -764,7 +722,7 @@ scor:EstablishCommunicateReturnPlans
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-# Source Stoked Product
+# Source Stocked Product
 
 scor:ScheduleProductDeliveries
     rdf:type owl:Class ;
