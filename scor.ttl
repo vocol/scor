@@ -2278,7 +2278,8 @@ scor:hasSkill
 scor:hasTraining
     rdf:type rdf:Property ;
     rdfs:domain scor:Skill ;
-    rdfs:label "hasTraining"@en  ;
+    rdfs:label "has Training"@en  ;
+    rdfs:comment "A Training required to gain a skill"@en  ;
     rdfs:range scor:Training ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
