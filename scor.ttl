@@ -896,7 +896,7 @@ scor:EstablishCommunicateReturnPlans
 
 # Source Stocked Product
 
-scor:ScheduleProductDeliveries
+scor:SSPScheduleProductDeliveries
     rdf:type owl:Class ;
     rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against an existing contract or purchase order."@en ;
     rdfs:label "Schedule Product Deliveries (Source Stocked Product)"@en ;
@@ -953,7 +953,7 @@ scor:AuthorizeSupplierPayment
 
 # Source MakeToOrderProduct
 
-scor:ScheduleProductDeliveries
+scor:MOScheduleProductDeliveries
     rdf:type owl:Class ;
     rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against the contract."@en ;
     rdfs:label "Schedule Product Deliveries (Source Make To Order Product)"@en ;
@@ -1032,7 +1032,7 @@ scor:SelectFinalSupplierNegotiate
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:ScheduleProductDeliveries
+scor:SEOPScheduleProductDeliveries
     rdf:type owl:Class ;
     rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against the contract."@en ;
     rdfs:label "Schedule Product Deliveries (Source Engineer To Order Product)"@en ;
@@ -1359,7 +1359,7 @@ scor:ReceiveEnterValidateOrder
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:ReserveInventoryDetermineDeliveryDate
+scor:DSPReserveInventoryDetermineDeliveryDate
     rdf:type owl:Class ;
     rdfs:comment "Inventory (both on hand and scheduled) is identified and reserved for specific orders and a delivery date is committed and scheduled."@en ;
     rdfs:label "Reserve Inventory and Determine Delivery Date (Deliver Stocked Product)"@en ;
@@ -1370,7 +1370,7 @@ scor:ReserveInventoryDetermineDeliveryDate
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:ConsolidateOrders
+scor:DSPConsolidateOrders
     rdf:type owl:Class ;
     rdfs:comment "The process of analyzing orders to determine the groupings that result in least cost/best service fulfillment and transportation."@en ;
     rdfs:label "Consolidate Orders (Deliver Stocked Product)"@en ;
@@ -1526,7 +1526,7 @@ scor:ReceiveConfigureEnterValidateOrder
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:ReserveInventoryDetermineDeliveryDate
+scor:DMOPReserveInventoryDetermineDeliveryDate
     rdf:type owl:Class ;
     rdfs:comment "Inventory and/or planned capacity is identified and reserved for specific orders, and a delivery date is committed and scheduled."@en ;
     rdfs:label "Reserve Inventory and Determine Delivery Date (Deliver Make To Order Product)"@en ;
@@ -1537,7 +1537,7 @@ scor:ReserveInventoryDetermineDeliveryDate
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:ConsolidateOrders
+scor:DMOPConsolidateOrders
     rdf:type owl:Class ;
     rdfs:comment "The process of analyzing orders to determine the groupings that result in least cost/best service fulfillment and transportation."@en ;
     rdfs:label "Consolidate Orders (Deliver Make To Order Product)"@en ;
@@ -2656,7 +2656,7 @@ scor:CreditCollectionManagement
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:CrossDocking
+scor:HSCrossDocking
     rdf:type scor:Skill ;
     rdfs:comment "Basic knowledge of linking, staging and moving received sourced products with/to existing open orders minimizing the need for product inventory or storage"@en  ;
     rdfs:label "Cross Docking"@en ;
@@ -2746,7 +2746,7 @@ scor:DeliveryScheduling
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:DemandManagement
+scor:HSDemandManagement
     rdf:type scor:Skill ;
     rdfs:comment "The manufacturing management process by which raw materials and production capacity are optimally allocated to meet demand"@en  ;
     rdfs:label "Demand Management"@en ;
@@ -3528,7 +3528,7 @@ scor:PurchaseOrderManagement
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:CrossDocking
+scor:BPCrossDocking
     rdf:type scor:StandardPractice ;
     rdfs:comment "the practice of unloading materials from an incoming vehicle and loading these materials directly onto outbound vehicles without putting away into the regular storage locations in a warehouse"@en  ;
     rdfs:label "Cross-Docking"@en ;
@@ -3591,7 +3591,7 @@ scor:SupplyNetworkPlanning
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:DemandManagement
+scor:BPDemandManagement
     rdf:type scor:EmergingPractice ;
     rdfs:comment "Takes Demand Planning to the next level and integrates the plan up and down the supply chain as well as across the enterprise."@en ;
       rdfs:label "Demand Management"@en ;
