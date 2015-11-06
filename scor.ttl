@@ -2041,7 +2041,7 @@ scor:DispositionDefectiveProduct
 scor:RequestDefectiveProductReturnAuthorization
     rdf:type owl:Class ;
     rdfs:comment "The process of a customer requesting and obtaining authorization, from last known holder or designated return center, for the return of defective product. Additionally, the customer and last known holder or designated return center would discuss enabling conditions such as return replacement or credit, packaging, handling, transportation and import / export requirements to facilitate the efficient return of the defective product."@en ;
-    rdfs:label "Disposition Defective Product"@en ;
+    rdfs:label "Request Defective Product Return Authorization"@en ;
     rdfs:subClassOf scor:SourceReturnDefectiveProduct ;
     olo:next scor:ScheduleDefectiveProductShipment;
     skos:notation "sSR1.3" ;
@@ -2251,7 +2251,7 @@ scor:ReturnMROPRoduct
  scor:DispositionExcessProduct
     rdf:type owl:Class ;
     rdfs:comment "The process of the customer determining whether to return the excess material and identification of a designated return center a return authorization."@en ;
-    rdfs:label "Identify Excess Product Condition"@en ;
+    rdfs:label "Disposition Excess Product"@en ;
     rdfs:subClassOf scor:SourceReturnExcessProduct ;
     olo:next scor:RequestExcessProductReturnAuthorization;
     skos:notation "sSR3.2" ;
@@ -3335,7 +3335,7 @@ scor:DeliveryScheduling
 scor:HSDemandManagement
     rdf:type scor:Skill ;
     rdfs:comment "The manufacturing management process by which raw materials and production capacity are optimally allocated to meet demand"@en  ;
-    rdfs:label "Demand Management"@en ;
+    rdfs:label "Demand Management (Skill)"@en ;
     skos:notation "HS.0037"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -4180,7 +4180,7 @@ scor:SupplyNetworkPlanning
 scor:BPDemandManagement
     rdf:type scor:EmergingPractice ;
     rdfs:comment "Takes Demand Planning to the next level and integrates the plan up and down the supply chain as well as across the enterprise."@en ;
-      rdfs:label "Demand Management"@en ;
+    rdfs:label "Demand Management (Emerging Practice)"@en ;
     skos:notation "BP.020"@en ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
