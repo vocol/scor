@@ -2,14 +2,12 @@
 # SCORVoc
 
 Welcome to the working enviroment of the SCORVoc Vocabulary.
-SCORVoc is a RDFS vocabulary which formalizes the SCOR model. 
-
-	[SCOR Framework](http://www.apics.org/sites/apics-supply-chain-council/frameworks/scor)
+SCORVoc is a RDFS vocabulary which formalizes the [SCOR Framework](http://www.apics.org/sites/apics-supply-chain-council/frameworks/scor)
 
 
 ## Accessibility
 
-A static link to SCORvoc is available at here: [link](http://purl.org/eis/vocab/scor)
+A static link to SCORvoc is available at here: [Static Link](http://purl.org/eis/vocab/scor)
 
 ## Usage
 
