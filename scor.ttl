@@ -4535,7 +4535,7 @@ scor:EmbedInventoryManagementGoals
 
 scor:DesignForLogisticsManagement
     rdf:type scor:BestPractice ;
-    rdfs:comment "Develop method to embed and track specific inventory management goals for the business for all functions within the business due to cross-functional issues associated with inventory vs. service level."@en  ;
+    rdfs:comment "Change new product development process to embed reuse and/or risk assessment around inventory management (e.g., include check off from supply chain of potential inventory management impact of proposed new product development). This could include mandatory end of lifecycle for another product, Commercial`s agreement to potential inventory/working capital exposure, etc."@en  ;
     rdfs:label "Design for Logistics (DFL) Management"@en  ;
     skos:notation "BP.052"@en  ;
     rdfs:isDefinedBy scor: ;
