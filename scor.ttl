@@ -76,9 +76,9 @@ scor:
 []
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
-      scor:Aptitude scor:Competency scor:Experience scor:Skill
-      scor:Training scor:Practice scor:Process
-      schema:Person
+        scor:Aptitude scor:Competency scor:Experience scor:Skill
+        scor:Training scor:Practice scor:Process
+        schema:Person
     ) .
 
 scor:Aptitude
@@ -155,7 +155,7 @@ scor:Process
 []
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
-      scor:BestPractice scor:EmergingPractice scor:StandardPractice
+        scor:BestPractice scor:EmergingPractice scor:StandardPractice
     ) .
 
 scor:BestPractice
@@ -196,7 +196,7 @@ scor:StandardPractice
 []
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
-      scor:Plan scor:Source scor:Make scor:Deliver scor:Return scor:Enable
+        scor:Plan scor:Source scor:Make scor:Deliver scor:Return scor:Enable
     ) .
 
 scor:Plan
@@ -278,7 +278,7 @@ scor:Enable
 []
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
-      scor:PlanSupplyChain scor:PlanSource scor:PlanMake scor:PlanDeliver scor:PlanReturn
+        scor:PlanSupplyChain scor:PlanSource scor:PlanMake scor:PlanDeliver scor:PlanReturn
     ) .
 
 scor:PlanSupplyChain
@@ -346,7 +346,7 @@ scor:PlanReturn
 []
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
-      scor:SourceStockedProduct scor:SourceMakeToOrderProduct scor:SourceEngineerToOrderProduct
+        scor:SourceStockedProduct scor:SourceMakeToOrderProduct scor:SourceEngineerToOrderProduct
     ) .
 
 scor:SourceStockedProduct
@@ -387,7 +387,7 @@ scor:SourceEngineerToOrderProduct
 []
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
-      scor:MakeToStock scor:MakeToOrder scor:MakeEngineerToOrder
+        scor:MakeToStock scor:MakeToOrder scor:MakeEngineerToOrder
     ) .
 
 scor:MakeToStock
@@ -428,8 +428,8 @@ scor:MakeEngineerToOrder
 []
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
-      scor:DeliverStockedProduct scor:DeliverMakeToOrderProduct
-      scor:DeliverEngineerToOrderProduct scor:DeliverRetailProduct
+        scor:DeliverStockedProduct scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct scor:DeliverRetailProduct
     ) .
 
 scor:DeliverStockedProduct
@@ -2026,7 +2026,7 @@ scor:IdentifyDefectiveProductCondition
     dct:modified "2015-11-05"^^xsd:date ;
 .
 
-scor:DispositionDefectiveProduct 
+scor:DispositionDefectiveProduct
     rdf:type owl:Class ;
     rdfs:comment "The process of the customer determining whether to return the defective item and the appropriate source contact for a return authorization."@en ;
     rdfs:label "Disposition Defective Product"@en ;
@@ -2407,7 +2407,6 @@ scor:hasTraining
 ##########################################################################################
 #### Metric Properties
 
-
 scor:hasMetric
     rdf:type owl:DatatypeProperty ;
     rdfs:range xsd:float ;
@@ -2418,13 +2417,12 @@ scor:hasMetric
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-
 ######### Reliability Metrics
 
 scor:hasMetricRL_1 rdfs:domain scor:ReleaseProductToDeliver ;
     rdfs:label "# of complaints regarding missing environmental documentation"@en;
     rdfs:comment "The number of products released without proper environmental documentation as a percent of total products released"@en ;
-    rdfs:subPropertyOf scor:hasMetric; 
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2433,7 +2431,7 @@ scor:hasMetricRL_1 rdfs:domain scor:ReleaseProductToDeliver ;
 scor:hasMetricRL_2 rdfs:domain scor:ReleaseProductToDeliver ;
     rdfs:label "# of recordkeeping related NOVs"@en;
     rdfs:comment "The number of recordkeeping related regulatory violations received per year"@en;
-    rdfs:subPropertyOf scor:hasMetric; 
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2446,7 +2444,7 @@ scor:hasMetricRL_4 rdfs:domain [owl:unionOf (scor:PackProduct
                                            scor:SSPReceiveProduct)] ;
     rdfs:label "% correct material documentation"@en;
     rdfs:comment "The percent of total shipments that include the correct environmental documentation"@en;
-    rdfs:subPropertyOf scor:hasMetric; 
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2458,7 +2456,7 @@ scor:hasMetricRL_5 rdfs:domain [owl:unionOf (scor:ReturnDefectiveProduct
     rdfs:label "% Error-freeReturns Shipped"@en;
     rdfs:comment "Percentage of Error-free Returns Shipped"@en;
     rdfs:isDefinedBy scor: ;
-    rdfs:subPropertyOf scor:hasMetric; 
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2699,8 +2697,6 @@ scor:hasMetricRL_31 rdfs:domain [owl:unionOf (scor:MSPackage
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
- 
-
 scor:hasMetricRL_32 rdfs:domain [owl:unionOf (scor:DSPReceiveVerifyProductByCustomer
                                             scor:DMOPReceiveVerifyProductByCustomer
                                             scor:DEOPReceiveVerifyProductByCustomer)] ;
@@ -2853,7 +2849,6 @@ scor:hasMetricRL_42 rdfs:domain [owl:unionOf (scor:DSPReceiveVerifyProductByCust
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-
 scor:hasMetricRL_43 rdfs:domain [owl:unionOf (scor:LoadVehicleGenerateShippingDocuments
                                             scor:DMOPLoadProductGenerateShippingDocs
                                             scor:DEOPLoadProductGenerateShippingDocs)] ;
@@ -2877,8 +2872,6 @@ scor:hasMetricRL_45 rdfs:domain [owl:unionOf (scor:LoadVehicleGenerateShippingDo
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
-
-
 
 #46 seems to be deprecated
 
@@ -3015,7 +3008,7 @@ scor:3WayReceivingMatch
 scor:AcceptanceTesting
     rdf:type scor:Skill ;
     rdfs:comment "Working knowledge of Functional and/or Quality Assurance testing of product to ensure it will perform in accordance with its intended contractual agreement for form, fit and function"@en  ;
-      rdfs:label "Acceptance testing"@en ;
+    rdfs:label "Acceptance testing"@en ;
     skos:notation "HS.0002"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3035,7 +3028,7 @@ scor:Accounting
 scor:AdvertisingMethodologies
     rdf:type scor:Skill ;
     rdfs:comment "Knowledge of effective procurement or business development communication techniques to inform and/or solicit potential suppliers regarding product or service specifications"@en  ;
-      rdfs:label "Advertising Methodologies"@en ;
+    rdfs:label "Advertising Methodologies"@en ;
     skos:notation "HS.0004"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -4191,7 +4184,7 @@ scor:BusinessRuleManagement
     rdf:type scor:EmergingPractice ;
     rdfs:comment "Business rules are in a (human-readable) form that are used by, but not embedded in, supply chain systems"@en ;
     rdfs:label "Business Rule Management"@en ;
-      skos:notation "BP.023"@en ;
+    skos:notation "BP.023"@en ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
