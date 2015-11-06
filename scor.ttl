@@ -387,7 +387,7 @@ scor:SourceEngineerToOrderProduct
 []
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
-      scor:MakeToStock scor:MakeToOrder scor:EngineerToOrder
+      scor:MakeToStock scor:MakeToOrder scor:MakeEngineerToOrder
     ) .
 
 scor:MakeToStock
@@ -2796,7 +2796,7 @@ scor:hasMetricRL_36 rdfs:domain [owl:unionOf (scor:BalanceSCResourcesWithSCRequi
 
 scor:hasMetricRL_37 rdfs:domain [owl:unionOf (scor:PSCIdentifyPrioritizeAggregateSCRequirements
                                             scor:IdentifyPrioritizeAggregateProductRequirements
-                                            scor:IdentifyPrioritizeAggregateProductionRequirement
+                                            scor:IdentifyPrioritizeAggregateProductionRequirements
                                             scor:IdentifyPrioritizeAggregateDeliveryRequirements
                                             scor:IdentifyAssessAggregateDeliveryResources
                                             scor:ManageSupplyChainHumanResources
