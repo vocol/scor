@@ -666,7 +666,7 @@ scor:ManageSupplyChainRisk
 
 # Plan SC
 
-scor:IdentifyPrioritizeAggregateSCRequirements
+scor:PSCIdentifyPrioritizeAggregateSCRequirements
     rdf:type owl:Class ;
     rdfs:comment "The process of identifying, aggregating, and prioritizing, all sources of demand for the integrated supply chain of a product or service at the appropriate level, horizon and interval."@en ;
     rdfs:label "Identify, Prioritize Aggregate Supply Chain Requirements"@en ;
@@ -907,7 +907,7 @@ scor:SSPScheduleProductDeliveries
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:ReceiveProduct
+scor:SSPReceiveProduct
     rdf:type owl:Class ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
     rdfs:label "Receive Product (Source Stocked Product)"@en ;
@@ -964,7 +964,7 @@ scor:MOScheduleProductDeliveries
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:SourceMakeToOrderReceiveProduct
+scor:SMOPReceiveProduct
     rdf:type owl:Class ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
     rdfs:label "Receive Product (Source Make To Order Product)"@en ;
@@ -1915,6 +1915,317 @@ scor:DeliverInstall
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
+# Source Return Defective Product
+
+scor:IdentifyDefectiveProductCondition .
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the customer utilizes planned policies, business rules and product operating conditions inspection as criteria to identify and confirm that material is excess to requirements defective."@en ;
+    rdfs:label "Identify Defective Product Condition"@en ;
+    rdfs:subClassOf scor: ;
+    skos:notation "sSR1.1" ;
+    rdfs:isDefinedBy scor:SourceReturnDefectiveProduct ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DispositionDefectiveProduct .
+    rdf:type owl:Class ;
+    rdfs:comment "The process of the customer determining whether to return the defective item and the appropriate source contact for a return authorization."@en ;
+    rdfs:label "Disposition Defective Product"@en ;
+    rdfs:subClassOf scor: ;
+    skos:notation "sSR1.2" ;
+    rdfs:isDefinedBy scor:SourceReturnDefectiveProduct ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:RequestDefectiveProductReturnAuthorization
+    rdf:type owl:Class ;
+    rdfs:comment "The process of a customer requesting and obtaining authorization, from last known holder or designated return center, for the return of defective product. Additionally, the customer and last known holder or designated return center would discuss enabling conditions such as return replacement or credit, packaging, handling, transportation and import / export requirements to facilitate the efficient return of the defective product."@en ;
+    rdfs:label "Disposition Defective Product"@en ;
+    rdfs:subClassOf scor: ;
+    skos:notation "sSR1.3" ;
+    rdfs:isDefinedBy scor:SourceReturnDefectiveProduct ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ScheduleDefectiveProductShipment .
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the customer develops the schedule for a carrier to pick-up for delivery of the defective product. Activities include selecting the carrier and rates, preparing the item for transfer, preparing scheduling documentation and managing overall scheduling administration."@en ;
+    rdfs:label "Schedule Defective Product Shipment"@en ;
+    rdfs:subClassOf scor: ;
+    skos:notation "sSR1.4" ;
+    rdfs:isDefinedBy scor:SourceReturnDefectiveProduct ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ReturnDefectiveProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the customer packages, and handles the defective product in preparation for shipping in accord with pre-determined conditions. The product is then provided by the customer to the carrier who physically transports the product and its associated documentation to the last known holder or designated return center."@en ;
+    rdfs:label "Return Defective Product"@en ;
+    rdfs:subClassOf scor:SourceReturnDefectiveProduct ;
+    skos:notation "sSR1.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+# Deliver Return Defective Product
+
+scor:AuthorizeDefectiveProductReturn
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the last known holder or designated return center receives a defective product return authorization request from a customer, determines if the item can be accepted and communicates decision to the customer. Accepting the request would include negotiating the conditions of the return with the customer, including authorizing return replacement or credit. Rejecting the request would include providing a reason for the rejection to the customer."@en ;
+    rdfs:label "Authorize Defective Product Return"@en ;
+    rdfs:subClassOf scor:DeliverReturnDefectiveProduct ;
+    skos:notation "sDR1.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ScheduleDefectiveReturnReceipt
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the last known holder or designated return center evaluates the defective product handling requirements including negotiated conditions and develops a schedule that tells the Customer when to ship the product. The scheduling activity would also inform Receiving when to expect the shipment and where to send the product, for disposition, upon receipt."@en ;
+    rdfs:label "Schedule Defective Return Receipt"@en ;
+    rdfs:subClassOf scor:DeliverReturnDefectiveProduct ;
+    skos:notation "sDR1.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ReceiveDefectiveProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the last known holder or designated return center receives and verifies the returned defective product against the return authorization and other documentation and prepares the item for transfer."@en ;
+    rdfs:label "Receive Defective Product"@en ;
+    rdfs:subClassOf scor:DeliverReturnDefectiveProduct ;
+    skos:notation "sDR1.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:TransferDefectiveProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the last known holder or designated return center transfers the defective product to the appropriate process to implement the disposition decision."@en ;
+    rdfs:label "Transfer Defective Product"@en ;
+    rdfs:subClassOf scor:DeliverReturnDefectiveProduct ;
+    skos:notation "sDR1.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+
+# Return MRO Product
+
+scor:IdentifyMROProductCondition
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the customer utilizes pre-determined MRO policies, business rules and product operating conditions as criteria to identify and confirm that an item requires maintenance, repair, overhaul or disposal. Includes operating failures and planned maintenance requirements."@en ;
+    rdfs:label "Identify MRO Product Condition"@en ;
+    rdfs:subClassOf scor:ReturnMROProduct ;
+    skos:notation "sSR2.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DispositionMROProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process of the customer determining whether to service the item, what service is required, and who the appropriate service provider would be to service the item. Outputs include a decision to: (1) send a return authorization request to a service provider, (2) send the product back into service without requiring a return authorization request, or (3) discard the item."@en ;
+    rdfs:label "Disposition MRO Product"@en ;
+    rdfs:subClassOf scor:ReturnMROProduct ;
+    skos:notation "sSR2.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:RequestMROReturnAuthorization
+    rdf:type owl:Class ;
+    rdfs:comment "The process of a customer requesting and obtaining authorization, from a service provider, for the return of an MRO product. In addition to discussing the MRO issue, the customer and service provider would discuss enabling conditions such as return replacement or credit, packaging, handling, transportation and import / export requirements to facilitate the efficient return of the MRO product to the service provider. The customer may need to go through several return authorization iterations with multiple service providers before authorization is received."@en ;
+    rdfs:label "Request MRO Return Authorization"@en ;
+    rdfs:subClassOf scor:ReturnMROProduct ;
+    skos:notation "sSR2.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ScheduleMROShipment
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the customer develops the schedule for a carrier to pick-up and deliver the MRO product. Activities include selecting the carrier and rates, preparing the item for transfer, preparing scheduling documentation and managing overall scheduling administration."@en ;
+    rdfs:label "Schedule MRO Shipment"@en ;
+    rdfs:subClassOf scor:ReturnMROProduct ;
+    skos:notation "sSR2.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:SRReturnMROPRoduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the customer packages, and handles the MRO product in preparation for shipping in accord with pre-determined conditions. The product is then provided by the customer to the carrier who physically transports the product and its associated documentation to the service provider."@en ;
+    rdfs:label "Return MRO Shipment"@en ;
+    rdfs:subClassOf scor:ReturnMROProduct ;
+    skos:notation "sSR2.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+
+# Deliver Return MRO Product
+
+ scor:AuthorizeMROProductReturn
+    rdf:type owl:Class ;
+    rdfs:comment "The process where a service provider receives an MRO product return authorization request from a customer, determines if the item can be accepted for MRO and communicates their decision to the customer. Accepting the request would include negotiating the conditions of the return with the customer, including authorizing return replacement or credit. Rejecting the request would include providing a reason for the rejection to the customer."@en ;
+    rdfs:label "Authorize MRO Product Return"@en ;
+    rdfs:subClassOf scor:DeliverReturnMROProduct ;
+    skos:notation "sDR2.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:ScheduleMROReturnReceipt
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the service provider evaluates the MRO service requirements including negotiated conditions and develops a schedule that tells the Customer when to ship the part. The scheduling activity would also inform Receiving when to expect the shipment and where to send the part, for induction or storage, upon receipt."@en ;
+    rdfs:label "Schedule MRO Return Receipt"@en ;
+    rdfs:subClassOf scor:DeliverReturnMROProduct ;
+    skos:notation "sDR2.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:ReceiveMROProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the service provider receives and verifies the returned MRO item against the return authorization and other documentation and prepares the item for transfer."@en ;
+    rdfs:label "Receive MRO Product"@en ;
+    rdfs:subClassOf scor:DeliverReturnMROProduct ;
+    skos:notation "sDR2.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:TransferMROProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the service provider transfers the MRO product to the appropriate process to implement the disposition decision."@en ;
+    rdfs:label "Transfer MRO Product"@en ;
+    rdfs:subClassOf scor:DeliverReturnMROProduct ;
+    skos:notation "sDR2.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+
+# Source Return Excess Product
+
+ scor:IdentifyExcessProductCondition
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the customer utilizes planned policies, business rules and product inspection as criteria to identify and confirm that material is in excess of the current requirements."@en ;
+    rdfs:label "Identify Excess Product Condition"@en ;
+    rdfs:subClassOf scor:SourceReturnExcessProduct ;
+    skos:notation "sSR3.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:DispositionExcessProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process of the customer determining whether to return the excess material and identification of a designated return center a return authorization."@en ;
+    rdfs:label "Identify Excess Product Condition"@en ;
+    rdfs:subClassOf scor:SourceReturnExcessProduct ;
+    skos:notation "sSR3.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:RequestExcessProductReturnAuthorization
+    rdf:type owl:Class ;
+    rdfs:comment "The process of a customer requesting and obtaining authorization, from the designated return center, for the return of excess product. Additionally, the customer and designated return center would negotiate enabling conditions such as return credit or cash discount, packaging, handling, transportation and import / export requirements to facilitate the efficient return of the excess product."@en ;
+    rdfs:label "Request Excess Product Return Authorization"@en ;
+    rdfs:subClassOf scor:SourceReturnExcessProduct ;
+    skos:notation "sSR3.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:ScheduleExcessProductShipment
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the customer develops the schedule for a carrier to pick-up the excess product. Activities include selecting the carrier and rates, preparing the item for transfer, preparing scheduling documentation and managing overall scheduling administration."@en ;
+    rdfs:label "Schedule Excess Product Shipment"@en ;
+    rdfs:subClassOf scor:SourceReturnExcessProduct ;
+    skos:notation "sSR3.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:ReturnExcessProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the customer packages, and handles the excess product in preparation for shipping in accord with pre-determined conditions. The product is then provided by the customer to the carrier who physically transports the product and its associated documentation to the last known holder or designated return center."@en ;
+    rdfs:label "Return Excess Product"@en ;
+    rdfs:subClassOf scor:SourceReturnExcessProduct ;
+    skos:notation "sSR3.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+# Deliver Return Excess Product
+
+ scor:AuthorizeExcessProductReturn
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the designated return center receives an excess product return authorization request from a customer, determines if the item can be accepted and communicates their decision to the customer. Accepting the request would include negotiating the conditions of the return with the customer, including authorizing credit or cash discount. Rejecting the request would include providing a reason for the rejection to the customer."@en ;
+    rdfs:label "Authorize Excess Product Return"@en ;
+    rdfs:subClassOf scor:DeliverReturnExcessProduct ;
+    skos:notation "sDR3.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:ScheduleExcessReturnReceipt
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the l designated return center evaluates an authorized excess material return toolsdetermine packaging and handling requirements. This assessment will lead to the development of a return disposition decision and a return schedule with terms and conditions that will tell the Customer how and when to ship the product. The scheduling activity would also inform the Return Center?s Receiving department when to expect the shipment and where to send the product, for disposition, upon receipt."@en ;
+    rdfs:label "Schedule Excess Return Receipt"@en ;
+    rdfs:subClassOf scor:DeliverReturnExcessProduct ;
+    skos:notation "sDR3.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:ReceiveExcessProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the designated return center receives and verifies the returned excess product and associated documentation against the return authorization and other documentation and prepares the item for transfer. Administrate any discrepancies that arise."@en ;
+    rdfs:label "Receive Excess Product"@en ;
+    rdfs:subClassOf scor:DeliverReturnExcessProduct ;
+    skos:notation "sDR3.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+ scor:TransferExcessProduct
+    rdf:type owl:Class ;
+    rdfs:comment "The process where the designated return center transfers the excess product to the appropriate process to implement the disposition decision."@en ;
+    rdfs:label "Transfer Excess Product"@en ;
+    rdfs:subClassOf scor:DeliverReturnExcessProduct ;
+    skos:notation "sDR3.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
 #############################################################################################
 #############################################################################################
 #############################################################################################
@@ -1922,19 +2233,10 @@ scor:DeliverInstall
 
 scor:hasStep
     rdf:type owl:ObjectProperty ;
-    rdfs:label "hasStep"@en ;
+    rdfs:label "has Step"@en ;
     rdfs:domain scor:Process ;
     rdfs:range  scor:Process ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
- .
-
-scor:hasPracticeId
-    rdf:type owl:DatatypeProperty ;
-    rdfs:label "hasPracticeID"@en ;
-    rdfs:domain scor:Practice ;
-    rdfs:range xsd:string ;
+    rdfs:comment "Steps which are part of a certain process"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -1943,8 +2245,9 @@ scor:hasPracticeId
 scor:hasAptitude
     rdf:type rdf:Property ;
     rdfs:domain scor:Skill ;
-    rdfs:label "hasAptitude"@en  ;
     rdfs:range scor:Aptitude ;
+    rdfs:comment "An aptitude required for certain skills"@en  ;
+    rdfs:label "has Aptitude"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -1953,8 +2256,9 @@ scor:hasAptitude
 scor:hasExperience
     rdf:type rdf:Property ;
     rdfs:domain scor:Skill ;
-    rdfs:label "hasExperience"@en  ;
     rdfs:range scor:Experience ;
+    rdfs:label "has Experience"@en  ;
+    rdfs:comment "An Experience required for certain skills"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -1963,8 +2267,8 @@ scor:hasExperience
 scor:hasSkill
     rdf:type rdf:Property ;
     rdfs:domain schema:Person ;
-    rdfs:label "hasSkill"@en  ;
-    rdfs:comment "A person has an Skill "@en  ;
+    rdfs:label "has Skill"@en  ;
+    rdfs:comment "A Skill of a Person"@en  ;
     rdfs:range scor:Skill ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -1989,6 +2293,8 @@ scor:hasMetric
     rdf:type owl:DatatypeProperty ;
     rdfs:range xsd:float ;
     rdfs:isDefinedBy scor: ;
+    rdfs:comment "A Meric related to Processes"@en ;
+    rdfs:label "has Metric"@en;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -1996,13 +2302,15 @@ scor:hasMetric
 
 ######### Reliability Metrics
 
-scor:hasMetricRL_1 rdfs:domain scor:Make1_6 ;
+scor:hasMetricRL_1 rdfs:domain scor:ReleaseProductToDeliver ;
+    rdfs:label "Percentage of Orders Delivered In Full of a certain Process"@en;
+    rdfs:comment "Percentage of Orders Delivered In Full"@en ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:hasMetricRL_2 rdfs:domain scor:Make1_6 ;
+scor:hasMetricRL_2 rdfs:domain scor:ReleaseProductToDeliver ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2010,17 +2318,17 @@ scor:hasMetricRL_2 rdfs:domain scor:Make1_6 ;
 
 #3 seems to be deprecated #
 
-scor:hasMetricRL_4 rdfs:domain [owl:unionOf (scor:Deliver1_10
-                                           scor:Deliver2_9
-                                           scor:Deliver3_8)] ;
+scor:hasMetricRL_4 rdfs:domain [owl:unionOf (scor:PackProduct
+                                           scor:PickProduct
+                                           scor:SSPReceiveProduct)] ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:hasMetricRL_5 rdfs:domain [owl:unionOf (scor:SourceReturn1_5
-                                           scor:SourceReturn2_5
-                                           scor:SourceReturn3_5)] ;
+scor:hasMetricRL_5 rdfs:domain [owl:unionOf (scor:SourceReturnDefectiveProduct
+                                           scor:SourceReturnDefectiveProduct
+                                           scor:SourceReturnDefectiveProduct)] ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
