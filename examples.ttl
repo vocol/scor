@@ -1,0 +1,37 @@
+@prefix :   <http://purl.org/eis/vocab/scor#> .
+@prefix ex: <http://example.com/> .
+
+#--- Delivery 1 --------------------------------------
+
+ex:delivery_id_1 a 	   :DeliverStockedProduct ;
+
+#--- General information 
+    ex:hasProduct    "SmartCardModule" ;
+    ex:hasCommitDate "01-01-2015" ;
+    ex:hasSupplier   <http://dbpedia.org/resource/Infineon> ;
+    ex:hasCustomer   <http://dbpedia.org/resource/Siemens> ;
+#--- SCOR Information 
+    :hasMetricRL_33  90 ;    # Deliver Item Accuracy
+		:hasMetricRL_35  100 ;   # Delivery Quantity Accuracy
+		:hasMetricRL_32  75 ;    # Customer CommitDateAchievement Time Customer Receiving
+		:hasMetricRL_34  82 ;    # Delivery Location Accuracy
+		:hasMetricRL_31  92 ;    # Compliance Documentation Accuracy
+		:hasMetricRL_43  98 ;    # Other Required Documentaiton Accuracy 
+		:hasMetricRL_45  100 ;   # Payment Documentation Accuracy
+		:hasMetricRL_50  100 ;   # Shipping Documentation Accuracy
+		:hasMetricRL_12  100 ;   # % of Faultless Installations
+		:hasMetricRL_41  100 ;   # Orders Delivered Damage Free Conformance
+    :hasMetricRL_42  94 ;    # Orders Delivered Defect Free Confromanace 
+ .
+
+#--- Delivery 2 --------------------------------------
+
+:delivery_id_2 a :DeliverMakeToOrderProduct .
+
+#--- Delivery 3 --------------------------------------
+
+:delivery_id_3 a :DeliverEngineerToOrderProduct .
+
+#--- Delivery 4 --------------------------------------
+
+:delivery_id_4 a :DeliverRetailProduct .
