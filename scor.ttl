@@ -2306,6 +2306,7 @@ scor:hasMetric
 scor:hasMetricRL_1 rdfs:domain scor:ReleaseProductToDeliver ;
     rdfs:label "# of complaints regarding missing environmental documentation"@en;
     rdfs:comment "The number of products released without proper environmental documentation as a percent of total products released"@en ;
+    rdfs:subPropertyOf scor:hasMetric; 
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2314,6 +2315,7 @@ scor:hasMetricRL_1 rdfs:domain scor:ReleaseProductToDeliver ;
 scor:hasMetricRL_2 rdfs:domain scor:ReleaseProductToDeliver ;
     rdfs:label "# of recordkeeping related NOVs"@en;
     rdfs:comment "The number of recordkeeping related regulatory violations received per year"@en;
+    rdfs:subPropertyOf scor:hasMetric; 
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2326,6 +2328,7 @@ scor:hasMetricRL_4 rdfs:domain [owl:unionOf (scor:PackProduct
                                            scor:SSPReceiveProduct)] ;
     rdfs:label "% correct material documentation"@en;
     rdfs:comment "The percent of total shipments that include the correct environmental documentation"@en;
+    rdfs:subPropertyOf scor:hasMetric; 
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2337,6 +2340,7 @@ scor:hasMetricRL_5 rdfs:domain [owl:unionOf (scor:ReturnDefectiveProduct
     rdfs:label "% Error-freeReturns Shipped"@en;
     rdfs:comment "Percentage of Error-free Returns Shipped"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric; 
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2344,6 +2348,7 @@ scor:hasMetricRL_5 rdfs:domain [owl:unionOf (scor:ReturnDefectiveProduct
 scor:hasMetricRL_6 rdfs:domain scor:DispositionMROProduct ;
     rdfs:label "% Identified MROProducts ReturnedTo Service"@en;
     rdfs:comment "Percentage Identified MROProducts ReturnedTo Service"@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2352,6 +2357,7 @@ scor:hasMetricRL_6 rdfs:domain scor:DispositionMROProduct ;
 scor:hasMetricRL_7 rdfs:domain scor:FillShoppingCart;
     rdfs:label "Item Location Accuracy"@en;
     rdfs:comment "Item Location Accuracy"@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2365,6 +2371,7 @@ scor:hasMetricRL_10 rdfs:domain [owl:unionOf (scor:SourceReturnExcessProduct
                                             scor:DeliverReturnExcessProduct)] ;
     rdfs:label "% of Excess Product Returns Delivered Complete to the Designated Return Center"@en;
     rdfs:comment "Correct destination, according to the schedule, with the correct part and documentation"@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2375,6 +2382,7 @@ scor:hasMetricRL_11 rdfs:domain [owl:unionOf (scor:DSPInvoice
                                             scor:DEOPInvoice)] ;
     rdfs:label "% of Faultless Invoices"@en;
     rdfs:comment "The number of invoices processed without issues and or errors divided by the total number of invoices. Examples of potential invoice defects are: Change from customer purchase order without proper customer involvement Wrong Customer Information (e.g., name, address, telephone number) Wrong Product Information (e.g., part number, product description) Wrong Price (e.g., discounts not applied) Wrong Quantity or Wrong Terms or Wrong Date"@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2383,6 +2391,7 @@ scor:hasMetricRL_11 rdfs:domain [owl:unionOf (scor:DSPInvoice
 scor:hasMetricRL_12 rdfs:domain scor:InstallProduct ;
     rdfs:label "% Of Faultless Installations"@en;
     rdfs:comment "Number of Faultless Installations divided by Total Number of Units Installed."@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2392,6 +2401,7 @@ scor:hasMetricRL_13 rdfs:domain scor:DeliverReturnMROProduct ;
     rdfs:label "% of MRO returnsdelivered to the correct service provider location"@en;
     rdfs:comment "% of MRO returns delivered to the correct service provider location, within schedule, with the correct part and documentation"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2400,6 +2410,7 @@ scor:hasMetricRL_14 rdfs:domain scor:ReleaseFinishedProductToDeliver ;
     rdfs:label "% of products meeting specified environmental performance requirements"@en;
     rdfs:comment "The number of products that meet desired environmental performance specifications as a percent of total products produced"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2408,6 +2419,7 @@ scor:hasMetricRL_15 rdfs:domain scor:ReleaseFinishedProductToDeliver ;
     rdfs:label "% of products with proper environmental labeling (if required)"@en;
     rdfs:comment "The number of products with proper environmental labels in place as a per cent of total products produced"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2416,6 +2428,7 @@ scor:hasMetricRL_16 rdfs:domain scor:SelectCarriersRateShipments ;
     rdfs:label "% of suppliers meeting environmental metrics/ criteria"@en;
     rdfs:comment "Number of suppliers that completely meet agreement environmental criteria divided by the total number of suppliers used."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2424,6 +2437,7 @@ scor:hasMetricRL_17 rdfs:domain scor:SelectFinalSupplierNegotiate ;
     rdfs:label "% of suppliers with an EMS or ISO 14001 certification"@en;
     rdfs:comment "Percent of suppliers used that have a validated Environmental Management System or ISO 14000 certification"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2434,6 +2448,7 @@ scor:hasMetricRL_18 rdfs:domain [owl:unionOf (scor:SSPReceiveProduct
     rdfs:label "% Orders/ Lines Processed Complete"@en;
     rdfs:comment "The number of orders / lines that are processed complete divided by the total orders / lines processed within the measurement period"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2444,6 +2459,7 @@ scor:hasMetricRL_19 rdfs:domain [owl:unionOf (scor:SSPVerifyProduct
     rdfs:label "% Orders/ Lines Received Defect Free"@en;
     rdfs:comment "The number of orders / lines that are received defect free divided by the total orders / lines processed in the measurement period."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2453,6 +2469,7 @@ scor:hasMetricRL_20 rdfs:domain [owl:unionOf (scor:SSPReceiveProduct
                                             scor:SEOPReceiveProduct)] ;
     rdfs:label "% Orders/ Lines Received On-Time To Demand Requirement"@en;
     rdfs:comment "The number of orders / lines that are received on- time to the demand requirements divided by the total orders / lines for the demand requirements in the measurement period"@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2464,6 +2481,7 @@ scor:hasMetricRL_21 rdfs:domain [owl:unionOf (scor:SSPVerifyProduct
     rdfs:label "% Orders/ lines received with correct content"@en;
     rdfs:comment "Percent of orders or lines received that have the correct material content as specified in the product design specs and supplier agreements."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2474,6 +2492,7 @@ scor:hasMetricRL_21 rdfs:domain [owl:unionOf (scor:SSPVerifyProduct
     rdfs:label "% Orders/ lines received with correct packaging"@en;
     rdfs:comment "Percent of orders or lines received that are packaged correctly with the right type and quantity of packaging material."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2484,6 +2503,7 @@ scor:hasMetricRL_23 rdfs:domain [owl:unionOf (scor:SSPReceiveProduct
     rdfs:label "% Orders/ Lines Received with Correct Shipping Documents"@en;
     rdfs:comment "The number of orders / lines that are received on- time with correct shipping documents divided by the total orders / lines processed in the measurement period"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2494,6 +2514,7 @@ scor:hasMetricRL_24 rdfs:domain [owl:unionOf (scor:SSPVerifyProduct
     rdfs:label "% Orders/lines received damage free"@en;
     rdfs:comment "The number of orders / lines that are processed damage free divided by the total orders / Lines processed in the measurement period"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2504,6 +2525,7 @@ scor:hasMetricRL_25 rdfs:domain [owl:unionOf (scor:SSPTransferProduct
     rdfs:label "% Product Transferred On-Time to Demand Requirement"@en;
     rdfs:comment "The number of product orders / lines that are transferred on-time to demand requirements divided by the total orders / lines transferred in the measurement period"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2514,6 +2536,7 @@ scor:hasMetricRL_26 rdfs:domain [owl:unionOf (scor:SSPTransferProduct
     rdfs:label "% Product Transferred without Transaction Errors"@en;
     rdfs:comment "The number of transactions processed without error divided by the total transactions processed in the measurement period."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2523,6 +2546,7 @@ scor:hasMetricRL_27 rdfs:domain [owl:unionOf (scor:SSPScheduleProductDeliveries
                                             scor:SEOPScheduleProductDeliveries)] ;
     rdfs:label "% Schedules Changed within Supplier's Lead Time"@en;
     rdfs:comment "The number of schedules that are changed within the suppliers lead-time divided by the total number Deliveries of schedules generated within the measurement period"@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2534,6 +2558,7 @@ scor:hasMetricRL_28 rdfs:domain [owl:unionOf (scor:ScheduleDefectiveProductShipm
     rdfs:label "% Shipping Schedules that Support Customer Required Return by Date"@en;
     rdfs:comment "Percentage Shipping Schedules that Support Customer Required Return by Date"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2551,6 +2576,7 @@ scor:hasMetricRL_31 rdfs:domain [owl:unionOf (scor:MSPackage
     rdfs:label "Compliance Documentation Accuracy"@en;
     rdfs:comment "Percentage of compliance documentations are complete, correct, and readily available when and  how expected by customer, Government and other supply chain regulatory entities. Compliance documentation includes material safety data sheets."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2564,6 +2590,7 @@ scor:hasMetricRL_32 rdfs:domain [owl:unionOf (scor:DSPReceiveVerifyProductByCust
     rdfs:comment "Percentage of orders which is received on time as defined by the custome"@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
+    rdfs:subPropertyOf scor:hasMetric;
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
@@ -2585,6 +2612,7 @@ scor:hasMetricRL_33 rdfs:domain [owl:unionOf (scor:ReceiveEnterValidateOrder
     rdfs:label "Delivery Item Accuracy"@en;
     rdfs:comment "Percentage of orders in which all items ordered are the items actually provided, and no extra items are provided"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2607,6 +2635,7 @@ scor:hasMetricRL_34 rdfs:domain [owl:unionOf (scor:ReceiveEnterValidateOrder
     rdfs:label "Delivery Location Accuracy"@en;
     rdfs:comment "Percentage of orders which is delivered to the correct location and customer entity"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2629,6 +2658,7 @@ scor:hasMetricRL_35 rdfs:domain [owl:unionOf (scor:ReceiveEnterValidateOrder
     rdfs:label "Delivery Quantity Accuracy"@en;
     rdfs:comment "Percentage of orders in which all quantities received by the customer match the order quantities (within mutually agreed tolerances)"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2641,6 +2671,7 @@ scor:hasMetricRL_36 rdfs:domain [owl:unionOf (scor:BalanceSCResourcesWithSCRequi
     rdfs:label "Fill Rate"@en;
     rdfs:comment "The percentage of ship-from-stock orders shipped within 24 hours of order receipt. For services, this metric is the proportion for services that are filled so that the service is completed within 24 hours"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2657,6 +2688,7 @@ scor:hasMetricRL_37 rdfs:domain [owl:unionOf (scor:PSCIdentifyPrioritizeAggregat
     rdfs:label "Forecast Accuracy"@en;
     rdfs:comment "Forecast accuracy is calculated for products and/or families for markets/distribution channels, in unit measurement. Common calculation (Sum Actuals - Sum of Variance) / Sum Actuals to determine percentage error. *monitoring the delta of Forecast Accuracy over measured time periods can determine success rates."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2667,6 +2699,7 @@ scor:hasMetricRL_39 rdfs:domain scor:DispositionExcessProduct;
     rdfs:label "Number of occurrences of incorrect designated return center"@en;
     rdfs:comment "Number of occurrences of incorrect designated return center"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2674,6 +2707,7 @@ scor:hasMetricRL_39 rdfs:domain scor:DispositionExcessProduct;
 scor:hasMetricRL_40 rdfs:domain scor:IdentifyExcessProductCondition ;
     rdfs:label "Number of occurrences where excessive inventory is returned and followed"@en;
     rdfs:comment ""@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2685,6 +2719,7 @@ scor:hasMetricRL_41 rdfs:domain [owl:unionOf (scor:DSPReceiveVerifyProductByCust
     rdfs:label "Orders Delivered Damage Free Conformance"@en;
     rdfs:comment "Percentage of orders which is delivered without damage."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2695,6 +2730,7 @@ scor:hasMetricRL_42 rdfs:domain [owl:unionOf (scor:DSPReceiveVerifyProductByCust
     rdfs:label "Orders Delivered Defect Free Conformance"@en;
     rdfs:comment "Percentage of orders which is delivered without defect"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2706,6 +2742,7 @@ scor:hasMetricRL_43 rdfs:domain [owl:unionOf (scor:LoadVehicleGenerateShippingDo
     rdfs:label "Other Required Documentation Accuracy"@en;
     rdfs:comment "Percentage of other required documentations (besides of compliance documentation, payment documentation and shipping documentation) are complete, correct, and readily available when and how expected by customer, Government and other supply chain regulatory entities. This kind of documentations includes quality certification"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2718,6 +2755,7 @@ scor:hasMetricRL_45 rdfs:domain [owl:unionOf (scor:LoadVehicleGenerateShippingDo
     rdfs:label "Payment Documentation Accuracy"@en;
     rdfs:comment "Percentage of payment documentations are complete, correct, and readily available when and how expected by customer, Government and other supply chain regulatory entities. Payment documentations includes invoice, contractual outline agreement"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2729,8 +2767,9 @@ scor:hasMetricRL_45 rdfs:domain [owl:unionOf (scor:LoadVehicleGenerateShippingDo
 scor:hasMetricRL_47 rdfs:domain [owl:unionOf (scor:ReturnDefectiveProduct
                                             scor:ReturnMROPRoduct
                                             scor:DEOPLoadProductGenerateShippingDocs)] ;
-    rdfs:label ""@en;
-    rdfs:comment ""@en;
+    rdfs:label "Return Shipments on Time"@en;
+    rdfs:comment "Return Shipments on Time"@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2741,12 +2780,14 @@ scor:hasMetricRL_47 rdfs:domain [owl:unionOf (scor:ReturnDefectiveProduct
 scor:hasMetricRL_49 rdfs:domain [owl:unionOf (scor:MSScheduleProductionActivities
                                             scor:MOScheduleProductionActivities
                                             scor:MEOScheduleProductionActivities)] ;
-    rdfs:label "Return Shiptments Shipped on Time"@en;
-    rdfs:comment "Return Shiptments Shipped on Time"@en;
+    rdfs:label "Schedule Achievement"@en;
+    rdfs:comment "The percentage of time that a plant achieves its production schedule. This calculation is based on the number of scheduled end-items or total volume for a specific period. Note: over-shipments do not make up for under-shipments."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
+
 
 scor:hasMetricRL_50 rdfs:domain [owl:unionOf (scor:LoadVehicleGenerateShippingDocuments
                                             scor:DMOPLoadProductGenerateShippingDocs
@@ -2754,6 +2795,7 @@ scor:hasMetricRL_50 rdfs:domain [owl:unionOf (scor:LoadVehicleGenerateShippingDo
     rdfs:label "Shipping Documentation Accuracy"@en;
     rdfs:comment "Percentage of shipping documentations are complete, correct, and readily available when and how expected by customer, Government and other supply chain regulatory entities. Shipping documentations includes packing slips (customers), bill of lading (carriers) and government or customs documentation/forms"@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2767,6 +2809,7 @@ scor:hasMetricRL_55 rdfs:domain [owl:unionOf (scor:MSProduceTest
     rdfs:label "Warranty and Returns"@en;
     rdfs:comment "Warranty costs include materials, labor and problem diagnosis for product defects."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
@@ -2781,6 +2824,7 @@ scor:hasMetricRL_56 rdfs:domain [owl:unionOf (scor:MSProduceTest
     rdfs:comment "Warranty costs include materials, labor and problem diagnosis for product defects."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
+    rdfs:subPropertyOf scor:hasMetric;
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
@@ -2789,6 +2833,7 @@ scor:hasMetricRL_57 rdfs:domain [owl:unionOf (scor:MSWasteDisposal
                                             scor:MEOWasteDisposal)] ;
     rdfs:label "Waste Processing Errors"@en;
     rdfs:comment "Number of errors in waste transactions as percent of total waste transactions"@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2805,6 +2850,7 @@ scor:hasMetricRL_58 rdfs:domain [owl:unionOf (scor:MakeToStock
                                             scor:MEOPackage)] ;
     rdfs:label "Yield"@en;
     rdfs:comment "The ratio of usable output from a process to its input."@en;
+    rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -2816,6 +2862,7 @@ scor:hasMetricRL_59 rdfs:domain [owl:unionOf (scor:MSProduceTest
     rdfs:label "Yield Availability"@en;
     rdfs:comment "The condition that occurs when the output of a process is not consistently repeatable either in quantity, quality, or combination of these."@en;
     rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
