@@ -2941,8 +2941,8 @@ scor:hasMetricRL_39
 scor:hasMetricRL_40
     rdf:type owl:DatatypeProperty ;
     rdfs:domain scor:IdentifyExcessProductCondition ;
-    rdfs:label "Number of occurrences where excessive inventory is returned and followed"@en;
-    rdfs:comment ""@en;
+    rdfs:label "# occurrences where excessive inventory is returned and followed"@en;
+    rdfs:comment "Number of occurrences where excessive inventory is returned and followed"@en;
     rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
