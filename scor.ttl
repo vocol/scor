@@ -1036,7 +1036,7 @@ scor:SMOPAuthorizeSupplierPayment
     rdfs:comment "The process of authorizing payments and paying suppliers for product or services."@en ;
     rdfs:label "Supplier Payment (Source Make To Order Product)"@en ;
     rdfs:subClassOf scor:SourceMakeToOrderProduct ;
-    skos:notation "sS2.4" ;
+    skos:notation "sS2.5" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -1437,14 +1437,14 @@ scor:DSPConsolidateOrders
     rdfs:comment "The process of analyzing orders to determine the groupings that result in least cost/best service fulfillment and transportation."@en ;
     rdfs:label "Consolidate Orders (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
-    olo:next scor:BuildLoads;
+    olo:next scor:DSPBuildLoads;
     skos:notation "sD1.4" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:BuildLoads
+scor:DSPBuildLoads
     rdf:type owl:Class ;
     rdfs:comment "Transportation modes are selected and efficient loads are built."@en ;
     rdfs:label "Build Loads (Deliver Stocked Product)"@en ;
@@ -1545,14 +1545,14 @@ scor:DSPReceiveVerifyProductByCustomer
     rdfs:comment "The process of receiving the shipment by the customer (either at customer site or at shipping area in case of self-collection) and verifying that the order was shipped complete and that the product meets delivery terms."@en ;
     rdfs:label "Receive and verify Product by Customer (Deliver Stocked Product)"@en ;
     rdfs:subClassOf scor:DeliverStockedProduct ;
-    olo:next scor:InstallProduct;
+    olo:next scor:DSPInstallProduct;
     skos:notation "sD1.13" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:InstallProduct
+scor:DSPInstallProduct
     rdf:type owl:Class ;
     rdfs:comment "the process of preparing, testing and installing the product at the customer site. The product is fully functional upon completion."@en ;
     rdfs:label "Install Product (Deliver Stocked Product)"@en ;
@@ -1618,14 +1618,14 @@ scor:DMOPConsolidateOrders
     rdfs:comment "The process of analyzing orders to determine the groupings that result in least cost/best service fulfillment and transportation."@en ;
     rdfs:label "Consolidate Orders (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
-    olo:next scor:DeliverMakeToOrderProductProcessBuildLoads;
+    olo:next scor:DMOPBuildLoads;
     skos:notation "sD2.4" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:DeliverMakeToOrderProductProcessBuildLoads
+scor:DMOPBuildLoads
     rdf:type owl:Class ;
     rdfs:comment "Transportation modes are selected and efficient loads are built."@en ;
     rdfs:label "Build Loads (Deliver Make To Order Product)"@en ;
@@ -1726,14 +1726,14 @@ scor:DMOPReceiveVerifyProductByCustomer
     rdfs:comment "The process of receiving the shipment at the customer (either at customer site or at shipping area in case of self-collection) and verifying that the order was shipped complete and that the product meets delivery terms."@en ;
     rdfs:label "Receive and verify Product by Customer (Deliver Make To Order Product)"@en ;
     rdfs:subClassOf scor:DeliverMakeToOrderProduct ;
-    olo:next scor:DeliverMakeToOrderProduct;
+    olo:next scor:DMOPInstallProduct;
     skos:notation "sD2.13" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:DeliverMakeToOrderProductInstallProduct
+scor:DMOPInstallProduct
     rdf:type owl:Class ;
     rdfs:comment "the process of preparing, testing and installing the product at the customer site."@en ;
     rdfs:label "Install Product (Deliver Make To Order Product)"@en ;
@@ -2352,6 +2352,9 @@ scor:ReturnMROPRoduct
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
+
+
+# Enable steps
 .
 
 #############################################################################################
@@ -2540,7 +2543,7 @@ scor:hasMetricRL_11
 
 scor:hasMetricRL_12
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain scor:InstallProduct ;
+    rdfs:domain scor:DSPInstallProduct ;
     rdfs:label "% Of Faultless Installations"@en;
     rdfs:comment "Number of Faultless Installations divided by Total Number of Units Installed."@en;
     rdfs:subPropertyOf scor:hasMetric;
@@ -3150,6 +3153,719 @@ scor:hasMetricRL_59
 
 
 ######### Responsiveness Metrics
+
+
+#1 seems to be deprecated
+
+scor:hasMetricRS_2
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain scor:ManagePerformance ;
+    rdfs:label "Assess Delivery Performance Cycle Time"@en;
+    rdfs:comment "The average time associated with assessing the performance of deliver processes."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:hasMetricRS_3
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain scor:ManagePerformance ;
+    rdfs:label "Assess Supplier Performance Cycle Time"@en;
+    rdfs:comment "The average time associated with assessing the performance of deliver processes."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_4
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MSProduceTest
+        scor:MSPackage
+        scor:MOProduceTest
+        scor:MOPackage
+        scor:MEOProduceTest
+        scor:MEOPackage
+        )] ;
+    rdfs:label "Asset Turns"@en;
+    rdfs:comment "Total gross product revenue / Total net assets."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_5
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:AuthorizeDefectiveProductReturn
+        )] ;
+    rdfs:label "Authorize Defective Product Return Cycle Time"@en;
+    rdfs:comment "The average time associated with authorizing the return of defective product."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_6
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:
+        )] ;
+    rdfs:label "Authorize Excess Product Return Cycle Time"@en;
+    rdfs:comment "The average time associated with authorizing the turn of excess product."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_7
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:AuthorizeMROProductReturn
+        )] ;
+    rdfs:label "Authorize MRO Product Return Cycle Time"@en;
+    rdfs:comment "The average time associated with authorizing the turn of MRO product."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_8
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:AuthorizeSupplierPayment
+        scor:SMOPAuthorizeSupplierPayment
+        scor:SEOPAuthorizeSupplierPayment
+        )] ;
+    rdfs:label "Authorize Supplier Payment Cycle Time"@en;
+    rdfs:comment "The average time associated with authorizing payment to suppliers."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_9
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SSPScheduleProductDeliveries
+        scor:MOPScheduleProductDeliveries
+        scor:SEOPScheduleProductDeliveries
+        )] ;
+    rdfs:label "Average Days per Engineering Change"@en;
+    rdfs:comment "# of days each engineering change impacts the delivery date divided by the total # of changes."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_10
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SSPScheduleProductDeliveries
+        scor:MOPScheduleProductDeliveries
+        scor:SEOPScheduleProductDeliveries
+        )] ;
+    rdfs:label "Average Days per Schedule Change"@en;
+    rdfs:comment "# of days each schedule change impacts the delivery date divided by the total # of changes."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_11
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SSPScheduleProductDeliveries
+        scor:MOPScheduleProductDeliveries
+        scor:SEOPScheduleProductDeliveries
+        )] ;
+    rdfs:label "Average Release Cycle of Changes"@en;
+    rdfs:comment "Cycle time for implementing change notices divided by total number of changes."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_12
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:BalanceProductResourcesWithProductRequirements
+        )] ;
+    rdfs:label "Balance Product Resources with Product Requirements Cycle Time"@en;
+    rdfs:comment "The average time associated with balancing the product resources and product requirements."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_13
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:BalanceProductionResourcesWithProductionRequirements
+        )] ;
+    rdfs:label "Balance Production Resources with Product Requirements Cycle Time"@en;
+    rdfs:comment "The average time associated with identifying, prioritizing, and aggregating product requirements."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_14
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:BalanceReturnResourcesWithReturnRequirements
+        )] ;
+    rdfs:label "Balance Return Resources with Return Requirements Cycle Time"@en;
+    rdfs:comment "The average time associated with balancing return resources and return requirements."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_15
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:BalanceSCResourcesWithSCRequirements
+        )] ;
+    rdfs:label "Balance Supply Chain Resources with SC Requirements"@en;
+    rdfs:comment "The average time associated with balancing supply chain resources and supply chain requirements requirements."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_16
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DSPBuildLoads
+        scor:DMOPBuildLoads
+        scor:DEOPBuildLoads
+        )] ;
+    rdfs:label "Build Loads Cycle Time"@en;
+    rdfs:comment "The average time associated with building shipment loads."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_17
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:Checkout
+        )] ;
+    rdfs:label "Checkout Cycle Time"@en;
+    rdfs:comment "The average time required for customer checkout."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_18
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DSPConsolidateOrders
+        )] ;
+    rdfs:label "Consolidate Orders Cycle Time"@en;
+    rdfs:comment "The average time required for customer order consolidation."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_19
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:
+        scor:DeliverReturnMROProduct
+        scor:DeliverReturnExcessProduct
+        )] ;
+    rdfs:label "Current customer return order cycle time"@en;
+    rdfs:comment "Current return order cycle time, including customer return order processing cycle time, transit time, return processing and disposition cycle time, etc."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_20
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        )] ;
+    rdfs:label "Current logistics order cycle time"@en;
+    rdfs:comment "Current logistics order cycle time, including customer order processing cycle time, dock-to-stock cycle time, pick-to-ship cycle, transit time, etc."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_21
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MakeToStock
+        scor:MakeToOrder
+        scor:MakeEngineerToOrder
+        )] ;
+    rdfs:label "Current manufacturing order cycle time"@en;
+    rdfs:comment "Current manufacturing cycle time"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_22
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceReturnDefectiveProduct
+        )] ;
+    rdfs:label "Current supplier return order cycle time"@en;
+    rdfs:comment "Current supplier return cycle time, including supplier return order processing cycle time, pick-to-shop time, transit time etc."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#23 seems to be deprecated
+
+scor:hasMetricRS_24
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverInstall
+        )] ;
+    rdfs:label "Deliver and/or Install Cycle Time"@en;
+    rdfs:comment "The average time required to deliver and install product."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_25
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:EnterOrderCommitResourcesLaunchProgram
+        )] ;
+    rdfs:label "Enter Order, Commmit Resources & Launch Program Cycle Time"@en;
+    rdfs:comment "The average time associated with entering an order, committing resources and program launch."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+
+scor:hasMetricRS_26
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:EstablishCommunicateReturnPlans
+        )] ;
+    rdfs:label "Establish and Communicate Return Plans Cycle Time"@en;
+    rdfs:comment "The average time associated with entering an order, committing resources and program launch."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_27
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:EstablishDeliveryPlans
+        )] ;
+    rdfs:label "Establish Delivery Plans Cycle Time"@en;
+    rdfs:comment "The average time associated with establish and communicating deliver plans"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_28
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:EstablishProductionPlans
+        )] ;
+    rdfs:label "Establish Production Plans Cycle Time"@en;
+    rdfs:comment "The average time associated with establish and communicating production plans"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_29
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:EstablishSourcingPlans
+        )] ;
+    rdfs:label "Establish Sourcing Plans Cycle Time"@en;
+    rdfs:comment "The average time associated with establishing and communicating source plans"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_30
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:EstablishCommunicateSCPlans
+        )] ;
+    rdfs:label "Establish Supply Chain Plans Cycle Time"@en;
+    rdfs:comment "Five point annual average of the sum of all gross inventories (raw materials & WIP, plant FG, field FG, fiels samples, other) / (COGS / 365). Total gross value of iventory at standard cost before reservers for excess and obsolescence. Only includes inventory on company books, future liabilities should not be included"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#31 seems to be deprecated
+
+scor:hasMetricRS_32
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:FillShoppingCart
+        )] ;
+    rdfs:label "Fill Shopping Cart Cycle Time"@en;
+    rdfs:comment "The average time associated with 'filling the shopping cart'."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_33
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:FinalizeProductionEngineering
+        )] ;
+    rdfs:label "Finalize Production Engineering Cycle Time"@en;
+    rdfs:comment "The average time associated with the finalization of production engineering."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_34
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:GenerateStockingSchedule
+        )] ;
+    rdfs:label "Generate Stocking Schedule Cycle Time"@en;
+    rdfs:comment "The average time associated with the generation of the stocking schedlule."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_35
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifySourcesOfSupply
+        )] ;
+    rdfs:label "Identify Sources and Supply Cycle Time"@en;
+    rdfs:comment "The average time associated with the generation of the stocking schedule."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_36
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyAssessAggregateProductionResources
+        )] ;
+    rdfs:label "Identify, Assess and Aggregate Production"@en;
+    rdfs:comment "The average time associated with the identifying, prioritizing and aggregating of product requirements."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_37
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyAssessAggregateDeliveryResources
+        )] ;
+    rdfs:label "Identify, Assess and Aggregate Delivery Resources Cycle Time"@en;
+    rdfs:comment "The average time associated with the identifying, prioritizing and aggregating delivery resource availability."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_38
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyAssessAggregateProductResources
+        )] ;
+    rdfs:label "Identify, Assess and Aggregate Product Resources Cycle Time"@en;
+    rdfs:comment "The average time associated with the identifying, prioritizing and aggregating product resource availability."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_39
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyPrioritizeAggregateSCResources
+        )] ;
+    rdfs:label "Identify, Assess and Aggregate Supply Chain Cycle Time"@en;
+    rdfs:comment "The average time associated with the identifying, prioritizing and aggregating supply chain resource availibity."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+
+scor:hasMetricRS_40
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyPrioritizeAggregateDeliveryRequirements
+        )] ;
+    rdfs:label "Identify, Assess and Aggregate Delivery Requirements Cycle Time"@en;
+    rdfs:comment "The average time associated with the identifying, prioritizing and aggregating delivery requirements availibity."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_41
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyPrioritizeAggregateProductRequirements
+        )] ;
+    rdfs:label "Identify, Assess and Aggregate Product Requirements Cycle Time"@en;
+    rdfs:comment "The average time associated with the identifying, prioritizing and aggregating product requirements."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_42
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyPrioritizeAggregateProductRequirements
+        )] ;
+    rdfs:label "Identify, Assess and Aggregate Product Requirements Cycle Time"@en;
+    rdfs:comment "The average time associated with the identifying, prioritizing and aggregating product requirements."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_43
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:AssessAggregateReturnRequirements
+        )] ;
+    rdfs:label "Identify, Assess and Aggregate Return Requirements Cycle Time"@en;
+    rdfs:comment "The average time associated with the identifying, prioritizing and aggregating return requirements."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_44
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:PSCIdentifyPrioritizeAggregateSCRequirements
+        )] ;
+    rdfs:label "Identify, Assess and Aggregate Supply Chain Requirements Cycle Time"@en;
+    rdfs:comment "The average time associated with the identifying, prioritizing and aggregating supply chain requirements."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+#45 seems to be deprecated
+
+scor:hasMetricRS_46
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DSPInstallProduct
+        scor:DMOPInstallProduct
+        scor:DEOPInstallProduct
+        )] ;
+    rdfs:label "Install Product Cycle Time"@en;
+    rdfs:comment "The average time associated with product installation."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_47
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:StockShelf
+        )] ;
+    rdfs:label "In-stock %"@en;
+    rdfs:comment "Percentage of materials, components, or finished goods that are there when needed."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_48
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DSPInvoice
+        )] ;
+    rdfs:label "Invoice Cycle Time"@en;
+    rdfs:comment "The average time associated with the generation and issuance of an invoice."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_49
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IssueMaterial
+        )] ;
+    rdfs:label "Issue Material Cycle Time"@en;
+    rdfs:comment "The average time associated with the issuance of material to production."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_50
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IssueSourcedInProcessProduct
+        )] ;
+    rdfs:label "Issue Sourced/In-Process Product Cycle Time"@en;
+    rdfs:comment "The average time associated with the issuance of material to production."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_51
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:LoadVehicleGenerateShippingDocuments
+        scor:DMOPLoadProductGenerateShippingDocs
+        scor:DEOPLoadProductGenerateShippingDocs
+        )] ;
+    rdfs:label "Load & Generate Shipping Documentation Cycle Time"@en;
+    rdfs:comment "The average time associated with the product loading and the generation of shipping documentation."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#52 seems to be deprecated
+
+scor:hasMetricRS_53
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:ManageDataInformation
+        )] ;
+    rdfs:label "Maintain Source Cycle Time"@en;
+    rdfs:comment "The average time associated with with maintaining source data."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_54
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:ManageSupplyChainBusinessRules
+        )] ;
+    rdfs:label "Manage Business Rules for PLAN Processes Cycle Time"@en;
+    rdfs:comment "The average time associated with managing plan business rules."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_55
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:ManageSupplyChainBusinessRules
+        )] ;
+    rdfs:label "Manage Business Rules for PLAN Processes Cycle Time"@en;
+    rdfs:comment "The average time associated with managing plan business rules."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricRS_56
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:
+        )] ;
+    rdfs:label "Manage Capital Assets Cycle Time"@en;
+    rdfs:comment "The average time associated with managing plan business rules."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+
+
+
+scor:hasMetricRL_xx
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:
+        )] ;
+    rdfs:label ""@en;
+    rdfs:comment "."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
 
 ######### Agility Metrics
 
