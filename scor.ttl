@@ -5,6 +5,7 @@
 @prefix dct:    <http://purl.org/dc/terms/> .
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix void:   <http://rdfs.org/ns/void#> .
 @prefix olo:    <http://purl.org/ontology/olo/core#> .
 @prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix doap:   <http://usefulinc.com/ns/doap#> .
@@ -22,6 +23,15 @@ scor:
     dct:modified "2015-11-05"^^xsd:date ;
     owl:imports <http://www.w3.org/2004/02/skos/core> , dct: ;
     owl:versionInfo "SNAPSHOT" ;
+    void:vocabulary
+        <http://purl.org/dc/terms/> ,
+        <http://www.w3.org/2004/02/skos/core#> ,
+        <http://purl.org/vocab/vann/> ,
+        <http://rdfs.org/ns/void#> ,
+        <http://purl.org/ontology/olo/core#> ,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns#> ,
+        <http://usefulinc.com/ns/doap#> ,
+        <http://schema.org/> ;
     vann:preferredNamespacePrefix "scor" ;
     vann:preferredNamespaceUri "http://purl.org/eis/vocab/scor#" ;
     doap:homepage <https://github.com/vocol/scor> ;
