@@ -568,7 +568,7 @@ scor:SourceReturnExcessProduct
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
         scor:ManagePerformance scor:ManageSupplyChainBusinessRules
-        scor:ManageDataInformation scor:ManageSupplyChainHumanResources
+        scor:ManageDataAndInformation scor:ManageSupplyChainHumanResources
         scor:ManageSupplyChainAssets scor:ManageSupplyChainContracts
         scor:ManageSupplyChainNetworks scor:ManageRegulatoryCompliance
         scor:ManageSupplyChainRisk
@@ -596,7 +596,7 @@ scor:ManagePerformance
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-scor:ManageDataInformation
+scor:ManageDataAndInformation
     rdf:type owl:Class ;
     rdfs:subClassOf scor:Enable ;
     rdfs:comment "Collecting, maintaining and publishing data and information required to plan, operate, measure and manage the supply chain"@en ;
@@ -2343,7 +2343,7 @@ scor:ReturnMROPRoduct
     dct:modified "2015-11-05"^^xsd:date ;
 .
 
- scor:TransferExcessProduct
+scor:TransferExcessProduct
     rdf:type owl:Class ;
     rdfs:comment "The process where the designated return center transfers the excess product to the appropriate process to implement the disposition decision."@en ;
     rdfs:label "Transfer Excess Product"@en ;
@@ -2352,9 +2352,725 @@ scor:ReturnMROPRoduct
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
+.
+
+# Manage Supply Chain Business Rule Steps
+
+scor:GatherBusinessRuleRequirements
+    rdf:type owl:Class ;
+    rdfs:comment "The process of collecting, organizing, prioritizing and scheduling policies and directives requiring new supply chain business rules, changes to business rules or discontinuation of business rules. This may include scheduling and assigning activities to responsible individuals, groups or organizations."@en ;
+    rdfs:label "Gather Business Rule Requirements"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainBusinessRules;
+    olo:next scor:InterpretBusinessRuleRequirement;
+    skos:notation "sE1.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:InterpretBusinessRuleRequirement
+    rdf:type owl:Class ;
+    rdfs:comment "The process of determining how the policy or directive impacts supply chain processes, technology and business rules. This includes reviewing existing business rules and determining the need to add, change or delete business rules. The outcome is one or more of the following: (1) Request to Add a Business Rule (2) Request to Change a Business Rule (3) Request to Delete or Archive a Business Rule. The purpose of this step is to identify the type of activities required and routing the request if required."@en ;
+    rdfs:label "Gather Business Rule Requirements"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainBusinessRules;
+    olo:next scor:DocumentBusinessRule;
+    skos:notation "sE1.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DocumentBusinessRule
+    rdf:type owl:Class ;
+    rdfs:comment "The process of writing the business rule in the appropriate system of record. This includes adding, editing and deleting policy and process documentation. A business rule includes a directive or policy, scope and effective date. Updates to existing business rules may include discontinuation information. The final activity of Document Business Rule is obtaining formal approval. The output of this process step is a fully documented business rule that is signed off by the responsible function."@en ;
+    rdfs:label "Document Business Rules"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainBusinessRules;
+    olo:next scor:CommunicateBusinessRule;
+    skos:notation "sE1.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:CommunicateBusinessRule
+    rdf:type owl:Class ;
+    rdfs:comment "The process of creating awareness in the relevant organization and/or staff of the upcoming changes. This may include communications, training and education programs. For small or incremental changes a notice maybe sufficient."@en;     
+    rdfs:label "Communicate Business Rules"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainBusinessRules;
+    olo:next scor:ReleaseAndPublishBusinessRule;
+    skos:notation "sE1.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ReleaseAndPublishBusinessRule
+    rdf:type owl:Class ;
+    rdfs:comment "The process of activating the business rule. Business rules release may be time-phased --e.g. Bill of Materials release for newer revisions. This may include activiation of a business rule in a software algorithm and starting to use a new or updated standard operating procedure. For large impact business rule changes this may include updating external websites, formal announcements, etc."@en;     
+    rdfs:label "Release and Publish Business Rule"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainBusinessRules;
+    olo:next scor:RetireBusinessRule;
+    skos:notation "sE1.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:RetireBusinessRule
+    rdf:type owl:Class ;
+    rdfs:comment "The process of de-activating the business rule. Business rules retirement may be time-phased --e.g. Bill of Materials replaced by newer revisions. This may include archiving the business rule in the associated software to avoid users from inadvertently using it or in order to comply to regulatory requirements or policies."@en;
+    rdfs:label "Retire Business Rule"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainBusinessRules;
+    skos:notation "sE1.6" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+# Manage Supply Chain Steps
+
+scor:InitiateReporting
+    rdf:type owl:Class ;
+    rdfs:comment "The process of scheduling, running reports, collecting and aggregating perfomance data. This includes running standard (pre-defined) reports as well as adhoc reporting. Ad hoc reporting includes developing a data collection plan and organizing data collection through: (1) Inspections (2) Measurement (e.g. stopwatch to measure duration of activities) (3) Sampling (4) Self assessements (e.g. Baldridge Self Assessment). Note: Today reports may be delivered (pushed) to the user by electronic media. This process step represents the delivery of reports to the user in such scenarios.";
+    rdfs:label "Retire Business Rule"@en ;
+    rdfs:subClassOf scor:ManagePerformance;
+    olo:next scor:AnalyzeReports;
+    skos:notation "sE2.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:AnalyzeReports
+    rdf:type owl:Class ;
+    rdfs:comment "The process of reviewing the reported performance. This includes comparing actual performance and trends to targets set for each metric. Identify metrics that require root cause analysis and notification/scheduling of process owners or 'root cause analysis' resources.";    #
+    rdfs:label "Analyze Reports"@en ;
+    rdfs:subClassOf scor:ManagePerformance;
+    olo:next scor:FindRootCauses;
+    skos:notation "sE2.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:FindRootCauses
+    rdf:type owl:Class ;
+    rdfs:comment "The process of analyzing the gaps in performance. Example root cause finding methods and techniques include: (1) Adding commentary to reported data (2) Metrics decomposition using diagnostic relationships of (SCOR) metrics (3) Time studies, sampling, audits, cycle counting (4) 5-Whys/Cause & Effect analysis (5) Statistical Analysis Techniques: e.g. Histogram, Scatter Plots, ANOVA. All root causes are documented and quantified. Quantification is the calculation or estimation of the relative contribution to the gap in performance."@en;
+    rdfs:label "Analyze Reports"@en ;
+    rdfs:subClassOf scor:ManagePerformance;
+    olo:next scor:FindRootCauses;
+    skos:notation "sE2.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:PrioritizeRootCauses
+    rdf:type owl:Class ;
+    rdfs:comment "The process of sorting root causes by relative contribution and prioritizing root causes. This includes assigning root causes to resources and scheduling development of corrective actions."@en;
+    rdfs:label "Prioritize Root Causes"@en ;
+    rdfs:subClassOf scor:ManagePerformance;
+    olo:next scor:DevelopeCorrectiveActions;
+    skos:notation "sE2.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DevelopeCorrectiveActions
+    rdf:type owl:Class ;
+    rdfs:comment "The process of identifying, documenting and testing corrective actions to address the root cause in order to close the performance gap. Corrections actions include: (1) Organizational changes (hiring, redeployment) (2) Policy changes (business rules) (3) Process improvements (work instructions, training) (4) Production equipment repairs/calibration (5) Supply chain network reconfiguration (6) Software algorithm changes (e.g. planning or scheduling logic) (7) Technology introduction (new equipment, tools, software). Note: This list of corrective actions is a general characterization for example purposes only. Different root causes may require different corrective actions."@en;
+    rdfs:label "Develope Corrective Actions"@en ;
+    rdfs:subClassOf scor:ManagePerformance;
+    olo:next scor:;
+    skos:notation "sE2.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ApproveAndLaunch
+    rdf:type owl:Class ;
+    rdfs:comment "The process of obtaining approvals, prioritizing, communicating and launching the corrective actions."@en;
+    rdfs:label "Develope Corrective Actions"@en ;
+    rdfs:subClassOf scor:ManagePerformance;
+    skos:notation "sE2.6" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+# Manage Data and Information steps
+
+scor:ReceiveMaintainanceRequest
+    rdf:type owl:Class ;
+    rdfs:comment "The process of receiving, validating and logging the request for information, configuration or system functionality maintenance. Maintenance request types: (1) Add data - creation of new record/document (includes duplicating existing records/documents) (2) Change data - modification of an existing record/document (3) Delete data - deletion of an existing record (includes archiving and unpublishing existing records/documents) (4) Change configuration (includes creating and maintaining user access) (5) Add code - (includes installing software updates and security updates) (6) Change code (modification of software code) (7) Delete code. This process may include assigning a ticket, tracking or order number and routing the request to the appropriate resource."@en;
+    rdfs:label "Manage Data and Information"@en ;
+    rdfs:subClassOf scor:ManageDataAndInformation;
+    olo:next scor:DetermineAndScopeWork;
+    skos:notation "sE3.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DetermineAndScopeWork
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with determining the activities required to perform the requested maintenance. The requestor may be contacted for additinal information. Complex requests may be setup as projects with appropriate work breakdown structure, milestones, acceptance criteria and deliverable schedules. This process may include routing the request to the appropriate resource."@en;
+    rdfs:label "Determine/Scope Work"@en ;
+    rdfs:subClassOf scor:ManageDataAndInformation;
+    olo:next scor:MaintainContentAndCode;
+    skos:notation "sE3.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:MaintainContentAndCode
+    rdf:type owl:Class ;
+    rdfs:comment "The process of formatting, entering, loading, editing or deleting the information, software updates and code changes requested. This includes verification of changes as needed (unit and integration testing). Typical changes included are: (1) Data record maintenance (such as bills-of-materials, shipping routes) (2) Configuration (system parameter) changes (such as activating and disabling system functionality) (3) Loading/installing software updates (e.g. code changes from vendors or development groups) (4) Loading/installing security updates. This process is not a placeholder for complex software engineering processes. Such processes would lay outside of the SCOR process framework."@en;    
+    rdfs:label "Maintain Content/Code"@en ;
+    rdfs:subClassOf scor:ManageDataAndInformation;
+    olo:next scor:MaintainAccess;
+    skos:notation "sE3.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:MaintainAccess
+    rdf:type owl:Class ;
+    rdfs:comment "The process of establishing, changing or removing access rights for users."@en;
+    rdfs:label "Maintain Access"@en ;
+    rdfs:subClassOf scor:ManageDataAndInformation;
+    olo:next scor:PublishInformation;
+    skos:notation "sE3.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:PublishInformation
+    rdf:type owl:Class ;
+    rdfs:comment "The process of activating the changes to information, configuration and/or code and populating the information to dependent systems, where applicable. For data record maintenance this is the activation of the new data and populating dependent systems with the new data. For example activating a bill-of-materials (BOM) in the system-of-record* and populating the BOM to dependent systems that require a copy of this data. This process may be manual, automated or a combination. *system-of-record = the information storage system, which is the authoritative data source for a given data element or piece of information."@en;    
+    rdfs:label "Publish Information"@en ;
+    rdfs:subClassOf scor:ManageDataAndInformation;
+    olo:next scor:VerfyInformation;
+    skos:notation "sE3.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:VerfyInformation
+    rdf:type owl:Class ;
+    rdfs:comment "The process of verifying the information is properly recorded in the system of record and populated to dependent systems. This includes verifying information is accessible to users."@en;    
+    rdfs:label "Publish Information"@en ;
+    rdfs:subClassOf scor:ManageDataAndInformation;
+    skos:notation "sE3.6" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#Manage Supply Chain Human Resources steps 
 
 
-# Enable steps
+scor:VerifyInformation
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the collection of the required skills to operate (part of) the supply chain. Examples of this process are planning meetings, periodic performance reviews, reorganizations. The data collected should list the required skills and/or number of resources and is generally organized by entity (supply chain node, department, function or a combination of these)."@en;    
+    rdfs:label "Identify Skills and Resource Requirement"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainHumanResources;
+    olo:next scor:IdentifyAvailableSkillsAndResources;
+    skos:notation "sE4.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:IdentifyAvailableSkillsAndResources
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the collection of skills/resources currently available in the supply chain. Generally this information is collected and organized by entity (supply chain node, department, function or a combination of these). Examples of this process include data collection for standard headcount reports, but should include temporary staff and outsourced resources."@en;
+    rdfs:label "Identify available Skills and Resource Requirement"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainHumanResources;
+    olo:next scor:MatchSkillsAndResources;
+    skos:notation "sE4.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:MatchSkillsAndResources
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the matching of skills or resource demand with the available skills/ resources. The purpose of this process is to determine which skill/resource requirements (demand) can be met using existing resources, determine which skill/resource requirements are not supported by current available skills/resources (gap) and determine the skills/resources for which no demand exists (excess) For each skill/resource gap or excess, one or more actions need to be identified to close the gap or address the excess: (1) Training/Cross-training (add skills to existing resources) (2) Hiring (add resources with existing skills) (3) Redeployment (moving staff to different organizations or layoff. It is important to consider the lead-time of these actions, scarce skills may have longer leadtimes for example. Hiring includes temporary workers and all types of outsourced staff."@en;
+    rdfs:label "Match Skills/Resources"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainHumanResources;
+    olo:next scor:DetermineHiringAndRedeployment;
+    skos:notation "sE4.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DetermineHiringAndRedeployment
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with identification of sources of new hires or sources/destinations for redeployment. The purpose of this process step includes assessing the feasibility of hiring the required skills/resources within the required time period, assessing the feasibility of redeploying the excess employees (resources) and assessing the feasibility and impact of possible layoff of employees. Note: At this stage this is a planning activity. The actual hiring process is not documented in SCOR as this is a Human Resources Management (HR) process. Employee in this context includes temporary workers and employees of service providers."@en;
+    rdfs:label "Determine Hiring/Redeployment"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainHumanResources;
+    olo:next scor:DetermineTrainingAndEducation;
+    skos:notation "sE4.4" ;
+    rdfs:isDefinedBy scor:DetermineTrainingAndEducation ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DetermineTrainingAndEducation
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the identification of training and education programs to ensure existing (and newly hired) employees will have the appropriate skills to perform the work allocated to each individual employee. Employee in this definition may include temporary workers and employees of service providers."@en;  
+    rdfs:label "Determine Training/Education"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainHumanResources;
+    olo:next scor:ApprovePrioritizeAndLaunch;
+    skos:notation "sE4.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ApprovePrioritizeAndLaunch
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with obtaining approvals for hiring, redeployment, training and education plans, prioritizing and executing these plans. Additional resources and skills will become available over time, adjusting the labor component of capacity in Plan, Source, Make, Deliver, Return and/or Enable processes."@en;    
+    rdfs:label "Approve, Prioritize and Launch"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainHumanResources;
+    olo:next scor:;
+    skos:notation "sE4.6" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+# Manage Supply Chain Assets Steps
+
+scor:ScheduleAssetManagementActivities
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with receiving maintenance requests, receiving repair/replacement/installation requests, maintaining preventive/regular maintenance tasks, scheduling individual mainentance tasks and assigning resources to individual maintenance tasks. Scheduling may include incorporating production and delivery plans and schedules and communication of maintenance schedules to production and delivery planning and scheduling processes."@en;
+    rdfs:label "Schedule Assets Management Activities"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainAssets;
+    olo:next scor:TakeAssetOffline;
+    skos:notation "sE5.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:TakeAssetOffline
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the preparation of the maintenance tasks. In general terms this mean the asset or equipment needs to be stopped or put into maintenance mode. Safety precautions need to be made to ensure the equipment cannot be restarted during mainentance without active approval of the maintenance operators/engineers. This may include installing safety barriers, transporting the asset/equipment to a location where the maintenance will take place, removing deposits/materials from production equipment (cleaning), unloading transportation equipment and backing up data from the equipment and associated automation systems."@en;    
+    rdfs:label "Take Asset Off-line"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainAssets;
+    olo:next scor:InspectAndTroubleshoot;
+    skos:notation "sE5.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:InspectAndTroubleshoot
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with assessing the overall status of the equipment, performing standard inspection and detailed troublshooting if required. This includes identification of repairs, upgrades and maintenance tasks in order to bring the asset/equipment in optimal or acceptable working condition. This process may be the identification of readiness for installing new hardware or software and preparing (documenting) the steps of decommissioning and dispositioning for equipment/assets installation or de-installation and disposal."@en;    
+    rdfs:label "Inspect and Troubleshoot"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainAssets;
+    olo:next scor:InstallAndConfigure;
+    skos:notation "sE5.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:InstallAndConfigure
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the installation of new hardware, software or functionality (equipment/ assets). This includes installation and initial testing of the new hardware, software or functionality. The general purpose of installation is to increase capacity or add/improve capabilities. Note: This process step may trigger a separate supply chain (depending on the scale of the installation) building and installing new supply chain assets."@en;
+    rdfs:label "Install and Configure"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainAssets;
+    olo:next scor:CleanMaintainAndRepair;
+    skos:notation "sE5.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:CleanMaintainAndRepair
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the cleaning, replacement of parts, reconditioning of the equipment/ asset. (The general purpose of this process step is to bring the equipment/asset back in optimal/ acceptable operating condition). This may include measuring and testing of the equipment. Note: This is a Make process for the function performing the maintenance/repair activities."@en;    
+    rdfs:label "Clean, Maintain and Repair"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainAssets;
+    olo:next scor:DecomissionAndDispose;
+    skos:notation "sE5.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DecomissionAndDispose
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the de-installation and disposal of existing hardware, software or functionality (equipment/assets). This includes physical removal from the original point of use. The general purpose of installation is to replace capacity or remove outdated capabilities."@en;    
+    rdfs:label "Decommission and Dispose"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainAssets;
+    olo:next scor:InspectMaintenance;
+    skos:notation "sE5.6" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:InspectMaintenance
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the inspection of the maintenance work performed. This may include performing test runs to assess whether new capacity or functionality is meeting expectations. This includes documentation of any inspection data, recording any inspection errors and obtaining approvals. The purpose of Inspect Mainentance is to verify the effectiveness/success of the maintenance activities."@en ;  
+    rdfs:label "Inspect Maintenance"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainAssets;
+    olo:next scor:ReinstateAsset;
+    skos:notation "sE5.7" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ReinstateAsset
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with completion of the maintenance work and preparing the equipment/ asset to be brought 'on-line'. The general purpose of this process step is to make the asset available for 'production' (add to capacity). This includes closing work orders and receiving and approving payment of invoices for work performed by external resources. Upon completion of this process step the asset is expected to be in full working condition."@n;    
+    rdfs:label "Reinstate Asset"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainAssets;
+    skos:notation "sE5.8" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+# Manage Supply Chain Contracts
+
+scor:ReceiveContractUpdates
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with receiving new contracts or changes to existing contracts. These contract updates may originate in Sales & Support processes (customer contracts) or in Product and Process Design processes (for material supplier or services providers such as transportation services, equipment maintenance services, IT services). This includes validation of contracts against criteria (business rules). A contract needs to include information such as effective date and duration, customer or supplier address and payment terms and may not be in conflict with business rules (and regulatory requirements).";    
+    rdfs:label "Receive Contract Updates"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainContracts;
+    olo:next scor:EnterAndDistirbuteContract;
+    skos:notation "sE6.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:EnterAndDistirbuteContract
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with entering contractual information in document management systems and ERP systems. This includes the 'translation' of contractual language/information into a format that the system can comprehend. A final step in this process is to distribute the contract or updates to an existing contract to the appropriate processes/functions."@en;    
+    rdfs:label "Enter and Distribute Contract"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainContracts;
+    olo:next scor:ActiviateOrArchiveContract;
+    skos:notation "sE6.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ActiviateOrArchiveContract
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with activation or de-activation and archiving the contract. This may include updating statuses of information in document management systems or ERP systems. This activity may be triggered and performed by the document management system or ERP system based on parameters entered as part of sE6.2 Enter and Distribute Contract"@en;
+    rdfs:label "Activate or Archive Contract"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainContracts;
+    olo:next scor:ReviewContractualPerformance;
+    skos:notation "sE6.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ReviewContractualPerformance
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with reviewing the performance of contractual parties (both supplier and customer). This includes comparing the contractual service level agreements with the actual service levels. This process may be triggered by a calendar event - such as annual or quarterly quality reviews or actual performance issues identified in daily supply chain processes."@en;    
+    rdfs:label "Review Contractual Performance"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainContracts;
+    olo:next scor:IdentifyPerformanceIssuesAndOpportunities;
+    skos:notation "sE6.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:IdentifyPerformanceIssuesAndOpportunities
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with identifying and prioritization of key performance issues or areas of ongoing process improvement. This includes notifying contractual partners of non-conformance to contractual agreements or agreed service level agreements. This process addresses both the non-compliance issues (severe) as well as areas of continuous improvement (non-severe, common interest)."@en;    
+    rdfs:label "Identify Performance Issues/Opportunities"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainContracts;
+    olo:next scor:IdentifyResolutionsAndImprovements;
+    skos:notation "sE6.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:IdentifyResolutionsAndImprovements
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with identifying ways to address the non-compliance or how to implement performance improvements. For non-compliance this process may have one or a combination of outcomes: (1) Terminate the contract (2) Pay/Collect Penalties (3) Update contract (service levels, quality levels, terms and conditions) (4) Continue as-is (internal process, policy or business rule changes). Litigation or mediation may be considered in this process. Litigation or mediation is not part of supply chain processes."@en;   
+    rdfs:label "Identify Resolutions/Improvements"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainContracts;
+    olo:next scor:SelectPrioritizeAndDistributeResolutions;
+    skos:notation "sE6.6" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:SelectPrioritizeAndDistributeResolutions
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with selecting, obtaining approvals and prioritizing the appropriate issue resolution and distributing the resolution to the appropriate processes/functions. Litigation or mediation may be the result of decisions made in this process. Litigation or mediation is not part of supply chain processes."@en;    
+    rdfs:label "Select, Prioritize and Distribute Resolutions"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainContracts;
+    skos:notation "sE6.7" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+# Manage Supply Chain Networks Steps
+
+scor:SelectScopeAndOrganization
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with determining what part of the supply chain network will be assessed (the scope). Organizations that manage the supply chain network as a project structure will need to establish a project organization. Organization selection includes identification and securing availability of sponsor, stakeholders and data/information providers as well as selecting project team members."@en;
+    rdfs:label "Select Scope and Organization"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainNetworks;
+    olo:next scor:GatherInputAndData;
+    skos:notation "sE7.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:GatherInputAndData
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with identification of the objective of the supply chain ('what strategy does the supply chain need to support') and collection of data required to describe (model) the supply chain at the required level. Data collected includes: facilities costs, capacity and locations, transportation cost, capacity and lead times, customer volumes, order frequency and size and customer locations."@en;    
+    rdfs:label "Gather Input and Data"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainNetworks;
+    olo:next scor:DevelopeScenarios;
+    skos:notation "sE7.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DevelopeScenarios
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the development of scenarios (what-if) in support of different strategies and projections. Scenarios may be developed for different detailed strategies, requirements and potential internal/external changes. Activities include management interview, external transportation and warehousing studies. Initial review of developed scenarios may result in rejection of the scenario or proceeding to simulation."@en;   
+    rdfs:label "Develope Scenarios"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainNetworks;
+    olo:next scor:ModelAndSimulateScenarios;
+    skos:notation "sE7.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ModelAndSimulateScenarios
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with the development of models and/or simulation models to run 'what-if' scenarios through a validation process. Simulation models may use automation, but conference room pilots or walk-throughs may also serve this purpose. The purpose of simulation is to validat feasibility of each scenario and find possible network/process design flaws. Automated simulation tools may also predict the performance of the new network/processes by simulating the processing of large numbers of orders."@en;
+    rdfs:label "Model/Simulate Scenarios"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainNetworks;
+    olo:next scor:ProjectImpact;
+    skos:notation "sE7.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:ProjectImpact
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with estimating the effort, risks, results of implementing the scenario. effort includes the estimating the risks and duration and the funding, staffing and skills required for implementing the scenario. Risks includes estimating the impact on the Value-at-Risk for the supply chain. Results includes determining the changes to the performance of the supply chain on all relevant metrics."@en;    
+    rdfs:label "Project Impact"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainNetworks;
+    olo:next scor:SelectAndApprove;
+    skos:notation "sE7.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:SelectAndApprove
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with recommending and obtaining approvals for proposed supply chain network/configuration changes. This includes reviewing the 'what-if' scenarios and impact/benefit results with key stakeholders. The objective of this process is to identify the optimal solution and present this recommendation to sponsor and stakeholders and obtain approval to develop network change program."@en;    
+    rdfs:label "Select and Approve"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainNetworks;
+    olo:next scor:DevelopChangeProgram;
+    skos:notation "sE7.6" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DevelopChangeProgram
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with developing the roadmap for change. This includes identifying the steps (or projects) required to implement changes to facilities, contracted parties, staffing, automation an process. Specific changes are assigned to unique owners. This includes reviewing the specific change/projects with key stakeholders. The objective of this process is to obtain approval to launch change projects."@en;    
+    rdfs:label "Develop Change Program"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainNetworks;
+    olo:next scor:LaunchChangeProgram;
+    skos:notation "sE7.7" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:LaunchChangeProgram
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with coordinating, starting and monitoring the inidividual change projects. This includes support the establishment of change projects, coordinate launch dates and communicate reporting requirements. Steps may include archiving the supply chain network/ configuration project documentation for future reference and dissolving the project team. Dissolving the project team requires transfer of responsibilities to monitor progress to appropriate organizations."@en;
+    rdfs:label "Launch Change Program"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainNetworks;
+    skos:notation "sE7.8" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+# Manage Regulatory Compliance
+
+scor:MonitorRegulatoryEntities
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with identification regulatory publications, subscribing to publications, receiving and registering publications of relevant regulatory entities (e.g. goverment agencies)."@en;
+    rdfs:label "Monitor Regulatory Entities"@en ;
+    rdfs:subClassOf scor:ManageRegulatoryCompliance;
+    olo:next scor:MonitorRegulatoryEntities;
+    skos:notation "sE8.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:MonitorRegulatoryEntities
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with reading, interpreting and researching policies, laws, rules and regulations. This includes determining if and how these regulatory requirements apply to the supply chain."@en;    
+    rdfs:label "Assess Regulatory Publications"@en ;
+    rdfs:subClassOf scor:ManageRegulatoryCompliance;
+    olo:next scor:IdentifyRegulatoryDeficiencies;
+    skos:notation "sE8.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:IdentifyRegulatoryDeficiencies
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with identification of past, current and future regulatory requirements that are not or can not be met using existing processes, business rules and policies. This includes notification of deficiency status to impacted organizations."@en;    
+    rdfs:label "Identify Regulatory Deficiencies"@en ;
+    rdfs:subClassOf scor:ManageRegulatoryCompliance;
+    olo:next scor:DefineRemediation;
+    skos:notation "sE8.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:DefineRemediation
+    rdf:type owl:Class ;
+    rdfs:comment "The activities associated with identification remediation alternatives, selecting and documenting processes, policies and business rules and setting documentation requirements to remediate a deficiency."@en;    
+    rdfs:label "Define Remediation"@en ;
+    rdfs:subClassOf scor:ManageRegulatoryCompliance;
+    olo:next scor:VerifyAndObtainLicense;
+    skos:notation "sE8.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:VerifyAndObtainLicense
+    rdf:type owl:Class ;
+    rdfs:comment "The activities asscoiated with verification of the remediation strategy with controlling entities and/or obtaining a license certifying compliance by the controlling entity."@en;    
+    rdfs:label "Verify/Obtain License"@en ;
+    rdfs:subClassOf scor:ManageRegulatoryCompliance;
+    olo:next scor:;
+    skos:notation "sE8.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:PublishRemediation
+    rdf:type owl:Class ;
+    rdfs:comment "The activities asscoiated with approving and implementing changes to processes, policies and business rules. This may include distributing certification documentation to relevant organizations in the supply chain."@en;    
+    rdfs:label "Publish Remediation"@en ;
+    rdfs:subClassOf scor:ManageRegulatoryCompliance;
+    skos:notation "sE8.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+# Manage Supply Chain Risk Steps
+
+scor:EstablishContext
+    rdf:type owl:Class ;
+    rdfs:comment "The process of defining and documenting the objectives and scope (internal and external) for managing risk. This includes developing/maintaining understanding of the internal and external relationships, internal and external factors that influence the supply chain's ability to achieve it's objectives, and defining and maintaining a risk management organization -- stakeholders, governance structure, procedures and schedule"@en;
+    rdfs:label "Establish Context"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainRisk;
+    olo:next scor:IdentifyRiskEvents;
+    skos:notation "sE9.1" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:IdentifyRiskEvents
+    rdf:type owl:Class ;
+    rdfs:comment "The process of identifying, collecting and documenting all potential risk events that may impact the organization from meeting its goals. This includes identification of sources of risks, identification and discovery of risk events. This process generates a comprehensive list of all risks that may disrupt the supply chain, including information which processes in the supply chain will be directly and indirectly impacted by the occurance of the risk event. A broad classification of risk types includes: (1) Disruptions in demand - e.g. customers going out of business (2) Disruptions in supply - e.g. suppliers going out of business, supplier quality/performance issues (3) Environmental disruptions - e.g. weather, flooding, earthquakes (4) Financial disruptions - e.g. availability of credit, investors (5) Fraud, theft and mismanagement - lack of risk mitigation (6) Labor disruption - e.g. employee strikes, availability of qualified staff (7) Terrorism and cyber attacks. The number of risks within these types may differ by industry."@en;    
+    rdfs:label "Identify Risk Events"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainRisk;
+    olo:next scor:QuantifyRisks;
+    skos:notation "sE9.2" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:QuantifyRisks
+    rdf:type owl:Class ;
+    rdfs:comment "The process of collecting and documenting for each potential risk the causes, probability and consequences. The standard metric for quantification of risk is Value at Risk (VaR): VaR = Probability of Occurance x Monetary Impact of Occurance This process generates a comprehensive list of the monetary impact for all risks that may disrupt th supply chain. For certain types of risk events probability information may be available through government agencies, insurance companies or research firms. The monetary impact is determined based on the projected monetary impact for each supply chain for each risk event. For example: (1) For a single sourced material the supplier going out of business means the product manufactured using this material can not be produced until a new supplier has been identified, qualified and integrated in the supply chain. The manetary impact would be the loss of the projected revenue for these products during the qualification and integration process of a new supplier. (2) For a dual sourced material one of the two suppliers going out of business means the product manufactured using this material can only be produced for the percentage the remaining supplier may be able to support until a new supplier has been identified, qualified and integrated or until the remaining supplier can support 100% of the project revenue. Different risk events may have different monetary impacts: reduction of revenue vs. increase of cost."@en;
+    rdfs:label "Quantify Risks"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainRisk;
+    olo:next scor:EvaluateRisks;
+    skos:notation "sE9.3" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:EvaluateRisks
+    rdf:type owl:Class ;
+    rdfs:comment "The process of prioritizing risk events by VaR and determining for each risk whether mitigation actions are required or the risk is acceptable ('risk of doing business')."@en;
+    rdfs:label "Evaluate Risks"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainRisk;
+    olo:next scor:EvaluateRisks;
+    skos:notation "sE9.4" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:MitigateRisk
+    rdf:type owl:Class ;
+    rdfs:comment "The process of determining the actions required to eliminate, reduce or accept and monitor the risks - creating, approving, communicating and launching the 'Risk Mitigation Plan'."@en;     
+    rdfs:label "Mitigate Risk"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainRisk;
+    olo:next scor:;
+    skos:notation "sE9.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:MitigateRisk
+    rdf:type owl:Class ;
+    rdfs:comment "The process of determining the actions required to eliminate, reduce or accept and monitor the risks - creating, approving, communicating and launching the 'Risk Mitigation Plan'."@en;     
+    rdfs:label "Mitigate Risk"@en ;
+    rdfs:subClassOf scor:ManageSupplyChainRisk;
+    olo:next scor:;
+    skos:notation "sE9.5" ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
 .
 
 #############################################################################################
@@ -3801,7 +4517,7 @@ scor:hasMetricRS_51
 scor:hasMetricRS_53
     rdf:type owl:DatatypeProperty ;
     rdfs:domain [owl:unionOf (
-        scor:ManageDataInformation
+        scor:ManageDataAndInformation
         )] ;
     rdfs:label "Maintain Source Cycle Time"@en;
     rdfs:comment "The average time associated with with maintaining source data."@en;
@@ -3851,7 +4567,7 @@ scor:hasMetricRS_56
 .
 
 
-
+#p55
 
 scor:hasMetricRL_xx
     rdf:type owl:DatatypeProperty ;
