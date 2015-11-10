@@ -5564,6 +5564,211 @@ scor:hasMetricRS_142
 
 ######### Agility Metrics
 
+scor:hasMetricAG_1
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        )] ;
+    rdfs:label "% of labor used in logistics, not used in direct activity"@en;
+    rdfs:comment "Percent of labor used in logistics, not used in direct activity"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAG_2
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MakeToStock
+        scor:MakeToOrder
+        scor:MakeEngineerToOrder
+        )] ;
+    rdfs:label "% of labor used in manufacturing, not used in direct activity"@en;
+    rdfs:comment "Percent of labor used in manufacturing, not used in direct activity"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAG_3
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverReturnDefectiveProduct
+        scor:DeliverReturnMROProduct
+        scor:DeliverReturnExcessProduct
+        )] ;
+    rdfs:label "Additional deliver return volume"@en;
+    rdfs:comment "Additional customer return volume"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAG_4
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        )] ;
+    rdfs:label "Additional Delivery volume"@en;
+    rdfs:comment "Additional delivery volume"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#5-8 seem to be deprecated
+
+scor:hasMetricAG_9
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        )] ;
+    rdfs:label "Additional source volumes obtained in 30 days"@en;
+    rdfs:comment "Additional source volume to be determined given ramped up resources"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#10-30 seem to be deprecated
+
+scor:hasMetricAG_31
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverReturnDefectiveProduct
+        scor:DeliverReturnMROProduct
+        scor:DeliverReturnExcessProduct
+        )] ;
+    rdfs:label "Current Deliver Return Volume"@en;
+    rdfs:comment "Current Return volume, number of orders returned"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAG_32
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:DeliverRetailProduct
+        )] ;
+    rdfs:label "Current Delivery Volume"@en;
+    rdfs:comment "Number of orders shipped"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#33-37 seem to be deprecated
+
+scor:hasMetricAG_38
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MakeToStock
+        scor:MakeToOrder
+        scor:MakeEngineerToOrder
+        )] ;
+    rdfs:label "Current Make Volume"@en;
+    rdfs:comment "Amount of each item which are manufactured"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#39 seem to be deprecated
+
+scor:hasMetricAG_40
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        )] ;
+    rdfs:label "Current Purchase Order Cycle Times"@en;
+    rdfs:comment "Sum of time to place a purchase order and supplier lead time"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAG_41
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceReturnDefectiveProduct
+        )] ;
+    rdfs:label "Current source return volume"@en;
+    rdfs:comment "Current return volume, number of orders returned"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAG_42
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        )] ;
+    rdfs:label "Current Source Volume"@en;
+    rdfs:comment "Amount of each item which are purchased"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+#43 seem to be deprecated
+
+scor:hasMetricAG_44
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverReturnDefectiveProduct
+        scor:DeliverReturnMROProduct
+        scor:DeliverReturnExcessProduct
+        )] ;
+    rdfs:label "Customer return order cycle time reestablished and sustained in 30 days"@en;
+    rdfs:comment "Customer return order cycle time reestablished and sustained for increased quantities returned from customer given 30 days, including customer return order processing cycle time, transit time, return processing and disposition cycle time, etc."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#45 seem to be deprecated
+
+scor:hasMetricAG_46
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        )] ;
+    rdfs:label "Demand sourcing-supplier constraints"@en;
+    rdfs:comment "Percentage of orders with on time and accurate documentation supporting the order, including packing slips, bills of lading, invoices, etc. [Total number of orders delivered with correct and timely documentation] / [Total number of orders delivered] x 100%."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
 ######### Cost Metrics
 
 ######### Asset Management Efficiency Metrics
