@@ -290,6 +290,7 @@ scor:PlanSupplyChain
     rdfs:label "Plan Supply Chain"@en ;
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP1" ;
+    scor:hasStepList scor:PlanSupplyChainStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -3068,6 +3069,34 @@ scor:MitigateRisk
 #############################################################################################
 #############################################################################################
 #############################################################################################
+#### Default Step Configuration
+
+scor:PlanSupplyChainStepList a olo:OrderedList ;
+   dct:title "Default Plan Supply Chain Steps"^^xsd:string ;
+   dct:description "An ordered list of all process steps involved in the Plan Supply Chain process."^^xsd:string ;
+      olo:length 4 ;
+      olo:slot [   
+         olo:index 1 ;
+         olo:item scor:PSCIdentifyPrioritizeAggregateSCRequirements
+      ] ;
+      olo:slot [
+         olo:index 2 ;
+         olo:item scor:IdentifyPrioritizeAggregateSCResources
+      ] ;
+      olo:slot [   
+         olo:index 3 ;
+         olo:item scor:BalanceSCResourcesWithSCRequirements
+      ] ;
+      olo:slot [
+         olo:index 4 ;
+         olo:item scor:EstablishCommunicateSCPlans
+      ] ;
+.
+
+
+#############################################################################################
+#############################################################################################
+#############################################################################################
 #### Properties
 
 scor:isStepOf
@@ -3076,6 +3105,17 @@ scor:isStepOf
     rdfs:domain scor:Process ;
     rdfs:range  scor:Process ;
     rdfs:comment "Steps which are part of a certain process"@en  ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:hasStepList
+    rdf:type owl:ObjectProperty ;
+    rdfs:label "has Step List"@en ;
+    rdfs:domain scor:Process ;
+    rdfs:range  olo:OrderedList;
+    rdfs:comment "A list of steps for certain processes"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
