@@ -17,7 +17,7 @@ scor:
     rdfs:comment "A vocabulary which represents the Supply Chain Operations Reference (SCOR) standard."@en ;
     rdfs:label "SCORVoc"@en;
     dct:creator <http://eis.iai.uni-bonn.de/Irlan>, <http://eis.iai.uni-bonn.de/NiklasPetersen>, <http://sebastian.tramp.name> ;
-    dct:publisher <http://dbpedia.org/resource/University_of_Bonn>, <https://ns.eccenca.com/eccenca-GmbH> ;
+    dct:publisher <http://dbpedia.org/resource/University_of_Bonn> ;
     dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
     dct:created "2015-03-01"^^xsd:date ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -63,18 +63,11 @@ scor:
 <http://sebastian.tramp.name>
     rdf:type schema:Person;
     rdfs:label "Sebastian Tramp";
-    owl:sameAs <http://aksw.org/SebastianTramp>, <https://ns.eccenca.com/stramp> ;
-    schema:affiliation <https://ns.eccenca.com/eccenca-GmbH> ;
 .
 
 <http://dbpedia.org/resource/University_of_Bonn>
     rdf:type schema:CollegeOrUniversity;
     rdfs:label "University of Bonn"@en, "Rheinische Friedrich-Wilhelms-Universität Bonn"@de;
-.
-
-<https://ns.eccenca.com/eccenca-GmbH>
-    rdf:type schema:Corporation;
-    rdfs:label "eccenca GmbH";
 .
 
 <http://www.opendatacommons.org/licenses/pddl/1.0/>
