@@ -1570,7 +1570,7 @@ scor:DSPInvoice
 
 # Deliver Make-to-Order Product
 
-scor:DeliverMakeToOrderProductProcessInquiryQuote
+scor:DMOPInquiryQuote
     rdf:type owl:Class ;
     rdfs:comment "Receive and respond to general customer inquiries and requests for quotes."@en ;
     rdfs:label "Process Inquiry and Quote (Deliver Make To Order Product)"@en ;
@@ -5808,7 +5808,588 @@ scor:hasMetricAG_46
     dct:modified "2015-11-05"^^xsd:date ;
 .
 
+
 ######### Cost Metrics
+
+scor:hasMetricCO_1
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:PlanSupplyChain
+        scor:PlanSource
+        scor:PlanMake
+        scor:PlanDeliver
+        scor:PlanReturn
+        scor:ManageSupplyChainHumanResources
+        )] ;
+    rdfs:label "Planning Labor Cost"@en;
+    rdfs:comment "The costs associated with the personnel performing the tasks associated with supply and demand planning in support of operating the supply chain."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_2
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:PlanSupplyChain
+        scor:PlanSource
+        scor:PlanMake
+        scor:PlanDeliver
+        scor:PlanReturn
+        scor:ManageDataAndInformation
+        )] ;
+    rdfs:label "Planning Automation Cost"@en;
+    rdfs:comment "The costs associated with automation (software, hardware, maintenance and consumable materials) of supply chain processes."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_3
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:PlanSupplyChain
+        scor:PlanSource
+        scor:PlanMake
+        scor:PlanDeliver
+        scor:PlanReturn
+        scor:ManageSupplyChainAssets
+        )] ;
+    rdfs:label "Planning Property, Plant, and Equipment Cost"@en;
+    rdfs:comment "The costs associated with the (fixed) assets designated to support supply chain planning processes. PP&E costs include the cost of leases, rents, acquisition, depreciation, maintenance and disposition of land, buildings, and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_4
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:PlanSupplyChain
+        scor:PlanSource
+        scor:PlanMake
+        scor:PlanDeliver
+        scor:PlanReturn
+        scor:ManageSupplyChainBusinessRules
+        scor:ManagePerformance
+        scor:ManageRegulatoryCompliance
+        scor:ManageSupplyChainRisk
+        )] ;
+    rdfs:label "Planning GRC and Overhead Cost"@en;
+    rdfs:comment "The governance, risk management, compliance and overhead costs allocated to supply chain planning processes. This may include cost of supporting organizations, e.g. Human Resources department, Legal department, Quality Department, as well as office supplies and other indirect cost."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_5
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        scor:GenerateStockingSchedule
+        scor:ReceiveProductAtStore
+        scor:PickProductFromBackroom
+        scor:ManageSupplyChainHumanResources
+        )] ;
+    rdfs:label "Sourcing Labor Cost"@en;
+    rdfs:comment "The labor costs associated with the personnel performing the ordering, receiving, processing and storing purchased materials."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_6
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        scor:ManageDataAndInformation
+        )] ;
+    rdfs:label "Sourcing Automation Cost"@en;
+    rdfs:comment "The costs associated with the automation (software, hardware, maintenance and consumable materials) in support of the acquisition of materials and services."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_7
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        scor:ManageSupplyChainAssets
+        )] ;
+    rdfs:label "Sourcing Property, Plant and Equipment Cost"@en;
+    rdfs:comment "The costs associated with the (fixed) assets designated to support the aquisition of materials, products, merchandise and services. PP&E costs include the cost of leases, rents, acquisition, depreciation, maintenance and disposition of land, buildings, and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_8
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        scor:GenerateStockingSchedule
+        scor:ManageSupplyChainBusinessRules
+        scor:ManagePerformance
+        scor:ManageRegulatoryCompliance
+        scor:ManageSupplyChainRisk
+        )] ;
+    rdfs:label "Sourcing GRC, Inventory and Overhead Cost"@en;
+    rdfs:comment "The governnance, risk management, compliance, inventory and overhead costs allocated to aquisition processes (the ordering, receiving, inspecting, processing and storage of purchased materials, merchandise and services)."@en;    
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_9
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        scor:ManageSupplyChainContracts
+        )] ;
+    rdfs:label "Purchased Materials Cost"@en;
+    rdfs:comment "The total cost of the materials, merchandise and services purchased to produce the final product or for resale. Purchased Materials Cost is reported at purchase price net of any discounts."@en;    
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_10
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        scor:ManageSupplyChainContracts
+        scor:ManageSupplyChainNetworks
+        )] ;
+    rdfs:label "Material Transportation Cost"@en;
+    rdfs:comment "The costs associated with the physical transportation of purchased materials to the location-of-use. Transportation costs include the transportation equipment ownership -- depreciation, equipment insurance, license and registration, financing -- and equipment operating costs (also known as the costs of driving): fuel, electricity, load insurance, maintenance and parking, tolls, and other trip specific costs."@en;     
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_11
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        scor:ManageSupplyChainContracts
+        scor:ManageSupplyChainNetworks
+        scor:ManageRegulatoryCompliance
+        scor:ManageSupplyChainRisk
+        )] ;
+    rdfs:label "Material Customs, Duties, Taxes and Tariffs Cost"@en;
+    rdfs:comment "The costs of import/export duties, taxes and tariffs, including the costs of third party services enabling customs, clearance."@en;    
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_12
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        scor:ManageSupplyChainBusinessRules
+        scor:ManagePerformance
+        scor:ManageSupplyChainNetworks
+        scor:ManageRegulatoryCompliance
+        scor:ManageSupplyChainRisk
+        )] ;
+    rdfs:label "Material Risk and Compliance Cost"@en;
+    rdfs:comment "The costs associated with acquiring purchased materials (and services). Example costs included in Material Risk and Compliance Cost are: (1) Cost of theft, fraud, depreciation and shrinkage of in-transit goods (2) C-TPAT program costs (3) Carbon footprint mandate compliance costs (4) Cost of mitigation of potential risk of supply disruption (5) Cost of compliance to Health, Safety and Environmental legislation"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#13 seem to be deprecated
+
+scor:hasMetricCO_14
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MakeToStock
+        scor:MakeToOrder
+        scor:MakeEngineerToOrder
+        scor:ManageSupplyChainHumanResources
+        )] ;
+    rdfs:label "Production (Direct) Labor Cost"@en;
+    rdfs:comment "The total cost associated with the personnel performing the activities of Make (producing, manufacturing, re-manufacturing, refurbishment, MRO, repair, and/or recycling)."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_15
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MakeToStock
+        scor:MakeToOrder
+        scor:MakeEngineerToOrder
+        scor:ManageDataAndInformation
+        )] ;
+    rdfs:label "Production Automation Cost"@en;
+    rdfs:comment "The costs associated with the automation (software, hardware, maintenance and consumable materials) of production processes."@en;    
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_16
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MakeToStock
+        scor:MakeToOrder
+        scor:MakeEngineerToOrder
+        scor:ManageSupplyChainAssets
+        )] ;
+    rdfs:label "Production Property, Plant, Equipment Cost"@en;
+    rdfs:comment "The costs associated with the assets designated to support the production, manufacturing, assembly, remanufacturing, refurbishment, repair and overhaul of goods. PP&E costs include the cost of leases, rents, asquisition, depreciation, maintenance, and disposition of land, buildings, and eqipment and labor cost and expenses of internal maintenance and support staff."@en;    
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_17
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MakeToStock
+        scor:MakeToOrder
+        scor:MakeEngineerToOrder
+        scor:ManageSupplyChainBusinessRules
+        scor:ManagePerformance
+        scor:ManageRegulatoryCompliance
+        scor:ManageSupplyChainRisk
+        )] ;
+    rdfs:label "Production GRC, Inventory and Overhead Cost"@en;
+    rdfs:comment "The governance, risk management, compliance, inventory and overhead costs allocated to the production processes (manufacturing, re-manufacturing, refurbishment, repairs, maintenance, and overhaul)."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_18
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:ProcessInquiryQuote
+        scor:DSPConsolidateOrders
+        scor:DSPBuildLoads
+        scor:DSPRouteShipments
+        scor:DSPSelectCarriersRateShipments
+        scor:DSPInvoice
+        scor:DeliverMakeToOrderProduct
+        scor:DMOPInquiryQuote
+        scor:DMOPReceiveVerifyProductByCustomer
+        scor:DMOPReserveInventoryDetermineDeliveryDate
+        scor:DMOPConsolidateOrders
+        scor:DMOPBuildLoads
+        scor:DMOPRouteShipments
+        scor:DMOPSelectCarriersRateShipments
+        scor:DMOPInvoice
+        scor:ObtainRespondToRFPRFQ
+        scor:NegotiateReceiveContract
+        scor:EnterOrderCommitResourcesLaunchProgram
+        scor:ScheduleInstallation
+        scor:DEOPBuildLoads
+        scor:DEOPRouteShipments
+        scor:DEOPSelectCarriersRateShipments
+        scor:DEOPInvoice
+        scor:DeliverRetailProduct
+        scor:Checkout
+        scor:ManageSupplyChainHumanResources
+        )] ;
+    rdfs:label "Order Management Labor Cost"@en;
+    rdfs:comment "The costs associated with the personnel performing the order management tasks of customer order entry, maintenance and scheduling of deliveries."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_19
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:DeliverRetailProduct
+        scor:ManageDataAndInformation
+        )] ;
+    rdfs:label "Order Management Automation Cost"@en;
+    rdfs:comment "The costs associated with the automation (software, hardware, maintenance and consumable materials) of order management processes."@en; 
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_20
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:DeliverRetailProduct
+        scor:ManageSupplyChainAssets
+        )] ;
+    rdfs:label "Order Management Property, Plant and Equipment Cost"@en;
+    rdfs:comment "The costs associated with the (fixed) assets designated to support order management processes. PP&E costs include the cost of leases, rents, aquisition, depreciation, maintenance and disposition of land, buildings and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_21
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:DeliverRetailProduct
+        scor:ManageSupplyChainBusinessRules
+        scor:ManagePerformance
+        scor:ManageRegulatoryCompliance
+        scor:ManageSupplyChainRisk
+        )] ;
+    rdfs:label "Order Management GRC, Inventory and Overhead Cost"@en;
+    rdfs:comment "The governance, risk management, compliance, inventory and overhead costs allocated to order management processes (managing customer data, entry, maintenance, scheduling, prioritizion, and expedition of customer orders, invoicing and collections)."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_22
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DSPConsolidateOrders
+        scor:DSPBuildLoads
+        scor:DSPRouteShipments
+        scor:DSPSelectCarriersRateShipments
+        scor:DSPShipProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DMOPConsolidateOrders
+        scor:DMOPBuildLoads
+        scor:DMOPSelectCarriersRateShipments
+        scor:DMOPShipProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:ScheduleInstallation
+        scor:DEOPBuildLoads
+        scor:DEOPRouteShipments
+        scor:DEOPSelectCarriersRateShipments
+        scor:DEOPShipProduct
+        scor:DeliverRetailProduct
+        scor:DeliverInstall
+        scor:ReturnDefectiveProduct
+        scor:ReturnMROPRoduct
+        scor:ReturnExcessProduct
+        scor:ManageSupplyChainContracts
+        scor:ManageSupplyChainNetworks
+        )] ;
+    rdfs:label "Transportation Cost"@en;
+    rdfs:comment "The costs associated with the physical transportation of goods between supply chain nodes."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_23
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:DeliverRetailProduct
+        scor:ManageSupplyChainNetworks
+        scor:ManageRegulatoryCompliance
+        scor:ManageSupplyChainRisk
+        )] ;
+    rdfs:label "Fulfillment Customs, Duties, Taxes and Tariffs Cost"@en;
+    rdfs:comment "The costs of import/export duties, taxes and tariffs, including the costs of third party services enabling customs, clearance. Internal personnel cost related to customs and duties are reported in the Order Management Labor Cost and should therefore not be reported in the Customs and Duties Cost."@en;    
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_24
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DSPReceiveProductFromSourceMake
+        scor:DSPPickProduct
+        scor:DSPPackProduct
+        scor:LoadVehicleGenerateShippingDocuments
+        scor:DSPShipProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DMOPRouteShipments
+        scor:DMOPReceiveProductFromSourceMake
+        scor:DMOPPickProduct
+        scor:DMOPPackProduct
+        scor:DMOPLoadProductGenerateShippingDocs
+        scor:DMOPShipProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:DEOPReceiveProductFromSourceMake
+        scor:DEOPPickProduct
+        scor:DEOPPackProduct
+        scor:DEOPLoadProductGenerateShippingDocs
+        scor:DEOPShipProduct
+        scor:DeliverRetailProduct
+        scor:StockShelf
+        scor:FillShoppingCart
+        scor:DeliverInstall
+        scor:ManageSupplyChainHumanResources
+        )] ;
+    rdfs:label "Fulfillment Labor Cost"@en;
+    rdfs:comment "The costs associated with the personnel performing the order fulfillment tasks of picking, packing and shipping."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_25
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:DeliverRetailProduct
+        scor:ManageDataAndInformation
+        )] ;
+    rdfs:label "Fulfillment Automation Cost"@en;
+    rdfs:comment "The costs associated with the automation (software, hardware, maintenance and consumable materials) of phyiscal order fulfillment."@en; 
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_26
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:DeliverRetailProduct
+        scor:ManageSupplyChainAssets
+        )] ;
+    rdfs:label "Fulfillment Property, Plant and Equipment Cost"@en;
+    rdfs:comment "The costs associated with the (fixed) assets designated to support fulfillment of customer oders. PP&E costs include the cost of leases, rents, aquisition, depreciation, maintenance and disposition of land, buildings and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_27
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        scor:DeliverRetailProduct
+        scor:ManageSupplyChainBusinessRules
+        scor:ManagePerformance
+        scor:ManageRegulatoryCompliance
+        scor:ManageSupplyChainRisk
+        )] ;
+    rdfs:label "Fulfillment GRC, Inventory and Overhead Cost"@en;
+    rdfs:comment "The governance, risk management, compliance, inventory and overhead costs allocated to the fulfillment processes to customer orders (phyiscal handling of the product, such as storage, picking, packing and shipping)."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_28
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverReturnDefectiveProduct
+        scor:AuthorizeDefectiveProductReturn
+        scor:DeliverReturnExcessProduct
+        scor:AuthorizeExcessProductReturn
+        )] ;
+    rdfs:label "Discounts and Refunds Cost"@en;
+    rdfs:comment "The costs associated with the settlement of a return or defect claim. This may include the net cost of discounts offered for damaged goods, refunding of purchase price for returned goods."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+
+scor:hasMetricCO_29
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceReturnDefectiveProduct
+        scor:DispositionDefectiveProduct
+        scor:DeliverReturnDefectiveProduct
+        scor:AuthorizeDefectiveProductReturn
+        scor:DispositionMROProduct
+        scor:SourceReturnExcessProduct
+        scor:DispositionExcessProduct
+        scor:DeliverReturnExcessProduct
+        scor:AuthorizeExcessProductReturn
+        )] ;
+    rdfs:label "Disposition Cost"@en;
+    rdfs:comment "The costs associated with the settlement of a return or defect claim. This may include the net cost of discounts offered for damaged goods, refunding of purchase price for returned goods."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricCO_30
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceReturnDefectiveProduct
+        scor:ReturnMROPRoduct
+        scor:SourceReturnExcessProduct
+        scor:DeliverReturnExcessProduct
+        )] ;
+    rdfs:label "Return GRC, Inventory and Overhead Cost"@en;
+    rdfs:comment "The governance, risk management, compliance, inventory and overhead costs allocated to return processes."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
 
 ######### Asset Management Efficiency Metrics
 
