@@ -18,7 +18,6 @@ scor:
     rdfs:label "SCORVoc"@en;
     dct:creator <http://eis.iai.uni-bonn.de/Irlan>, <http://eis.iai.uni-bonn.de/NiklasPetersen>, <http://sebastian.tramp.name> ;
     dct:publisher <http://dbpedia.org/resource/University_of_Bonn> ;
-    dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
     dct:created "2015-03-01"^^xsd:date ;
     dct:modified "2015-11-05"^^xsd:date ;
     owl:imports <http://www.w3.org/2004/02/skos/core> , dct: ;
