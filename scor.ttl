@@ -3054,18 +3054,6 @@ scor:MitigateRisk
     dct:modified "2015-11-05"^^xsd:date ;
 .
 
-scor:MitigateRisk
-    rdf:type owl:Class ;
-    rdfs:comment "The process of determining the actions required to eliminate, reduce or accept and monitor the risks - creating, approving, communicating and launching the 'Risk Mitigation Plan'."@en;     
-    rdfs:label "Mitigate Risk"@en ;
-    scor:isStepOf scor:ManageSupplyChainRisk;
-    olo:next scor:;
-    skos:notation "sE9.5" ;
-    rdfs:isDefinedBy scor: ;
-    vs:term_status "testing" ;
-    dct:modified "2015-11-05"^^xsd:date ;
-.
-
 #############################################################################################
 #############################################################################################
 #############################################################################################
@@ -5410,7 +5398,7 @@ scor:hasMetricRS_123
         scor:MEOScheduleProductionActivities
         )] ;
     rdfs:label "Schedule Production Activities Cycle Time."@en;
-    rdfs:comement "The average time associated with scheudling production activities."@en;
+    rdfs:comment "The average time associated with scheudling production activities."@en;
     rdfs:isDefinedBy scor: ;
     rdfs:subPropertyOf scor:hasMetric;
     vs:term_status "testing" ;
