@@ -2933,7 +2933,7 @@ scor:MonitorRegulatoryEntities
     dct:modified "2015-11-05"^^xsd:date ;
 .
 
-scor:MonitorRegulatoryEntities
+scor:AssessRegulatoryPublications
     rdf:type owl:Class ;
     rdfs:comment "The activities associated with reading, interpreting and researching policies, laws, rules and regulations. This includes determining if and how these regulatory requirements apply to the supply chain."@en;    
     rdfs:label "Assess Regulatory Publications"@en ;
