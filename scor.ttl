@@ -499,7 +499,7 @@ scor:DeliverRetailProduct
     rdf:type owl:AllDifferent ;
     owl:distinctMembers (
         scor:DeliverReturnDefectiveProduct scor:DeliverReturnMROProduct
-        scor:DeliverReturnExcessProduct scor:ReturnMROProduct
+        scor:DeliverReturnExcessProduct scor:SourceReturnMROProduct
         scor:SourceReturnDefectiveProduct scor:SourceReturnExcessProduct
     ) .
 
@@ -7403,7 +7403,7 @@ scor:hasMetricAM_21
     rdfs:domain [owl:unionOf (
         scor:SourceReturnDefectiveProduct
         scor:ReturnDefectiveProduct
-        scor:ReturnMROProduct
+        scor:SourceReturnMROProduct
         )] ;
     rdfs:label "Rebuild or recycle rate"@en;
     rdfs:comment "Number of returned products that are rebuilt or recycled as a percent of the total number of products returned"@en;
