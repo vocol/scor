@@ -3237,7 +3237,7 @@ scor:hasMetricRL_7
     rdf:type owl:DatatypeProperty ;
     rdfs:domain scor:FillShoppingCart;
     rdfs:label "Item Location Accuracy"@en;
-    rdfs:comment "Item Location Accuracy"@en;
+    rdfs:comment "Percentage of items delivered at the correct Location"@en;
     rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -3672,7 +3672,7 @@ scor:hasMetricRL_37
 scor:hasMetricRL_39
     rdf:type owl:DatatypeProperty ;
     rdfs:domain scor:DispositionExcessProduct;
-    rdfs:label "Number of occurrences of incorrect designated return center"@en;
+    rdfs:label "# of occurrences of incorrect designated return center"@en;
     rdfs:comment "Number of occurrences of incorrect designated return center"@en;
     rdfs:isDefinedBy scor: ;
     rdfs:subPropertyOf scor:hasMetric;
@@ -3763,7 +3763,7 @@ scor:hasMetricRL_47
         scor:DEOPLoadProductGenerateShippingDocs
         )] ;
     rdfs:label "Return Shipments on Time"@en;
-    rdfs:comment "Return Shipments on Time"@en;
+    rdfs:comment "Percentage of return shipments on Time"@en;
     rdfs:subPropertyOf scor:hasMetric;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
