@@ -6390,8 +6390,489 @@ scor:hasMetricCO_30
     dct:modified "2015-11-05"^^xsd:date ;
 .
 
-
 ######### Asset Management Efficiency Metrics
+
+#1 seems to be deprecated
+
+scor:hasMetricAM_2
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifySourcesOfSupply
+        )] ;
+    rdfs:label "% of material that has a valid"@en;
+    rdfs:comment "% of the product content that has a supplier take- back program for recycling or reuse."@en;    
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_3
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifySourcesOfSupply
+        )] ;
+    rdfs:label "% of materials that are recyclable/ reusable"@en;
+    rdfs:comment "% of the product content that is recyclable or reusable"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_4
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MOPackage
+        )] ;
+    rdfs:label "% of packaging/shipping materials reused internally"@en;
+    rdfs:comment "The percent of scrap from packaging that is immediately reused in the packaging process"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_5
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MSProduceTest
+        scor:MOProduceTest
+        scor:MEOProduceTest
+        )] ;
+    rdfs:label "% of production materials reused"@en;
+    rdfs:comment "The percent of scrap from production that is immediately reused in the production process"@en;    
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_6
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MSProduceTest
+        scor:MOProduceTest
+        scor:MEOProduceTest
+        )] ;
+    rdfs:label "% of products consisting of previously used components"@en;
+    rdfs:comment "the weight of recycled material in the product as a percent of total product weight"@en;  
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#7 seems to be deprecated
+
+scor:hasMetricAM_8
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceReturnExcessProduct
+        )] ;
+    rdfs:label "Average age of Excess Inventory"@en;
+    rdfs:comment "Average age of Excess Inventory in days"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_9
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MSScheduleProductionActivities
+        scor:MSProduceTest
+        scor:MSPackage
+        scor:MOScheduleProductionActivities
+        scor:MOProduceTest
+        scor:MOPackage
+        scor:MEOScheduleProductionActivities
+        scor:MEOProduceTest
+        scor:MEOPackage
+        scor:ManageSupplyChainHumanResources
+        scor:ManageSupplyChainAssets
+        )] ;
+    rdfs:label "Capacity Utilization"@en;
+    rdfs:comment "A measure of how intensively a resource is being used to produce a good or service. Some factors that should be considered are internal manufacturing capacity, constraining processes,direct labor availability and key components/ materials availability."@en;  
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#10-11 seem to be deprecated
+
+scor:hasMetricAM_12
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverReturnDefectiveProduct
+        scor:DeliverReturnMROProduct
+        )] ;
+    rdfs:label "Deliver Return Cycle Time"@en;
+    rdfs:comment "The average time associated with returns."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#13 seem to be deprecated
+
+scor:hasMetricAM_14
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MSProduceTest
+        scor:MOProduceTest
+        scor:MEOProduceTest
+        )] ;
+    rdfs:label "Hazardous materials used during production process as a % of all materials"@en;
+    rdfs:comment "The % of material (by weight) issued for production that is classified as hazardous material"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_15
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MSWasteDisposal
+        scor:MOWasteDisposal
+        scor:MEOWasteDisposal
+        )] ;
+    rdfs:label "Hazardous waste as % of total waste"@en;
+    rdfs:comment "The % of waste (by weight) generated from production that is classified as hazardous material"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_16
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceStockedProduct
+        scor:SourceMakeToOrderProduct
+        scor:SourceEngineerToOrderProduct
+        )] ;
+    rdfs:label "Inventory Days of Supply - Raw Material"@en;
+    rdfs:comment "Value of raw materials / (COGS / 365) in days."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_17
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MakeToOrder
+        scor:MakeEngineerToOrder
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        )] ;
+    rdfs:label "Inventory Days of Supply - WIP"@en;
+    rdfs:comment "Total value of Work in Process / (COGS / 365) in days. WIP = Work In Process."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#18 seem to be deprecated
+
+scor:hasMetricAM_19
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IssueMaterial
+        scor:IssueSourcedInProcessProduct
+        scor:MEOSourcedInProcessProduct
+        )] ;
+    rdfs:label "Packaging as % of total material"@en;
+    rdfs:comment "The % by weight of packaging material to total raw material weight"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#20 seem to be deprecated
+
+scor:hasMetricAM_21
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceReturnDefectiveProduct
+        scor:ReturnDefectiveProduct
+        scor:ReturnMROProduct
+        )] ;
+    rdfs:label "Rebuild or recycle rate"@en;
+    rdfs:comment "Number of returned products that are rebuilt or recycled as a percent of the total number of products returned"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_22
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:MakeToOrder
+        scor:MakeToOrder
+        scor:MakeEngineerToOrder
+        )] ;
+    rdfs:label "Recyclable waste as % of total waste"@en;
+    rdfs:comment "The % of waste (by weight) generated from production that is recyclable."@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#23-24 seem to be deprecated
+
+scor:hasMetricAM_25
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverReturnExcessProduct
+        )] ;
+    rdfs:label "Return for Recycle Rate"@en;
+    rdfs:comment "Number of returns that are for recycling or re use as a per cent of the total number of products returned"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_26
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverReturnDefectiveProduct
+        )] ;
+    rdfs:label "Return Rate"@en;
+    rdfs:comment "Weight of products returned divided by the weight of product shipped"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#27 seem to be deprecated
+
+scor:hasMetricAM_28
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceReturnDefectiveProduct
+        scor:DeliverReturnDefectiveProduct
+        )] ;
+    rdfs:label "Percentage Defencitve Inventory"@en;
+    rdfs:comment "The value of defective product inventory as a percentage of the value of total inventory (%) Calculation [Total Defective Product Inventory Value] / [Total Inventory Value] x 100%"@en;
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_29
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyDefectiveProductCondition
+        scor:DispositionDefectiveProduct
+        scor:DispositionMROProduct
+        )] ;
+    rdfs:label "Percentage Defective Inventory in Disposition"@en;
+    rdfs:comment "The value of defective product awaiting a disposition decision as a percentage of the value of the total defective product inventory (%) Calculation [Value of Defective Inventory in Disposition Stage] / [Total Inventory Value] x 100%"@en;    
+    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_30
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:RequestDefectiveProductReturnAuthorization
+        )] ;
+    rdfs:label "Percentage Defective Inventory in Return Authorization"@en;
+    rdfs:comment "The value of defective product awaiting return authorization as a percentage of the total defectiv product inventory value (%) Calculation [Value of Defective Product Inventory in Request Return Authorization Stage] / [Total Defective Product Inventory Value] x 100%"@en;    rdfs:isDefinedBy scor: ;
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_31
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:ReturnDefectiveProduct
+        )] ;
+    rdfs:label "Percentage Defective Inventory in Return Transportation"@en;
+    rdfs:comment "The value of defective product inventory in transportation as a percentage of total defective product inventory (%) Calculation [Value of Defective Product Inventory in Physical Return and Transportation Stage] / [Total Defective Product Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_32
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:ScheduleDefectiveProductShipment
+        )] ;
+    rdfs:label "Percentage Defective Product Inventory in Scheduling"@en;
+    rdfs:comment "he value of defective product inventory awaiting scheduling as a percentage of the total defective product inventory value (%) Calculation [Value of Defective Product in Scheduling Stage] / [Total Defective Product Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_33
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceReturnExcessProduct
+        )] ;
+    rdfs:label "Percentage Excess Inventory in Disposition"@en;
+    rdfs:comment "Inventory Awaiting Return in the disposition decision stage. Calculation [Excess Inventory in Disposition Stage] / [Total Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_34
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:ReturnExcessProduct
+        )] ;
+    rdfs:label "Percentage Excess Inventory in Transportation"@en;
+    rdfs:comment "Excess process in physcial return and transportation stage as a percentage of total excess product inventory (%) Calculation [Value of excess product inventory in physcial return and transportation stage] / [Total excess inventory value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_35
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:RequestExcessProductReturnAuthorization
+        )] ;
+    rdfs:label "Percentage Excess Inventory in Request Return Authorization"@en;
+    rdfs:comment "Inventory Awaiting Return Authorization (%) Calculation [Value of excess product in request return authorization stage] / [Value of total excess inventory] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_36
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyExcessProductCondition
+        )] ;
+    rdfs:label "Percentage Excess Inventory in Identification"@en;
+    rdfs:comment "Inventory awaiting return in the identification stage as a percentage of total excess inventory (%) Calculation [Value of Excess Inventory in Identification Stage] / [Total Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_37
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:SourceReturnExcessProduct
+        scor:DeliverReturnExcessProduct
+        )] ;
+    rdfs:label "Percentage Excess Inventory"@en;
+    rdfs:comment "The value of excess inventory as a percentage of the value of total inventory (%) Calculation [Value of Excess Inventory] / [Total Inventory Value] x 100%"@en;    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_38
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:ScheduleExcessProductShipment
+        )] ;
+    rdfs:label "Percentage Excess Inventory in Scheduling"@en;
+    rdfs:comment "Percentage of excess inventory awaiting scheduling the return (%) Calculation [Value of Excess Product Inventory in Scheduling Stage] / [Total Excess Product Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_39
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DispositionMROProduct
+        scor:DeliverReturnMROProduct
+        )] ;
+    rdfs:label "Percentage Unserviceable MRO Inventory in Disposition"@en;
+    rdfs:comment "The value of unserviceable MRO Inventory in disposition stage as a percentage of total MRO inventory value (%) Calculation [Value of Unserviceable MRO Inventory in Disposition Stage] /[ Total MRO Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_40
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:ReturnMROPRoduct
+        )] ;
+    rdfs:label "Percentage Unserviceable MRO Inventory in Disposition"@en;
+    rdfs:comment "The value of unserviceable MRO inventory in transportation as a percentage of the total MRO inventory value (%) Calculation [Value of Unserviceable MRO Inventory in Physical Return and Transportation Stage] / [Total MRO Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_41
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:RequestMROReturnAuthorization
+        )] ;
+    rdfs:label "Percentage Unserviceable MRO Inventory in Return Authorization"@en;
+    rdfs:comment "The value of unserviceable MRO inventory awaiting return authorization as a percentage of the total MRO inventory value (%) Calculation [Value of Unserviceable MRO Inventory in Request Return Authorization Stage] / Total MRO Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_42
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:IdentifyMROProductCondition
+        )] ;
+    rdfs:label "Percentage Unserviceable MRO Inventory in Identification"@en;
+    rdfs:comment "The value of unserviceable MRO Inventory awaiting identification as a percentage of total MRO inventory value (%) Calculation [Value of Unserviceable MRO Inventory in Identification Stage] / [Total MRO Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+scor:hasMetricAM_43
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:ScheduleMROShipment
+        )] ;
+    rdfs:label "Percentage Unserviceable MRO Inventory in Scheduling"@en;
+    rdfs:comment "The value of unserviceable MRO inventory awaiting scheduling as a percentage of the total MRO inventory value (%) Calculation [Value of Unserviceable MRO inventory in Scheduling Stage] / [Total MRO Inventory Value] x 100%"@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
+
+#44 seem to be deprecated
+
+scor:hasMetricAM_45
+    rdf:type owl:DatatypeProperty ;
+    rdfs:domain [owl:unionOf (
+        scor:DeliverStockedProduct
+        scor:DeliverMakeToOrderProduct
+        scor:DeliverEngineerToOrderProduct
+        )] ;
+    rdfs:label "Inventory Days of Supply - Finished Goods"@en;
+    rdfs:comment "Finished goods inventory days of supply are calculated as gross finished goods inventory / (value of transfers / 365 days) in days."@en;    
+    rdfs:subPropertyOf scor:hasMetric;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+.
 
 
 #############################################################################################
