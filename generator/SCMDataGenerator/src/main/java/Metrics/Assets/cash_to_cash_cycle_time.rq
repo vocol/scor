@@ -1,0 +1,11 @@
+PREFIX    :   <http://purl.org/eis/vocab/scor#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (AVG(xsd:decimal(?inventoryDays))
+	  + AVG(xsd:decimal(?salesOutstanding))
+	  - AVG(xsd:decimal(?payableOutstanding)) as ?result)
+WHERE 
+{ 	?order :hasMetricAM_1 ?salesOutstanding .
+	?order :hasMetricAM_2 ?inventoryDays .
+	?order :hasMetricAM_3 ?payableOutstanding . 
+}

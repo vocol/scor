@@ -1,0 +1,10 @@
+PREFIX    :   <http://purl.org/eis/vocab/scor#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (SUM(xsd:decimal(?costs)) AS ?result)
+WHERE 
+{ 	?order :hasMetricCO_14
+		  |:hasMetricCO_15
+		  |:hasMetricCO_16
+ 		  |:hasMetricCO_17  ?costs . 
+}

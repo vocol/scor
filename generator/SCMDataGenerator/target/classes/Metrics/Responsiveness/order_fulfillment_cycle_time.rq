@@ -1,0 +1,15 @@
+PREFIX    :   <http://purl.org/eis/vocab/scor#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ((xsd:decimal(?actualTime)) /
+		(xsd:decimal(?allOrders)) as ?result)
+WHERE 
+{ 
+	{SELECT (SUM(xsd:decimal(?value)) as ?actualTime)
+	 WHERE { ?order :hasMetricRS_21
+			  	   |:hasMetricRS_22
+				   |:hasMetricRS_23
+				   |:hasMetricRS_24 ?value . }}
+	{SELECT (count(?order) as ?allOrders)
+	 WHERE { ?order a :Process . }}
+}

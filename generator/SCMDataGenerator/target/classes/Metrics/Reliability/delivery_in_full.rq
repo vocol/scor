@@ -1,0 +1,15 @@
+PREFIX    :   <http://purl.org/eis/vocab/scor#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ((xsd:decimal(?full) / (xsd:decimal(?notFull)) * 100) as ?result)
+WHERE 
+{
+	{SELECT ((count(?deliveredInFull)) as ?full)
+	 WHERE {
+		?deliveredInFull :hasMetricRL_33 100 .
+		?deliveredInFull :hasMetricRL_50 100 .
+	}}
+	{SELECT ((count(?allDeliveries)) as ?notFull)
+	 WHERE { ?allDeliveries a :DeliverStockedProduct . 
+	}}
+}

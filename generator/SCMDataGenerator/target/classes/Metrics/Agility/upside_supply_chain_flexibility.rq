@@ -1,0 +1,10 @@
+PREFIX    :   <http://purl.org/eis/vocab/scor#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (MAX(xsd:decimal(?flexibility)) AS ?result)
+WHERE 
+{ 		?order :hasMetricAG_1
+			  |:hasMetricAG_2
+			  |:hasMetricAG_3
+			  |:hasMetricAG_4
+			  |:hasMetricAG_5  ?flexibility . }
