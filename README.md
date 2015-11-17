@@ -9,10 +9,6 @@ SCORVoc is an OWL vocabulary which fully formalizes the latest SCOR standard, wh
 Preferred prefix identifier: [`scor`](http://prefix.cc/scor)
 Vocabulary namespace: [`http://purl.org/eis/vocab/scor#`](http://purl.org/eis/vocab/scor#)
 
-## Usage
+## Test Dataset
 
- ```
- arq --query metrics/reliability/delivery_in_full.rq --data examples.ttl
- ```
-	
- (for ARQ, see: [ARQ SPARQL Processor](https://jena.apache.org/documentation/query/) of the [Apache Jena Framework](https://jena.apache.org/))	
+See /generator for more information
