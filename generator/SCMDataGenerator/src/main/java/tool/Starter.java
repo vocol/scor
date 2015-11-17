@@ -3,9 +3,10 @@ package tool;
 
 import java.io.IOException;
 
-
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+
+import com.hp.hpl.jena.rdf.model.Model;
 
 import templates.Benchmarker;
 import templates.DatasetGenerator;
@@ -22,12 +23,11 @@ public class Starter {
 		// process parameters
 		DatasetGenerator dg = new DatasetGenerator();
 		dg.processParameters(args);
-		String datasetURL = dg.generateData();
+		Model model = dg.generateData();
 
 		// execute queries & print results
 		Benchmarker bm = new Benchmarker();
-		bm.setDatasetURL(datasetURL);
-		bm.executeQueries();
+		bm.executeQueries(model);
 
 
 	}
