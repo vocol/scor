@@ -76,8 +76,8 @@ scor:
 # Level 0
 
 []
-    rdf:type owl:AllDifferent ;
-    owl:distinctMembers (
+    rdf:type owl:AllDisjointClasses ;
+    owl:members (
         scor:Aptitude scor:Competency scor:Experience scor:Skill
         scor:Training scor:Practice scor:Process
         schema:Person
@@ -128,12 +128,6 @@ scor:Training
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-schema:Person
-    rdf:type owl:Class ;
-    rdfs:comment "Models person in a Supply Chain"@en ;
-    rdfs:label "Person"@en ;
- .
-
 scor:Practice
     rdf:type owl:Class ;
     rdfs:comment "A practice is a unique way to configure a process or a set of processes"@en ;
@@ -155,8 +149,8 @@ scor:Process
 # Level 1 Practice
 
 []
-    rdf:type owl:AllDifferent ;
-    owl:distinctMembers (
+    rdf:type owl:AllDisjointClasses ;
+    owl:members (
         scor:BestPractice scor:EmergingPractice scor:StandardPractice
     ) .
 
@@ -196,8 +190,8 @@ scor:StandardPractice
 # Level 1 Processes
 
 []
-    rdf:type owl:AllDifferent ;
-    owl:distinctMembers (
+    rdf:type owl:AllDisjointClasses ;
+    owl:members (
         scor:Plan scor:Source scor:Make scor:Deliver scor:Return scor:Enable
     ) .
 
@@ -278,8 +272,8 @@ scor:Enable
 # Plan
 
 []
-    rdf:type owl:AllDifferent ;
-    owl:distinctMembers (
+    rdf:type owl:AllDisjointClasses ;
+    owl:members (
         scor:PlanSupplyChain scor:PlanSource scor:PlanMake scor:PlanDeliver scor:PlanReturn
     ) .
 
@@ -290,7 +284,7 @@ scor:PlanSupplyChain
     rdfs:label "Plan Supply Chain"@en ;
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP1" ;
-    scor:hasSteps scor:PlanSupplyChainStepList;
+    scor:hasDefaultSteps scor:PlanSupplyChainStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -303,7 +297,7 @@ scor:PlanSource
     rdfs:label "Plan Source"@en ;
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP2" ;
-    scor:hasSteps scor:PlanSourceStepList;
+    scor:hasDefaultSteps scor:PlanSourceStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -315,7 +309,7 @@ scor:PlanMake
     rdfs:comment "The development and establishment of courses of action over specified time periods that represent a projected appropriation of production resources to meet production requirements"@en ;
     rdfs:label "Plan Make"@en ;
     rdfs:subClassOf scor:Plan ;
-    scor:hasSteps scor:PlanMakeStepList;
+    scor:hasDefaultSteps scor:PlanMakeStepList;
     skos:notation "sP3" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -329,7 +323,7 @@ scor:PlanDeliver
     rdfs:label "Plan Deliver"@en ;
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP4" ;
-    scor:hasSteps scor:PlanDeliverStepList;
+    scor:hasDefaultSteps scor:PlanDeliverStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -342,7 +336,7 @@ scor:PlanReturn
     rdfs:label "Plan Return"@en ;
     rdfs:subClassOf scor:Plan ;
     skos:notation "sP5" ;
-    scor:hasSteps scor:PlanReturnStepList;
+    scor:hasDefaultSteps scor:PlanReturnStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -351,8 +345,8 @@ scor:PlanReturn
 # Source
 
 []
-    rdf:type owl:AllDifferent ;
-    owl:distinctMembers (
+    rdf:type owl:AllDisjointClasses ;
+    owl:members (
         scor:SourceStockedProduct scor:SourceMakeToOrderProduct scor:SourceEngineerToOrderProduct
     ) .
 
@@ -362,7 +356,7 @@ scor:SourceStockedProduct
     rdfs:comment "The process of ordering, receiving and transferring raw material items, sub-assemblies, product and or services based on aggregated demand requirements."@en;
     rdfs:label "Source Stocked Product"@en ;
     skos:notation "sS1" ;
-    scor:hasSteps scor:SourceStockedProductStepList;
+    scor:hasDefaultSteps scor:SourceStockedProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -374,7 +368,7 @@ scor:SourceMakeToOrderProduct
     rdfs:comment "The processes of ordering and receiving product or material that is ordered (and may be configured) only when required by a specific customer order."@en ;
     rdfs:label "Source Make-to-Order Product"@en ;
     skos:notation "sS2" ;
-    scor:hasSteps scor:SourceMakeToOrderProductStepList;
+    scor:hasDefaultSteps scor:SourceMakeToOrderProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -386,7 +380,7 @@ scor:SourceEngineerToOrderProduct
     rdfs:comment "The processes of identifying and selecting sources of supply, negotiating, validating, scheduling, ordering and receiving parts, assemblies or specialized products or services that are designed, ordered and/or built based on the requirements or specifications of a specific customer order."@en ;
     rdfs:label "Source Engineer-to-Order Product"@en ;
     skos:notation "sS3" ;
-    scor:hasSteps scor:SourceEngineerToOrderProductStepList;
+    scor:hasDefaultSteps scor:SourceEngineerToOrderProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -395,8 +389,8 @@ scor:SourceEngineerToOrderProduct
 # Make
 
 []
-    rdf:type owl:AllDifferent ;
-    owl:distinctMembers (
+    rdf:type owl:AllDisjointClasses ;
+    owl:members (
         scor:MakeToStock scor:MakeToOrder scor:MakeEngineerToOrder
     ) .
 
@@ -406,7 +400,7 @@ scor:MakeToStock
     rdfs:comment "The process of manufacturing in a make-to-stock environment adds value to products through mixing, separating, forming, machining, and chemical processes."@en ;
     rdfs:label "Make-to-Stock"@en ;
     skos:notation "sM1" ;
-    scor:hasSteps scor:MakeToStockStepList;
+    scor:hasDefaultSteps scor:MakeToStockStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -418,7 +412,7 @@ scor:MakeToOrder
     rdfs:comment "The process of manufacturing in a make-to-order environment adds value to products through mixing, separating, forming, machining, and chemical processes for a specific customer order."@en ;
     rdfs:label "Make-to-Order"@en ;
     skos:notation "sM2" ;
-    scor:hasSteps scor:MakeToOrderStepList;
+    scor:hasDefaultSteps scor:MakeToOrderStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -429,7 +423,7 @@ scor:MakeEngineerToOrder
     rdfs:subClassOf scor:Make ;
     rdfs:comment "The process of developing, designing, validating, and ultimately using a manufacturing process to produce products or services based on the requirements of a specific customer."@en;
     rdfs:label "Engineer-to-Order"@en ;
-    scor:hasSteps scor:EngineerToOrderStepList;
+    scor:hasDefaultSteps scor:EngineerToOrderStepList;
     skos:notation "sM3" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -439,8 +433,8 @@ scor:MakeEngineerToOrder
 # Deliver
 
 []
-    rdf:type owl:AllDifferent ;
-    owl:distinctMembers (
+    rdf:type owl:AllDisjointClasses ;
+    owl:members (
         scor:DeliverStockedProduct scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct scor:DeliverRetailProduct
     ) .
@@ -451,7 +445,7 @@ scor:DeliverStockedProduct
     rdfs:comment "Delivers product that is sourced or made based on aggregated customer orders, projected orders/demand and inventory re-ordering parameters"@en ;
     rdfs:label "Deliver Stocked Product"@en ;
     skos:notation "sD1" ;
-    scor:hasSteps scor:DeliverStockedProductStepList;
+    scor:hasDefaultSteps scor:DeliverStockedProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -463,7 +457,7 @@ scor:DeliverMakeToOrderProduct
     rdfs:comment "Delivers product that is sourced, configured, manufactured, and/or assembled from standard raw materials, parts, ingredients or sub-assemblies, in response to a specific firm customer order"@en ;
     rdfs:label "Deliver Make-to-Order Product"@en ;
     skos:notation "sD2" ;
-    scor:hasSteps scor:DeliverMakeToOrderProductStepList;
+    scor:hasDefaultSteps scor:DeliverMakeToOrderProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -475,7 +469,7 @@ scor:DeliverEngineerToOrderProduct
     rdfs:comment "Obtaining, responding to, and allocating resources for a customer order that has unique requirements or specifications and delivering a product that is partially or fully designed, redesigned, manufactured, and/or assembled from a bill of materials or recipe that includes one or more custom parts or ingredients"@en ;
     rdfs:label "Deliver Engineer-to-Order Product"@en ;
     skos:notation "sD3" ;
-    scor:hasSteps scor:DeliverEngineerToProductStepList;
+    scor:hasDefaultSteps scor:DeliverEngineerToProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -487,7 +481,7 @@ scor:DeliverRetailProduct
     rdfs:comment "To acquire, merchandise, and sell finished goods at a retail store"@en ;
     rdfs:label "Deliver Retail Product"@en ;
     skos:notation "sD4" ;
-    scor:hasSteps scor:DeliverRetailProductStepList;
+    scor:hasDefaultSteps scor:DeliverRetailProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -496,8 +490,8 @@ scor:DeliverRetailProduct
 # Return
 
 []
-    rdf:type owl:AllDifferent ;
-    owl:distinctMembers (
+    rdf:type owl:AllDisjointClasses ;
+    owl:members (
         scor:DeliverReturnDefectiveProduct scor:DeliverReturnMROProduct
         scor:DeliverReturnExcessProduct scor:SourceReturnMROProduct
         scor:SourceReturnDefectiveProduct scor:SourceReturnExcessProduct
@@ -509,7 +503,7 @@ scor:DeliverReturnDefectiveProduct
     rdfs:comment "The receipt and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement"@en ;
     rdfs:label "Deliver Return Defective Product"@en ;
     skos:notation "sDR1" ;
-    scor:hasSteps scor:DeliverReturnDefectiveProduct;
+    scor:hasDefaultSteps scor:DeliverReturnDefectiveProduct;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -520,7 +514,7 @@ scor:DeliverReturnMROProduct
     rdfs:subClassOf scor:Return ;
     rdfs:comment "The receipt of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure"@en ;
     rdfs:label "Deliver Return MRO Product"@en ;
-    scor:hasSteps scor:DRMROProductStepList;
+    scor:hasDefaultSteps scor:DRMROProductStepList;
     skos:notation "sDR2" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -533,7 +527,7 @@ scor:DeliverReturnExcessProduct
     rdfs:comment "The receipt of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract"@en ;
     rdfs:label "Deliver Return Excess Product"@en ;
     skos:notation "sDR3" ;
-    scor:hasSteps scor:DRExcessProductStepList;
+    scor:hasDefaultSteps scor:DRExcessProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -545,7 +539,7 @@ scor:SourceReturnMROProduct
     rdfs:comment "The return of Maintenance, Repair and Overhaul (MRO) products or company assets for the purpose of servicing, repairing or upgrading it, as defined by Maintenance Plans or the occurrence or anticipation of risk of failure"@en ;
     rdfs:label "Source Return MRO Product"@en ;
     skos:notation "sSR2" ;
-    scor:hasSteps scor:SRMROProductStepList;
+    scor:hasDefaultSteps scor:SRMROProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -557,7 +551,7 @@ scor:SourceReturnDefectiveProduct
     rdfs:comment "The return and disposition determination of defective products as defined by the warranty claims, product recall, non-conforming product and/or other similar policies including appropriate replacement"@en ;
     rdfs:label "Source Return Defective Product"@en ;
     skos:notation "sSR1" ;
-    scor:hasSteps scor:SRDefectiveProductStepList;
+    scor:hasDefaultSteps scor:SRDefectiveProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -569,7 +563,7 @@ scor:SourceReturnExcessProduct
     rdfs:comment "The return of excess or aging inventory or obsolete products as defined by the terms and conditions of a customer/supplier contract"@en ;
     rdfs:label "Source Return Excess Product"@en ;
     skos:notation "sSR3" ;
-    scor:hasSteps scor:SRExcessProductStepList;
+    scor:hasDefaultSteps scor:SRExcessProductStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -578,8 +572,8 @@ scor:SourceReturnExcessProduct
 # Enable
 
 []
-    rdf:type owl:AllDifferent ;
-    owl:distinctMembers (
+    rdf:type owl:AllDisjointClasses ;
+    owl:members (
         scor:ManagePerformance scor:ManageSupplyChainBusinessRules
         scor:ManageDataAndInformation scor:ManageSupplyChainHumanResources
         scor:ManageSupplyChainAssets scor:ManageSupplyChainContracts
@@ -593,7 +587,7 @@ scor:ManageSupplyChainBusinessRules
     rdfs:comment "Establishing, documenting, communicating and publishing supply chain business rules"@en ;
     rdfs:label "Manage Supply Chain Business Rules"@en ;
     skos:notation "sE1" ;
-    scor:hasSteps scor:ManageSCBusinessRulesStepList;
+    scor:hasDefaultSteps scor:ManageSCBusinessRulesStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -605,7 +599,7 @@ scor:ManagePerformance
     rdfs:comment "Reporting performance, identifying gaps in performance, performing root cause analysis, and developing and launching corrective actions to close gaps in performance"@en ;
     rdfs:label "Manage Performance"@en ;
     skos:notation "sE2" ;
-    scor:hasSteps scor:ManageSCPerformanceStepList;
+    scor:hasDefaultSteps scor:ManageSCPerformanceStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -617,7 +611,7 @@ scor:ManageDataAndInformation
     rdfs:comment "Collecting, maintaining and publishing data and information required to plan, operate, measure and manage the supply chain"@en ;
     rdfs:label "Manage Data and Information"@en ;
     skos:notation "sE3" ;
-    scor:hasSteps scor:ManageSCDataAndInformationStepList;
+    scor:hasDefaultSteps scor:ManageSCDataAndInformationStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -629,7 +623,7 @@ scor:ManageSupplyChainHumanResources
     rdfs:comment "Developing, governing and maintaining an organization of permanent, temporary and outsourced staff, with the right qualifications, in support of the business objects and supply chain goals"@en ;
     rdfs:label "Manage Supply Chain Human Resources"@en ;
     skos:notation "sE4" ;
-    scor:hasSteps scor:ManageSupplyChainHumanResources;
+    scor:hasDefaultSteps scor:ManageSupplyChainHumanResources;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -641,7 +635,7 @@ scor:ManageSupplyChainAssets
     rdfs:comment "Scheduling, maintaining and dispositioning of supply chain assets that operate supply chain processes"@en ;
     rdfs:label "Manage Supply Chain Assets"@en ;
     skos:notation "sE5" ;
-    scor:hasSteps scor:ManageSCAssetsStepList;
+    scor:hasDefaultSteps scor:ManageSCAssetsStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -653,7 +647,7 @@ scor:ManageSupplyChainContracts
     rdfs:comment "The management and communication of contractual agreements in support of business objectives and supply chain goals"@en ;
     rdfs:label "Manage Supply Chain Contracts"@en ;
     skos:notation "sE6" ;
-    scor:hasSteps scor:ManageSCContractsStepList;
+    scor:hasDefaultSteps scor:ManageSCContractsStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -665,7 +659,7 @@ scor:ManageSupplyChainNetworks
     rdfs:comment "Developing, governing and maintaining a network of supply chain assets"@en ;
     rdfs:label "Manage Supply Chain Networks"@en ;
     skos:notation "sE7" ;
-    scor:hasSteps scor:ManageSCNetworkStepList;
+    scor:hasDefaultSteps scor:ManageSCNetworkStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -677,7 +671,7 @@ scor:ManageRegulatoryCompliance
     rdfs:comment "Identifying, collecting, assessing and integrating regulatory compliance requirements in standard supply chain processes, policies and business rules"@en ;
     rdfs:label "Manage Regulatory Compliance"@en ;
     skos:notation "sE8" ;
-    scor:hasSteps scor:ManageSCRegulatoryComplianceStepList;
+    scor:hasDefaultSteps scor:ManageSCRegulatoryComplianceStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -689,7 +683,7 @@ scor:ManageSupplyChainRisk
     rdfs:comment "Identification and assessment of potential disruptions (risks) in the supply chain and developing a plan to mitigate these threats to operating the supply chain"@en ;
     rdfs:label "Manage Supply Chain Risk"@en ;
     skos:notation "sE9" ;
-    scor:hasSteps scor:ManageSCRiskStepList;
+    scor:hasDefaultSteps scor:ManageSCRiskStepList;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -3908,8 +3902,18 @@ scor:isStepOf
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
+scor:hasDefaultSteps
+    rdf:type owl:AnnotationProperty;
+    rdfs:label "has default steps"@en;
+    rdfs:domain owl:Class;
+    rdfs:range olo:OrderedList;
+    rdfs:isDefinedBy scor: ;
+	rdfs:comment "A list of default steps for a specific class of processes. A particular instance of the class can override this by using scor:hasSteps."@en  ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-16"^^xsd:date .
+	
 scor:hasSteps
-    rdf:type owl:ObjectProperty ;
+    rdf:type owl:ObjectProperty;
     rdfs:label "has Step List"@en ;
     rdfs:domain scor:Process ;
     rdfs:range  olo:OrderedList;
@@ -3968,7 +3972,7 @@ scor:hasTraining
 
 scor:hasMetric
     rdf:type owl:DatatypeProperty ;
-    rdfs:range xsd:float ;
+    rdfs:range xsd:decimal ;
     rdfs:isDefinedBy scor: ;
     rdfs:comment "A Meric related to Processes"@en ;
     rdfs:label "has Metric"@en;
@@ -4121,7 +4125,7 @@ scor:hasMetricRL_14
  .
 
 scor:hasMetricRL_15
-    rdf:type owl:DatatypeProperty ;
+    rdf:type owl:DatatypeProperty;
     rdfs:domain scor:ReleaseFinishedProductToDeliver ;
     rdfs:label "% of products with proper environmental labeling (if required)"@en;
     rdfs:comment "The number of products with proper environmental labels in place as a per cent of total products produced"@en;
