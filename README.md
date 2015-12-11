@@ -12,3 +12,7 @@ Vocabulary namespace: [`http://purl.org/eis/vocab/scor#`](http://purl.org/eis/vo
 ## Test Dataset
 
 See /generator for more information
+
+## Future
+
+SCORVoc is planned as the basis for the [SCMApp](https://github.com/np00/scmApp). SCMApp provides a Web Interface Configurator to manage Supply Chains. 
