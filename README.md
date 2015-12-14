@@ -16,3 +16,6 @@ See /generator for more information
 ## Future
 
 SCORVoc is planned as the basis for the [SCMApp](https://github.com/np00/scmApp). SCMApp provides a Web Interface Configurator to manage Supply Chains. 
+
+-
+© APICS 2015. APICS, CCOR, CPIM, CSCP, DCOR, SCOR, and SCORmark are all registered trademarks of APICS.  All rights reserved.
