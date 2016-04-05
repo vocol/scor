@@ -20,7 +20,7 @@ scor:
     dct:publisher <http://dbpedia.org/resource/University_of_Bonn> ;
     dct:created "2015-03-01"^^xsd:date ;
     dct:modified "2015-11-05"^^xsd:date ;
-    owl:imports <http://www.w3.org/2004/02/skos/core> , dct: ;
+    owl:imports skos: , dct: ;
     owl:versionInfo "SNAPSHOT" ;
     void:vocabulary
         <http://purl.org/dc/terms/> ,
