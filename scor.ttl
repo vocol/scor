@@ -16,6 +16,7 @@ scor:
     rdf:type owl:Ontology ;
     rdfs:comment "A vocabulary which represents the Supply Chain Operations Reference (SCOR) standard."@en ;
     rdfs:label "SCORVoc"@en;
+    doap:maintainer <http://eis.iai.uni-bonn.de/NiklasPetersen> ;
     dct:creator <http://eis.iai.uni-bonn.de/Irlan>, <http://eis.iai.uni-bonn.de/NiklasPetersen>, <http://sebastian.tramp.name> ;
     dct:publisher <http://dbpedia.org/resource/University_of_Bonn> ;
     dct:created "2015-03-01"^^xsd:date ;
