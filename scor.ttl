@@ -2389,7 +2389,7 @@ scor:DevelopeCorrectiveActions
 scor:ApproveAndLaunch
     rdf:type owl:Class ;
     rdfs:comment "The process of obtaining approvals, prioritizing, communicating and launching the corrective actions."@en;
-    rdfs:label "Develope Corrective Actions"@en ;
+    rdfs:label "Approve And Launch"@en ;
     scor:isStepOf scor:ManagePerformance;
     skos:notation "sE2.6" ;
     rdfs:isDefinedBy scor: ;
