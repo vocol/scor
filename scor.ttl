@@ -2457,7 +2457,7 @@ scor:PublishInformation
 scor:VerfyInformation
     rdf:type owl:Class ;
     rdfs:comment "The process of verifying the information is properly recorded in the system of record and populated to dependent systems. This includes verifying information is accessible to users."@en;    
-    rdfs:label "Publish Information"@en ;
+    rdfs:label "Verfy Information"@en ;
     scor:isStepOf scor:ManageDataAndInformation;
     skos:notation "sE3.6" ;
     rdfs:isDefinedBy scor: ;
