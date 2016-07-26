@@ -2334,7 +2334,7 @@ scor:RetireBusinessRule
 scor:InitiateReporting
     rdf:type owl:Class ;
     rdfs:comment "The process of scheduling, running reports, collecting and aggregating perfomance data. This includes running standard (pre-defined) reports as well as adhoc reporting. Ad hoc reporting includes developing a data collection plan and organizing data collection through: (1) Inspections (2) Measurement (e.g. stopwatch to measure duration of activities) (3) Sampling (4) Self assessements (e.g. Baldridge Self Assessment). Note: Today reports may be delivered (pushed) to the user by electronic media. This process step represents the delivery of reports to the user in such scenarios.";
-    rdfs:label "Retire Business Rule"@en ;
+    rdfs:label "Initiate Reporting"@en ;
     scor:isStepOf scor:ManagePerformance;
     skos:notation "sE2.1" ;
     rdfs:isDefinedBy scor: ;
