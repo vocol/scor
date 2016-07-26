@@ -2356,7 +2356,7 @@ scor:AnalyzeReports
 scor:FindRootCauses
     rdf:type owl:Class ;
     rdfs:comment "The process of analyzing the gaps in performance. Example root cause finding methods and techniques include: (1) Adding commentary to reported data (2) Metrics decomposition using diagnostic relationships of (SCOR) metrics (3) Time studies, sampling, audits, cycle counting (4) 5-Whys/Cause & Effect analysis (5) Statistical Analysis Techniques: e.g. Histogram, Scatter Plots, ANOVA. All root causes are documented and quantified. Quantification is the calculation or estimation of the relative contribution to the gap in performance."@en;
-    rdfs:label "Analyze Reports"@en ;
+    rdfs:label "Find Root Causes"@en ;
     scor:isStepOf scor:ManagePerformance;
     skos:notation "sE2.3" ;
     rdfs:isDefinedBy scor: ;
