@@ -2615,7 +2615,7 @@ scor:InspectMaintenance
 
 scor:ReinstateAsset
     rdf:type owl:Class ;
-    rdfs:comment "The activities associated with completion of the maintenance work and preparing the equipment/ asset to be brought 'on-line'. The general purpose of this process step is to make the asset available for 'production' (add to capacity). This includes closing work orders and receiving and approving payment of invoices for work performed by external resources. Upon completion of this process step the asset is expected to be in full working condition."@n;    
+    rdfs:comment "The activities associated with completion of the maintenance work and preparing the equipment/ asset to be brought 'on-line'. The general purpose of this process step is to make the asset available for 'production' (add to capacity). This includes closing work orders and receiving and approving payment of invoices for work performed by external resources. Upon completion of this process step the asset is expected to be in full working condition."@en;    
     rdfs:label "Reinstate Asset"@en ;
     scor:isStepOf scor:ManageSupplyChainAssets;
     skos:notation "sE5.8" ;
