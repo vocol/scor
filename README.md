@@ -12,14 +12,14 @@ SCORVoc is an OWL vocabulary which fully formalizes the latest SCOR standard, wh
 ## Example Process
 
 ```
-scor:exampleProcess a        		scor:DeliverStockedProduct ;
-			        :hasCommitDate  "2015-11-05" ;
-			        :hasSupplier    "Sangio Sugar Factory" ;
-			        :product        "Raw sugar" ;
-			        :processId      "2ad9380f-1eb4-4595-857b-1bcf874621bb" ;
+scor:exampleProcess a        		   scor:DeliverStockedProduct ;
+			        :hasCommitDate     "2015-11-05" ;
+			        :hasSupplier       "Sangio Sugar Factory" ;
+			        :product           "Raw sugar" ;
+			        :processId         "2ad9380f-1eb4-4595-857b-1bcf874621bb" ;
 
-			        :hasMetricRL_33 "90" ;  # Delivery Item Accurac
-			        :hasMetricRL_34 "100" . # Delivery Location Accuracy
+			        scor:hasMetricRL_33 "90" ;  # Delivery Item Accuracy
+			        scor:hasMetricRL_34 "100" . # Delivery Location Accuracy
 ```
 
 
