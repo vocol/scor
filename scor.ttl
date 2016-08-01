@@ -21,7 +21,7 @@ scor:
     dct:publisher <http://dbpedia.org/resource/University_of_Bonn> ;
     dct:created "2015-03-01"^^xsd:date ;
     dct:modified "2015-11-05"^^xsd:date ;
-    owl:imports skos: , dct: ;
+  #  owl:imports skos: , dct: ;
     owl:versionInfo "SNAPSHOT" ;
     void:vocabulary
         <http://purl.org/dc/terms/> ,
@@ -4007,9 +4007,11 @@ scor:hasMetricRL_2
 
 #3 seems to be deprecated #
 
+
 scor:hasMetricRL_4
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPPackProduct
         scor:DMOPPickProduct
         scor:SSPReceiveProduct
@@ -4024,7 +4026,8 @@ scor:hasMetricRL_4
 
 scor:hasMetricRL_5
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReturnDefectiveProduct
         scor:ReturnMROPRoduct
         scor:ReturnExcessProduct
@@ -4065,7 +4068,8 @@ scor:hasMetricRL_7
 
 scor:hasMetricRL_10
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnExcessProduct
         scor:DeliverReturnExcessProduct
         )] ;
@@ -4079,7 +4083,8 @@ scor:hasMetricRL_10
 
 scor:hasMetricRL_11
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPInvoice
         scor:DMOPInvoice
         scor:DEOPInvoice
@@ -4138,7 +4143,8 @@ scor:hasMetricRL_15
 
 scor:hasMetricRL_16
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPSelectCarriersRateShipments
         scor:DMOPSelectCarriersRateShipments
         )] ;
@@ -4163,7 +4169,8 @@ scor:hasMetricRL_17
 
 scor:hasMetricRL_18
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPReceiveProduct
         scor:SMOPReceiveProduct
         scor:SEOPReceiveProduct
@@ -4178,7 +4185,8 @@ scor:hasMetricRL_18
 
 scor:hasMetricRL_19
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPVerifyProduct
         scor:SMOPVerifyProduct
         scor:SEOPVerifyProduct
@@ -4193,7 +4201,8 @@ scor:hasMetricRL_19
 
 scor:hasMetricRL_20
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPReceiveProduct
         scor:SMOPReceiveProduct
         scor:SEOPReceiveProduct
@@ -4208,7 +4217,8 @@ scor:hasMetricRL_20
 
 scor:hasMetricRL_21
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPVerifyProduct
         scor:SMOPVerifyProduct
         scor:SEOPVerifyProduct
@@ -4223,7 +4233,8 @@ scor:hasMetricRL_21
 
  scor:hasMetricRL_22
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPReceiveProduct
         scor:SMOPReceiveProduct
         scor:SEOPReceiveProduct
@@ -4238,7 +4249,8 @@ scor:hasMetricRL_21
 
 scor:hasMetricRL_23
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPReceiveProduct
         scor:SMOPReceiveProduct
         scor:SEOPReceiveProduct
@@ -4253,7 +4265,8 @@ scor:hasMetricRL_23
 
 scor:hasMetricRL_24
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPVerifyProduct
         scor:SMOPVerifyProduct
         scor:SEOPVerifyProduct
@@ -4268,7 +4281,8 @@ scor:hasMetricRL_24
 
 scor:hasMetricRL_25
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPTransferProduct
         scor:SMOPTransferProduct
         scor:SEOPTransferProduct
@@ -4283,7 +4297,8 @@ scor:hasMetricRL_25
 
 scor:hasMetricRL_26
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPTransferProduct
         scor:SMOPTransferProduct
         scor:SEOPTransferProduct
@@ -4298,7 +4313,8 @@ scor:hasMetricRL_26
 
 scor:hasMetricRL_27
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPScheduleProductDeliveries
         scor:SMOPScheduleProductDeliveries
         scor:SEOPScheduleProductDeliveries
@@ -4313,7 +4329,8 @@ scor:hasMetricRL_27
 
 scor:hasMetricRL_28
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleDefectiveProductShipment
         scor:ScheduleMROShipment
         scor:ScheduleExcessProductShipment
@@ -4332,7 +4349,8 @@ scor:hasMetricRL_28
 
 scor:hasMetricRL_31
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSPackage
         scor:MOPackage
         scor:MEOPackage
@@ -4350,7 +4368,8 @@ scor:hasMetricRL_31
 
 scor:hasMetricRL_32
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPReceiveVerifyProductByCustomer
         scor:DMOPReceiveVerifyProductByCustomer
         scor:DEOPReceiveVerifyProductByCustomer
@@ -4365,7 +4384,8 @@ scor:hasMetricRL_32
 
 scor:hasMetricRL_33
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveEnterValidateOrder
         scor:DSPConsolidateOrders
         scor:LoadVehicleGenerateShippingDocuments
@@ -4392,7 +4412,8 @@ scor:hasMetricRL_33
 
 scor:hasMetricRL_34
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveEnterValidateOrder
         scor:DSPConsolidateOrders
         scor:LoadVehicleGenerateShippingDocuments
@@ -4419,7 +4440,8 @@ scor:hasMetricRL_34
 
 scor:hasMetricRL_35
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveEnterValidateOrder
         scor:DSPConsolidateOrders
         scor:LoadVehicleGenerateShippingDocuments
@@ -4446,7 +4468,8 @@ scor:hasMetricRL_35
 
 scor:hasMetricRL_36
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:BalanceSCResourcesWithSCRequirements
         scor:EstablishDeliveryPlans
         scor:MSProduceTest
@@ -4463,7 +4486,8 @@ scor:hasMetricRL_36
 
 scor:hasMetricRL_37
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:PSCIdentifyPrioritizeAggregateSCRequirements
         scor:IdentifyPrioritizeAggregateProductRequirements
         scor:IdentifyPrioritizeAggregateProductionRequirements
@@ -4508,7 +4532,8 @@ scor:hasMetricRL_40
 
 scor:hasMetricRL_41
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPReceiveVerifyProductByCustomer
         scor:DMOPReceiveVerifyProductByCustomer
         scor:DEOPReceiveVerifyProductByCustomer
@@ -4523,7 +4548,8 @@ scor:hasMetricRL_41
 
 scor:hasMetricRL_42
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPReceiveVerifyProductByCustomer
         scor:DMOPReceiveVerifyProductByCustomer
         scor:DEOPReceiveVerifyProductByCustomer
@@ -4538,7 +4564,8 @@ scor:hasMetricRL_42
 
 scor:hasMetricRL_43
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:LoadVehicleGenerateShippingDocuments
         scor:DMOPLoadProductGenerateShippingDocs
         scor:DEOPLoadProductGenerateShippingDocs
@@ -4555,7 +4582,8 @@ scor:hasMetricRL_43
 
 scor:hasMetricRL_45
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:LoadVehicleGenerateShippingDocuments
         scor:DMOPLoadProductGenerateShippingDocs
         scor:DEOPLoadProductGenerateShippingDocs
@@ -4572,7 +4600,8 @@ scor:hasMetricRL_45
 
 scor:hasMetricRL_47
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReturnDefectiveProduct
         scor:ReturnMROPRoduct
         scor:DEOPLoadProductGenerateShippingDocs
@@ -4589,7 +4618,8 @@ scor:hasMetricRL_47
 
 scor:hasMetricRL_49
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSScheduleProductionActivities
         scor:MOScheduleProductionActivities
         scor:MEOScheduleProductionActivities
@@ -4605,7 +4635,8 @@ scor:hasMetricRL_49
 
 scor:hasMetricRL_50
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:LoadVehicleGenerateShippingDocuments
         scor:DMOPLoadProductGenerateShippingDocs
         scor:DEOPLoadProductGenerateShippingDocs
@@ -4624,7 +4655,8 @@ scor:hasMetricRL_50
 
 scor:hasMetricRL_55
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSProduceTest
         scor:MSPackage
         )] ;
@@ -4638,7 +4670,8 @@ scor:hasMetricRL_55
 
 scor:hasMetricRL_56
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSProduceTest
         scor:MSPackage
         scor:MOProduceTest
@@ -4656,7 +4689,8 @@ scor:hasMetricRL_56
 
 scor:hasMetricRL_57
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSWasteDisposal
         scor:MOWasteDisposal
         scor:MEOWasteDisposal
@@ -4671,7 +4705,8 @@ scor:hasMetricRL_57
 
 scor:hasMetricRL_58
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToStock
         scor:MSProduceTest
         scor:MSPackage
@@ -4692,7 +4727,8 @@ scor:hasMetricRL_58
 
 scor:hasMetricRL_59
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSProduceTest
         scor:MOProduceTest
         scor:MEOProduceTest
@@ -4735,7 +4771,8 @@ scor:hasMetricRS_3
 
 scor:hasMetricRS_4
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSProduceTest
         scor:MSPackage
         scor:MOProduceTest
@@ -4753,7 +4790,8 @@ scor:hasMetricRS_4
 
 scor:hasMetricRS_5
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:AuthorizeDefectiveProductReturn
         )] ;
     rdfs:label "Authorize Defective Product Return Cycle Time"@en;
@@ -4766,7 +4804,8 @@ scor:hasMetricRS_5
 
 scor:hasMetricRS_6
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:
         )] ;
     rdfs:label "Authorize Excess Product Return Cycle Time"@en;
@@ -4779,7 +4818,8 @@ scor:hasMetricRS_6
 
 scor:hasMetricRS_7
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:AuthorizeMROProductReturn
         )] ;
     rdfs:label "Authorize MRO Product Return Cycle Time"@en;
@@ -4792,7 +4832,8 @@ scor:hasMetricRS_7
 
 scor:hasMetricRS_8
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:AuthorizeSupplierPayment
         scor:SMOPAuthorizeSupplierPayment
         scor:SEOPAuthorizeSupplierPayment
@@ -4807,7 +4848,8 @@ scor:hasMetricRS_8
 
 scor:hasMetricRS_9
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPScheduleProductDeliveries
         scor:SMOPScheduleProductDeliveries
         scor:SEOPScheduleProductDeliveries
@@ -4822,7 +4864,8 @@ scor:hasMetricRS_9
 
 scor:hasMetricRS_10
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPScheduleProductDeliveries
         scor:SMOPScheduleProductDeliveries
         scor:SEOPScheduleProductDeliveries
@@ -4837,7 +4880,8 @@ scor:hasMetricRS_10
 
 scor:hasMetricRS_11
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPScheduleProductDeliveries
         scor:SMOPScheduleProductDeliveries
         scor:SEOPScheduleProductDeliveries
@@ -4852,7 +4896,8 @@ scor:hasMetricRS_11
 
 scor:hasMetricRS_12
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:BalanceProductResourcesWithProductRequirements
         )] ;
     rdfs:label "Balance Product Resources with Product Requirements Cycle Time"@en;
@@ -4865,7 +4910,8 @@ scor:hasMetricRS_12
 
 scor:hasMetricRS_13
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:BalanceProductionResourcesWithProductionRequirements
         )] ;
     rdfs:label "Balance Production Resources with Product Requirements Cycle Time"@en;
@@ -4878,7 +4924,8 @@ scor:hasMetricRS_13
 
 scor:hasMetricRS_14
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:BalanceReturnResourcesWithReturnRequirements
         )] ;
     rdfs:label "Balance Return Resources with Return Requirements Cycle Time"@en;
@@ -4891,7 +4938,8 @@ scor:hasMetricRS_14
 
 scor:hasMetricRS_15
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:BalanceSCResourcesWithSCRequirements
         )] ;
     rdfs:label "Balance Supply Chain Resources with SC Requirements"@en;
@@ -4904,7 +4952,8 @@ scor:hasMetricRS_15
 
 scor:hasMetricRS_16
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPBuildLoads
         scor:DMOPBuildLoads
         scor:DEOPBuildLoads
@@ -4919,7 +4968,8 @@ scor:hasMetricRS_16
 
 scor:hasMetricRS_17
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:Checkout
         )] ;
     rdfs:label "Checkout Cycle Time"@en;
@@ -4932,7 +4982,8 @@ scor:hasMetricRS_17
 
 scor:hasMetricRS_18
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPConsolidateOrders
         )] ;
     rdfs:label "Consolidate Orders Cycle Time"@en;
@@ -4945,7 +4996,8 @@ scor:hasMetricRS_18
 
 scor:hasMetricRS_19
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:
         scor:DeliverReturnMROProduct
         scor:DeliverReturnExcessProduct
@@ -4960,7 +5012,8 @@ scor:hasMetricRS_19
 
 scor:hasMetricRS_20
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -4975,7 +5028,8 @@ scor:hasMetricRS_20
 
 scor:hasMetricRS_21
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToStock
         scor:MakeToOrder
         scor:MakeEngineerToOrder
@@ -4990,7 +5044,8 @@ scor:hasMetricRS_21
 
 scor:hasMetricRS_22
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnDefectiveProduct
         )] ;
     rdfs:label "Current supplier return order cycle time"@en;
@@ -5005,7 +5060,8 @@ scor:hasMetricRS_22
 
 scor:hasMetricRS_24
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverInstall
         )] ;
     rdfs:label "Deliver and/or Install Cycle Time"@en;
@@ -5018,7 +5074,8 @@ scor:hasMetricRS_24
 
 scor:hasMetricRS_25
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:EnterOrderCommitResourcesLaunchProgram
         )] ;
     rdfs:label "Enter Order, Commmit Resources & Launch Program Cycle Time"@en;
@@ -5032,7 +5089,8 @@ scor:hasMetricRS_25
 
 scor:hasMetricRS_26
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:EstablishCommunicateReturnPlans
         )] ;
     rdfs:label "Establish and Communicate Return Plans Cycle Time"@en;
@@ -5045,7 +5103,8 @@ scor:hasMetricRS_26
 
 scor:hasMetricRS_27
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:EstablishDeliveryPlans
         )] ;
     rdfs:label "Establish Delivery Plans Cycle Time"@en;
@@ -5058,7 +5117,8 @@ scor:hasMetricRS_27
 
 scor:hasMetricRS_28
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:EstablishProductionPlans
         )] ;
     rdfs:label "Establish Production Plans Cycle Time"@en;
@@ -5071,7 +5131,8 @@ scor:hasMetricRS_28
 
 scor:hasMetricRS_29
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:EstablishSourcingPlans
         )] ;
     rdfs:label "Establish Sourcing Plans Cycle Time"@en;
@@ -5084,7 +5145,8 @@ scor:hasMetricRS_29
 
 scor:hasMetricRS_30
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:EstablishCommunicateSCPlans
         )] ;
     rdfs:label "Establish Supply Chain Plans Cycle Time"@en;
@@ -5099,7 +5161,8 @@ scor:hasMetricRS_30
 
 scor:hasMetricRS_32
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:FillShoppingCart
         )] ;
     rdfs:label "Fill Shopping Cart Cycle Time"@en;
@@ -5112,7 +5175,8 @@ scor:hasMetricRS_32
 
 scor:hasMetricRS_33
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:FinalizeProductionEngineering
         )] ;
     rdfs:label "Finalize Production Engineering Cycle Time"@en;
@@ -5125,7 +5189,8 @@ scor:hasMetricRS_33
 
 scor:hasMetricRS_34
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:GenerateStockingSchedule
         )] ;
     rdfs:label "Generate Stocking Schedule Cycle Time"@en;
@@ -5138,7 +5203,8 @@ scor:hasMetricRS_34
 
 scor:hasMetricRS_35
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifySourcesOfSupply
         )] ;
     rdfs:label "Identify Sources and Supply Cycle Time"@en;
@@ -5151,7 +5217,8 @@ scor:hasMetricRS_35
 
 scor:hasMetricRS_36
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyAssessAggregateProductionResources
         )] ;
     rdfs:label "Identify, Assess and Aggregate Production"@en;
@@ -5164,7 +5231,8 @@ scor:hasMetricRS_36
 
 scor:hasMetricRS_37
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyAssessAggregateDeliveryResources
         )] ;
     rdfs:label "Identify, Assess and Aggregate Delivery Resources Cycle Time"@en;
@@ -5177,7 +5245,8 @@ scor:hasMetricRS_37
 
 scor:hasMetricRS_38
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyAssessAggregateProductResources
         )] ;
     rdfs:label "Identify, Assess and Aggregate Product Resources Cycle Time"@en;
@@ -5190,7 +5259,8 @@ scor:hasMetricRS_38
 
 scor:hasMetricRS_39
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyPrioritizeAggregateSCResources
         )] ;
     rdfs:label "Identify, Assess and Aggregate Supply Chain Cycle Time"@en;
@@ -5204,7 +5274,8 @@ scor:hasMetricRS_39
 
 scor:hasMetricRS_40
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyPrioritizeAggregateDeliveryRequirements
         )] ;
     rdfs:label "Identify, Assess and Aggregate Delivery Requirements Cycle Time"@en;
@@ -5217,7 +5288,8 @@ scor:hasMetricRS_40
 
 scor:hasMetricRS_41
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyPrioritizeAggregateProductRequirements
         )] ;
     rdfs:label "Identify, Assess and Aggregate Product Requirements Cycle Time"@en;
@@ -5230,7 +5302,8 @@ scor:hasMetricRS_41
 
 scor:hasMetricRS_42
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyPrioritizeAggregateProductRequirements
         )] ;
     rdfs:label "Identify, Assess and Aggregate Product Requirements Cycle Time"@en;
@@ -5243,7 +5316,8 @@ scor:hasMetricRS_42
 
 scor:hasMetricRS_43
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:AssessAggregateReturnRequirements
         )] ;
     rdfs:label "Identify, Assess and Aggregate Return Requirements Cycle Time"@en;
@@ -5256,7 +5330,8 @@ scor:hasMetricRS_43
 
 scor:hasMetricRS_44
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:PSCIdentifyPrioritizeAggregateSCRequirements
         )] ;
     rdfs:label "Identify, Assess and Aggregate Supply Chain Requirements Cycle Time"@en;
@@ -5270,7 +5345,8 @@ scor:hasMetricRS_44
 
 scor:hasMetricRS_46
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPInstallProduct
         scor:DMOPInstallProduct
         scor:DEOPInstallProduct
@@ -5285,7 +5361,8 @@ scor:hasMetricRS_46
 
 scor:hasMetricRS_47
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:StockShelf
         )] ;
     rdfs:label "In-stock %"@en;
@@ -5298,7 +5375,8 @@ scor:hasMetricRS_47
 
 scor:hasMetricRS_48
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPInvoice
         )] ;
     rdfs:label "Invoice Cycle Time"@en;
@@ -5311,7 +5389,8 @@ scor:hasMetricRS_48
 
 scor:hasMetricRS_49
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IssueMaterial
         )] ;
     rdfs:label "Issue Material Cycle Time"@en;
@@ -5324,7 +5403,8 @@ scor:hasMetricRS_49
 
 scor:hasMetricRS_50
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IssueSourcedInProcessProduct
         )] ;
     rdfs:label "Issue Sourced/In-Process Product Cycle Time"@en;
@@ -5337,7 +5417,8 @@ scor:hasMetricRS_50
 
 scor:hasMetricRS_51
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:LoadVehicleGenerateShippingDocuments
         scor:DMOPLoadProductGenerateShippingDocs
         scor:DEOPLoadProductGenerateShippingDocs
@@ -5354,7 +5435,8 @@ scor:hasMetricRS_51
 
 scor:hasMetricRS_53
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageDataAndInformation
         )] ;
     rdfs:label "Maintain Source Cycle Time"@en;
@@ -5367,7 +5449,8 @@ scor:hasMetricRS_53
 
 scor:hasMetricRS_54
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainBusinessRules
         )] ;
     rdfs:label "Manage Business Rules for PLAN Processes Cycle Time"@en;
@@ -5380,7 +5463,8 @@ scor:hasMetricRS_54
 
 scor:hasMetricRS_55
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainBusinessRules
         )] ;
     rdfs:label "Manage Business Rules for PLAN Processes Cycle Time"@en;
@@ -5393,7 +5477,8 @@ scor:hasMetricRS_55
 
 scor:hasMetricRS_56
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleAssetManagementActivities
         scor:TakeAssetOffline
         scor:InspectAndTroubleshoot
@@ -5412,7 +5497,8 @@ scor:hasMetricRS_56
 
 scor:hasMetricRS_57
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainBusinessRules
         )] ;
     rdfs:label "Manage Deliver Business Rules Cycle Time"@en;
@@ -5425,7 +5511,8 @@ scor:hasMetricRS_57
 
 scor:hasMetricRS_58
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleAssetManagementActivities
         scor:TakeAssetOffline
         scor:InspectAndTroubleshoot
@@ -5444,7 +5531,8 @@ scor:hasMetricRS_58
 
 scor:hasMetricRS_59
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageDataAndInformation
         )] ;
     rdfs:label "Manage Deliver Information Cycle Time"@en;
@@ -5459,7 +5547,8 @@ scor:hasMetricRS_59
 
 scor:hasMetricRS_61
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageRegulatoryCompliance
         )] ;
     rdfs:label "Manage Import/Export Requirements Cycle Time"@en;
@@ -5474,7 +5563,8 @@ scor:hasMetricRS_61
 
 scor:hasMetricRS_64
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainAssets
         scor:ScheduleAssetManagementActivities
         scor:TakeAssetOffline
@@ -5494,7 +5584,8 @@ scor:hasMetricRS_64
 
 scor:hasMetricRS_65
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManagePerformance
         )] ;
     rdfs:label "Manage Integrated Supply Chain Inventory Cycle Time"@en;
@@ -5507,7 +5598,8 @@ scor:hasMetricRS_65
 
 scor:hasMetricRS_66
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainNetworks
         )] ;
     rdfs:label "Manage Integrated Supply Chain Transportation Cycle Time"@en;
@@ -5520,7 +5612,8 @@ scor:hasMetricRS_66
 
 scor:hasMetricRS_67
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleAssetManagementActivities
         scor:TakeAssetOffline
         scor:InspectAndTroubleshoot
@@ -5539,7 +5632,8 @@ scor:hasMetricRS_67
 
 scor:hasMetricRS_68
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageDataAndInformation
         )] ;
     rdfs:label "Manage MAKE Information Cycle Time"@en;
@@ -5554,7 +5648,8 @@ scor:hasMetricRS_68
 
 scor:hasMetricRS_70
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManagePerformance
         )] ;
     rdfs:label "Manage Performance of Return Cycle Time"@en;
@@ -5567,7 +5662,8 @@ scor:hasMetricRS_70
 
 scor:hasMetricRS_71
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManagePerformance
         )] ;
     rdfs:label "Manage Performance of Supply Chain Cycle Time"@en;
@@ -5580,7 +5676,8 @@ scor:hasMetricRS_71
 
 scor:hasMetricRS_72
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageDataAndInformation
         )] ;
     rdfs:label "Manage PLAN Data Collection Cycle Time"@en;
@@ -5595,7 +5692,8 @@ scor:hasMetricRS_72
 
 scor:hasMetricRS_74
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainNetworks
         )] ;
     rdfs:label "Manage Planning Configuration Cycle Time"@en;
@@ -5610,7 +5708,8 @@ scor:hasMetricRS_74
 
 scor:hasMetricRS_77
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainNetworks
         )] ;
     rdfs:label "Manage Production Network Cycle Time"@en;
@@ -5623,7 +5722,8 @@ scor:hasMetricRS_77
 
 scor:hasMetricRS_78
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManagePerformance
         )] ;
     rdfs:label "Manage Production Performance Cycle Time"@en;
@@ -5636,7 +5736,8 @@ scor:hasMetricRS_78
 
 scor:hasMetricRS_79
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainBusinessRules
         )] ;
     rdfs:label "Manage Production Rules Cycle Time"@en;
@@ -5649,7 +5750,8 @@ scor:hasMetricRS_79
 
 scor:hasMetricRS_80
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleAssetManagementActivities
         scor:TakeAssetOffline
         scor:InspectAndTroubleshoot
@@ -5668,7 +5770,8 @@ scor:hasMetricRS_80
 
 scor:hasMetricRS_81
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageDataAndInformation
         )] ;
     rdfs:label "Manage Return Data Collection Cycle Time"@en;
@@ -5683,7 +5786,8 @@ scor:hasMetricRS_81
 
 scor:hasMetricRS_83
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainNetworks
         )] ;
     rdfs:label "Manage Return Network Configuration Cycle Time"@en;
@@ -5698,7 +5802,8 @@ scor:hasMetricRS_83
 
 scor:hasMetricRS_85
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainNetworks
         )] ;
     rdfs:label "Manage Return Transportation Cycle Time"@en;
@@ -5711,7 +5816,8 @@ scor:hasMetricRS_85
 
 scor:hasMetricRS_86
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainBusinessRules
         )] ;
     rdfs:label "Manage Sourcing Business Rules Cycle Time"@en;
@@ -5724,7 +5830,8 @@ scor:hasMetricRS_86
 
 scor:hasMetricRS_87
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainContracts
         )] ;
     rdfs:label "Manage Supplier Agreements Cycle Time"@en;
@@ -5737,7 +5844,8 @@ scor:hasMetricRS_87
 
 scor:hasMetricRS_88
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainNetworks
         )] ;
     rdfs:label "Manage Supplier Network Cycle Time"@en;
@@ -5750,7 +5858,8 @@ scor:hasMetricRS_88
 
 scor:hasMetricRS_89
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainNetworks
         )] ;
     rdfs:label "Manage Transportation (WIP) Cycle Time"@en;
@@ -5763,7 +5872,8 @@ scor:hasMetricRS_89
 
 scor:hasMetricRS_90
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ManageSupplyChainNetworks
         )] ;
     rdfs:label "Manage Transportation Cycle Time"@en;
@@ -5778,7 +5888,8 @@ scor:hasMetricRS_90
 
 scor:hasMetricRS_92
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:NegotiateReceiveContract
         )] ;
     rdfs:label "Negotiate & Receive Contract Cycle Time"@en;
@@ -5791,7 +5902,8 @@ scor:hasMetricRS_92
 
 scor:hasMetricRS_93
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ObtainRespondToRFPRFQ
         )] ;
     rdfs:label "Obtain & Respond to Request for Quote (RFQ) / Request for Proposal (RFP) Cycle time"@en;
@@ -5804,7 +5916,8 @@ scor:hasMetricRS_93
 
 scor:hasMetricRS_94
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveEnterValidateOrder
         scor:DSPReserveInventoryDetermineDeliveryDate
         scor:ReceiveConfigureEnterValidateOrder
@@ -5821,7 +5934,8 @@ scor:hasMetricRS_94
 
 scor:hasMetricRS_95
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPPackProduct
         scor:DMOPPackProduct
         scor:DEOPPackProduct
@@ -5836,7 +5950,8 @@ scor:hasMetricRS_95
 
 scor:hasMetricRS_96
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPPickProduct
         scor:DMOPPickProduct
         scor:DEOPPickProduct
@@ -5851,7 +5966,8 @@ scor:hasMetricRS_96
 
 scor:hasMetricRS_97
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:PickProductFromBackroom
         )] ;
     rdfs:label "Pick Product from Backroom Cycle Time"@en;
@@ -5864,7 +5980,8 @@ scor:hasMetricRS_97
 
 scor:hasMetricRS_98
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:PlanSupplyChain
         )] ;
     rdfs:label "Plan Cycle Time"@en;
@@ -5877,7 +5994,8 @@ scor:hasMetricRS_98
 
 scor:hasMetricRS_99
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:PlanSource
         )] ;
     rdfs:label "Plan Source Cycle Time"@en;
@@ -5890,7 +6008,8 @@ scor:hasMetricRS_99
 
 scor:hasMetricRS_100
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ProcessInquiryQuote
         )] ;
     rdfs:label "Plan Inquiry & Quote Cycle Time"@en;
@@ -5903,7 +6022,8 @@ scor:hasMetricRS_100
 
 scor:hasMetricRS_101
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSProduceTest
         scor:MOProduceTest
         scor:MEOProduceTest
@@ -5918,7 +6038,8 @@ scor:hasMetricRS_101
 
 scor:hasMetricRS_102
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPReceiveVerifyProductByCustomer
         scor:DMOPReceiveVerifyProductByCustomer
         scor:DSPReceiveVerifyProductByCustomer
@@ -5933,7 +6054,8 @@ scor:hasMetricRS_102
 
 scor:hasMetricRS_103
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPReceiveVerifyProductByCustomer
         scor:DMOPReceiveVerifyProductByCustomer
         scor:DSPReceiveVerifyProductByCustomer
@@ -5948,7 +6070,8 @@ scor:hasMetricRS_103
 
 scor:hasMetricRS_104
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveDefectiveProduct
         )] ;
     rdfs:label "Receive Defective Product Cycle Time"@en;
@@ -5961,7 +6084,8 @@ scor:hasMetricRS_104
 
 scor:hasMetricRS_105
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveExcessProduct
         )] ;
     rdfs:label "Receive Excess Product Cycle Time"@en;
@@ -5974,7 +6098,8 @@ scor:hasMetricRS_105
 
 scor:hasMetricRS_106
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveMROProduct
         )] ;
     rdfs:label "Receive MRO Product Cycle Time"@en;
@@ -5987,7 +6112,8 @@ scor:hasMetricRS_106
 
 scor:hasMetricRS_107
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveProductAtStore
         )] ;
     rdfs:label "Receive Product Cycle Time"@en;
@@ -6000,7 +6126,8 @@ scor:hasMetricRS_107
 
 scor:hasMetricRS_108
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPReceiveProductFromSourceMake
         scor:DMOPReceiveProductFromSourceMake
         scor:DEOPReceiveProductFromSourceMake
@@ -6015,7 +6142,8 @@ scor:hasMetricRS_108
 
 scor:hasMetricRS_109
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveProductAtStore
         )] ;
     rdfs:label "Receive Product at Store Cycle Time"@en;
@@ -6028,7 +6156,8 @@ scor:hasMetricRS_109
 
 scor:hasMetricRS_110
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPReceiveProductFromSourceMake
         scor:DMOPReceiveProductFromSourceMake
         scor:DEOPReceiveProductFromSourceMake
@@ -6043,7 +6172,8 @@ scor:hasMetricRS_110
 
 scor:hasMetricRS_111
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveConfigureEnterValidateOrder
         )] ;
     rdfs:label "Receive, Configure, Enter & Validate Order Cycle Time"@en;
@@ -6056,7 +6186,8 @@ scor:hasMetricRS_111
 
 scor:hasMetricRS_112
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReceiveEnterValidateOrder
         )] ;
     rdfs:label "Receive, Enter & Validate Order Cycle Time"@en;
@@ -6069,7 +6200,8 @@ scor:hasMetricRS_112
 
 scor:hasMetricRS_113
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPReceiveProduct
         scor:SMOPReceiveProduct
         scor:SEOPReceiveProduct
@@ -6084,7 +6216,8 @@ scor:hasMetricRS_113
 
 scor:hasMetricRS_114
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReleaseProductToDeliver
         scor:ReleaseFinishedProductToDeliver
         scor:MEOReleaseProductToDeliver
@@ -6099,7 +6232,8 @@ scor:hasMetricRS_114
 
 scor:hasMetricRS_115
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DMOPReserveInventoryDetermineDeliveryDate
         )] ;
     rdfs:label "Resever Inventory & Determine Data Cycle Time"@en;
@@ -6112,7 +6246,8 @@ scor:hasMetricRS_115
 
 scor:hasMetricRS_116
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPReserveInventoryDetermineDeliveryDate
         )] ;
     rdfs:label "Reserve Resources and Determine Delivery Date Cycle Time"@en;
@@ -6125,7 +6260,8 @@ scor:hasMetricRS_116
 
 scor:hasMetricRS_117
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPRouteShipments
         scor:DMOPRouteShipments
         scor:DEOPRouteShipments
@@ -6140,7 +6276,8 @@ scor:hasMetricRS_117
 
 scor:hasMetricRS_118
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleDefectiveReturnReceipt
         )] ;
     rdfs:label "Schedule Defective Return Receipt Cycle Time"@en;
@@ -6153,7 +6290,8 @@ scor:hasMetricRS_118
 
 scor:hasMetricRS_119
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleExcessReturnReceipt
         )] ;
     rdfs:label "Schedule Excess Return Receipt Cycle Time"@en;
@@ -6166,7 +6304,8 @@ scor:hasMetricRS_119
 
 scor:hasMetricRS_120
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleInstallation
         )] ;
     rdfs:label "Schedule Installation Cycle Time"@en;
@@ -6179,7 +6318,8 @@ scor:hasMetricRS_120
 
 scor:hasMetricRS_121
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleMROReturnReceipt
         )] ;
     rdfs:label "Schedule MRO Return Receipt Cycle Time"@en;
@@ -6192,7 +6332,8 @@ scor:hasMetricRS_121
 
 scor:hasMetricRS_122
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPScheduleProductDeliveries
         scor:SMOPScheduleProductDeliveries
         scor:SEOPScheduleProductDeliveries
@@ -6207,7 +6348,8 @@ scor:hasMetricRS_122
 
 scor:hasMetricRS_123
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSScheduleProductionActivities
         scor:MOScheduleProductionActivities
         scor:MEOScheduleProductionActivities
@@ -6222,7 +6364,8 @@ scor:hasMetricRS_123
 
 scor:hasMetricRS_124
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DEOPSelectCarriersRateShipments
         )] ;
     rdfs:label "Select Carriers & Rate Shipments Cycle Time"@en;
@@ -6235,7 +6378,8 @@ scor:hasMetricRS_124
 
 scor:hasMetricRS_125
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SelectFinalSupplierNegotiate
         )] ;
     rdfs:label "Select Supplier and Negotiate Cycle Time"@en;
@@ -6248,7 +6392,8 @@ scor:hasMetricRS_125
 
 scor:hasMetricRS_126
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DSPShipProduct
         scor:DMOPShipProduct
         scor:DEOPShipProduct
@@ -6263,7 +6408,8 @@ scor:hasMetricRS_126
 
 scor:hasMetricRS_127
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnDefectiveProduct
         scor:SourceReturnExcessProduct
         )] ;
@@ -6277,7 +6423,8 @@ scor:hasMetricRS_127
 
 scor:hasMetricRS_128
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:StageProduct
         scor:StageFinishedProduct
         scor:MEOStageFinishedProduct
@@ -6292,7 +6439,8 @@ scor:hasMetricRS_128
 
 scor:hasMetricRS_129
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:StockShelf
         )] ;
     rdfs:label "Stock Shelf Cycle Time"@en;
@@ -6307,7 +6455,8 @@ scor:hasMetricRS_129
 
 scor:hasMetricRS_136
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:TransferDefectiveProduct
         )] ;
     rdfs:label "Transfer Defective Product Cycle Time"@en;
@@ -6320,7 +6469,8 @@ scor:hasMetricRS_136
 
 scor:hasMetricRS_137
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:TransferExcessProduct
         )] ;
     rdfs:label "Transfer Excess Product Cycle Time"@en;
@@ -6333,7 +6483,8 @@ scor:hasMetricRS_137
 
 scor:hasMetricRS_138
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:TransferMROProduct
         )] ;
     rdfs:label "Transfer MRO Product Cycle Time"@en;
@@ -6346,7 +6497,8 @@ scor:hasMetricRS_138
 
 scor:hasMetricRS_139
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPTransferProduct
         scor:SMOPTransferProduct
         scor:SEOPTransferProduct
@@ -6361,7 +6513,8 @@ scor:hasMetricRS_139
 
 scor:hasMetricRS_140
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SSPVerifyProduct
         scor:SMOPVerifyProduct
         scor:SEOPVerifyProduct
@@ -6376,7 +6529,8 @@ scor:hasMetricRS_140
 
 scor:hasMetricRS_141
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSWasteDisposal
         scor:MOWasteDisposal
         scor:MEOWasteDisposal
@@ -6391,7 +6545,8 @@ scor:hasMetricRS_141
 
 scor:hasMetricRS_142
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSPackage
         scor:MOPackage
         scor:MEOPackage
@@ -6408,7 +6563,8 @@ scor:hasMetricRS_142
 
 scor:hasMetricAG_1
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -6423,7 +6579,8 @@ scor:hasMetricAG_1
 
 scor:hasMetricAG_2
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToStock
         scor:MakeToOrder
         scor:MakeEngineerToOrder
@@ -6438,7 +6595,8 @@ scor:hasMetricAG_2
 
 scor:hasMetricAG_3
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverReturnDefectiveProduct
         scor:DeliverReturnMROProduct
         scor:DeliverReturnExcessProduct
@@ -6453,7 +6611,8 @@ scor:hasMetricAG_3
 
 scor:hasMetricAG_4
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -6470,7 +6629,8 @@ scor:hasMetricAG_4
 
 scor:hasMetricAG_9
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6487,7 +6647,8 @@ scor:hasMetricAG_9
 
 scor:hasMetricAG_31
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverReturnDefectiveProduct
         scor:DeliverReturnMROProduct
         scor:DeliverReturnExcessProduct
@@ -6502,7 +6663,8 @@ scor:hasMetricAG_31
 
 scor:hasMetricAG_32
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -6520,7 +6682,8 @@ scor:hasMetricAG_32
 
 scor:hasMetricAG_38
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToStock
         scor:MakeToOrder
         scor:MakeEngineerToOrder
@@ -6537,7 +6700,8 @@ scor:hasMetricAG_38
 
 scor:hasMetricAG_40
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6552,7 +6716,8 @@ scor:hasMetricAG_40
 
 scor:hasMetricAG_41
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnDefectiveProduct
         )] ;
     rdfs:label "Current source return volume"@en;
@@ -6565,7 +6730,8 @@ scor:hasMetricAG_41
 
 scor:hasMetricAG_42
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6581,7 +6747,8 @@ scor:hasMetricAG_42
 
 scor:hasMetricAG_44
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverReturnDefectiveProduct
         scor:DeliverReturnMROProduct
         scor:DeliverReturnExcessProduct
@@ -6598,7 +6765,8 @@ scor:hasMetricAG_44
 
 scor:hasMetricAG_46
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6616,7 +6784,8 @@ scor:hasMetricAG_46
 
 scor:hasMetricCO_1
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:PlanSupplyChain
         scor:PlanSource
         scor:PlanMake
@@ -6634,7 +6803,8 @@ scor:hasMetricCO_1
 
 scor:hasMetricCO_2
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:PlanSupplyChain
         scor:PlanSource
         scor:PlanMake
@@ -6652,7 +6822,8 @@ scor:hasMetricCO_2
 
 scor:hasMetricCO_3
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:PlanSupplyChain
         scor:PlanSource
         scor:PlanMake
@@ -6670,7 +6841,8 @@ scor:hasMetricCO_3
 
 scor:hasMetricCO_4
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:PlanSupplyChain
         scor:PlanSource
         scor:PlanMake
@@ -6691,7 +6863,8 @@ scor:hasMetricCO_4
 
 scor:hasMetricCO_5
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6710,7 +6883,8 @@ scor:hasMetricCO_5
 
 scor:hasMetricCO_6
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6726,7 +6900,8 @@ scor:hasMetricCO_6
 
 scor:hasMetricCO_7
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6742,7 +6917,8 @@ scor:hasMetricCO_7
 
 scor:hasMetricCO_8
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6762,7 +6938,8 @@ scor:hasMetricCO_8
 
 scor:hasMetricCO_9
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6778,7 +6955,8 @@ scor:hasMetricCO_9
 
 scor:hasMetricCO_10
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6795,7 +6973,8 @@ scor:hasMetricCO_10
 
 scor:hasMetricCO_11
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6814,7 +6993,8 @@ scor:hasMetricCO_11
 
 scor:hasMetricCO_12
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -6836,7 +7016,8 @@ scor:hasMetricCO_12
 
 scor:hasMetricCO_14
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToStock
         scor:MakeToOrder
         scor:MakeEngineerToOrder
@@ -6852,7 +7033,8 @@ scor:hasMetricCO_14
 
 scor:hasMetricCO_15
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToStock
         scor:MakeToOrder
         scor:MakeEngineerToOrder
@@ -6868,7 +7050,8 @@ scor:hasMetricCO_15
 
 scor:hasMetricCO_16
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToStock
         scor:MakeToOrder
         scor:MakeEngineerToOrder
@@ -6884,7 +7067,8 @@ scor:hasMetricCO_16
 
 scor:hasMetricCO_17
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToStock
         scor:MakeToOrder
         scor:MakeEngineerToOrder
@@ -6903,7 +7087,8 @@ scor:hasMetricCO_17
 
 scor:hasMetricCO_18
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:ProcessInquiryQuote
         scor:DSPConsolidateOrders
@@ -6942,7 +7127,8 @@ scor:hasMetricCO_18
 
 scor:hasMetricCO_19
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -6959,7 +7145,8 @@ scor:hasMetricCO_19
 
 scor:hasMetricCO_20
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -6976,7 +7163,8 @@ scor:hasMetricCO_20
 
 scor:hasMetricCO_21
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -6996,7 +7184,8 @@ scor:hasMetricCO_21
 
 scor:hasMetricCO_22
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DSPConsolidateOrders
         scor:DSPBuildLoads
@@ -7032,7 +7221,8 @@ scor:hasMetricCO_22
 
 scor:hasMetricCO_23
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -7051,7 +7241,8 @@ scor:hasMetricCO_23
 
 scor:hasMetricCO_24
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DSPReceiveProductFromSourceMake
         scor:DSPPickProduct
@@ -7087,7 +7278,8 @@ scor:hasMetricCO_24
 
 scor:hasMetricCO_25
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -7104,7 +7296,8 @@ scor:hasMetricCO_25
 
 scor:hasMetricCO_26
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -7121,7 +7314,8 @@ scor:hasMetricCO_26
 
 scor:hasMetricCO_27
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
@@ -7141,7 +7335,8 @@ scor:hasMetricCO_27
 
 scor:hasMetricCO_28
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverReturnDefectiveProduct
         scor:AuthorizeDefectiveProductReturn
         scor:DeliverReturnExcessProduct
@@ -7158,7 +7353,8 @@ scor:hasMetricCO_28
 
 scor:hasMetricCO_29
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnDefectiveProduct
         scor:DispositionDefectiveProduct
         scor:DeliverReturnDefectiveProduct
@@ -7179,7 +7375,8 @@ scor:hasMetricCO_29
 
 scor:hasMetricCO_30
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnDefectiveProduct
         scor:ReturnMROPRoduct
         scor:SourceReturnExcessProduct
@@ -7199,7 +7396,8 @@ scor:hasMetricCO_30
 
 scor:hasMetricAM_2
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifySourcesOfSupply
         )] ;
     rdfs:label "% of material that has a valid"@en;
@@ -7212,7 +7410,8 @@ scor:hasMetricAM_2
 
 scor:hasMetricAM_3
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifySourcesOfSupply
         )] ;
     rdfs:label "% of materials that are recyclable/ reusable"@en;
@@ -7225,7 +7424,8 @@ scor:hasMetricAM_3
 
 scor:hasMetricAM_4
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MOPackage
         )] ;
     rdfs:label "% of packaging/shipping materials reused internally"@en;
@@ -7238,7 +7438,8 @@ scor:hasMetricAM_4
 
 scor:hasMetricAM_5
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSProduceTest
         scor:MOProduceTest
         scor:MEOProduceTest
@@ -7253,7 +7454,8 @@ scor:hasMetricAM_5
 
 scor:hasMetricAM_6
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSProduceTest
         scor:MOProduceTest
         scor:MEOProduceTest
@@ -7270,7 +7472,8 @@ scor:hasMetricAM_6
 
 scor:hasMetricAM_8
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnExcessProduct
         )] ;
     rdfs:label "Average age of Excess Inventory"@en;
@@ -7283,7 +7486,8 @@ scor:hasMetricAM_8
 
 scor:hasMetricAM_9
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSScheduleProductionActivities
         scor:MSProduceTest
         scor:MSPackage
@@ -7308,7 +7512,8 @@ scor:hasMetricAM_9
 
 scor:hasMetricAM_12
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverReturnDefectiveProduct
         scor:DeliverReturnMROProduct
         )] ;
@@ -7324,7 +7529,8 @@ scor:hasMetricAM_12
 
 scor:hasMetricAM_14
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSProduceTest
         scor:MOProduceTest
         scor:MEOProduceTest
@@ -7339,7 +7545,8 @@ scor:hasMetricAM_14
 
 scor:hasMetricAM_15
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MSWasteDisposal
         scor:MOWasteDisposal
         scor:MEOWasteDisposal
@@ -7354,7 +7561,8 @@ scor:hasMetricAM_15
 
 scor:hasMetricAM_16
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceStockedProduct
         scor:SourceMakeToOrderProduct
         scor:SourceEngineerToOrderProduct
@@ -7369,7 +7577,8 @@ scor:hasMetricAM_16
 
 scor:hasMetricAM_17
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToOrder
         scor:MakeEngineerToOrder
         scor:DeliverStockedProduct
@@ -7388,7 +7597,8 @@ scor:hasMetricAM_17
 
 scor:hasMetricAM_19
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IssueMaterial
         scor:IssueSourcedInProcessProduct
         scor:MEOSourcedInProcessProduct
@@ -7405,7 +7615,8 @@ scor:hasMetricAM_19
 
 scor:hasMetricAM_21
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnDefectiveProduct
         scor:ReturnDefectiveProduct
         scor:SourceReturnMROProduct
@@ -7420,7 +7631,8 @@ scor:hasMetricAM_21
 
 scor:hasMetricAM_22
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:MakeToOrder
         scor:MakeToOrder
         scor:MakeEngineerToOrder
@@ -7437,7 +7649,8 @@ scor:hasMetricAM_22
 
 scor:hasMetricAM_25
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverReturnExcessProduct
         )] ;
     rdfs:label "Return for Recycle Rate"@en;
@@ -7450,7 +7663,8 @@ scor:hasMetricAM_25
 
 scor:hasMetricAM_26
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverReturnDefectiveProduct
         )] ;
     rdfs:label "Return Rate"@en;
@@ -7465,7 +7679,8 @@ scor:hasMetricAM_26
 
 scor:hasMetricAM_28
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnDefectiveProduct
         scor:DeliverReturnDefectiveProduct
         )] ;
@@ -7479,7 +7694,8 @@ scor:hasMetricAM_28
 
 scor:hasMetricAM_29
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyDefectiveProductCondition
         scor:DispositionDefectiveProduct
         scor:DispositionMROProduct
@@ -7494,7 +7710,8 @@ scor:hasMetricAM_29
 
 scor:hasMetricAM_30
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:RequestDefectiveProductReturnAuthorization
         )] ;
     rdfs:label "Percentage Defective Inventory in Return Authorization"@en;
@@ -7506,7 +7723,8 @@ scor:hasMetricAM_30
 
 scor:hasMetricAM_31
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReturnDefectiveProduct
         )] ;
     rdfs:label "Percentage Defective Inventory in Return Transportation"@en;
@@ -7518,7 +7736,8 @@ scor:hasMetricAM_31
 
 scor:hasMetricAM_32
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleDefectiveProductShipment
         )] ;
     rdfs:label "Percentage Defective Product Inventory in Scheduling"@en;
@@ -7530,7 +7749,8 @@ scor:hasMetricAM_32
 
 scor:hasMetricAM_33
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnExcessProduct
         )] ;
     rdfs:label "Percentage Excess Inventory in Disposition"@en;
@@ -7542,7 +7762,8 @@ scor:hasMetricAM_33
 
 scor:hasMetricAM_34
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReturnExcessProduct
         )] ;
     rdfs:label "Percentage Excess Inventory in Transportation"@en;
@@ -7554,7 +7775,8 @@ scor:hasMetricAM_34
 
 scor:hasMetricAM_35
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:RequestExcessProductReturnAuthorization
         )] ;
     rdfs:label "Percentage Excess Inventory in Request Return Authorization"@en;
@@ -7566,7 +7788,8 @@ scor:hasMetricAM_35
 
 scor:hasMetricAM_36
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyExcessProductCondition
         )] ;
     rdfs:label "Percentage Excess Inventory in Identification"@en;
@@ -7578,7 +7801,8 @@ scor:hasMetricAM_36
 
 scor:hasMetricAM_37
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:SourceReturnExcessProduct
         scor:DeliverReturnExcessProduct
         )] ;
@@ -7590,7 +7814,8 @@ scor:hasMetricAM_37
 
 scor:hasMetricAM_38
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleExcessProductShipment
         )] ;
     rdfs:label "Percentage Excess Inventory in Scheduling"@en;
@@ -7602,7 +7827,8 @@ scor:hasMetricAM_38
 
 scor:hasMetricAM_39
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DispositionMROProduct
         scor:DeliverReturnMROProduct
         )] ;
@@ -7615,7 +7841,8 @@ scor:hasMetricAM_39
 
 scor:hasMetricAM_40
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ReturnMROPRoduct
         )] ;
     rdfs:label "Percentage Unserviceable MRO Inventory in Disposition"@en;
@@ -7627,7 +7854,8 @@ scor:hasMetricAM_40
 
 scor:hasMetricAM_41
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:RequestMROReturnAuthorization
         )] ;
     rdfs:label "Percentage Unserviceable MRO Inventory in Return Authorization"@en;
@@ -7639,7 +7867,8 @@ scor:hasMetricAM_41
 
 scor:hasMetricAM_42
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:IdentifyMROProductCondition
         )] ;
     rdfs:label "Percentage Unserviceable MRO Inventory in Identification"@en;
@@ -7651,7 +7880,8 @@ scor:hasMetricAM_42
 
 scor:hasMetricAM_43
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:ScheduleMROShipment
         )] ;
     rdfs:label "Percentage Unserviceable MRO Inventory in Scheduling"@en;
@@ -7665,7 +7895,8 @@ scor:hasMetricAM_43
 
 scor:hasMetricAM_45
     rdf:type owl:DatatypeProperty ;
-    rdfs:domain [owl:unionOf (
+    rdfs:domain [rdf:type owl:Class ;
+        owl:unionOf (
         scor:DeliverStockedProduct
         scor:DeliverMakeToOrderProduct
         scor:DeliverEngineerToOrderProduct
