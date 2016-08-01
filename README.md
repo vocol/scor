@@ -9,6 +9,20 @@ SCORVoc is an OWL vocabulary which fully formalizes the latest SCOR standard, wh
 ![alt tag](https://raw.githubusercontent.com/vocol/scor/master/diagram.png)
 
 
+## Example Process
+
+```
+scor:exampleProcess a        		scor:DeliverStockedProduct ;
+			        :hasCommitDate  "2015-11-05" ;
+			        :hasSupplier    "Sangio Sugar Factory" ;
+			        :product        "Raw sugar" ;
+			        :processId      "2ad9380f-1eb4-4595-857b-1bcf874621bb" ;
+
+			        :hasMetricRL_33 "90" ;  # Delivery Item Accurac
+			        :hasMetricRL_34 "100" . # Delivery Location Accuracy
+```
+
+
 ## Accessibility
 
 Preferred prefix identifier: [`scor`](http://prefix.cc/scor)
