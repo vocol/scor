@@ -4,6 +4,11 @@
 The [Supply Chain Operation Reference (SCOR)](http://www.apics.org/sites/apics-supply-chain-council/frameworks/scor) is a cross-industry approach to lay the groundwork for more efficient and effective information ex- change in supply networks.
 SCORVoc is an OWL vocabulary which fully formalizes the latest SCOR standard, while overcoming identified limitations of existing formalizations.
 
+## Overview Diagram
+
+![alt tag](https://raw.githubusercontent.com/vocol/scor/master/diagram.png)
+
+
 ## Accessibility
 
 Preferred prefix identifier: [`scor`](http://prefix.cc/scor)
