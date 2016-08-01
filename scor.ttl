@@ -698,12 +698,259 @@ scor:ManageSupplyChainRisk
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
-# Level 3 Processes
+# Step definition
+
+scor:Step
+    rdf:type owl:Class ;
+    rdfs:comment "Steps are all level 3 processe to be executed to accomplish a level 2 process."@en ;
+    rdfs:label "Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:PlanStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:Step ;
+    rdfs:comment "Plan Steps ."@en ;
+    rdfs:label "Plan Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:SourceReturnStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:Step ;
+    rdfs:comment "Source Return Steps to be exectued for a Source Return level 2 process."@en ;
+    rdfs:label "Source Return Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:SourceStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:Step ;
+    rdfs:comment "Source Steps to be exectued for a Source level 2 process."@en ;
+    rdfs:label "Source Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:MakeStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:Step ;
+    rdfs:comment "Make Steps to be exectued for a Make level 2 process."@en ;
+    rdfs:label "Make Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:EnableStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:Step ;
+    rdfs:comment "Enable Steps to be exectued for a Enable level 2 process."@en ;
+    rdfs:label "Enable Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:DeliverStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:Step ;
+    rdfs:comment "Deliver Steps to be exectued for a Deliver level 2 process."@en ;
+    rdfs:label "Deliver Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+ ################################
+
+ scor:PlanSupplyChainStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanStep ;
+    rdfs:comment "Steps to be exectued for a Plan Supply Chain process."@en ;
+    rdfs:label "Plan Supply Chain Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+ scor:PlanSourceStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanStep ;
+    rdfs:comment "Steps to be exectued for a Plan Source process."@en ;
+    rdfs:label "Plan Source Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+  scor:PlanMakeStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanStep ;
+    rdfs:comment "Steps to be exectued for a Plan Make process."@en ;
+    rdfs:label "Plan Make Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+  scor:PlanDeliverStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanStep ;
+    rdfs:comment "Steps to be exectued for a Plan Deliver process."@en ;
+    rdfs:label "Plan Deliver Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+  scor:PlanReturnStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanStep ;
+    rdfs:comment "Steps to be exectued for a Plan Return process."@en ;
+    rdfs:label "Plan Return Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+ ################################
+
+scor:SourceReturnDefectiveProductStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnStep ;
+    rdfs:comment "Steps to be exectued for a Source Return Defective Product process."@en ;
+    rdfs:label "Source Return Defective Product Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+
+scor:SourceReturnMROProductStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnStep ;
+    rdfs:comment "Steps to be exectued for a Source Return MRO Product process."@en ;
+    rdfs:label "Source Return MRO Product Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:SourceReturnExcessProductStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnStep ;
+    rdfs:comment "Steps to be exectued for a Source Return MRO Product process."@en ;
+    rdfs:label "Source Return MRO Product Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:DeliverReturnDefectiveProductStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnStep ;
+    rdfs:comment "Steps to be exectued for a Deliver Return Defective Product process."@en ;
+    rdfs:label "Deliver Return Defective Product Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+ scor:DeliverReturnMROProductStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnStep ;
+    rdfs:comment "Steps to be exectued for a Source Return MRO Product process."@en ;
+    rdfs:label "Deliver Return MRO Product Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+
+ ################################
+
+ scor:SourceStockedProductStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceStep ;
+    rdfs:comment "Steps to be exectued for a Source Stocked Product process."@en ;
+    rdfs:label "Source Stocked Product Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:SourceMakeToOrderProductStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceStep ;
+    rdfs:comment "Steps to be exectued for a Source Stocked Product process."@en ;
+    rdfs:label "Source Stocked Product Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:SourceEngineerToOrderProductStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceStep ;
+    rdfs:comment "Steps to be exectued for a Source Stocked Product process."@en ;
+    rdfs:label "Source Stocked Product Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+
+ ################################
+
+scor:MakeToStockStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeStep ;
+    rdfs:comment "Steps to be exectued for a Make to Stock process."@en ;
+    rdfs:label "Make to Stock Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:MakeToOrderStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeStep ;
+    rdfs:comment "Steps to be exectued for a Make to Order process."@en ;
+    rdfs:label "Make to Order Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+scor:MakeToEngineerStep
+    rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeStep ;
+    rdfs:comment "Steps to be exectued for a Make to Engineer process."@en ;
+    rdfs:label "Make to Engineer Step"@en ;
+    rdfs:isDefinedBy scor: ;
+    vs:term_status "testing" ;
+    dct:modified "2015-11-05"^^xsd:date ;
+ .
+
+
+ ################################
+
+
+
+######################
+# level 3 processes (steps) start
 
 # Plan SC
-
 scor:PSCIdentifyPrioritizeAggregateSCRequirements
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanSupplyChainStep ;
     rdfs:comment "The process of identifying, aggregating, and prioritizing, all sources of demand for the integrated supply chain of a product or service at the appropriate level, horizon and interval."@en ;
     rdfs:label "Identify, Prioritize Aggregate Supply Chain Requirements"@en ;
     scor:isStepOf scor:PlanSupplyChain ;
@@ -718,6 +965,7 @@ scor:IdentifyPrioritizeAggregateSCResources
     rdfs:comment "The process of identifying, prioritizing, and aggregating, as a whole with constituent parts, all sources of supply that are required and add value in the supply chain of a product or service at the appropriate level, horizon and interval."@en ;
     rdfs:label "Identify, Prioritize Aggregate Supply Chain Resources"@en ;
     scor:isStepOf scor:PlanSupplyChain ;
+    rdfs:subClassOf scor:PlanSupplyChainStep ;
     skos:notation "sP1.2" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -729,6 +977,7 @@ scor:BalanceSCResourcesWithSCRequirements
     rdfs:comment "The process of identifying and measuring the gaps and imbalances between demand and resources in order to determine how to best resolve the variances through marketing, pricing, packaging, warehousing, outsource plans or some other action that will optimize service, flexibility, costs, assets, (or other supply chain inconsistencies) in an iterative and collaborative environment."@en ;
     rdfs:label "Balance Supply Chain Resources with SC Requirements"@en ;
     scor:isStepOf scor:PlanSupplyChain ;
+    rdfs:subClassOf scor:PlanSupplyChainStep ;
     skos:notation "sP1.3" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -740,6 +989,7 @@ scor:EstablishCommunicateSCPlans
     rdfs:comment "The establishment and communication of courses of action over the appropriate time-defined (long-term, annual, monthly, weekly) planning horizon and interval, representing a projected appropriation of supply-chain resources to meet supply chain requirements."@en ;
     rdfs:label "Establish and Communicate Supply Chain Plans"@en ;
     scor:isStepOf scor:PlanSupplyChain ;
+    rdfs:subClassOf scor:PlanSupplyChainStep ;
     skos:notation "sP1.4" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -753,6 +1003,7 @@ scor:IdentifyPrioritizeAggregateProductRequirements
     rdfs:comment "The process of identifying, prioritizing, and considering, as a whole with constituent parts, all sources of demand for a product or service in the supply chain."@en ;
     rdfs:label "Identify, Prioritize and Aggregate Product Requirements"@en ;
     scor:isStepOf scor:PlanSource ;
+    rdfs:subClassOf scor:PlanSourceStep ;
     skos:notation "sP2.1" ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "testing" ;
@@ -761,6 +1012,7 @@ scor:IdentifyPrioritizeAggregateProductRequirements
 
 scor:IdentifyAssessAggregateProductResources
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanSourceStep ;
     rdfs:comment "The process of identifying, evaluating, and considering, as a whole with constituent parts, all material and other resources used to add value in the supply chain for a product or services."@en ;
     rdfs:label "Identify, Assess and Aggregate Product Resources"@en ;
     scor:isStepOf scor:PlanSource ;
@@ -772,6 +1024,7 @@ scor:IdentifyAssessAggregateProductResources
 
 scor:BalanceProductResourcesWithProductRequirements
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanSourceStep ;
     rdfs:comment "The process of developing a time-phased course of action that commits resources to meet requirements."@en ;
     rdfs:label "Balance Product Resources with Product Requirements"@en ;
     scor:isStepOf scor:PlanSource ;
@@ -783,6 +1036,7 @@ scor:BalanceProductResourcesWithProductRequirements
 
 scor:EstablishSourcingPlans
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanSourceStep ;
     rdfs:comment "The establishment of courses of action over specified time periods that represent a projected appropriation of supply resources to meet sourcing plan requirements."@en ;
     rdfs:label "Establish Sourcing Plans"@en ;
     scor:isStepOf scor:PlanSource ;
@@ -796,6 +1050,7 @@ scor:EstablishSourcingPlans
 
 scor:IdentifyPrioritizeAggregateProductionRequirements
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanMakeStep ;
     rdfs:comment "The process of identifying, prioritizing, and considering as a whole with constituent parts, all sources of demand in the creation of a product or service."@en ;
     rdfs:label "Identify, Prioritize and Aggregate Production Requirements"@en ;
     scor:isStepOf scor:PlanMake ;
@@ -807,6 +1062,7 @@ scor:IdentifyPrioritizeAggregateProductionRequirements
 
 scor:IdentifyAssessAggregateProductionResources
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanMakeStep ;
     rdfs:comment "The process of identifying, evaluating, and considering, as a whole with constituent parts, all things that add value in the creation of a product or performance of a service."@en ;
     rdfs:label "Identify, Assess and Aggregate Production Resources"@en ;
     scor:isStepOf scor:PlanMake ;
@@ -818,6 +1074,7 @@ scor:IdentifyAssessAggregateProductionResources
 
 scor:BalanceProductionResourcesWithProductionRequirements
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanMakeStep ;
     rdfs:comment "The process of developing a time-phased course of action that commits creation and operation resources to meet creation and operation requirements."@en ;
     rdfs:label "Balance Production Resources with Production Requirements"@en ;
     scor:isStepOf scor:PlanMake ;
@@ -829,6 +1086,7 @@ scor:BalanceProductionResourcesWithProductionRequirements
 
 scor:EstablishProductionPlans
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanMakeStep ;
     rdfs:comment "The establishment of courses of action over specified time periods that represent a projected appropriation of supply resources to meet production and operating plan requirements."@en ;
     rdfs:label "Establish Production Plans"@en ;
     scor:isStepOf scor:PlanMake ;
@@ -842,6 +1100,7 @@ scor:EstablishProductionPlans
 
 scor:IdentifyPrioritizeAggregateDeliveryRequirements
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanDeliverStep ;
     rdfs:comment "The process of identifying, prioritizing, and considering, as a whole with constituent parts, all sources of demand in the delivery of a product or service."@en ;
     rdfs:label "Identify, Prioritize and Aggregate Delivery Requirements"@en ;
     scor:isStepOf scor:PlanDeliver ;
@@ -853,6 +1112,7 @@ scor:IdentifyPrioritizeAggregateDeliveryRequirements
 
 scor:IdentifyAssessAggregateDeliveryResources
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanDeliverStep ;
     rdfs:comment "The process of identifying, evaluating, and considering, as a whole with constituent parts, all things that add value in the delivery of a product or service."@en ;
     rdfs:label "Identify, Assess and Aggregate Delivery Resources"@en ;
     scor:isStepOf scor:PlanDeliver ;
@@ -864,6 +1124,7 @@ scor:IdentifyAssessAggregateDeliveryResources
 
 scor:BalanceDeliveryResourcesCapabilitiesWithDeliveryRequirements
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanDeliverStep ;
     rdfs:comment "The process of developing a time-phased course of action that commits delivery resources to meet delivery requirements."@en ;
     rdfs:label "Balance Delivery Resources and Capabilities with Delivery Requirements"@en ;
     scor:isStepOf scor:PlanDeliver ;
@@ -875,6 +1136,7 @@ scor:BalanceDeliveryResourcesCapabilitiesWithDeliveryRequirements
 
 scor:EstablishDeliveryPlans
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanDeliverStep ;
     rdfs:comment "The establishment of courses of action over specified time periods that represent a projected appropriation of delivery resources to meet delivery requirements."@en ;
     rdfs:label "Establish Delivery Plans"@en ;
     scor:isStepOf scor:PlanDeliver ;
@@ -888,6 +1150,7 @@ scor:EstablishDeliveryPlans
 
 scor:AssessAggregateReturnRequirements
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanReturnStep ;
     rdfs:comment "The process of identifying, evaluating, and considering, as a whole with constituent parts, all sources of demand for the return of a product."@en ;
     rdfs:label "Assess and Aggregate Return Requirements"@en ;
     scor:isStepOf scor:PlanReturn ;
@@ -899,6 +1162,7 @@ scor:AssessAggregateReturnRequirements
 
 scor:IdentifyAssessAggregateReturnResources
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanReturnStep ;
     rdfs:comment "The process of identifying, evaluating, and consideration for all resources that add value to, execute, or constrain the processes for the return of a product.."@en ;
     rdfs:label "Identify, Assess and Aggregate Return Resources"@en ;
     scor:isStepOf scor:PlanReturn ;
@@ -910,6 +1174,7 @@ scor:IdentifyAssessAggregateReturnResources
 
 scor:BalanceReturnResourcesWithReturnRequirements
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanReturnStep ;
     rdfs:comment "The process of developing courses of action that make feasible the commitment the appropriate return resources and or assets to satisfy return requirements."@en ;
     rdfs:label "Balance Return Resources with Return Requirements"@en ;
     scor:isStepOf scor:PlanReturn ;
@@ -921,6 +1186,7 @@ scor:BalanceReturnResourcesWithReturnRequirements
 
 scor:EstablishCommunicateReturnPlans
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:PlanReturnStep ;
     rdfs:comment "The establishment and communication of courses of action over specified time periods that represent a projected appropriation of required return resources and or assets to meet return process requirements."@en ;
     rdfs:label "Establish and Communicate Return Plans"@en ;
     scor:isStepOf scor:PlanReturn ;
@@ -934,6 +1200,7 @@ scor:EstablishCommunicateReturnPlans
 
 scor:SSPScheduleProductDeliveries
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceStockedProductStep ;
     rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against an existing contract or purchase order."@en ;
     rdfs:label "Schedule Product Deliveries (Source Stocked Product)"@en ;
     scor:isStepOf scor:SourceStockedProduct ;
@@ -945,6 +1212,7 @@ scor:SSPScheduleProductDeliveries
 
 scor:SSPReceiveProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceStockedProductStep ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
     rdfs:label "Receive Product (Source Stocked Product)"@en ;
     scor:isStepOf scor:SourceStockedProduct ;
@@ -956,6 +1224,7 @@ scor:SSPReceiveProduct
 
 scor:SSPVerifyProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceStockedProductStep ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
     rdfs:label "Verify Product (Source Stocked Product)"@en ;
     scor:isStepOf scor:SourceStockedProduct ;
@@ -967,6 +1236,7 @@ scor:SSPVerifyProduct
 
 scor:SSPTransferProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceStockedProductStep ;
     rdfs:comment "The transfer of accepted product to the appropriate stocking location within the supply chain."@en ;
     rdfs:label "Transfer Product (Source Stocked Product)"@en ;
     scor:isStepOf scor:SourceStockedProduct ;
@@ -978,6 +1248,7 @@ scor:SSPTransferProduct
 
 scor:AuthorizeSupplierPayment
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceStockedProductStep ;
     rdfs:comment "The process of authorizing payments and paying suppliers for product or services."@en ;
     rdfs:label "Authorize Supplier Payment (Source Stocked Product)"@en ;
     scor:isStepOf scor:SourceStockedProduct ;
@@ -991,6 +1262,7 @@ scor:AuthorizeSupplierPayment
 
 scor:SMOPScheduleProductDeliveries
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceMakeToOrderProductStep ;
     rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against the contract."@en ;
     rdfs:label "Schedule Product Deliveries (Source Make To Order Product)"@en ;
     scor:isStepOf scor:SourceMakeToOrderProduct ;
@@ -1002,6 +1274,7 @@ scor:SMOPScheduleProductDeliveries
 
 scor:SMOPReceiveProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceMakeToOrderProductStep ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
     rdfs:label "Receive Product (Source Make To Order Product)"@en ;
     scor:isStepOf scor:SourceMakeToOrderProduct ;
@@ -1013,6 +1286,7 @@ scor:SMOPReceiveProduct
 
 scor:SMOPVerifyProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceMakeToOrderProductStep ;
     rdfs:comment "The process and actions required determining product conformance to requirements and criteria."@en ;
     rdfs:label "Verify Product (Source Make To Order Product)"@en ;
     scor:isStepOf scor:SourceMakeToOrderProduct ;
@@ -1024,6 +1298,7 @@ scor:SMOPVerifyProduct
 
 scor:SMOPTransferProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceMakeToOrderProductStep ;
     rdfs:comment "The transfer of accepted product to the appropriate stocking location within the supply chain."@en ;
     rdfs:label "Transfer Product (Source Make To Order Product)"@en ;
     scor:isStepOf scor:SourceMakeToOrderProduct ;
@@ -1035,6 +1310,7 @@ scor:SMOPTransferProduct
 
 scor:SMOPAuthorizeSupplierPayment
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceMakeToOrderProductStep ;
     rdfs:comment "The process of authorizing payments and paying suppliers for product or services."@en ;
     rdfs:label "Supplier Payment (Source Make To Order Product)"@en ;
     scor:isStepOf scor:SourceMakeToOrderProduct ;
@@ -1048,6 +1324,7 @@ scor:SMOPAuthorizeSupplierPayment
 
 scor:IdentifySourcesOfSupply
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceEngineerToOrderProductStep ;
     rdfs:comment "The identification and qualification of potential suppliers capable of designing and delivering product that will meet all of the required product specifications."@en ;
     rdfs:label "Identify Sources of Supply"@en ;
     scor:isStepOf scor:SourceEngineerToOrderProduct ;
@@ -1059,6 +1336,7 @@ scor:IdentifySourcesOfSupply
 
 scor:SelectFinalSupplierNegotiate
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceEngineerToOrderProductStep ;
     rdfs:comment "The identification of the final supplier(s) based on the evaluation of RFQs, supplier qualifications and the generation of a contract defining the costs and terms and conditions of product availability."@en ;
     rdfs:label "Select Final Supplier and Negotiate"@en ;
     scor:isStepOf scor:SourceEngineerToOrderProduct ;
@@ -1070,6 +1348,7 @@ scor:SelectFinalSupplierNegotiate
 
 scor:SEOPScheduleProductDeliveries
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceEngineerToOrderProductStep ;
     rdfs:comment "Scheduling and managing the execution of the individual deliveries of product against the contract."@en ;
     rdfs:label "Schedule Product Deliveries (Source Engineer To Order Product)"@en ;
     scor:isStepOf scor:SourceEngineerToOrderProduct ;
@@ -1081,6 +1360,7 @@ scor:SEOPScheduleProductDeliveries
 
 scor:SEOPReceiveProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceEngineerToOrderProductStep ;
     rdfs:comment "The process and associated activities of receiving product to contract requirements."@en ;
     rdfs:label "Receive Product (Source Engineer To Order Product)"@en ;
     scor:isStepOf scor:SourceEngineerToOrderProduct ;
@@ -1092,6 +1372,7 @@ scor:SEOPReceiveProduct
 
 scor:SEOPVerifyProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceEngineerToOrderProductStep ;
     rdfs:comment "The process and actions required determining product conformance to requirements and criteria."@en ;
     rdfs:label "Verify Product (Source Engineer To Order Product)"@en ;
     scor:isStepOf scor:SourceEngineerToOrderProduct ;
@@ -1103,6 +1384,7 @@ scor:SEOPVerifyProduct
 
 scor:SEOPTransferProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceEngineerToOrderProductStep ;
     rdfs:comment "The transfer of accepted product to the appropriate stocking location within the supply chain."@en ;
     rdfs:label "Transfer Product (Source Engineer To Order Product)"@en ;
     scor:isStepOf scor:SourceEngineerToOrderProduct ;
@@ -1114,6 +1396,7 @@ scor:SEOPTransferProduct
 
 scor:SEOPAuthorizeSupplierPayment
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceEngineerToOrderProductStep ;
     rdfs:comment "The process of authorizing payments and paying suppliers for product or services. This process includes invoice collection, invoice matching and the issuance of checks."@en ;
     rdfs:label "Authorize Supplier Payment (Source Engineer To Order Product)"@en ;
     scor:isStepOf scor:SourceEngineerToOrderProduct ;
@@ -1127,6 +1410,7 @@ scor:SEOPAuthorizeSupplierPayment
 
 scor:MSScheduleProductionActivities
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToStockStep ;
     rdfs:comment "Given plans for the production of specific parts, products, or formulations in specified quantities and planned availability of required sourced products, the scheduling of the operations to be performed in accordance with these plans."@en ;
     rdfs:label "Schedule Production Activities (Make To Stock)"@en ;
     scor:isStepOf scor:MakeToStock ;
@@ -1138,6 +1422,7 @@ scor:MSScheduleProductionActivities
 
 scor:IssueMaterial
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToStockStep ;
     rdfs:comment "The selection and physical movement of sourced/in-process product (e.g., raw materials, fabricated components, subassemblies, required ingredients or intermediate formulations) from a stocking location (e.g., stockroom, a location on the production floor, a supplier) to a specific point of use location."@en ;
     rdfs:label "Issue Material"@en ;
     scor:isStepOf scor:MakeToStock ;
@@ -1149,6 +1434,7 @@ scor:IssueMaterial
 
 scor:MSProduceTest
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToStockStep ;
     rdfs:comment "The series of activities performed upon sourced/in-process product to convert it from the raw or semi-finished state to a state of completion and greater value."@en ;
     rdfs:label "Produce and Test (Make To Stock)"@en ;
     scor:isStepOf scor:MakeToStock ;
@@ -1160,6 +1446,7 @@ scor:MSProduceTest
 
 scor:MSPackage
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToStockStep ;
     rdfs:comment "The series of activities that containerize completed products for storage or sale to end-users."@en ;
     rdfs:label "Package (Make To Stock)"@en ;
     scor:isStepOf scor:MakeToStock ;
@@ -1171,6 +1458,7 @@ scor:MSPackage
 
 scor:StageProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToStockStep ;
     rdfs:comment "The movement of packaged products into a temporary holding location to await movement to a finished goods location."@en ;
     rdfs:label "Stage Product"@en ;
     scor:isStepOf scor:MakeToStock ;
@@ -1182,6 +1470,7 @@ scor:StageProduct
 
 scor:ReleaseProductToDeliver
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToStockStep ;
     rdfs:comment "Activities associated with post-production documentation, testing, or certification required prior to delivery of finished product to customer."@en ;
     rdfs:label "Release Product to Deliver (Make To Stock)"@en ;
     scor:isStepOf scor:MakeToStock ;
@@ -1193,6 +1482,7 @@ scor:ReleaseProductToDeliver
 
 scor:MSWasteDisposal
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToStockStep ;
     rdfs:comment "Activities associated with collecting and managing waste produced during the produce and test process including scrap material and non-conforming product."@en ;
     rdfs:label "Waste Disposal (Make To Stock)"@en ;
     scor:isStepOf scor:MakeToStock ;
@@ -1206,6 +1496,7 @@ scor:MSWasteDisposal
 
 scor:MOScheduleProductionActivities
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToOrderStep ;
     rdfs:comment "Given plans for the production of specific parts, products, or formulations in specific quantities and planned availability of required sourced products, the scheduling of the operations to be preformed in accordance with these plans."@en ;
     rdfs:label "Schedule Production Activities (Make To Order)"@en ;
     scor:isStepOf scor:MakeToOrder ;
@@ -1217,6 +1508,7 @@ scor:MOScheduleProductionActivities
 
 scor:IssueSourcedInProcessProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToOrderStep ;
     rdfs:comment "The selection and physical movement of sourced/in-process products (e.g., raw materials, fabricated components, subassemblies, required ingredients or intermediate formulations) from a stocking location (e.g., stockroom, a location on the production floor, a supplier) to a specific point of use location."@en ;
     rdfs:label "Issue Sourced In-Process Product (Make To Order)"@en ;
     scor:isStepOf scor:MakeToOrder ;
@@ -1228,6 +1520,7 @@ scor:IssueSourcedInProcessProduct
 
 scor:MOProduceTest
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToOrderStep ;
     rdfs:comment "The series of activities performed upon sourced/in-process product to convert it from the raw or semi-finished state to a state of completion and greater value."@en ;
     rdfs:label "Produce and Test (Make to Order)"@en ;
     scor:isStepOf scor:MakeToOrder ;
@@ -1239,6 +1532,7 @@ scor:MOProduceTest
 
 scor:MOPackage
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToOrderStep ;
     rdfs:comment "The series of activities that containerize completed products for storage or sale to end-users."@en ;
     rdfs:label "Package (Make To Order)"@en ;
     scor:isStepOf scor:MakeToOrder ;
@@ -1250,6 +1544,7 @@ scor:MOPackage
 
 scor:StageFinishedProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToOrderStep ;
     rdfs:comment "The movement of packaged products into a temporary holding location to await movement to a finished goods location."@en ;
     rdfs:label "Stage Finished Product (Make To Order)"@en ;
     scor:isStepOf scor:MakeToOrder ;
@@ -1261,6 +1556,7 @@ scor:StageFinishedProduct
 
 scor:ReleaseFinishedProductToDeliver
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToOrderStep ;
     rdfs:comment "Activities associated with post-production documentation, testing, or certification required prior to delivery of finished product to customer."@en ;
     rdfs:label "Release Finished Product to Deliver"@en ;
     scor:isStepOf scor:MakeToOrder ;
@@ -1272,6 +1568,7 @@ scor:ReleaseFinishedProductToDeliver
 
 scor:MOWasteDisposal
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToOrderStep ;
     rdfs:comment "Activities associated with collecting and managing waste produced during the produce and test process including scrap material and non-conforming product."@en ;
     rdfs:label "Waste Disposal (Make To Order)"@en ;
     scor:isStepOf scor:MakeToOrder ;
@@ -1285,6 +1582,7 @@ scor:MOWasteDisposal
 
 scor:FinalizeProductionEngineering
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToEngineerStep ;
     rdfs:comment "Engineering activities required after acceptance of order, but before product can be produced. May include generation and delivery of final drawings, specifications, formulas, part programs, etc."@en ;
     rdfs:label "Finalize Production Engineering"@en ;
     scor:isStepOf scor:MakeEngineerToOrder ;
@@ -1296,6 +1594,7 @@ scor:FinalizeProductionEngineering
 
 scor:MEOScheduleProductionActivities
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToEngineerStep ;
     rdfs:comment "Given plans for the production of specific parts, products, or formulations in specified quantities and planned availability of required sourced products, the scheduling of the operations to be performed in accordance with these plans"@en ;
     rdfs:label "Schedule Production Activities (Engineer To Order)"@en ;
     scor:isStepOf scor:MakeEngineerToOrder ;
@@ -1307,6 +1606,7 @@ scor:MEOScheduleProductionActivities
 
 scor:MEOSourcedInProcessProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToEngineerStep ;
     rdfs:comment "The selection and physical movement of sourced/in-process products (e.g., raw materials, fabricated components, subassemblies, required ingredients or intermediate formulations) from a stocking location (e.g., stockroom, a location on the production floor, a supplier) to a specific point of use location"@en ;
     rdfs:label "Issue Sourced In-Process Product (Engineer To Order)"@en ;
     scor:isStepOf scor:MakeEngineerToOrder ;
@@ -1318,6 +1618,7 @@ scor:MEOSourcedInProcessProduct
 
 scor:MEOProduceTest
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToEngineerStep ;
     rdfs:comment "The series of activities performed upon sourced/in-process product to convert it from the raw or semi-finished state to a state of completion and greater value"@en ;
     rdfs:label "Produce and Test (Engineer to Order)"@en ;
     scor:isStepOf scor:MakeEngineerToOrder ;
@@ -1329,6 +1630,7 @@ scor:MEOProduceTest
 
 scor:MEOPackage
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToEngineerStep ;
     rdfs:comment "The series of activities that containerize completed products for storage or sale to end-users."@en ;
     rdfs:label "Package (Engineer To Order)"@en ;
     scor:isStepOf scor:MakeEngineerToOrder ;
@@ -1340,6 +1642,7 @@ scor:MEOPackage
 
 scor:MEOStageFinishedProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToEngineerStep ;
     rdfs:comment "The movement of packaged products into a temporary holding location to await movement to a finished goods location."@en ;
     rdfs:label "Stage Finished Product (Engineer To Order)"@en ;
     scor:isStepOf scor:MakeEngineerToOrder ;
@@ -1351,6 +1654,7 @@ scor:MEOStageFinishedProduct
 
 scor:MEOReleaseProductToDeliver
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToEngineerStep ;
     rdfs:comment "Activities associated with post-production documentation, testing, or certification required prior to delivery of finished product to customer."@en ;
     rdfs:label "Release Product to Deliver (Engineer To Order)"@en ;
     scor:isStepOf scor:MakeEngineerToOrder ;
@@ -1362,6 +1666,7 @@ scor:MEOReleaseProductToDeliver
 
 scor:MEOWasteDisposal
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:MakeToEngineerStep ;   
     rdfs:comment "Activities associated with collecting and managing waste produced during the produce and test process including scrap material and non-conforming product."@en ;
     rdfs:label "Waste Disposal (Engineer To Order)"@en ;
     scor:isStepOf scor:MakeEngineerToOrder ;
@@ -1955,6 +2260,7 @@ scor:DeliverInstall
 
 scor:IdentifyDefectiveProductCondition
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnDefectiveProductStep ;
     rdfs:comment "The process where the customer utilizes planned policies, business rules and product operating conditions inspection as criteria to identify and confirm that material is excess to requirements defective."@en ;
     rdfs:label "Identify Defective Product Condition"@en ;
     scor:isStepOf scor:SourceReturnDefectiveProduct ;
@@ -1966,6 +2272,7 @@ scor:IdentifyDefectiveProductCondition
 
 scor:DispositionDefectiveProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnDefectiveProductStep ;
     rdfs:comment "The process of the customer determining whether to return the defective item and the appropriate source contact for a return authorization."@en ;
     rdfs:label "Disposition Defective Product"@en ;
     scor:isStepOf scor:SourceReturnDefectiveProduct ;
@@ -1977,6 +2284,7 @@ scor:DispositionDefectiveProduct
 
 scor:RequestDefectiveProductReturnAuthorization
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnDefectiveProductStep ;
     rdfs:comment "The process of a customer requesting and obtaining authorization, from last known holder or designated return center, for the return of defective product. Additionally, the customer and last known holder or designated return center would discuss enabling conditions such as return replacement or credit, packaging, handling, transportation and import / export requirements to facilitate the efficient return of the defective product."@en ;
     rdfs:label "Request Defective Product Return Authorization"@en ;
     scor:isStepOf scor:SourceReturnDefectiveProduct ;
@@ -1988,6 +2296,7 @@ scor:RequestDefectiveProductReturnAuthorization
 
 scor:ScheduleDefectiveProductShipment
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnDefectiveProductStep ;
     rdfs:comment "The process where the customer develops the schedule for a carrier to pick-up for delivery of the defective product. Activities include selecting the carrier and rates, preparing the item for transfer, preparing scheduling documentation and managing overall scheduling administration."@en ;
     rdfs:label "Schedule Defective Product Shipment"@en ;
     scor:isStepOf scor:SourceReturnDefectiveProduct ;
@@ -1999,6 +2308,7 @@ scor:ScheduleDefectiveProductShipment
 
 scor:ReturnDefectiveProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnDefectiveProductStep ;
     rdfs:comment "The process where the customer packages, and handles the defective product in preparation for shipping in accord with pre-determined conditions. The product is then provided by the customer to the carrier who physically transports the product and its associated documentation to the last known holder or designated return center."@en ;
     rdfs:label "Return Defective Product"@en ;
     scor:isStepOf scor:SourceReturnDefectiveProduct ;
@@ -2011,6 +2321,7 @@ scor:ReturnDefectiveProduct
 
 scor:AuthorizeDefectiveProductReturn
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:DeliverReturnDefectiveProductStep ;
     rdfs:comment "The process where the last known holder or designated return center receives a defective product return authorization request from a customer, determines if the item can be accepted and communicates decision to the customer. Accepting the request would include negotiating the conditions of the return with the customer, including authorizing return replacement or credit. Rejecting the request would include providing a reason for the rejection to the customer."@en ;
     rdfs:label "Authorize Defective Product Return"@en ;
     scor:isStepOf scor:DeliverReturnDefectiveProduct ;
@@ -2022,6 +2333,7 @@ scor:AuthorizeDefectiveProductReturn
 
 scor:ScheduleDefectiveReturnReceipt
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:DeliverReturnDefectiveProductStep ;
     rdfs:comment "The process where the last known holder or designated return center evaluates the defective product handling requirements including negotiated conditions and develops a schedule that tells the Customer when to ship the product. The scheduling activity would also inform Receiving when to expect the shipment and where to send the product, for disposition, upon receipt."@en ;
     rdfs:label "Schedule Defective Return Receipt"@en ;
     scor:isStepOf scor:DeliverReturnDefectiveProduct ;
@@ -2033,6 +2345,7 @@ scor:ScheduleDefectiveReturnReceipt
 
 scor:ReceiveDefectiveProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:DeliverReturnDefectiveProductStep ;
     rdfs:comment "The process where the last known holder or designated return center receives and verifies the returned defective product against the return authorization and other documentation and prepares the item for transfer."@en ;
     rdfs:label "Receive Defective Product"@en ;
     scor:isStepOf scor:DeliverReturnDefectiveProduct ;
@@ -2044,6 +2357,7 @@ scor:ReceiveDefectiveProduct
 
 scor:TransferDefectiveProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:DeliverReturnDefectiveProductStep ;
     rdfs:comment "The process where the last known holder or designated return center transfers the defective product to the appropriate process to implement the disposition decision."@en ;
     rdfs:label "Transfer Defective Product"@en ;
     scor:isStepOf scor:DeliverReturnDefectiveProduct ;
@@ -2058,6 +2372,7 @@ scor:TransferDefectiveProduct
 
 scor:IdentifyMROProductCondition
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnMROProductStep ;
     rdfs:comment "The process where the customer utilizes pre-determined MRO policies, business rules and product operating conditions as criteria to identify and confirm that an item requires maintenance, repair, overhaul or disposal. Includes operating failures and planned maintenance requirements."@en ;
     rdfs:label "Identify MRO Product Condition"@en ;
     scor:isStepOf scor:SourceReturnMROProduct ;
@@ -2069,6 +2384,7 @@ scor:IdentifyMROProductCondition
 
 scor:DispositionMROProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnMROProductStep ;
     rdfs:comment "The process of the customer determining whether to service the item, what service is required, and who the appropriate service provider would be to service the item. Outputs include a decision to: (1) send a return authorization request to a service provider, (2) send the product back into service without requiring a return authorization request, or (3) discard the item."@en ;
     rdfs:label "Disposition MRO Product"@en ;
     scor:isStepOf scor:SourceReturnMROProduct ;
@@ -2080,6 +2396,7 @@ scor:DispositionMROProduct
 
 scor:RequestMROReturnAuthorization
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnMROProductStep ;
     rdfs:comment "The process of a customer requesting and obtaining authorization, from a service provider, for the return of an MRO product. In addition to discussing the MRO issue, the customer and service provider would discuss enabling conditions such as return replacement or credit, packaging, handling, transportation and import / export requirements to facilitate the efficient return of the MRO product to the service provider. The customer may need to go through several return authorization iterations with multiple service providers before authorization is received."@en ;
     rdfs:label "Request MRO Return Authorization"@en ;
     scor:isStepOf scor:SourceReturnMROProduct ;
@@ -2091,6 +2408,7 @@ scor:RequestMROReturnAuthorization
 
 scor:ScheduleMROShipment
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnMROProductStep ;
     rdfs:comment "The process where the customer develops the schedule for a carrier to pick-up and deliver the MRO product. Activities include selecting the carrier and rates, preparing the item for transfer, preparing scheduling documentation and managing overall scheduling administration."@en ;
     rdfs:label "Schedule MRO Shipment"@en ;
     scor:isStepOf scor:SourceReturnMROProduct ;
@@ -2102,6 +2420,7 @@ scor:ScheduleMROShipment
 
 scor:ReturnMROPRoduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnMROProductStep ;
     rdfs:comment "The process where the customer packages, and handles the MRO product in preparation for shipping in accord with pre-determined conditions. The product is then provided by the customer to the carrier who physically transports the product and its associated documentation to the service provider."@en ;
     rdfs:label "Return MRO Shipment"@en ;
     scor:isStepOf scor:SourceReturnMROProduct ;
@@ -2116,6 +2435,7 @@ scor:ReturnMROPRoduct
 
  scor:AuthorizeMROProductReturn
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:DeliverReturnMROProductStep ;
     rdfs:comment "The process where a service provider receives an MRO product return authorization request from a customer, determines if the item can be accepted for MRO and communicates their decision to the customer. Accepting the request would include negotiating the conditions of the return with the customer, including authorizing return replacement or credit. Rejecting the request would include providing a reason for the rejection to the customer."@en ;
     rdfs:label "Authorize MRO Product Return"@en ;
     scor:isStepOf scor:DeliverReturnMROProduct ;
@@ -2127,6 +2447,7 @@ scor:ReturnMROPRoduct
 
  scor:ScheduleMROReturnReceipt
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:DeliverReturnMROProductStep ;
     rdfs:comment "The process where the service provider evaluates the MRO service requirements including negotiated conditions and develops a schedule that tells the Customer when to ship the part. The scheduling activity would also inform Receiving when to expect the shipment and where to send the part, for induction or storage, upon receipt."@en ;
     rdfs:label "Schedule MRO Return Receipt"@en ;
     scor:isStepOf scor:DeliverReturnMROProduct ;
@@ -2138,6 +2459,7 @@ scor:ReturnMROPRoduct
 
  scor:ReceiveMROProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:DeliverReturnMROProductStep ;
     rdfs:comment "The process where the service provider receives and verifies the returned MRO item against the return authorization and other documentation and prepares the item for transfer."@en ;
     rdfs:label "Receive MRO Product"@en ;
     scor:isStepOf scor:DeliverReturnMROProduct ;
@@ -2149,6 +2471,7 @@ scor:ReturnMROPRoduct
 
  scor:TransferMROProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:DeliverReturnMROProductStep ;
     rdfs:comment "The process where the service provider transfers the MRO product to the appropriate process to implement the disposition decision."@en ;
     rdfs:label "Transfer MRO Product"@en ;
     scor:isStepOf scor:DeliverReturnMROProduct ;
@@ -2163,6 +2486,7 @@ scor:ReturnMROPRoduct
 
  scor:IdentifyExcessProductCondition
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnExcessProductStep ;
     rdfs:comment "The process where the customer utilizes planned policies, business rules and product inspection as criteria to identify and confirm that material is in excess of the current requirements."@en ;
     rdfs:label "Identify Excess Product Condition"@en ;
     scor:isStepOf scor:SourceReturnExcessProduct ;
@@ -2174,6 +2498,7 @@ scor:ReturnMROPRoduct
 
  scor:DispositionExcessProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnExcessProductStep ;
     rdfs:comment "The process of the customer determining whether to return the excess material and identification of a designated return center a return authorization."@en ;
     rdfs:label "Disposition Excess Product"@en ;
     scor:isStepOf scor:SourceReturnExcessProduct ;
@@ -2185,6 +2510,7 @@ scor:ReturnMROPRoduct
 
  scor:RequestExcessProductReturnAuthorization
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnExcessProductStep ;
     rdfs:comment "The process of a customer requesting and obtaining authorization, from the designated return center, for the return of excess product. Additionally, the customer and designated return center would negotiate enabling conditions such as return credit or cash discount, packaging, handling, transportation and import / export requirements to facilitate the efficient return of the excess product."@en ;
     rdfs:label "Request Excess Product Return Authorization"@en ;
     scor:isStepOf scor:SourceReturnExcessProduct ;
@@ -2196,6 +2522,7 @@ scor:ReturnMROPRoduct
 
  scor:ScheduleExcessProductShipment
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnExcessProductStep ;
     rdfs:comment "The process where the customer develops the schedule for a carrier to pick-up the excess product. Activities include selecting the carrier and rates, preparing the item for transfer, preparing scheduling documentation and managing overall scheduling administration."@en ;
     rdfs:label "Schedule Excess Product Shipment"@en ;
     scor:isStepOf scor:SourceReturnExcessProduct ;
@@ -2207,6 +2534,7 @@ scor:ReturnMROPRoduct
 
  scor:ReturnExcessProduct
     rdf:type owl:Class ;
+    rdfs:subClassOf scor:SourceReturnExcessProductStep ;
     rdfs:comment "The process where the customer packages, and handles the excess product in preparation for shipping in accord with pre-determined conditions. The product is then provided by the customer to the carrier who physically transports the product and its associated documentation to the last known holder or designated return center."@en ;
     rdfs:label "Return Excess Product"@en ;
     scor:isStepOf scor:SourceReturnExcessProduct ;
@@ -3981,7 +4309,6 @@ scor:hasTraining
 
 scor:hasMetric
     rdf:type owl:DatatypeProperty ;
-    rdfs:subPropertyOf scor:hasMetric ;
     rdfs:range xsd:decimal ;
     rdfs:isDefinedBy scor: ;
     rdfs:comment "A Meric related to Processes"@en ;
