@@ -18,7 +18,8 @@ scor:
     rdfs:label "SCORVoc"@en;
     doap:maintainer <http://eis.iai.uni-bonn.de/NiklasPetersen> ;
     dct:creator <http://eis.iai.uni-bonn.de/Irlan>, <http://eis.iai.uni-bonn.de/NiklasPetersen>, <http://sebastian.tramp.name> ;
-    dct:publisher <http://dbpedia.org/resource/University_of_Bonn> ;
+    dct:publisher <http://dbpedia.org/resource/University_of_Bonn>, <https://ns.eccenca.com/eccenca-GmbH> ;
+    dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
     dct:created "2015-03-01"^^xsd:date ;
     dct:modified "2015-11-05"^^xsd:date ;
   #  owl:imports skos: , dct: ;
@@ -63,11 +64,18 @@ scor:
 <http://sebastian.tramp.name>
     rdf:type schema:Person;
     rdfs:label "Sebastian Tramp";
+    owl:sameAs <http://aksw.org/SebastianTramp>, <https://ns.eccenca.com/stramp> ;
+    schema:affiliation <https://ns.eccenca.com/eccenca-GmbH> ;
 .
 
 <http://dbpedia.org/resource/University_of_Bonn>
     rdf:type schema:CollegeOrUniversity;
     rdfs:label "University of Bonn"@en, "Rheinische Friedrich-Wilhelms-Universität Bonn"@de;
+.
+
+<https://ns.eccenca.com/eccenca-GmbH>
+    rdf:type schema:Corporation;
+    rdfs:label "eccenca GmbH";
 .
 
 <http://www.opendatacommons.org/licenses/pddl/1.0/>
@@ -2270,7 +2278,7 @@ scor:GatherBusinessRuleRequirements
 scor:InterpretBusinessRuleRequirement
     rdf:type owl:Class ;
     rdfs:comment "The process of determining how the policy or directive impacts supply chain processes, technology and business rules. This includes reviewing existing business rules and determining the need to add, change or delete business rules. The outcome is one or more of the following: (1) Request to Add a Business Rule (2) Request to Change a Business Rule (3) Request to Delete or Archive a Business Rule. The purpose of this step is to identify the type of activities required and routing the request if required."@en ;
-    rdfs:label "Gather Business Rule Requirements"@en ;
+    rdfs:label "Interpret Business Rule Requirement"@en ;
     scor:isStepOf scor:ManageSupplyChainBusinessRules;
     skos:notation "sE1.2" ;
     rdfs:isDefinedBy scor: ;
@@ -2326,7 +2334,7 @@ scor:RetireBusinessRule
 scor:InitiateReporting
     rdf:type owl:Class ;
     rdfs:comment "The process of scheduling, running reports, collecting and aggregating perfomance data. This includes running standard (pre-defined) reports as well as adhoc reporting. Ad hoc reporting includes developing a data collection plan and organizing data collection through: (1) Inspections (2) Measurement (e.g. stopwatch to measure duration of activities) (3) Sampling (4) Self assessements (e.g. Baldridge Self Assessment). Note: Today reports may be delivered (pushed) to the user by electronic media. This process step represents the delivery of reports to the user in such scenarios.";
-    rdfs:label "Retire Business Rule"@en ;
+    rdfs:label "Initiate Reporting"@en ;
     scor:isStepOf scor:ManagePerformance;
     skos:notation "sE2.1" ;
     rdfs:isDefinedBy scor: ;
@@ -2348,7 +2356,7 @@ scor:AnalyzeReports
 scor:FindRootCauses
     rdf:type owl:Class ;
     rdfs:comment "The process of analyzing the gaps in performance. Example root cause finding methods and techniques include: (1) Adding commentary to reported data (2) Metrics decomposition using diagnostic relationships of (SCOR) metrics (3) Time studies, sampling, audits, cycle counting (4) 5-Whys/Cause & Effect analysis (5) Statistical Analysis Techniques: e.g. Histogram, Scatter Plots, ANOVA. All root causes are documented and quantified. Quantification is the calculation or estimation of the relative contribution to the gap in performance."@en;
-    rdfs:label "Analyze Reports"@en ;
+    rdfs:label "Find Root Causes"@en ;
     scor:isStepOf scor:ManagePerformance;
     skos:notation "sE2.3" ;
     rdfs:isDefinedBy scor: ;
@@ -2381,7 +2389,7 @@ scor:DevelopeCorrectiveActions
 scor:ApproveAndLaunch
     rdf:type owl:Class ;
     rdfs:comment "The process of obtaining approvals, prioritizing, communicating and launching the corrective actions."@en;
-    rdfs:label "Develope Corrective Actions"@en ;
+    rdfs:label "Approve And Launch"@en ;
     scor:isStepOf scor:ManagePerformance;
     skos:notation "sE2.6" ;
     rdfs:isDefinedBy scor: ;
@@ -2449,7 +2457,7 @@ scor:PublishInformation
 scor:VerfyInformation
     rdf:type owl:Class ;
     rdfs:comment "The process of verifying the information is properly recorded in the system of record and populated to dependent systems. This includes verifying information is accessible to users."@en;    
-    rdfs:label "Publish Information"@en ;
+    rdfs:label "Verfy Information"@en ;
     scor:isStepOf scor:ManageDataAndInformation;
     skos:notation "sE3.6" ;
     rdfs:isDefinedBy scor: ;
@@ -2607,7 +2615,7 @@ scor:InspectMaintenance
 
 scor:ReinstateAsset
     rdf:type owl:Class ;
-    rdfs:comment "The activities associated with completion of the maintenance work and preparing the equipment/ asset to be brought 'on-line'. The general purpose of this process step is to make the asset available for 'production' (add to capacity). This includes closing work orders and receiving and approving payment of invoices for work performed by external resources. Upon completion of this process step the asset is expected to be in full working condition."@n;    
+    rdfs:comment "The activities associated with completion of the maintenance work and preparing the equipment/ asset to be brought 'on-line'. The general purpose of this process step is to make the asset available for 'production' (add to capacity). This includes closing work orders and receiving and approving payment of invoices for work performed by external resources. Upon completion of this process step the asset is expected to be in full working condition."@en;    
     rdfs:label "Reinstate Asset"@en ;
     scor:isStepOf scor:ManageSupplyChainAssets;
     skos:notation "sE5.8" ;
