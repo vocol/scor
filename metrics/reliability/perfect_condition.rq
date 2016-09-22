@@ -1,12 +1,14 @@
 PREFIX    :   <http://purl.org/eis/vocab/scor#> 
 PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#> 
 
-SELECT (xsd:double((?value1+?value2+?value3+?value4+?value5)/5) AS ?metricResult)
+# RL.2.4 Perfect Condition
+
+SELECT (xsd:double(( ?rl12 + ?rl24 + ?rl41 + ?rl42 + ?rl55 ) / 5) AS ?metricResult)
 WHERE 
 {
-	?order :hasMetricRL_12 ?value1 .
-	?order :hasMetricRL_24 ?value2 .
-	?order :hasMetricRL_41 ?value3 .
-	?order :hasMetricRL_42 ?value4 .
-	?order :hasMetricRL_55 ?value5 .
+	?order :hasMetricRL_12 ?rl12 . # % Of Faultless Installations
+	?order :hasMetricRL_24 ?rl24 . # % Orders/lines received damage free
+	?order :hasMetricRL_41 ?rl41 . # % of orders which is delivered without damage.
+	?order :hasMetricRL_42 ?rl42 . # % of orders which is delivered without defect.
+	?order :hasMetricRL_55 ?rl55 . # Number of returns within the warranty period.
 }
