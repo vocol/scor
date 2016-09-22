@@ -5,5 +5,5 @@ SELECT (xsd:double((?value1+?value2)/2) AS ?metricResult)
 WHERE 
 {
 	?order :hasMetricRL_33 ?value1 .
-	?order :hasMetricRL_50 ?value2 .
+	?order :hasMetricRL_35 ?value2 .
 }
