@@ -1,9 +1,11 @@
 PREFIX    :   <http://purl.org/eis/vocab/scor#> 
 PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#> 
 
-SELECT (xsd:double((?value1+?value2)/2) AS ?metricResult)
+# RL.2.1 % of Orders Delivered In Full
+
+SELECT (xsd:double(avg(xsd:double(?rl33))) / xsd:double(avg(xsd:double(?rl35))) AS ?metricResult)
 WHERE 
 {
-	?order :hasMetricRL_33 ?value1 .
-	?order :hasMetricRL_35 ?value2 .
+	?order :hasMetricRL_33 ?rl33 .
+	?order :hasMetricRL_35 ?rl35 .
 }
