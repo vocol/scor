@@ -5073,7 +5073,7 @@ scor:hasMetricRL_34
         scor:DMOPConsolidateOrders
         scor:DMOPLoadProductGenerateShippingDocs
         scor:DMOPShipProduct
-        scor:DSPReceiveVerifyProductByCustomer
+        scor:DMOPReceiveVerifyProductByCustomer
         scor:EnterOrderCommitResourcesLaunchProgram
         scor:DEOPRouteShipments
         scor:DEOPLoadProductGenerateShippingDocs
@@ -6695,7 +6695,7 @@ scor:hasMetricRS_102
         owl:unionOf (
         scor:DSPReceiveVerifyProductByCustomer
         scor:DMOPReceiveVerifyProductByCustomer
-        scor:DSPReceiveVerifyProductByCustomer
+        scor:DEOPReceiveVerifyProductByCustomer
         )] ;
     rdfs:label "Receive & Verify Product by Customer Cycle Time"@en;
     rdfs:comment "The average time associated with receiving and verifying an order at the customer site."@en;
@@ -6711,7 +6711,7 @@ scor:hasMetricRS_103
         owl:unionOf (
         scor:DSPReceiveVerifyProductByCustomer
         scor:DMOPReceiveVerifyProductByCustomer
-        scor:DSPReceiveVerifyProductByCustomer
+        scor:DEOPReceiveVerifyProductByCustomer
         )] ;
     rdfs:label "Receive & Verify Product Cycle Time"@en;
     rdfs:comment "The average time associated with receiving and verifying an order."@en;
