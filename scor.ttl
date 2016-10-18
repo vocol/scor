@@ -44,6 +44,7 @@ scor:
     rdfs:isDefinedBy scor: ;
  .
 
+
 <https://github.com/vocol/scor.git>
     rdf:type doap:GitRepository ;
     rdfs:label "SCORVoc GitHub Repository" ;
@@ -10435,4 +10436,3 @@ scor:ProcessMetricsAlignment
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
-
