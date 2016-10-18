@@ -2309,7 +2309,7 @@ scor:DEOPLoadProductGenerateShippingDocs
     rdf:type owl:Class ;
     rdfs:subClassOf scor:DeliverEngineerToOrderProductStep ;  
     rdfs:comment "The series of tasks including placing/loading product onto modes of transportation, and generating the documentation necessary to meet internal, customer, carrier and government needs."@en ;
-    rdfs:label "Load Product & Generate Shipping Docs"@en ;
+    rdfs:label "Load Product and Generate Shipping Docs"@en ;
     scor:isStepOf scor:DeliverEngineerToOrderProduct ;
     skos:notation "sD3.11" ;
     rdfs:isDefinedBy scor: ;
@@ -2891,7 +2891,7 @@ scor:AnalyzeReports
 scor:FindRootCauses
     rdf:type owl:Class ;
     rdfs:subClassOf scor:ManageSupplyChainPerformanceStep ;  
-    rdfs:comment "The process of analyzing the gaps in performance. Example root cause finding methods and techniques include: (1) Adding commentary to reported data (2) Metrics decomposition using diagnostic relationships of (SCOR) metrics (3) Time studies, sampling, audits, cycle counting (4) 5-Whys/Cause & Effect analysis (5) Statistical Analysis Techniques: e.g. Histogram, Scatter Plots, ANOVA. All root causes are documented and quantified. Quantification is the calculation or estimation of the relative contribution to the gap in performance."@en;
+    rdfs:comment "The process of analyzing the gaps in performance. Example root cause finding methods and techniques include: (1) Adding commentary to reported data (2) Metrics decomposition using diagnostic relationships of (SCOR) metrics (3) Time studies, sampling, audits, cycle counting (4) 5-Whys/Cause and Effect analysis (5) Statistical Analysis Techniques: e.g. Histogram, Scatter Plots, ANOVA. All root causes are documented and quantified. Quantification is the calculation or estimation of the relative contribution to the gap in performance."@en;
     rdfs:label "Find Root Causes"@en ;
     scor:isStepOf scor:ManagePerformance;
     skos:notation "sE2.3" ;
@@ -3188,7 +3188,7 @@ scor:ReinstateAsset
 scor:ReceiveContractUpdates
     rdf:type owl:Class ;
     rdfs:subClassOf scor:ManageSupplyChainContractsStep ; 
-    rdfs:comment "The activities associated with receiving new contracts or changes to existing contracts. These contract updates may originate in Sales & Support processes (customer contracts) or in Product and Process Design processes (for material supplier or services providers such as transportation services, equipment maintenance services, IT services). This includes validation of contracts against criteria (business rules). A contract needs to include information such as effective date and duration, customer or supplier address and payment terms and may not be in conflict with business rules (and regulatory requirements).";    
+    rdfs:comment "The activities associated with receiving new contracts or changes to existing contracts. These contract updates may originate in Sales and Support processes (customer contracts) or in Product and Process Design processes (for material supplier or services providers such as transportation services, equipment maintenance services, IT services). This includes validation of contracts against criteria (business rules). A contract needs to include information such as effective date and duration, customer or supplier address and payment terms and may not be in conflict with business rules (and regulatory requirements).";    
     rdfs:label "Receive Contract Updates"@en ;
     scor:isStepOf scor:ManageSupplyChainContracts;
     skos:notation "sE6.1" ;
@@ -4502,10 +4502,10 @@ scor:hasDefaultSteps
     rdfs:domain owl:Class;
     rdfs:range olo:OrderedList;
     rdfs:isDefinedBy scor: ;
-	rdfs:comment "A list of default steps for a specific class of processes. A particular instance of the class can override this by using scor:hasSteps."@en  ;
+    rdfs:comment "A list of default steps for a specific class of processes. A particular instance of the class can override this by using scor:hasSteps."@en  ;
     vs:term_status "stable" ;
     dct:modified "2015-11-16"^^xsd:date .
-	
+    
 scor:hasSteps
     rdf:type owl:ObjectProperty;
     rdfs:label "has Step List"@en ;
@@ -5731,7 +5731,7 @@ scor:hasMetricRS_25
         owl:unionOf (
         scor:EnterOrderCommitResourcesLaunchProgram
         )] ;
-    rdfs:label "Enter Order, Commmit Resources & Launch Program Cycle Time"@en;
+    rdfs:label "Enter Order, Commmit Resources and Launch Program Cycle Time"@en;
     rdfs:comment "The average time associated with entering an order, committing resources and program launch."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -5803,7 +5803,7 @@ scor:hasMetricRS_30
         scor:EstablishCommunicateSCPlans
         )] ;
     rdfs:label "Establish Supply Chain Plans Cycle Time"@en;
-    rdfs:comment "Five point annual average of the sum of all gross inventories (raw materials & WIP, plant FG, field FG, fiels samples, other) / (COGS / 365). Total gross value of iventory at standard cost before reservers for excess and obsolescence. Only includes inventory on company books, future liabilities should not be included"@en;
+    rdfs:comment "Five point annual average of the sum of all gross inventories (raw materials and WIP, plant FG, field FG, fiels samples, other) / (COGS / 365). Total gross value of iventory at standard cost before reservers for excess and obsolescence. Only includes inventory on company books, future liabilities should not be included"@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -6076,7 +6076,7 @@ scor:hasMetricRS_51
         scor:DMOPLoadProductGenerateShippingDocs
         scor:DEOPLoadProductGenerateShippingDocs
         )] ;
-    rdfs:label "Load & Generate Shipping Documentation Cycle Time"@en;
+    rdfs:label "Load and Generate Shipping Documentation Cycle Time"@en;
     rdfs:comment "The average time associated with the product loading and the generation of shipping documentation."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -6545,7 +6545,7 @@ scor:hasMetricRS_92
         owl:unionOf (
         scor:NegotiateReceiveContract
         )] ;
-    rdfs:label "Negotiate & Receive Contract Cycle Time"@en;
+    rdfs:label "Negotiate and Receive Contract Cycle Time"@en;
     rdfs:comment "The average time associated with negotiating and receing contract."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -6559,7 +6559,7 @@ scor:hasMetricRS_93
         owl:unionOf (
         scor:ObtainRespondToRFPRFQ
         )] ;
-    rdfs:label "Obtain & Respond to Request for Quote (RFQ) / Request for Proposal (RFP) Cycle time"@en;
+    rdfs:label "Obtain and Respond to Request for Quote (RFQ) / Request for Proposal (RFP) Cycle time"@en;
     rdfs:comment "The average time associated with obtaining and responding to RFQs/RFPs."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -6665,7 +6665,7 @@ scor:hasMetricRS_100
         owl:unionOf (
         scor:ProcessInquiryQuote
         )] ;
-    rdfs:label "Plan Inquiry & Quote Cycle Time"@en;
+    rdfs:label "Plan Inquiry and Quote Cycle Time"@en;
     rdfs:comment "The average time associated with processing inquiries and quotes."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -6697,7 +6697,7 @@ scor:hasMetricRS_102
         scor:DMOPReceiveVerifyProductByCustomer
         scor:DSPReceiveVerifyProductByCustomer
         )] ;
-    rdfs:label "Receive & Verify Product by Customer Cycle Time"@en;
+    rdfs:label "Receive and Verify Product by Customer Cycle Time"@en;
     rdfs:comment "The average time associated with receiving and verifying an order at the customer site."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -6713,7 +6713,7 @@ scor:hasMetricRS_103
         scor:DMOPReceiveVerifyProductByCustomer
         scor:DSPReceiveVerifyProductByCustomer
         )] ;
-    rdfs:label "Receive & Verify Product Cycle Time"@en;
+    rdfs:label "Receive and Verify Product Cycle Time"@en;
     rdfs:comment "The average time associated with receiving and verifying an order."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -6829,7 +6829,7 @@ scor:hasMetricRS_111
         owl:unionOf (
         scor:ReceiveConfigureEnterValidateOrder
         )] ;
-    rdfs:label "Receive, Configure, Enter & Validate Order Cycle Time"@en;
+    rdfs:label "Receive, Configure, Enter and Validate Order Cycle Time"@en;
     rdfs:comment "The average time associated with receiving and verifying and order at the customer site."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -6843,7 +6843,7 @@ scor:hasMetricRS_112
         owl:unionOf (
         scor:ReceiveEnterValidateOrder
         )] ;
-    rdfs:label "Receive, Enter & Validate Order Cycle Time"@en;
+    rdfs:label "Receive, Enter and Validate Order Cycle Time"@en;
     rdfs:comment "The average time associated with receiving, entering and verifying an order at the customer site."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -6889,7 +6889,7 @@ scor:hasMetricRS_115
         owl:unionOf (
         scor:DMOPReserveInventoryDetermineDeliveryDate
         )] ;
-    rdfs:label "Resever Inventory & Determine Data Cycle Time"@en;
+    rdfs:label "Resever Inventory and Determine Data Cycle Time"@en;
     rdfs:comment "The average time associated with reserving inventory and determining a delivery date."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -7021,7 +7021,7 @@ scor:hasMetricRS_124
         owl:unionOf (
         scor:DEOPSelectCarriersRateShipments
         )] ;
-    rdfs:label "Select Carriers & Rate Shipments Cycle Time"@en;
+    rdfs:label "Select Carriers and Rate Shipments Cycle Time"@en;
     rdfs:comment "The average time associated with selecting carriers and rating shipments."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
@@ -7485,7 +7485,7 @@ scor:hasMetricCO_3
         scor:ManageSupplyChainAssets
         )] ;
     rdfs:label "Planning Property, Plant, and Equipment Cost"@en;
-    rdfs:comment "The costs associated with the (fixed) assets designated to support supply chain planning processes. PP&E costs include the cost of leases, rents, acquisition, depreciation, maintenance and disposition of land, buildings, and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
+    rdfs:comment "The costs associated with the (fixed) assets designated to support supply chain planning processes. PP and E costs include the cost of leases, rents, acquisition, depreciation, maintenance and disposition of land, buildings, and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -7561,7 +7561,7 @@ scor:hasMetricCO_7
         scor:ManageSupplyChainAssets
         )] ;
     rdfs:label "Sourcing Property, Plant and Equipment Cost"@en;
-    rdfs:comment "The costs associated with the (fixed) assets designated to support the aquisition of materials, products, merchandise and services. PP&E costs include the cost of leases, rents, acquisition, depreciation, maintenance and disposition of land, buildings, and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
+    rdfs:comment "The costs associated with the (fixed) assets designated to support the aquisition of materials, products, merchandise and services. PP and E costs include the cost of leases, rents, acquisition, depreciation, maintenance and disposition of land, buildings, and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -7711,7 +7711,7 @@ scor:hasMetricCO_16
         scor:ManageSupplyChainAssets
         )] ;
     rdfs:label "Production Property, Plant, Equipment Cost"@en;
-    rdfs:comment "The costs associated with the assets designated to support the production, manufacturing, assembly, remanufacturing, refurbishment, repair and overhaul of goods. PP&E costs include the cost of leases, rents, asquisition, depreciation, maintenance, and disposition of land, buildings, and eqipment and labor cost and expenses of internal maintenance and support staff."@en;    
+    rdfs:comment "The costs associated with the assets designated to support the production, manufacturing, assembly, remanufacturing, refurbishment, repair and overhaul of goods. PP and E costs include the cost of leases, rents, asquisition, depreciation, maintenance, and disposition of land, buildings, and eqipment and labor cost and expenses of internal maintenance and support staff."@en;    
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -7807,7 +7807,7 @@ scor:hasMetricCO_20
         scor:ManageSupplyChainAssets
         )] ;
     rdfs:label "Order Management Property, Plant and Equipment Cost"@en;
-    rdfs:comment "The costs associated with the (fixed) assets designated to support order management processes. PP&E costs include the cost of leases, rents, aquisition, depreciation, maintenance and disposition of land, buildings and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
+    rdfs:comment "The costs associated with the (fixed) assets designated to support order management processes. PP and E costs include the cost of leases, rents, aquisition, depreciation, maintenance and disposition of land, buildings and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -7958,7 +7958,7 @@ scor:hasMetricCO_26
         scor:ManageSupplyChainAssets
         )] ;
     rdfs:label "Fulfillment Property, Plant and Equipment Cost"@en;
-    rdfs:comment "The costs associated with the (fixed) assets designated to support fulfillment of customer oders. PP&E costs include the cost of leases, rents, aquisition, depreciation, maintenance and disposition of land, buildings and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
+    rdfs:comment "The costs associated with the (fixed) assets designated to support fulfillment of customer oders. PP and E costs include the cost of leases, rents, aquisition, depreciation, maintenance and disposition of land, buildings and equipment and labor cost and expenses of internal and/or external maintenance and support staff."@en;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -10048,7 +10048,7 @@ scor:InventoryOptimization
 
 scor:InventoryManagementBP029
     rdf:type scor:BestPractice ;
-    rdfs:comment "Supply chains and supply networks both describe the flow and movement of materials & information, by linking organizations together to serve the end-customer."@en  ;
+    rdfs:comment "Supply chains and supply networks both describe the flow and movement of materials and information, by linking organizations together to serve the end-customer."@en  ;
     rdfs:label "Inventory Management Using Supply Chain Network Optimization"@en  ;
     skos:notation "BP.029"@en  ;
     rdfs:isDefinedBy scor: ;
@@ -10058,7 +10058,7 @@ scor:InventoryManagementBP029
 
 scor:InventoryRecordAccuracy
     rdf:type scor:BestPractice ;
-    rdfs:comment "Establish disciplined monthly process to ensure timely reporting of accurate inventory (physical inventory matches ERP inventory & identify sitting inventory not identified by a SKU) at the manufacturing and terminal locations."@en  ;
+    rdfs:comment "Establish disciplined monthly process to ensure timely reporting of accurate inventory (physical inventory matches ERP inventory and identify sitting inventory not identified by a SKU) at the manufacturing and terminal locations."@en  ;
     rdfs:label "Inventory Record Accuracy"@en  ;
     skos:notation "BP.030"@en  ;
     rdfs:isDefinedBy scor: ;
@@ -10248,7 +10248,7 @@ scor:ManufacturingReliabilityImprovement
 
 scor:ManufacturingQualityImprovementsBP054
     rdf:type scor:BestPractice ;
-    rdfs:comment "This consists of efforts to address manufacturing quality & improving manufacturing cost/capacity and service factor."@en  ;
+    rdfs:comment "This consists of efforts to address manufacturing quality and improving manufacturing cost/capacity and service factor."@en  ;
     rdfs:label "Manufacturing Quality Improvements for Return Reduction"@en  ;
     skos:notation "BP.054"@en  ;
     rdfs:isDefinedBy scor: ;
@@ -10358,7 +10358,7 @@ scor:SeasonalPackagingChange
 
 scor:ReduceReturnsInventoryBP66
     rdf:type scor:BestPractice ;
-    rdfs:comment "Evaluate and establish a business returns policy (buyer`s remorse, defectives, warranty, overstock, Root Cause Investigation to determine & eliminate return cause, etc.) including determining its impact to overall inventory management."@en  ;
+    rdfs:comment "Evaluate and establish a business returns policy (buyer`s remorse, defectives, warranty, overstock, Root Cause Investigation to determine and eliminate return cause, etc.) including determining its impact to overall inventory management."@en  ;
     rdfs:label "Returns Policy to Reduce Returns Inventory"@en  ;
     skos:notation "BP.066"@en  ;
     rdfs:isDefinedBy scor: ;
