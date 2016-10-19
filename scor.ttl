@@ -111,6 +111,7 @@ scor:Competency
     dct:modified "2015-11-05"^^xsd:date ;
  .
 
+
 scor:Experience
     rdf:type owl:Class ;
     rdfs:comment " the knowledge or ability acquired by observation or active participation. "@en  ;
