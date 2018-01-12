@@ -4491,16 +4491,18 @@ scor:DeliverRetailProductStepList a olo:OrderedList ;
 #############################################################################################
 #### Properties
 
+
 scor:isStepOf
-    rdf:type owl:ObjectProperty ;
+    rdf:type owl:AnnotationProperty ;
     rdfs:label "is Step of"@en ;
-    rdfs:domain scor:Process ;
-    rdfs:range  scor:Process ;
-    rdfs:comment "Steps which are part of a certain process"@en  ;
+    rdfs:domain owl:Class;
+    rdfs:range  owl:Class  ;
+    rdfs:comment "Step which belongs to a specific process"@en  ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
  .
+
 
 scor:hasDefaultSteps
     rdf:type owl:AnnotationProperty;
