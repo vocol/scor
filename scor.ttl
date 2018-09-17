@@ -907,7 +907,7 @@ scor:SourceMakeToOrderProductStep
     rdf:type owl:Class ;
     rdfs:subClassOf scor:SourceStep ;
     rdfs:comment "Steps to be exectued for a Source Stocked Product process."@en ;
-    rdfs:label "Source Stocked Product Step"@en ;
+    rdfs:label "Source Make To Order Product Step"@en ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -917,7 +917,7 @@ scor:SourceEngineerToOrderProductStep
     rdf:type owl:Class ;
     rdfs:subClassOf scor:SourceStep ;
     rdfs:comment "Steps to be exectued for a Source Stocked Product process."@en ;
-    rdfs:label "Source Stocked Product Step"@en ;
+    rdfs:label "Source Engineer-to-Order Product Step"@en ;
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
@@ -4591,6 +4591,7 @@ scor:hasReliabilityMetric
     rdfs:label "has reliability metric"@en;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL" ;
  .
 
  scor:hasResponsivenessMetric
@@ -4602,6 +4603,7 @@ scor:hasReliabilityMetric
     rdfs:label "has responsiveness metric"@en;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RS" ;
  .
 
  scor:hasAgilityMetric
@@ -4613,6 +4615,7 @@ scor:hasReliabilityMetric
     rdfs:label "has agility metric"@en;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "AG" ;
  .
 
   scor:hasCostMetric
@@ -4624,6 +4627,7 @@ scor:hasReliabilityMetric
     rdfs:label "has cost metric"@en;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "CO" ;
  .
 
 scor:hasAssetManagemenEfficiencyMetric 
@@ -4635,6 +4639,7 @@ scor:hasAssetManagemenEfficiencyMetric
     rdfs:label "has asset management efficiency metric"@en;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "AM" ;
  .
 
 
@@ -4649,6 +4654,7 @@ scor:hasMetricRL_1
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.1" ;
  .
 
 scor:hasMetricRL_2
@@ -4660,6 +4666,7 @@ scor:hasMetricRL_2
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.2" ;
  .
 
 #3 seems to be deprecated #
@@ -4679,6 +4686,7 @@ scor:hasMetricRL_4
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.4" ;
  .
 
 scor:hasMetricRL_5
@@ -4695,6 +4703,7 @@ scor:hasMetricRL_5
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.5" ;
  .
 
 scor:hasMetricRL_6
@@ -4706,6 +4715,7 @@ scor:hasMetricRL_6
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.6" ;
  .
 
 scor:hasMetricRL_7
@@ -4717,6 +4727,7 @@ scor:hasMetricRL_7
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.7" ;
  .
 
 #8 seems to be deprecated
@@ -4736,6 +4747,7 @@ scor:hasMetricRL_10
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.10" ;
  .
 
 scor:hasMetricRL_11
@@ -4752,6 +4764,7 @@ scor:hasMetricRL_11
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.11" ;
  .
 
 scor:hasMetricRL_12
@@ -4763,6 +4776,7 @@ scor:hasMetricRL_12
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.12" ;
  .
 
 scor:hasMetricRL_13
@@ -4774,6 +4788,7 @@ scor:hasMetricRL_13
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.13" ;
  .
 
 scor:hasMetricRL_14
@@ -4785,6 +4800,7 @@ scor:hasMetricRL_14
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.14" ;
  .
 
 scor:hasMetricRL_15
@@ -4796,6 +4812,7 @@ scor:hasMetricRL_15
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.15" ;
  .
 
 scor:hasMetricRL_16
@@ -4811,6 +4828,7 @@ scor:hasMetricRL_16
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.16" ;
  .
 
 scor:hasMetricRL_17
@@ -4822,6 +4840,7 @@ scor:hasMetricRL_17
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.17" ;
  .
 
 scor:hasMetricRL_18
@@ -4838,6 +4857,7 @@ scor:hasMetricRL_18
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.18" ;
  .
 
 scor:hasMetricRL_19
@@ -4854,6 +4874,7 @@ scor:hasMetricRL_19
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.19" ;
  .
 
 scor:hasMetricRL_20
@@ -4870,6 +4891,7 @@ scor:hasMetricRL_20
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.20" ;
  .
 
 scor:hasMetricRL_21
@@ -4886,6 +4908,7 @@ scor:hasMetricRL_21
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.21" ;
  .
 
  scor:hasMetricRL_22
@@ -4902,6 +4925,7 @@ scor:hasMetricRL_21
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.22" ;
  .
 
 scor:hasMetricRL_23
@@ -4918,6 +4942,7 @@ scor:hasMetricRL_23
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.23" ;
  .
 
 scor:hasMetricRL_24
@@ -4934,6 +4959,7 @@ scor:hasMetricRL_24
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.24" ;
  .
 
 scor:hasMetricRL_25
@@ -4950,6 +4976,7 @@ scor:hasMetricRL_25
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.25" ;
  .
 
 scor:hasMetricRL_26 
@@ -4966,6 +4993,7 @@ scor:hasMetricRL_26
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.26" ;
  .
 
 scor:hasMetricRL_27
@@ -4982,6 +5010,7 @@ scor:hasMetricRL_27
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.27" ;
  .
 
 scor:hasMetricRL_28
@@ -4998,6 +5027,7 @@ scor:hasMetricRL_28
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.28" ;
  .
 
 #29 seems to be deprecated
@@ -5021,6 +5051,7 @@ scor:hasMetricRL_31
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.31" ;
  .
 
 scor:hasMetricRL_32
@@ -5037,6 +5068,7 @@ scor:hasMetricRL_32
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.32" ;
  .
 
 scor:hasMetricRL_33
@@ -5065,6 +5097,7 @@ scor:hasMetricRL_33
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.33" ;
  .
 
 scor:hasMetricRL_34
@@ -5093,6 +5126,7 @@ scor:hasMetricRL_34
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.34" ;
  .
 
 scor:hasMetricRL_35
@@ -5121,6 +5155,7 @@ scor:hasMetricRL_35
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.35" ;
  .
 
 scor:hasMetricRL_36
@@ -5139,6 +5174,7 @@ scor:hasMetricRL_36
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.36" ;
  .
 
 scor:hasMetricRL_37
@@ -5161,6 +5197,7 @@ scor:hasMetricRL_37
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.37" ;
  .
 
 #38 seems to be deprecated
@@ -5174,6 +5211,7 @@ scor:hasMetricRL_39
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.39" ;
  .
 
 scor:hasMetricRL_40
@@ -5185,6 +5223,7 @@ scor:hasMetricRL_40
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.40" ;
  .
 
 scor:hasMetricRL_41
@@ -5201,6 +5240,7 @@ scor:hasMetricRL_41
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.41" ;
  .
 
 scor:hasMetricRL_42
@@ -5217,6 +5257,7 @@ scor:hasMetricRL_42
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.42" ;
  .
 
 scor:hasMetricRL_43
@@ -5233,6 +5274,7 @@ scor:hasMetricRL_43
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.43" ;
  .
 
 #44 seems to be deprecated
@@ -5251,6 +5293,7 @@ scor:hasMetricRL_45
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.45" ;
  .
 
 #46 seems to be deprecated
@@ -5269,6 +5312,7 @@ scor:hasMetricRL_47
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.47" ;
  .
 
 #48 seems to be deprecated
@@ -5287,6 +5331,7 @@ scor:hasMetricRL_49
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.49" ;
  .
 
 
@@ -5304,6 +5349,7 @@ scor:hasMetricRL_50
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.50" ;
  .
 
 
@@ -5323,6 +5369,7 @@ scor:hasMetricRL_55
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.55" ;
  .
 
 scor:hasMetricRL_56
@@ -5342,6 +5389,7 @@ scor:hasMetricRL_56
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.56" ;
  .
 
 scor:hasMetricRL_57
@@ -5358,6 +5406,7 @@ scor:hasMetricRL_57
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.57" ;
  .
 
 scor:hasMetricRL_58
@@ -5380,6 +5429,7 @@ scor:hasMetricRL_58
     rdfs:isDefinedBy scor: ;
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.58" ;
  .
 
 scor:hasMetricRL_59
@@ -5397,6 +5447,7 @@ scor:hasMetricRL_59
 
     vs:term_status "stable" ;
     dct:modified "2015-11-05"^^xsd:date ;
+    skos:notation "RL.3.59" ;
  .
 
 
